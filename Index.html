@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Infinite Protection</title>
+
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container align-items-center">
+
+        <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
+            Infinite Protection
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- PRODUCT -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <!-- <a class="nav-link" href="#">How it works</a> -->
+                    <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Product
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Product Overview</a></li>
+                        <li><a class="dropdown-item" href="#">3 in 1 Strategy</a></li>
+                        <li><a class="dropdown-item" href="#">SaferNet VPN</a></li>
+                        <li><a class="dropdown-item" href="#">Virus Protection</a></li>
+                        <li><a class="dropdown-item" href="#">Internet Controls</a></li>
+                    </ul>
+                </li> -->
+
+                <!-- COMPLIANCE -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="#">Compliance</a>
+                </li>
+                <!-- <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Compliance
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Business Compliance</a></li>
+                        <li><a class="dropdown-item" href="#">Compliance Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Talk To Us</a></li>
+                    </ul>
+                </li> -->
+
+                <!-- RESOURCES -->
+                <!-- <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="#">Resources</a>
+                </li> -->
+                 <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                    <ul class="dropdown-menu">
+                        <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
+                    </ul>
+                    
+                    <!-- <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Downloads</a></li>
+                        <li><a class="dropdown-item" href="#">User Guide</a></li>
+                        <li><a class="dropdown-item" href="#">Blog</a></li>
+                        <li><a class="dropdown-item" href="#">Podcast</a></li>
+                        <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        <li><a class="dropdown-item" href="#">Affliate Partners</a></li>
+                    </ul> -->
+                </li> 
+
+                <!-- PRICING -->
+                <li class="nav-item ms-lg-3">
+                    <!-- <a class="nav-link" href="#">Pricing</a> -->
+                    <a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <!--  <a class="nav-link" href="#">About</a> -->
+                    <a class="nav-link" asp-controller="Home" asp-action="about">About</a>
+                </li>
+
+                <!-- LOGIN -->
+                <!-- <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Login
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Sign In</a></li>
+                        <li><a class="dropdown-item" href="#">Sign Up</a></li>
+                    </ul>
+                </li> -->
+                <!-- DARK MODE -->
+                <li class="nav-item ms-lg-3">
+                    <!-- <button id="themeToggle" class="btn btn-outline-light">🌙</button> -->
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="icon moon">🌙</span>
+                            <span class="icon sun">☀️</span>
+                        </span>
+                    </label>
+                </li>
+                <!-- TALK -->
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-outline-light">Talk to Us</a>
+                </li>
+
+                
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+    <!-- PAGE CONTENT @{
+    ViewData["Title"] = "Home Page - Infinite Protection";
+}-->
+    
+
+
+
+
+<!-- ══════════════════════════════════════════
+     HERO SECTION
+     ══════════════════════════════════════════ -->
+<section class="hero-slider" style="padding-left:0px !important; padding:0px !important;">
+
+    <div id="heroCarousel" class="carousel slide carousel-fade"
+         data-bs-ride="carousel"
+         data-bs-interval="5000">
+
+        <div class="carousel-inner">
+
+            <!-- SLIDE 1 -->
+            <div class="carousel-item active hero-slide"
+                 style="background-image:url('assets/images/sliders/slide1.png')">
+                <div class="hero-overlay"></div>
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <small class="review">⭐ Google Reviews 4.7 • 10 reviews</small>
+                        <h1 class="slide-title">Enterprise-grade<br> cybersecurity, built for<br>small businesses</h1>
+                        <p class="slide-desc">Protect every device worldwide with always-on monitoring, AI threat detection, encrypted VPN, integrated malware defense, and content filtering.</p>
+                        <ul class="hero-list">
+                            <li><i class="bi bi-shield-check"></i> Every device + user covered — not just the network</li>
+                            <li><i class="bi bi-eye"></i> Always-on monitoring + threat blocking</li>
+                            <li><i class="bi bi-funnel"></i> Optional compliance + pen testing</li>
+                        </ul>
+                        <div class="hero-buttons">
+                            <a href="#video" class="btn btn-warning btn-lg">See How It Works</a>
+                            <a href="#demo" class="btn btn-outline-light btn-lg">Schedule a Demo</a>
+                        </div>
+                        <small class="hero-note">No pressure. Get a clear overview in under 2 minutes.</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="carousel-item hero-slide"
+                 style="background-image:url('assets/images/sliders/slide2.png')">
+                <div class="hero-overlay"></div>
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <small class="review">⭐ Google Reviews 4.7 • 10 reviews</small>
+                        <h1 class="slide-title">Enterprise-grade<br> cybersecurity, built for<br>small businesses</h1>
+                        <p class="slide-desc">Protect every device worldwide with always-on monitoring, AI threat detection, encrypted VPN, integrated malware defense, and content filtering.</p>
+                        <ul class="hero-list">
+                            <li><i class="bi bi-shield-check"></i> Every device + user covered — not just the network</li>
+                            <li><i class="bi bi-eye"></i> Always-on monitoring + threat blocking</li>
+                            <li><i class="bi bi-funnel"></i> Optional compliance + pen testing</li>
+                        </ul>
+                        <div class="hero-buttons">
+                            <a href="#video" class="btn btn-warning btn-lg">See How It Works</a>
+                            <a href="#demo" class="btn btn-outline-light btn-lg">Schedule a Demo</a>
+                        </div>
+                        <small class="hero-note">No pressure. Get a clear overview in under 2 minutes.</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     VIDEO SECTION
+     ══════════════════════════════════════════ -->
+<section id="video" class="videosection">
+    <div class="videocontainer">
+
+        <div class="left-content reveal-left">
+            <span class="vbadge">1-Minute Overview</span>
+            <h1>See how SaferNet<br>protects your<br>business.</h1>
+            <p>Get a clear overview of what's covered—devices, users, and connections—and how SaferNet keeps protection running automatically.</p>
+            <ul class="vfeature-list">
+                <li>What's covered (devices + users)</li>
+                <li>How threats are blocked (VPN + malware + filtering)</li>
+                <li>What you see in the dashboard (reports + status)</li>
+            </ul>
+            <a href="#features" class="btn-link">Explore Your Coverage →</a>
+        </div>
+
+        <div class="right-video reveal-right">
+            <div class="video-box">
+                <img src="assets/images/videosec/videoimg.png" alt="SaferNet overview video thumbnail">
+                <div class="play-btn">▶</div>
+            </div>
+            <p class="video-length">Length: 58 sec • No sound needed</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-label="Product overview video">
+    <div class="modal-content">
+        <span class="close" id="closeVideoBtn" role="button" tabindex="0" aria-label="Close video">✖</span>
+        <video id="videoPlayer" controls muted playsinline>
+            <source src="assets/images/videosec/video.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     FEATURES SECTION
+     ══════════════════════════════════════════ -->
+<section id="features" class="features-section">
+    <div class="fcontainer">
+
+        <div class="section-header reveal">
+            <h2>What SaferNet covers</h2>
+            <p>Comprehensive security across devices, users, and connections—without the complexity.</p>
+        </div>
+
+        <div class="features-grid stagger-children">
+
+            <div class="feature-card">
+                <div class="icon-box">🛡️</div>
+                <h3>Endpoint Protection</h3>
+                <p>Comprehensive security for every device, not just your network perimeter. Full coverage across laptops, desktops, and mobile devices.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box">👁️</div>
+                <h3>AI-Powered Monitoring</h3>
+                <p>Advanced behavioral analysis detects anomalies in real-time, identifying threats before they become problems.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box">🔒</div>
+                <h3>Always-On VPN</h3>
+                <p>Military-grade encryption for all connections. Automatic protection whether your team is in the office or remote.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box">⚙️</div>
+                <h3>Content Filtering</h3>
+                <p>84+ customizable filters protect against malicious sites, inappropriate content, and productivity drains.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box">🔍</div>
+                <h3>Penetration Testing</h3>
+                <p>Regular security assessments identify vulnerabilities before attackers do. Stay ahead of emerging threats.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box">⚡</div>
+                <h3>Malware Defense</h3>
+                <p>Multi-layered protection against viruses, ransomware, and zero-day exploits. Updated continuously.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box">✔️</div>
+                <h3>Compliance Ready</h3>
+                <p>Built-in compliance frameworks help you meet HIPAA, PCI-DSS, and other regulatory requirements effortlessly.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box">📊</div>
+                <h3>Detailed Reporting</h3>
+                <p>Clear, actionable insights into your security posture. Easy-to-understand dashboards for stakeholders.</p>
+            </div>
+
+        </div>
+
+        <div class="cta reveal">
+            <p>Want to see how it all works together?</p>
+            <div class="cta-buttons">
+                <button class="btn-primary">See How It Works</button>
+                <button class="btn-outline">Schedule a Demo</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     WHY SAFERNET
+     ══════════════════════════════════════════ -->
+<section class="why-safernet">
+    <div class="ycontainer">
+
+        <div class="ysection-header reveal">
+            <div class="label">WHY SAFERNET</div>
+            <h2>Protection that lets you breathe.</h2>
+            <p>SaferNet reduces the stress of 'Am I safe?' so you can focus on running your business.</p>
+        </div>
+
+        <div class="ycards stagger-children">
+
+            <a href="#features" class="ycard">
+                <h3>Complete security package</h3>
+                <p>SaferNet combines encrypted VPN, malware protection, and smart web controls in one platform—so every device and user stays protected, wherever work happens.</p>
+                <div class="ycard-link">
+                    <span>Explore your coverage</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+            </a>
+
+            <a href="#video" class="ycard">
+                <h3>Stop threats before they spread</h3>
+                <p>SaferNet detects suspicious behavior early and blocks risky traffic automatically—helping prevent small issues from turning into business-stopping incidents.</p>
+                <div class="ycard-link">
+                    <span>See how it works</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+            </a>
+
+            <a href="#monitoring" class="ycard">
+                <h3>Easy to set up and manage</h3>
+                <p>Get protected in minutes with a simple dashboard built for busy teams—no constant IT oversight, no complex tuning, just clear control and visibility.</p>
+                <div class="ycard-link">
+                    <span>View reporting</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+            </a>
+
+        </div>
+
+        <p class="ysection-footer reveal">No fear tactics. Just real protection you can understand.</p>
+
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     AI MONITOR SECTION
+     ══════════════════════════════════════════ -->
+<section id="monitoring" class="sn-section">
+    <div class="sn-container">
+        <div class="sn-grid">
+
+            <!-- Left -->
+            <div class="sn-left reveal-left">
+                <span class="sn-badge">AI-Powered Monitoring</span>
+                <h2 class="sn-heading">Monitoring that runs in the background.</h2>
+                <p class="sn-lead">SaferNet learns normal behavior, flags risks early, and blocks threats—so you stay focused.</p>
+
+                <div class="sn-accordion">
+
+                    <div class="sn-acc-item sn-open">
+                        <button class="sn-acc-btn" aria-expanded="true">
+                            What does 'AI monitoring' actually do?
+                            <svg class="sn-acc-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <div class="sn-acc-body">
+                            <p>SaferNet learns normal behavior across your devices and users, then flags unusual activity early—so threats are blocked before they become a business problem.</p>
+                        </div>
+                    </div>
+
+                    <div class="sn-acc-item">
+                        <button class="sn-acc-btn" aria-expanded="false">
+                            What happens when something looks suspicious?
+                            <svg class="sn-acc-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <div class="sn-acc-body">
+                            <p>SaferNet automatically applies protection policies in real time (VPN, malware defense, and web controls) and logs the event clearly in your dashboard.</p>
+                        </div>
+                    </div>
+
+                    <div class="sn-acc-item">
+                        <button class="sn-acc-btn" aria-expanded="false">
+                            Will I understand the alerts and reports?
+                            <svg class="sn-acc-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <div class="sn-acc-body">
+                            <p>Yes. Reports are written in plain language and show what happened, what was blocked, and what to do next—without technical jargon.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="#" class="sn-cta">
+                    See how monitoring works
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <!-- Right — Radar -->
+            <div class="sn-right reveal-right">
+
+                <div class="sn-radar-wrap" id="snRadarWrap">
+                    <div class="sn-ring sn-ring-outer"></div>
+                    <div class="sn-ring sn-ring-inner"></div>
+                    <div class="sn-ring sn-ring-glow"></div>
+
+                    <svg class="sn-radar-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="snSweepGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%"   stop-color="#4ADE80" stop-opacity="0.4"/>
+                                <stop offset="70%"  stop-color="#4ADE80" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#4ADE80" stop-opacity="1"/>
+                            </linearGradient>
+                        </defs>
+                        <g class="sn-sweep">
+                            <line x1="50" y1="50" x2="50" y2="12" stroke="url(#snSweepGrad)" stroke-width="1.5"/>
+                            <circle cx="50" cy="12" r="1" fill="#4ADE80" style="filter:drop-shadow(0 0 4px #4ADE80)"/>
+                        </g>
+                    </svg>
+
+                    <svg class="sn-connectors" id="snConnectorSvg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+                    <!-- Center card -->
+                    <div class="sn-center-card">
+                        <div class="sn-center-inner">
+                            <div class="sn-brain-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+                                    <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/>
+                                    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>
+                                    <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/>
+                                    <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/>
+                                    <path d="M3.477 10.896a4 4 0 0 1 .585-.396"/>
+                                    <path d="M19.938 10.5a4 4 0 0 1 .585.396"/>
+                                    <path d="M6 18a4 4 0 0 1-1.967-.516"/>
+                                    <path d="M19.967 17.484A4 4 0 0 1 18 18"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="sn-card-title">AI Monitor</div>
+                                <div class="sn-card-sub">Real-time</div>
+                            </div>
+                            <span class="sn-green-badge">ACTIVE</span>
+                        </div>
+                    </div>
+
+                    <!-- Device nodes injected by JS -->
+                    <div id="snDevices"></div>
+                </div>
+
+                <!-- Status bar -->
+                <div class="sn-status-bar">
+                    <div class="sn-status-item">
+                        <span class="sn-status-label">Monitoring:</span>
+                        <span class="sn-green-badge" style="font-size:12px;padding:3px 10px;">ACTIVE</span>
+                    </div>
+                    <div class="sn-status-item">
+                        <span class="sn-status-label">Alerts:</span>
+                        <span class="sn-status-value">Real-time</span>
+                    </div>
+                    <div class="sn-status-item">
+                        <span class="sn-status-label">Policies:</span>
+                        <span class="sn-status-value">84+ categories</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     TESTIMONIALS
+     ══════════════════════════════════════════ -->
+<section class="testimonial-section">
+    <div class="tcontainer">
+
+        <div class="tsection-header reveal">
+            <h2>Trusted by small businesses nationwide</h2>
+            <p>Join hundreds of business owners who sleep better knowing their data is protected.</p>
+        </div>
+
+        <div class="testimonial-grid stagger-children">
+
+            <div class="testimonial-card">
+                <div class="tquote">❝</div>
+                <div class="tstars">★★★★★</div>
+                <p class="testimonial-text">SaferNet gave us enterprise security without the enterprise headache. Setup took less than a day, and we've blocked over 200 threats in the first month alone.</p>
+                <div class="tauthor">
+                    <h4>Michael Chen</h4>
+                    <span>CEO, Brightside Marketing</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="tquote">❝</div>
+                <div class="tstars">★★★★★</div>
+                <p class="testimonial-text">As a healthcare practice, HIPAA compliance is critical. SaferNet makes it simple, and the team actually explains things in plain English.</p>
+                <div class="tauthor">
+                    <h4>Dr. Sarah Martinez</h4>
+                    <span>Practice Owner, Coastal Family Medicine</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="tquote">❝</div>
+                <div class="tstars">★★★★★</div>
+                <p class="testimonial-text">The peace of mind is worth every penny. I used to worry about our remote team's security constantly. Now I can focus on growing the business.</p>
+                <div class="tauthor">
+                    <h4>James Patterson</h4>
+                    <span>Founder, Summit Consulting Group</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Animated Stats -->
+        <div class="tstats reveal">
+            <div>⭐ <span class="counter-num" data-target="4.7" data-suffix="">0</span> Average Rating</div>
+            <div><span class="counter-num" data-target="500" data-suffix="+">0</span> Protected Businesses</div>
+            <div><span class="counter-num" data-target="99.9" data-suffix="%">0</span> Uptime</div>
+            <div>24/7 Support</div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     PRICING
+     ══════════════════════════════════════════ -->
+<section id="pricing" class="pricing-section">
+    <div class="pricing-container">
+
+        <div class="pricing-header reveal">
+            <p class="pricing-label">Pricing</p>
+            <h2>Transparent pricing, powerful protection</h2>
+            <p class="pricing-sub">Choose a plan that fits your business. Upgrade anytime.</p>
+        </div>
+
+        <div class="pricing-grid stagger-children">
+
+            <!-- Plan 1 -->
+            <div class="pricing-card" style="margin-top:40px;">
+                <h3>1 Month</h3>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">8.99</span>
+                    <span class="period">/ month</span>
+                </div>
+                <p class="billing">Billed monthly</p>
+                <button class="btn-outline2">Start Free Trial</button>
+                <ul class="price-features">
+                    <li>Malware Protection</li>
+                    <li>Internet Control</li>
+                    <li>24/7 VPN</li>
+                    <li>Virus Protection</li>
+                </ul>
+                <a class="advisor" href="#">Talk to a Security Advisor →</a>
+            </div>
+
+            <!-- Plan 2 (Popular) -->
+            <div class="pricing-card popular">
+                <div class="discount">20% Discount</div>
+                <h3>6 Month</h3>
+                <div class="pbadge">Most Popular</div>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">7.20</span>
+                    <span class="period">/ month</span>
+                </div>
+                <p class="billing">$43.20 billed every 6 months</p>
+                <button class="btn-primary2">Start Free Trial</button>
+                <ul class="price-features">
+                    <li>Malware Protection</li>
+                    <li>Internet Control</li>
+                    <li>24/7 VPN</li>
+                    <li>Virus Protection</li>
+                </ul>
+                <a class="advisor" href="#">Talk to a Security Advisor →</a>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="pricing-card" style="margin-top:40px;">
+                <div class="discount">30% Discount</div>
+                <h3>12 Month</h3>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">6.30</span>
+                    <span class="period">/ month</span>
+                </div>
+                <p class="billing">$75.60 billed every 12 months</p>
+                <button class="btn-outline2">Start Free Trial</button>
+                <ul class="price-features">
+                    <li>Malware Protection</li>
+                    <li>Internet Control</li>
+                    <li>24/7 VPN</li>
+                    <li>Virus Protection</li>
+                </ul>
+                <a class="advisor" href="#">Talk to a Security Advisor →</a>
+            </div>
+
+        </div>
+
+        <div class="pricing-footer reveal">
+            <p>Additional devices: $2.99 / month</p>
+            <p class="guarantee">No-hassle 100% money-back guarantee for your first 30 days.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     CTA — READY TO PROTECT
+     ══════════════════════════════════════════ -->
+<section id="demo" class="cta-section">
+    <div class="cta-container">
+        <div class="cta-card reveal">
+
+            <div class="icon-box">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                </svg>
+            </div>
+
+            <h2>Ready to protect your business?</h2>
+
+            <p class="subtext">Join hundreds of small businesses who trust SaferNet for enterprise-grade security without the complexity.</p>
+
+            <div class="features">
+                <div class="feature"><span class="check">✓</span><span>Free 14-day trial</span></div>
+                <div class="feature"><span class="check">✓</span><span>No credit card required</span></div>
+                <div class="feature"><span class="check">✓</span><span>Setup in under 5 minutes</span></div>
+            </div>
+
+            <div class="cta-buttons">
+                <button class="btn-primary">See How It Works →</button>
+                <button class="btn-secondary">Schedule a Demo</button>
+            </div>
+
+            <p class="contact">Questions? Call us at 1-800-555-1234 or email support@safernet.com</p>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SECTION -->
+                <div class="footer-about">
+                    <div class="logo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        </svg>
+                        <span>SaferNet</span>
+                    </div>
+
+                    <p>
+                        Enterprise-grade cybersecurity, simplified for small business.
+                        Protecting your devices, users, and connections with confidence.
+                    </p>
+
+                    <div class="badge">
+                        SOC 2 Certified
+                    </div>
+                </div>
+
+                <!-- SOLUTIONS -->
+                <div class="footer-links">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">Platform</a></li>
+                        <li><a href="#">VPN Protection</a></li>
+                        <li><a href="#">Malware Defense</a></li>
+                        <li><a href="#">Content Filtering</a></li>
+                        <li><a href="#">Pen Testing</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY -->
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+
+                    <p><i class="bi bi-envelope"></i> support@safernet.com</p>
+                    <p><i class="bi bi-telephone"></i> 1-800-555-1234</p>
+                    <p><i class="bi bi-geo-alt"></i> 123 Security Blvd, Suite 400<br>Austin, TX 78701</p>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+
+                <p>© 2026 SaferNet. All rights reserved.</p>
+
+                <div class="footer-policy">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+  
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/site.js" asp-append-version="true"></script>
+
+    <!--@await RenderSectionAsync("Scripts", required: false) -->
+
+</body>
+</html>

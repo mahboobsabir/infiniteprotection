@@ -1,0 +1,32 @@
+﻿@media (max-width:900px) {
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #0a1628;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+    }
+
+        .menu.active {
+            display: flex;
+        }
+
+    .hamburger {
+        display: block;
+    }
+
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}

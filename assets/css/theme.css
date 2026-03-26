@@ -1,0 +1,46 @@
+﻿/* ============================
+   CSS VARIABLES & RESET
+   ============================ */
+:root {
+    --bg-primary: #0a1628;
+    --bg-secondary: #0d1e35;
+    --bg-card: rgba(255,255,255,0.07);
+    --bg-card-hover: rgba(255,255,255,0.11);
+    --border-color: rgba(255,255,255,0.15);
+    --text-primary: #ffffff;
+    --text-muted: rgba(255,255,255,0.65);
+    --text-faint: rgba(255,255,255,0.38);
+    --accent-green: #4ADE80;
+    --accent-green-dim: rgba(74,222,128,0.15);
+    --accent-gold: #FDB022;
+    --accent-gold-hover: #e59a15;
+    --section-alt: #0f2847;
+    --section-alt2: #152f52;
+    --pill-bg: rgba(255,255,255,0.08);
+    --badge-blue: #6B9EFF;
+    --shadow-card: 0 4px 24px rgba(0,0,0,0.35);
+    --radius: 10px;
+    --radius-sm: 6px;
+    --transition: 0.22s ease;
+}
+
+[data-theme="light"] {
+    --bg-primary: #f4f7fb;
+    --bg-secondary: #eaf0f8;
+    --bg-card: rgba(255,255,255,0.85);
+    --bg-card-hover: rgba(255,255,255,1);
+    --border-color: rgba(0,0,0,0.10);
+    --text-primary: #0a1628;
+    --text-muted: rgba(10,22,40,0.62);
+    --text-faint: rgba(10,22,40,0.38);
+    --section-alt: #dce8f5;
+    --section-alt2: #ccdcee;
+    --pill-bg: rgba(10,22,40,0.07);
+    --shadow-card: 0 4px 24px rgba(10,22,40,0.12);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
