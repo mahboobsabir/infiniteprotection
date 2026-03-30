@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Infinite Protection</title>
+
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
+	<link rel="stylesheet" href="assets/css/downloads.css" asp-append-version="true" />
+
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container align-items-center">
+
+       
+        <a class="navbar-brand fw-bold" href="index.html">
+            <img id="logoImg" class="logo-dark" src="assets/images/logodark.png" width="200" height="60" alt="Infinite Protection" />
+            <img id="logoImg" class="logo-light" src="assets/images/logolight.png" width="200" height="60" alt="Infinite Protection" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- PRODUCT -->
+                <li class="nav-item ms-lg-3">
+                   <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
+			<a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="howitwork.html">How it works</a>
+                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
+                </li>
+                
+                <!-- COMPLIANCE -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="compliance.html">Compliance</a>
+                </li>
+                <!-- <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Compliance
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Business Compliance</a></li>
+                        <li><a class="dropdown-item" href="#">Compliance Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Talk To Us</a></li>
+                    </ul>
+                </li> -->
+
+                <!-- RESOURCES -->
+                <!-- <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="#">Resources</a>
+                </li> -->
+                 <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                  <!--  <ul class="dropdown-menu">
+                        <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
+                    </ul>-->
+                    
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                        <li><a class="dropdown-item" href="userguide.html">User Guide</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
+                        <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                        <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
+                    </ul>
+                </li> 
+
+                <!-- PRICING -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a> -->
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="about.html">About</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="about">About</a>-->
+                </li>
+
+                                
+                <!-- DARK MODE -->
+                <li class="nav-item ms-lg-3">
+                    
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="icon moon">🌙</span>
+                            <span class="icon sun">☀️</span>
+                        </span>
+                    </label>
+                </li>
+                <!-- TALK -->
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-outline-light">Talk to Us</a>
+                </li>
+
+                
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+ <!-- ── THEME TOGGLE ────────────────────────────────────────── -->
+<button class="download-theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="download-icon" id="themeIcon">🌙</span>
+    <span id="themeLabel">Dark Mode</span>
+</button>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- HERO                                                       -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="download-hero">
+    <div class="download-container fade-up">
+        <span class="download-tag">Download SaferNet</span>
+        <h1>Get Protected in Minutes</h1>
+        <p>Download SaferNet and start protecting your devices, data, and online activity instantly. Whether you're<br> securing a business or your family, SaferNet makes it simple to stay safe across all devices.</p>
+        <p>With built-in VPN, malware protection, and internet controls, SaferNet ensures complete protection from cyber threats the moment you install it.</p>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- PLATFORMS                                                  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="download-platforms">
+    <div class="download-container">
+        <h2 class="download-section-title fade-up">Choose Your Platform</h2>
+        <p class="download-section-sub fade-up stagger-1">Download SaferNet on your preferred device and stay protected wherever you connect. Built for<br> performance, security, and seamless experience across all platforms.</p>
+
+        <div class="download-cards-grid">
+
+            <!-- Desktop Card -->
+            <div class="download-card fade-up download-stagger-1">
+                <div class="download-card-icon">🖥️</div>
+                <h3>Desktop <span class="download-card-sub">(Windows, macOS, Chromebook)</span></h3>
+                <p>Secure your computers with powerful, full-featured protection designed for speed and control.</p>
+                <ul class="download-card-features">
+                    <li>Fast, secure installation for all desktop systems</li>
+                    <li>Advanced protection for files, browsing, and network activity</li>
+                    <li>Ideal for workstations and business environments</li>
+                </ul>
+                <span href="#" class="download-card-link">Download for Desktop <span class="arrow">→</span></span>
+            </div>
+
+            <!-- Mobile Card -->
+            <div class="download-card fade-up download-stagger-2">
+                <div class="download-card-icon">📱</div> <!--<i class="fa fa-mobile-phone" style="font-size:25px; color:#4ADE80;"></i>-->
+                <h3>Mobile <span class="download-card-sub">(Android & iOS)</span></h3>
+                <p>Stay protected on the go with reliable, advanc and real-time security across your mobile devices.</p>
+                <ul class="download-card-features">
+                    <li>Secure browsing on public Wi-Fi networks</li>
+                    <li>Lightweight and optimized for performance</li>
+                    <li>Always-on VPN protection</li>
+                </ul>
+                <span href="#" class="download-card-link">Get the Mobile App <span class="download-arrow">→</span></span>
+            </div>
+
+            <!-- Tablets Card -->
+            <div class="download-card fade-up download-stagger-3">
+                <div class="download-card-icon">📟</div>
+                <h3>Tablets &amp; Portable Devices</h3>
+                <p>Extend protection to every device in your ecosystem with consistent security coverage.</p>
+                <ul class="download-card-features">
+                    <li>Seamless syncing across your SaferNet account</li>
+                    <li>Continuous protection across all connections</li>
+                    <li>Optimized for tablets and hybrid devices</li>
+                </ul>
+                <span href="#" class="download-card-link">Protect All Devices <span class="arrow">→</span></span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- BUILT FOR EVERY DEVICE                                     -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="devices">
+    <div class="download-container">
+        <div class="devices-inner">
+
+            <div class="devices-left fade-up">
+                <h2>Built for Every Device</h2>
+                <p>SaferNet works across all major platforms, ensuring consistent protection wherever you work or connect.</p>
+
+                <ul class="device-list">
+                    <li>
+                        <div class="device-icon">🖥️</div>
+                        Windows desktops and laptops
+                    </li>
+                    <li>
+                        <div class="device-icon">🍎</div>
+                        MacOS computers
+                    </li>
+                    <li>
+                        <div class="device-icon">📱</div>
+                        Android and iOS devices
+                    </li>
+                    <li>
+                        <div class="device-icon">📟</div>
+                        Tablets and mobile devices
+                    </li>
+                </ul>
+
+                <div class="download-btn-row">
+                    <button class="download-btn-primary">See How It Works</button>
+                    <button class="download-btn-secondary">Schedule a Demo</button>
+                </div>
+            </div>
+
+            <div class="devices-right fade-up stagger-2">
+                <div class="device-visual">
+                    <div class="dv-ring"></div>
+                    <div class="dv-ring"></div>
+                    <div class="dv-ring"></div>
+                    <div class="dv-center">🛡️</div>
+                    <div class="dv-dot"></div>
+                    <div class="dv-dot"></div>
+                    <div class="dv-dot"></div>
+                    <div class="dv-dot"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- CTA                                                        -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="download-cta-section">
+    <div class="download-container fade-up">
+        <span class="download-tag" style=" color: rgb(0, 135, 0);">Protect Your Devices Today</span>
+        <h2>Start Your Secure Experience</h2>
+        <p>Take control of your digital safety today. Download SaferNet and experience powerful, simple cybersecurity built for modern users.</p>
+        <button class="download-cta-btn">Download SaferNet Now</button>
+        <div class="download-cta-trust">
+            <span>No credit card required</span>
+            <span>30-day money-back guarantee</span>
+            <span>Cancel anytime</span>
+        </div>
+    </div>
+</section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SECTION -->
+                <div class="footer-about">
+                    <div class="logo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        </svg>
+                        <span>SaferNet</span>
+                    </div>
+
+                    <p>
+                        Enterprise-grade cybersecurity, simplified for small business.
+                        Protecting your devices, users, and connections with confidence.
+                    </p>
+
+                    <div class="badge">
+                        SOC 2 Certified
+                    </div>
+                </div>
+
+                <!-- SOLUTIONS -->
+                <div class="footer-links">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">Platform</a></li>
+                        <li><a href="#">VPN Protection</a></li>
+                        <li><a href="#">Malware Defense</a></li>
+                        <li><a href="#">Content Filtering</a></li>
+                        <li><a href="#">Pen Testing</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY -->
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+
+                    <p><i class="bi bi-envelope"></i> support@safernet.com</p>
+                    <p><i class="bi bi-telephone"></i> 1-800-555-1234</p>
+                    <p><i class="bi bi-geo-alt"></i> 123 Security Blvd, Suite 400<br>Austin, TX 78701</p>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+
+                <p>© 2026 SaferNet. All rights reserved.</p>
+
+                <div class="footer-policy">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+  
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/site.js" asp-append-version="true"></script>
+	<script src="assets/js/downloads.js" asp-append-version="true"></script>
+
+    <!--@await RenderSectionAsync("Scripts", required: false) -->
+
+</body>
+</html>

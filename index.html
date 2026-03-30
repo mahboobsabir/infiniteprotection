@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+        <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Infinite Protection</title>
+    <title>Home - Infinite Protection</title>
 
     
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
@@ -18,6 +18,8 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
+
+
 </head>
 
 <body>
@@ -26,8 +28,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container align-items-center">
 
-        <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
-            Infinite Protection
+       
+        <a class="navbar-brand fw-bold" href="index.html">
+            <img id="logoImg" class="logo-dark" src="assets/images/logodark.png" width="200" height="60" alt="Infinite Protection" />
+            <img id="logoImg" class="logo-light" src="assets/images/logolight.png" width="200" height="60" alt="Infinite Protection" />
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -40,30 +44,17 @@
 
                 <!-- PRODUCT -->
                 <li class="nav-item ms-lg-3">
-                    <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>
+                   <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
+			<a class="nav-link" href="product.html">Product</a>
                 </li>
                 <li class="nav-item ms-lg-3">
-                    <!-- <a class="nav-link" href="#">How it works</a> -->
-                    <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>
+                    <a class="nav-link" href="howitwork.html">How it works</a>
+                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
                 </li>
-                <!-- <li class="nav-item dropdown">
-
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        Product
-                    </a>
-
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Product Overview</a></li>
-                        <li><a class="dropdown-item" href="#">3 in 1 Strategy</a></li>
-                        <li><a class="dropdown-item" href="#">SaferNet VPN</a></li>
-                        <li><a class="dropdown-item" href="#">Virus Protection</a></li>
-                        <li><a class="dropdown-item" href="#">Internet Controls</a></li>
-                    </ul>
-                </li> -->
-
+                
                 <!-- COMPLIANCE -->
                 <li class="nav-item ms-lg-3">
-                    <a class="nav-link" href="#">Compliance</a>
+                    <a class="nav-link" href="compliance.html">Compliance</a>
                 </li>
                 <!-- <li class="nav-item dropdown ms-lg-3">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -84,50 +75,40 @@
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         Resources
                     </a>
-                    <ul class="dropdown-menu">
+                  <!--  <ul class="dropdown-menu">
                         <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
                         <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
                         <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
                         <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
                         <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
                         <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
-                    </ul>
+                    </ul>-->
                     
-                    <!-- <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Downloads</a></li>
-                        <li><a class="dropdown-item" href="#">User Guide</a></li>
-                        <li><a class="dropdown-item" href="#">Blog</a></li>
-                        <li><a class="dropdown-item" href="#">Podcast</a></li>
-                        <li><a class="dropdown-item" href="#">FAQ</a></li>
-                        <li><a class="dropdown-item" href="#">Affliate Partners</a></li>
-                    </ul> -->
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                        <li><a class="dropdown-item" href="userguide.html">User Guide</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
+                        <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                        <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
+                    </ul>
                 </li> 
 
                 <!-- PRICING -->
                 <li class="nav-item ms-lg-3">
-                    <!-- <a class="nav-link" href="#">Pricing</a> -->
-                    <a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a>
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a> -->
                 </li>
 
                 <li class="nav-item ms-lg-3">
-                    <!--  <a class="nav-link" href="#">About</a> -->
-                    <a class="nav-link" asp-controller="Home" asp-action="about">About</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="about">About</a>-->
                 </li>
 
-                <!-- LOGIN -->
-                <!-- <li class="nav-item dropdown ms-lg-3">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        Login
-                    </a>
-
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Sign In</a></li>
-                        <li><a class="dropdown-item" href="#">Sign Up</a></li>
-                    </ul>
-                </li> -->
+                                
                 <!-- DARK MODE -->
                 <li class="nav-item ms-lg-3">
-                    <!-- <button id="themeToggle" class="btn btn-outline-light">🌙</button> -->
+                    
                     <label class="switch">
                         <input type="checkbox" id="theme-toggle">
                         <span class="slider">
@@ -148,12 +129,6 @@
         </div>
     </div>
 </nav>
-
-    <!-- PAGE CONTENT @{
-    ViewData["Title"] = "Home Page - Infinite Protection";
-}-->
-    
-
 
 
 

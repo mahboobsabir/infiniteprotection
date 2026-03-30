@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Infinite Protection</title>
+
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
+	<!-- howitwork css -->
+	<link rel="stylesheet" href="assets/css/howitwork.css" asp-append-version="true" />
+
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container align-items-center">
+
+       
+        <a class="navbar-brand fw-bold" href="index.html">
+            <img id="logoImg" class="logo-dark" src="assets/images/logodark.png" width="200" height="60" alt="Infinite Protection" />
+            <img id="logoImg" class="logo-light" src="assets/images/logolight.png" width="200" height="60" alt="Infinite Protection" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- PRODUCT -->
+                <li class="nav-item ms-lg-3">
+                   <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
+			<a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="howitwork.html">How it works</a>
+                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
+                </li>
+                
+                <!-- COMPLIANCE -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="compliance.html">Compliance</a>
+                </li>
+                <!-- <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Compliance
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Business Compliance</a></li>
+                        <li><a class="dropdown-item" href="#">Compliance Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Talk To Us</a></li>
+                    </ul>
+                </li> -->
+
+                <!-- RESOURCES -->
+                <!-- <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="#">Resources</a>
+                </li> -->
+                 <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                  <!--  <ul class="dropdown-menu">
+                        <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
+                    </ul>-->
+                    
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                        <li><a class="dropdown-item" href="userguide.html">User Guide</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
+                        <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                        <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
+                    </ul>
+                </li> 
+
+                <!-- PRICING -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a> -->
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="about.html">About</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="about">About</a>-->
+                </li>
+
+                                
+                <!-- DARK MODE -->
+                <li class="nav-item ms-lg-3">
+                    
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="icon moon">🌙</span>
+                            <span class="icon sun">☀️</span>
+                        </span>
+                    </label>
+                </li>
+                <!-- TALK -->
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-outline-light">Talk to Us</a>
+                </li>
+
+                
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+<section class="hiwhero">
+
+    <div class="hiwhero-bg">
+
+        <div class="hiwglow hiwglow-green"></div>
+
+        <div class="hiwglow hiwglow-orange"></div>
+
+    </div>
+
+    <div class="hiwhero-content">
+
+        <div class="hiwlabel">HOW IT WORKS</div>
+
+        <h1>How Infinite Protection Works</h1>
+
+        <p>
+            Two layers of defense working together 24/7 to find vulnerabilities
+            before attackers do—and stop threats before they start.
+        </p>
+
+        <button class="hiwbtn-primary">See Your Coverage</button>
+        <button class="btn-secondary">Talk to a Security Advisor</button>
+
+    </div>
+
+</section>
+
+@* ------------------------- SCAN SECTION -------------------------- *@
+
+<section class="scan-section">
+
+    <div class="hiwcontainer scan-grid-2">
+
+        <!-- LEFT CARD -->
+        <div class="scan-card">
+
+            <div class="scan-header">
+                <h3>We Find Your Open Doors</h3>
+                <p>Before attackers do</p>
+            </div>
+
+            <div class="scan-door-grid">
+
+                <div class="scan-door">
+                    <div class="scan-door-box">
+                        <div class="scan-door-inner"></div>
+                        <span class="scan-door-dot"></span>
+                    </div>
+                    <p>Secure</p>
+                </div>
+
+                <div class="scan-door">
+                    <div class="scan-door-box vulnerable">
+                        <div class="scan-door-inner"></div>
+                        <span class="scan-door-dot"></span>
+                        <div class="scan-alert-dot"></div>
+                    </div>
+                    <p>Vulnerable</p>
+                </div>
+
+                <div class="scan-door">
+                    <div class="scan-door-box">
+                        <div class="scan-door-inner"></div>
+                        <span class="scan-door-dot"></span>
+                    </div>
+                    <p>Secure</p>
+                </div>
+
+            </div>
+
+            <div class="scan-divider">
+                <div class="scan-line"></div>
+                <span class="scan-icon">🔍</span>
+                <div class="scan-line"></div>
+            </div>
+
+            <div class="scan-alert-box">
+                <p class="scan-alert-title">Vulnerability Detected</p>
+                <p class="scan-alert-desc">Automatically scanned & reported</p>
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT CONTENT -->
+        <div class="scan-content">
+
+            <h2>Every business has open doors</h2>
+
+            <p class="scan-text">
+                Your network has hundreds of potential entry points.
+                We continuously scan for vulnerabilities—so you know
+                where you're exposed before an attacker finds out.
+            </p>
+
+            <div class="scan-feature">
+
+                <div class="scan-feature-icon">🔍</div>
+                <div>
+                    <h4>Continuous scanning</h4>
+                    <p>We probe your network 24/7 looking for weaknesses before attackers do</p>
+                </div>
+
+            </div>
+
+            <div class="scan-feature">
+
+                <div class="scan-feature-icon">🛡️</div>
+                <div>
+                    <h4>Clear reporting</h4>
+                    <p>Simple dashboards show what's vulnerable and what needs fixing first</p>
+                </div>
+
+            </div>
+
+            <div class="scan-feature">
+
+                <div class="scan-feature-icon">⏱</div>
+                <div>
+                    <h4>Instant alerts</h4>
+                    <p>Get notified the moment a new vulnerability is discovered</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+@* ------------------------PEN TESTING -------------------------------- *@
+
+<section class="pen-test-section">
+
+    <div class="pen-container">
+
+        <div class="pen-section-header">
+            <h2>Continuous automated pen testing</h2>
+            <p>
+                Traditional pen testing happens once a year. By the time you get the report,
+                your network has already changed. Our system tests continuously—so you're always protected.
+            </p>
+        </div>
+
+        <div class="pen-grid">
+
+            <!-- Traditional -->
+            <div class="pen-card traditional">
+
+                <span class="pen-card-label">Traditional Approach</span>
+
+                <h3>Annual Manual Testing</h3>
+
+                <ul class="pen-list negative">
+
+                    <li>Tests happen once or twice a year</li>
+                    <li>Results delivered weeks later</li>
+                    <li>Expensive and time-consuming</li>
+                    <li>Network changes go unmonitored</li>
+                </ul>
+
+            </div>
+
+            <!-- SaferNet -->
+            <div class="pen-card safernet">
+
+                <span class="pen-card-label pen-success">SaferNet Approach</span>
+
+                <h3>Continuous Automated Testing</h3>
+
+                <ul class="pen-list positive">
+                    <li>Scans running 24/7/365</li>
+                    <li>Real-time vulnerability detection</li>
+                    <li>Affordable, predictable pricing</li>
+                    <li>Always up to date with network changes</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SECTION 1 — ENDPOINT PROTECTION
+════════════════════════════════════════════ -->
+<section class="hiwsection" id="endpoint">
+    <div class="hiwcontainer">
+        <div class="grid-2">
+
+            <!-- Left: copy -->
+            <div class="reveal" style="text-align:left;">
+                <p class="hiweyebrow hiweyebrow--yellow">Endpoint Protection</p>
+                <h2 class="hiwh2">Most attacks start with a click</h2>
+                <p class="hiwbody-lg">Your network might be secure, but what about your employees' devices? SaferNet Endpoint Protection blocks malware, phishing attempts, and suspicious downloads before they can cause damage.</p>
+                <p class="hiwbody-sm" style="margin-top:24px;">It's installed on every device, runs silently in the background, and stops threats automatically—no technical expertise required.</p>
+
+                
+            </div>
+
+            <!-- Right: visual -->
+            <div class="reveal reveal-delay-2">
+                <div class="hiwcard">
+                    <!-- Browser mock -->
+                    <div class="browser-card">
+                        <div class="browser-topbar">
+                            <div class="dot dot-red"></div>
+                            <div class="dot dot-yellow"></div>
+                            <div class="dot dot-green"></div>
+                            <div class="url-bar"></div>
+                        </div>
+                        <div class="fake-line w-3"></div>
+                        <div class="fake-line w-full"></div>
+                        <div class="fake-line w-5"></div>
+                        <div class="threat-row">
+                            <span>suspicious-link.exe</span>
+                            <div class="pulse-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 12.586 19 19" /><path d="M3.688 3.037a.497.497 0 0 0-.651.651l6.5 15.999a.501.501 0 0 0 .947-.062l1.569-6.083a2 2 0 0 1 1.448-1.479l6.124-1.579a.5.5 0 0 0 .063-.947z" /></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Connector line -->
+                    <div class="connector-line" style="margin: 0 auto; display:block;"></div>
+
+                    <!-- Blocked -->
+                    <div class="threat-blocked">
+                        <div class="shield-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /></svg>
+                        </div>
+                        <p class="title">Threat Blocked</p>
+                        <p class="sub">Malicious file prevented from executing</p>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="stat-grid">
+                        <div class="stat-card">
+                            <p class="val">Real-time</p>
+                            <p class="lbl">Protection</p>
+                        </div>
+                        <div class="stat-card">
+                            <p class="val">Zero-touch</p>
+                            <p class="lbl">Deployment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SECTION 2 — REMOTE WORK PROTECTION
+════════════════════════════════════════════ -->
+<section class="hiwsection" id="remote">
+    <div class="hiwcontainer-md">
+
+        <p class="hiweyebrow hiweyebrow--green reveal">Remote Work Protection</p>
+        <h2 class="hiwh2 reveal reveal-delay-1">Your team works everywhere</h2>
+        <p class="hiwbody-lg reveal reveal-delay-2" style="max-width:700px;margin:0 auto 48px;">
+            Coffee shops, airports, home offices—every connection is a potential risk. SaferNet protects your team no matter where they work.
+        </p>
+
+        <!-- Location cards -->
+        <div class="location-grid">
+            <div class="loc-card reveal reveal-delay-1">
+                <div class="loc-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2M14 2v2M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1M6 2v2" /></svg>
+                </div>
+                <p>Coffee Shops</p>
+            </div>
+            <div class="loc-card reveal reveal-delay-2">
+                <div class="loc-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg>
+                </div>
+                <p>Home Offices</p>
+            </div>
+            <div class="loc-card reveal reveal-delay-3">
+                <div class="loc-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" /></svg>
+                </div>
+                <p>Travel</p>
+            </div>
+            <div class="loc-card reveal reveal-delay-4">
+                <div class="loc-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01M2 8.82a15 15 0 0 1 20 0M5 12.859a10 10 0 0 1 14 0M8.5 16.429a5 5 0 0 1 7 0" /></svg>
+                </div>
+                <p>Public WiFi</p>
+            </div>
+        </div>
+
+        <!-- VPN feature cards -->
+        <div class="vpn-grid">
+            <div class="vpn-card reveal reveal-delay-2">
+                <div class="vpn-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /></svg>
+                </div>
+                <div>
+                    <h4>24/7 VPN Coverage</h4>
+                    <p>Encrypted connections on every device, automatically enabled on untrusted networks</p>
+                </div>
+            </div>
+            <div class="vpn-card reveal reveal-delay-3">
+                <div class="vpn-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                </div>
+                <div>
+                    <h4>Secure by Default</h4>
+                    <p>No configuration needed—protection starts the moment they connect</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SECTION 3 — TWO LAYERS, ONE UNIFIED PROTECTION
+════════════════════════════════════════════ -->
+<section class="hiwsection" id="layers">
+    <div class="hiwcontainer-md">
+
+        <h2 class="hiwh2 reveal">Two layers, one unified protection</h2>
+        <p class="hiwbody-lg reveal reveal-delay-1" style="max-width:700px;margin:0 auto 48px;">
+            Network scanning finds vulnerabilities. Endpoint protection stops active threats. Together, they create complete coverage.
+        </p>
+
+        <!-- Two layer cards -->
+        <div class="layers-grid">
+            <div class="layer-card reveal reveal-delay-1">
+                <div class="layer-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
+                </div>
+                <h3>Penetration Testing</h3>
+                <p>Finds vulnerabilities in your network infrastructure</p>
+                <div class="feature-dots">
+                    <div class="feature-dot"><div class="dot-bullet"></div><span>Continuous scanning</span></div>
+                    <div class="feature-dot"><div class="dot-bullet"></div><span>Real-time alerts</span></div>
+                    <div class="feature-dot"><div class="dot-bullet"></div><span>Clear reporting</span></div>
+                </div>
+            </div>
+            <div class="layer-card reveal reveal-delay-2">
+                <div class="layer-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /></svg>
+                </div>
+                <h3>Endpoint Protection</h3>
+                <p>Blocks threats on every device in real-time</p>
+                <div class="feature-dots">
+                    <div class="feature-dot"><div class="dot-bullet"></div><span>Malware protection</span></div>
+                    <div class="feature-dot"><div class="dot-bullet"></div><span>24/7 VPN</span></div>
+                    <div class="feature-dot"><div class="dot-bullet"></div><span>Phishing blocking</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unified badge row -->
+        <div class="unified-row reveal">
+            <div class="unified-line rev"></div>
+            <div class="unified-badge">UNIFIED</div>
+            <div class="unified-line"></div>
+        </div>
+
+        <!-- Complete protection block -->
+        <div class="complete-block reveal reveal-delay-1">
+            <div class="complete-circle">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335" /><path d="m9 11 3 3L22 4" /></svg>
+            </div>
+            <h3>Complete Protection</h3>
+            <p>Your network is continuously monitored for vulnerabilities, and every device is protected from active threats—automatically, 24/7.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SECTION 4 — GET STARTED (CTA)
+════════════════════════════════════════════ -->
+<section id="cta">
+    <div class="cta-glow"></div>
+    <div class="hiwcontainer-sm" style="position:relative;z-index:1;">
+        <p class="hiweyebrow hiweyebrow--green reveal">Get Started</p>
+        <h2 class="h1 reveal reveal-delay-1">Ready to see how protected you are?</h2>
+        <p class="hiwbody-lg reveal reveal-delay-2">
+            Start your free trial today or schedule a personalized consultation with our security team.
+        </p>
+        <div class="btn-row reveal reveal-delay-3">
+            <a href="#" class="btn-primary">Start Free Trial</a>
+            <a href="#" class="btn-outline">Schedule a Consultation</a>
+        </div>
+        <p class="cta-fine reveal reveal-delay-4">No credit card required &nbsp;•&nbsp; 30-day money-back guarantee</p>
+    </div>
+</section>
+
+
+<script>
+    /* ── Scroll-reveal (IntersectionObserver) ── */
+    const revealEls = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => observer.observe(el));
+</script>
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SECTION -->
+                <div class="footer-about">
+                    <div class="logo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        </svg>
+                        <span>SaferNet</span>
+                    </div>
+
+                    <p>
+                        Enterprise-grade cybersecurity, simplified for small business.
+                        Protecting your devices, users, and connections with confidence.
+                    </p>
+
+                    <div class="badge">
+                        SOC 2 Certified
+                    </div>
+                </div>
+
+                <!-- SOLUTIONS -->
+                <div class="footer-links">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">Platform</a></li>
+                        <li><a href="#">VPN Protection</a></li>
+                        <li><a href="#">Malware Defense</a></li>
+                        <li><a href="#">Content Filtering</a></li>
+                        <li><a href="#">Pen Testing</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY -->
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+
+                    <p><i class="bi bi-envelope"></i> support@safernet.com</p>
+                    <p><i class="bi bi-telephone"></i> 1-800-555-1234</p>
+                    <p><i class="bi bi-geo-alt"></i> 123 Security Blvd, Suite 400<br>Austin, TX 78701</p>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+
+                <p>© 2026 SaferNet. All rights reserved.</p>
+
+                <div class="footer-policy">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+  
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    	<script src="assets/js/site.js" asp-append-version="true"></script>
+	<script src="assets/js/howitwork.js" asp-append-version="true"></script>
+    <!--@await RenderSectionAsync("Scripts", required: false) -->
+
+</body>
+</html>

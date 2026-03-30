@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Infinite Protection</title>
+
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
+
+	<link rel="stylesheet" href="assets/css/pricing.css" asp-append-version="true" />
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container align-items-center">
+
+       
+        <a class="navbar-brand fw-bold" href="index.html">
+            <img id="logoImg" class="logo-dark" src="assets/images/logodark.png" width="200" height="60" alt="Infinite Protection" />
+            <img id="logoImg" class="logo-light" src="assets/images/logolight.png" width="200" height="60" alt="Infinite Protection" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- PRODUCT -->
+                <li class="nav-item ms-lg-3">
+                   <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
+			<a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="howitwork.html">How it works</a>
+                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
+                </li>
+                
+                <!-- COMPLIANCE -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="compliance.html">Compliance</a>
+                </li>
+                <!-- <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Compliance
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Business Compliance</a></li>
+                        <li><a class="dropdown-item" href="#">Compliance Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Talk To Us</a></li>
+                    </ul>
+                </li> -->
+
+                <!-- RESOURCES -->
+                <!-- <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="#">Resources</a>
+                </li> -->
+                 <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                  <!--  <ul class="dropdown-menu">
+                        <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
+                    </ul>-->
+                    
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                        <li><a class="dropdown-item" href="userguide.html">User Guide</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
+                        <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                        <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
+                    </ul>
+                </li> 
+
+                <!-- PRICING -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a> -->
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="about.html">About</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="about">About</a>-->
+                </li>
+
+                                
+                <!-- DARK MODE -->
+                <li class="nav-item ms-lg-3">
+                    
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="icon moon">🌙</span>
+                            <span class="icon sun">☀️</span>
+                        </span>
+                    </label>
+                </li>
+                <!-- TALK -->
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-outline-light">Talk to Us</a>
+                </li>
+
+                
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     SECTION 1 — HERO / PRICING HEADER
+════════════════════════════════════════════ -->
+<section class="pricing-section" id="pricing-hero">
+    <div class="glow-left"></div>
+    <div class="glow-right"></div>
+
+    <div class="pricing-container-sm" style="position:relative;z-index:1;text-align:center;">
+        <p class="pricing-section-label pricing-label-yellow reveal">Pricing</p>
+        <h1 class="pricing-h1 reveal reveal-delay-1">Transparent pricing, powerful protection</h1>
+        <p class="pricing-lead reveal reveal-delay-2" style="max-width:700px;margin:0 auto;font-size:21px;">
+            Simple per-endpoint pricing with no hidden fees. Start with a 30-day free trial—no credit card required.
+        </p>
+        <div class="guarantee-badge reveal reveal-delay-3">
+            <span>100% money-back guarantee</span> for your first 30 days
+        </div>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SECTION 2 — CHOOSE YOUR PLAN
+════════════════════════════════════════════ -->
+<section class="pricing-section" id="plans">
+    <div class="pricing-container">
+
+        <div style="text-align:center;max-width:700px;margin:0 auto 64px;" class="reveal">
+            <h2 class="pricing-h2">Choose your plan</h2>
+            <p class="pricing-body">All plans include full access to both automated pen testing and endpoint<br> protection. Save more with longer commitments.</p>
+        </div>
+
+        <div class="plans-grid">
+
+            <!-- 1 Month -->
+            <div class="plan-card reveal reveal-delay-1">
+                <div class="plan-name">1 Month</div>
+                <div class="plan-subtitle">&nbsp;</div>
+                <div class="price-row">
+                    <span class="price-dollar">$</span>
+                    <span class="price-amount">8.99</span>
+                    <span class="price-period">/ month</span>
+                </div>
+                <p class="price-note">Billed monthly</p>
+                <button class="btn-plan btn-plan-outline">Start Free Trial</button>
+                <ul class="pricing-feature-list">
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>Malware Protection</span>
+                    </li>
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>Internet Control</span>
+                    </li>
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>24/7 VPN</span>
+                    </li>
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>Virus Protection</span>
+                    </li>
+                </ul>
+                <a href="#" class="advisor-link">Talk to a Security Advisor →</a>
+            </div>
+
+            <!-- 6 Month (featured) -->
+            <div class="plan-card featured reveal reveal-delay-2">
+                <div class="plan-badge badge-yellow">20% Discount</div>
+                <div class="plan-name">6 Month</div>
+                <div class="plan-subtitle" style="padding-bottom:10px;">Most Popular</div>
+                <div class="price-row">
+                    <span class="price-dollar">$</span>
+                    <span class="price-amount">7.20</span>
+                    <span class="price-period">/ month</span>
+                </div>
+                <p class="price-note">$43.20 billed every 6 months</p>
+                <button class="btn-plan btn-plan-yellow">Start Free Trial</button>
+                <ul class="pricing-feature-list">
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>Malware Protection</span>
+                    </li>
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>Internet Control</span>
+                    </li>
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>24/7 VPN</span>
+                    </li>
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>Virus Protection</span>
+                    </li>
+                </ul>
+                <a href="#" class="advisor-link">Talk to a Security Advisor →</a>
+            </div>
+
+            <!-- 12 Month -->
+            <div class="plan-card reveal reveal-delay-3">
+                <div class="plan-badge badge-green">30% Discount</div>
+                <div class="plan-name" style="margin-top:8px;">12 Month</div>
+                <div class="plan-subtitle">&nbsp;</div>
+                <div class="price-row">
+                    <span class="price-dollar">$</span>
+                    <span class="price-amount">6.30</span>
+                    <span class="price-period">/ month</span>
+                </div>
+                <p class="price-note">$75.60 billed every 12 months</p>
+                <button class="btn-plan btn-plan-outline">Start Free Trial</button>
+                <ul class="pricing-feature-list">
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>Malware Protection</span>
+                    </li>
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>Internet Control</span>
+                    </li>
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>24/7 VPN</span>
+                    </li>
+                    <li class="pricing-feature-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span>Virus Protection</span>
+                    </li>
+                </ul>
+                <a href="#" class="advisor-link">Talk to a Security Advisor →</a>
+            </div>
+
+        </div>
+
+        <div class="plans-footer reveal">
+            <p>Additional devices: $2.99 / month</p>
+            <p>All plans include unlimited users and 24/7 support.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SECTION 3 — WHAT EVERY PLAN INCLUDES
+════════════════════════════════════════════ -->
+<section class="pricing-section" id="includes">
+    <div class="pricing-container-md">
+
+        <div style="text-align:center;max-width:700px;margin:0 auto 64px;" class="reveal">
+            <h2 class="pricing-h2">What every plan includes</h2>
+            <p class="pricing-body">Full access to both pillars of protection, no matter which plan you choose. No feature tiers, no hidden limitations.</p>
+        </div>
+
+        <div class="includes-grid">
+
+            <!-- Card helper macro (repeated 12×) -->
+            <div class="include-card reveal reveal-delay-1">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>Automated Penetration Testing</h3>
+                    <p>24/7 network scanning to find vulnerabilities before attackers do</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-2">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>SaferNet Endpoint Protection</h3>
+                    <p>Malware blocking, VPN encryption, and content filtering on every device</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-1">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>Real-time Threat Monitoring</h3>
+                    <p>Continuous surveillance with instant alerts for critical issues</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-2">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>Unified Security Dashboard</h3>
+                    <p>One simple view of your entire security posture</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-1">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>Compliance-Ready Reporting</h3>
+                    <p>Automated reports that meet industry standards (HIPAA, PCI DSS, etc.)</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-2">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>Zero-Touch Deployment</h3>
+                    <p>Simple setup with no technical expertise required</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-1">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>Automatic Updates</h3>
+                    <p>Security policies and threat definitions update automatically</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-2">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>24/7 Expert Support</h3>
+                    <p>Real humans available whenever you need help</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-1">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>Unlimited Users</h3>
+                    <p>Add as many team members as you need at no extra cost</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-2">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>Mobile &amp; Desktop Coverage</h3>
+                    <p>Protection for Windows, macOS, iOS, and Android devices</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-1">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>Phishing Protection</h3>
+                    <p>AI-powered email and web filtering to stop social<br> engineering attacks</p>
+                </div>
+            </div>
+
+            <div class="include-card reveal reveal-delay-2">
+                <div class="include-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <div>
+                    <h3>Data Encryption</h3>
+                    <p>End-to-end encryption for all network traffic</p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="includes-footer reveal">Every feature. Every plan. No exceptions.</p>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SECTION 4 — FAQ / PRICING QUESTIONS
+════════════════════════════════════════════ -->
+<section class="pricing-section" id="faq">
+    <div class="pricing-container-sm">
+
+        <div style="text-align:center;max-width:700px;margin:0 auto 64px;" class="reveal">
+            <h2 class="pricing-h2">Pricing questions</h2>
+            <p class="pricing-body">Simple, transparent answers to common questions about our pricing and plans.</p>
+        </div>
+
+        <div class="faq-list">
+
+            <div class="faq-item reveal reveal-delay-1">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What happens during the 30-day free trial?</h3>
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        You get full access to every feature—automated penetration testing, endpoint protection, VPN, and our security dashboard—completely free for 30 days. No credit card is required to start, and you won't be charged anything until your trial ends. If you decide SaferNet isn't right for you, simply cancel before day 30 with no questions asked.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal reveal-delay-2">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Can I switch plans later?</h3>
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        Absolutely. You can upgrade or downgrade your plan at any time from your account dashboard. If you upgrade mid-cycle, we'll prorate the difference. Downgrading takes effect at the start of your next billing period so you always get the full value of what you've paid for.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal reveal-delay-3">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What if I need more than one device?</h3>
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        Each plan covers one endpoint. Additional devices are just $2.99/month each—and you can add as many as you need directly from your dashboard. There's no cap on the number of devices, and every device gets the exact same level of protection.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal reveal-delay-4">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Is there a setup fee or cancellation penalty?</h3>
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        None whatsoever. There's no setup fee, no onboarding charge, and no penalty for cancelling. You can cancel at any time from your account settings. If you're within the first 30 days, you'll receive a full refund—no questions asked.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal reveal-delay-5">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Do you offer discounts for larger teams?</h3>
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        Yes—teams with 10 or more devices qualify for custom volume pricing. Reach out to our security advisors and we'll put together a tailored quote based on your team size and security needs. Enterprise contracts with dedicated support are also available.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="faq-footer reveal">
+            <p>Still have questions?</p>
+            <a href="#">Talk to a Security Advisor →</a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SECTION 5 — START FREE TRIAL CTA
+════════════════════════════════════════════ -->
+<section class="pricing-section" id="cta">
+    <div class="cta-glow"></div>
+    <div class="pricing-container-xs" style="position:relative;z-index:1;">
+        <p class="pricing-section-label pricing-label-green reveal">Ready to Get Started?</p>
+        <h2 class="pricing-h1 reveal reveal-delay-1">Start your 30-day free trial</h2>
+        <p class="lead reveal reveal-delay-2" style="max-width:650px;margin:0 auto 40px;color: rgba(255,255,255,0.50);">
+            Full access to automated pen testing and endpoint protection. No credit card required. Cancel anytime.
+        </p>
+        <div class="btn-row reveal reveal-delay-3">
+            <a href="#" class="btn-primary">Start Free Trial</a>
+            <a href="#" class="btn-outline">Schedule a Demo</a>
+        </div>
+        <div class="trust-bullets reveal reveal-delay-4">
+            <div class="trust-bullet"><div class="dot-green-sm"></div><span>No credit card required</span></div>
+            <div class="trust-bullet"><div class="dot-green-sm"></div><span>30-day money-back guarantee</span></div>
+            <div class="trust-bullet"><div class="dot-green-sm"></div><span>Cancel anytime</span></div>
+        </div>
+    </div>
+</section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SECTION -->
+                <div class="footer-about">
+                    <div class="logo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        </svg>
+                        <span>SaferNet</span>
+                    </div>
+
+                    <p>
+                        Enterprise-grade cybersecurity, simplified for small business.
+                        Protecting your devices, users, and connections with confidence.
+                    </p>
+
+                    <div class="badge">
+                        SOC 2 Certified
+                    </div>
+                </div>
+
+                <!-- SOLUTIONS -->
+                <div class="footer-links">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">Platform</a></li>
+                        <li><a href="#">VPN Protection</a></li>
+                        <li><a href="#">Malware Defense</a></li>
+                        <li><a href="#">Content Filtering</a></li>
+                        <li><a href="#">Pen Testing</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY -->
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+
+                    <p><i class="bi bi-envelope"></i> support@safernet.com</p>
+                    <p><i class="bi bi-telephone"></i> 1-800-555-1234</p>
+                    <p><i class="bi bi-geo-alt"></i> 123 Security Blvd, Suite 400<br>Austin, TX 78701</p>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+
+                <p>© 2026 SaferNet. All rights reserved.</p>
+
+                <div class="footer-policy">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+  
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/site.js" asp-append-version="true"></script>
+	<script src="assets/js/pricing.js" asp-append-version="true"></script>
+
+    <!--@await RenderSectionAsync("Scripts", required: false) -->
+
+</body>
+</html>
