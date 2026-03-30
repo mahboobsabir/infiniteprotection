@@ -2,7 +2,6 @@
    SAFERNET — Enhanced JavaScript
    Scroll Reveal | Navbar | Counter | Dark Mode
    ============================================= */
-
 (function () {
     'use strict';
 
@@ -322,3 +321,21 @@
     });
 
 })();
+//--------------------logo image change for dark and light mode --------------------------
+
+function applyTheme(isLight) {
+    if (isLight) {
+        document.body.classList.add('light-mode');
+    } else {
+        document.body.classList.remove('light-mode');
+    }
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+
+    // Swap logo
+    const logo = document.getElementById('logoImg');
+    if (logo) {
+        logo.src = isLight
+            ? '/assets/images/logolight.png'
+            : '/assets/images/logodark.png';
+    }
+}

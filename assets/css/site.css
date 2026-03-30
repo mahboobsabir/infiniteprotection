@@ -39,6 +39,24 @@ body.light-mode {
     --shadow-card:     0 8px 32px rgba(0,0,0,0.10);
 }
 
+/* Dark mode — show dark logo, hide light logo */
+.logo-light {
+    display: none;
+}
+
+.logo-dark {
+    display: block;
+}
+
+/* Light mode — show light logo, hide dark logo */
+body.light-mode .logo-light {
+    display: block;
+}
+
+body.light-mode .logo-dark {
+    display: none;
+}
+
 /* ── Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
