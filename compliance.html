@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Infinite Protection</title>
+
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
+
+	<link rel="stylesheet" href="assets/css/compliance.css" asp-append-version="true" />
+
+
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container align-items-center">
+
+       
+        <a class="navbar-brand fw-bold" href="index.html">
+            <img id="logoImg" class="logo-dark" src="assets/images/logodark.png" width="200" height="60" alt="Infinite Protection" />
+            <img id="logoImg" class="logo-light" src="assets/images/logolight.png" width="200" height="60" alt="Infinite Protection" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- PRODUCT -->
+                <li class="nav-item ms-lg-3">
+                   <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
+			<a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="howitwork.html">How it works</a>
+                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
+                </li>
+                
+                <!-- COMPLIANCE -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="compliance.html">Compliance</a>
+                </li>
+                <!-- <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Compliance
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Business Compliance</a></li>
+                        <li><a class="dropdown-item" href="#">Compliance Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Talk To Us</a></li>
+                    </ul>
+                </li> -->
+
+                <!-- RESOURCES -->
+                <!-- <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="#">Resources</a>
+                </li> -->
+                 <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                  <!--  <ul class="dropdown-menu">
+                        <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
+                    </ul>-->
+                    
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                        <li><a class="dropdown-item" href="userguide.html">User Guide</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
+                        <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                        <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
+                    </ul>
+                </li> 
+
+                <!-- PRICING -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a> -->
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="about.html">About</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="about">About</a>-->
+                </li>
+
+                                
+                <!-- DARK MODE -->
+                <li class="nav-item ms-lg-3">
+                    
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="icon moon">🌙</span>
+                            <span class="icon sun">☀️</span>
+                        </span>
+                    </label>
+                </li>
+                <!-- TALK -->
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-outline-light">Talk to Us</a>
+                </li>
+
+                
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="comp-hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container">
+        <div class="hero-inner">
+
+            <!-- Left -->
+            <div class="hero-left">
+                <p class="hero-eyebrow reveal">Compliance</p>
+                <h1 class="reveal rd1">Effortless Security and Compliance for Modern Businesses</h1>
+                <p class="hero-desc reveal rd2">We help businesses establish trust by building practical security controls and demonstrating compliance through streamlined, effective processes.</p>
+
+                <div class="comp-badges reveal rd3">
+                    <span class="comp-badge">ISO 27001</span>
+                    <span class="comp-badge">PCI DSS</span>
+                    <span class="comp-badge">HIPAA</span>
+                    <span class="comp-badge">TX-RAMP</span>
+                    <span class="comp-badge">GDPR</span>
+                    <span class="comp-badge">CIPA</span>
+                    <span class="comp-badge">FTC</span>
+                </div>
+
+                <div class="hero-btns reveal rd4">
+                    <button class="btn-primary">Get A Quote</button>
+                    <button class="btn-outline">See How We Work</button>
+                </div>
+            </div>
+
+            <!-- Right visual -->
+            <div class="hero-visual reveal rd3">
+                <div class="hero-shield-wrap">
+                    <div class="shield-ring"></div>
+                    <div class="shield-ring"></div>
+                    <div class="shield-ring"></div>
+                    <div class="shield-center">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <div class="shield-dot"></div>
+                    <div class="shield-dot"></div>
+                    <div class="shield-dot"></div>
+                    <div class="shield-dot"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     COMPLIANCE JOURNEY — 3 STEPS
+══════════════════════════════════════ -->
+<section class="journey-section">
+    <div class="container">
+        <div class="journey-header">
+            <h2 class="reveal">Your journey to business security starts here</h2>
+            <p class="reveal rd1">A straightforward, three-step process that takes you from vulnerable to compliant — with expert guidance at every stage.</p>
+        </div>
+        <div class="journey-steps">
+            <div class="journey-step reveal rd1">
+                <div class="step-number">1</div>
+                <h3>Initial Consultation</h3>
+                <p>We kick things off with an in-depth consultation to explore your infrastructure, pinpoint security challenges, and align with your compliance goals.</p>
+            </div>
+            <div class="journey-step reveal rd2">
+                <div class="step-number">2</div>
+                <h3>Tailored Security Plan</h3>
+                <p>We design a customized security plan perfectly scaled to your organization's size and current stage of growth — no cookie-cutter solutions.</p>
+            </div>
+            <div class="journey-step reveal rd3">
+                <div class="step-number">3</div>
+                <h3>Penetration Test</h3>
+                <p>Our expert testers carry out your penetration test with precision and professionalism, delivering insights only top-tier specialists can provide.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TOOLS GRID
+══════════════════════════════════════ -->
+<section class="tools-section">
+    <div class="container">
+        <div class="tools-header">
+            <h2 class="reveal">Tools for every business</h2>
+            <p class="reveal rd1">SaferNet equips you with all the essentials to stay secure and achieve compliance, all in one central hub — streamlined and stress-free.</p>
+        </div>
+
+        <div class="tools-grid">
+
+            <div class="tool-card reveal rd1">
+                <div class="tool-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
+                </div>
+                <h3>Penetration Testing</h3>
+                <p>Identify and fix vulnerabilities before attackers exploit them. Our expert testers simulate real-world attacks to keep you one step ahead.</p>
+                <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+            </div>
+
+            <div class="tool-card reveal rd2">
+                <div class="tool-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                </div>
+                <h3>Vulnerability Management</h3>
+                <p>Stay ahead with continuous threat detection and prioritization. Our program monitors, evaluates, and provides actionable insights to keep systems resilient.</p>
+                <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+            </div>
+
+            <div class="tool-card reveal rd3">
+                <div class="tool-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" /><circle cx="12" cy="12" r="3" /></svg>
+                </div>
+                <h3>Risk Assessment</h3>
+                <p>Understand, assess, and mitigate potential cybersecurity risks. We identify potential risks, quantify impact, and recommend effective mitigation strategies.</p>
+                <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+            </div>
+
+            <div class="tool-card reveal rd4">
+                <div class="tool-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                </div>
+                <h3>ISO 27001 Audit</h3>
+                <p>Achieve compliance with a thorough ISO27001 readiness review. We identify gaps, optimize processes, and ensure adherence to international security standards.</p>
+                <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+            </div>
+
+            <div class="tool-card reveal rd1">
+                <div class="tool-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg>
+                </div>
+                <h3>Policy Development</h3>
+                <p>Create tailored security policies to meet your organizational needs. We build documented, enforceable policies that protect your people and assets.</p>
+                <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+            </div>
+
+            <div class="tool-card reveal rd2">
+                <div class="tool-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                </div>
+                <h3>Security Consulting</h3>
+                <p>Expert advice to strengthen your cybersecurity defenses. Our consultants work directly with your team to build a culture of security awareness.</p>
+                <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+            </div>
+
+            <div class="tool-card reveal rd3">
+                <div class="tool-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="M12 12v9" /><path d="m8 17 4 4 4-4" /></svg>
+                </div>
+                <h3>Incident Response (Cyber Drill)</h3>
+                <p>Prepare for the unexpected with tailored incident response strategies and exercises. Practice your response before a real attack forces it.</p>
+                <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+            </div>
+
+            <div class="tool-card reveal rd4">
+                <div class="tool-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
+                </div>
+                <h3>Security Awareness Training</h3>
+                <p>Empower employees with knowledge to protect against cyber threats. Your people are your first line of defense — train them to act like it.</p>
+                <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+            </div>
+
+        </div>
+
+        <div class="tools-cta reveal">
+            <button class="btn-primary">Take A Closer Look</button>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     COMPLIANCE STANDARDS
+══════════════════════════════════════ -->
+<section class="standards-section">
+    <div class="container-md">
+        <div class="standards-header">
+            <h2 class="reveal">Compliance standards we support</h2>
+            <p class="reveal rd1">Whether your industry demands HIPAA, PCI DSS, or GDPR compliance, SaferNet has the tools and expertise to get you there.</p>
+        </div>
+        <div class="standards-grid">
+
+            <div class="standard-card reveal rd1">
+                <div class="standard-badge">HIPAA</div>
+                <div>
+                    <h3>Healthcare Compliance</h3>
+                    <p>Protect patient data and meet Health Insurance Portability and Accountability Act requirements with continuous monitoring, encryption, and access controls built for healthcare environments.</p>
+                </div>
+            </div>
+
+            <div class="standard-card reveal rd2">
+                <div class="standard-badge">PCI DSS</div>
+                <div>
+                    <h3>Payment Card Security</h3>
+                    <p>Safeguard cardholder data and achieve Payment Card Industry Data Security Standard compliance with network segmentation, vulnerability scanning, and policy enforcement.</p>
+                </div>
+            </div>
+
+            <div class="standard-card reveal rd1">
+                <div class="standard-badge">GDPR</div>
+                <div>
+                    <h3>Data Privacy Regulation</h3>
+                    <p>Meet General Data Protection Regulation requirements for businesses handling EU citizen data. We help implement data governance, privacy controls, and breach response procedures.</p>
+                </div>
+            </div>
+
+            <div class="standard-card reveal rd2">
+                <div class="standard-badge">ISO 27001</div>
+                <div>
+                    <h3>Information Security Management</h3>
+                    <p>Achieve internationally recognized certification with our ISO 27001 readiness audits that identify gaps, optimize processes, and prepare your organization for certification.</p>
+                </div>
+            </div>
+
+            <div class="standard-card reveal rd1">
+                <div class="standard-badge">TX-RAMP</div>
+                <div>
+                    <h3>Texas Risk & Authorization</h3>
+                    <p>Meet Texas government cloud security requirements. Our TX-RAMP compliance support ensures cloud service providers working with Texas agencies meet all mandatory controls.</p>
+                </div>
+            </div>
+
+            <div class="standard-card reveal rd2">
+                <div class="standard-badge">CIPA / FTC</div>
+                <div>
+                    <h3>Internet & Consumer Protection</h3>
+                    <p>Comply with Children's Internet Protection Act and FTC regulations. We help schools, libraries, and businesses implement the right content controls and privacy safeguards.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SELF-ASSESSMENT
+══════════════════════════════════════ -->
+<section class="assess-section">
+    <div class="container">
+        <div class="assess-inner">
+
+            <div class="assess-left">
+                <h2 class="reveal">For your business, consider these questions</h2>
+                <p class="reveal rd1">Answering "No" to any of these means your company may already be exposed. SaferNet helps you turn every No into a Yes.</p>
+                <div class="assess-questions">
+                    <div class="assess-q reveal rd1">
+                        <div class="assess-q-icon">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" /></svg>
+                        </div>
+                        <p>Have you conducted a <strong>recent security assessment</strong> (internal/external)?</p>
+                    </div>
+                    <div class="assess-q reveal rd2">
+                        <div class="assess-q-icon">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" /></svg>
+                        </div>
+                        <p>Do you have a <strong>formalized incident response plan</strong>?</p>
+                    </div>
+                    <div class="assess-q reveal rd3">
+                        <div class="assess-q-icon">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" /></svg>
+                        </div>
+                        <p>Do your employees receive <strong>regular security awareness training</strong>?</p>
+                    </div>
+                    <div class="assess-q reveal rd4">
+                        <div class="assess-q-icon">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" /></svg>
+                        </div>
+                        <p>Are <strong>security policies</strong> and procedures <strong>documented and enforced</strong> within your organization?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="assess-right reveal rd2">
+                <div class="vuln-card">
+                    <div class="vuln-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                    </div>
+                    <div class="vuln-stat">60%</div>
+                    <p class="vuln-stat-label">of small businesses that suffer a major cyberattack<br>close within 6 months</p>
+                    <h3>If you answered 'No' to any of these — your company is vulnerable to attack.</h3>
+                    <p>Don't wait for an incident to take action. SaferNet helps you close these gaps before attackers find them.</p>
+                    <button class="btn-primary" style="width:100%;margin-top:4px;">Get A Free Assessment</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     BUNDLE PLANS
+══════════════════════════════════════ -->
+<section class="bundles-section">
+    <div class="container">
+        <div class="bundles-header">
+            <h2 class="reveal">Bundle deals for all types of business</h2>
+            <p class="reveal rd1">Cybersecurity isn't one-size-fits-all. Choose a discounted bundle that suits your business best.</p>
+        </div>
+
+        <div class="bundles-grid">
+
+            <div class="bundle-card reveal rd1">
+                <div class="bundle-name">Essentials Bundle</div>
+                <div class="bundle-subtitle">Perfect for small businesses getting started</div>
+                <ul class="bundle-includes">
+                    <li>Penetration Testing (1×/year)</li>
+                    <li>Vulnerability Management</li>
+                    <li>Security Policy Templates</li>
+                    <li>24/7 VPN &amp; Endpoint Protection</li>
+                </ul>
+                <button class="btn-bundle">Get This Bundle</button>
+            </div>
+
+            <div class="bundle-card featured reveal rd2">
+                <div class="bundle-tag">Most Popular</div>
+                <div class="bundle-name">Professional Bundle</div>
+                <div class="bundle-subtitle">For growing teams that need full compliance</div>
+                <ul class="bundle-includes">
+                    <li>Penetration Testing (2×/year)</li>
+                    <li>Vulnerability Management Program</li>
+                    <li>ISO 27001 Readiness Audit</li>
+                    <li>Risk Assessment &amp; Report</li>
+                    <li>Policy Development</li>
+                    <li>Security Awareness Training</li>
+                </ul>
+                <button class="btn-bundle btn-bundle-yellow">Get This Bundle</button>
+            </div>
+
+            <div class="bundle-card reveal rd3">
+                <div class="bundle-name">Enterprise Bundle</div>
+                <div class="bundle-subtitle">Complete coverage for regulated industries</div>
+                <ul class="bundle-includes">
+                    <li>Everything in Professional</li>
+                    <li>Incident Response Playbooks</li>
+                    <li>Cyber Drill Exercises</li>
+                    <li>Security Consulting (ongoing)</li>
+                    <li>HIPAA / PCI DSS / GDPR Support</li>
+                    <li>Dedicated Account Manager</li>
+                </ul>
+                <button class="btn-bundle">Get This Bundle</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA
+══════════════════════════════════════ -->
+<section class="comp-cta">
+    <div class="cta-glow"></div>
+    <div class="cta-inner">
+        <p class="cta-eyebrow reveal">Ready to Take the Next Step?</p>
+        <h2 class="reveal rd1">Move Beyond Basic Compliance</h2>
+        <p class="reveal rd2">Schedule a call today and discover why hundreds of companies trust SaferNet to strengthen their security and compliance while building lasting confidence with clients.</p>
+        <div class="cta-btns reveal rd3">
+            <button class="btn-primary">Get A Quote</button>
+            <button class="btn-outline">Schedule a Consultation</button>
+        </div>
+        <div class="cta-trust reveal rd4">
+            <span>No setup fees</span>
+            <span>Tailored to your business</span>
+            <span>Expert-led from day one</span>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SECTION -->
+                <div class="footer-about">
+                    <div class="logo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        </svg>
+                        <span>SaferNet</span>
+                    </div>
+
+                    <p>
+                        Enterprise-grade cybersecurity, simplified for small business.
+                        Protecting your devices, users, and connections with confidence.
+                    </p>
+
+                    <div class="badge">
+                        SOC 2 Certified
+                    </div>
+                </div>
+
+                <!-- SOLUTIONS -->
+                <div class="footer-links">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="platform.html">Platform</a></li>
+                        <li><a href="vpnprotection.html">VPN Protection</a></li>
+                        <li><a href="malwaredefense.html">Malware Defense</a></li>
+                        <li><a href="contentfiltering.html">Content Filtering</a></li>
+                        <li><a href="pentesting.html">Pen Testing</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY -->
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="howitwork.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="casestudies.html">Case Studies</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+
+                    <p>
+  <i class="bi bi-envelope"></i> 
+  <a href="mailto:support@safernet.com">support@safernet.com</a>
+</p>
+
+<p>
+  <i class="bi bi-telephone"></i> 
+  <a href="tel:18005551234">1-800-555-1234</a>
+</p>
+
+<p>
+  <i class="bi bi-geo-alt"></i> 
+  <a href="https://www.google.com/maps?q=123+Security+Blvd,+Suite+400,+Austin,+TX+78701" target="_blank">
+    123 Security Blvd, Suite 400<br>
+    Austin, TX 78701
+  </a>
+</p>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+
+                <p>© 2026 SaferNet. All rights reserved.</p>
+
+                <div class="footer-policy">
+                    <a href="privacypolicy.html">Privacy Policy</a>
+                    <a href="termsofservice.html">Terms of Service</a>
+                    <a href="security.html">Security</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+  
+  
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/site.js" asp-append-version="true"></script>
+	 <script src="assets/js/compliance.js" asp-append-version="true"></script>
+
+    <!--@await RenderSectionAsync("Scripts", required: false) -->
+
+</body>
+</html>
