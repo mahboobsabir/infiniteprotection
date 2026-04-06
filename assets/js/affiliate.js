@@ -1,30 +1,30 @@
 ﻿/* ── Theme toggle ── */
-//const html = document.documentElement;
-//const themeBtn = document.getElementById('themeToggle');
-//const themeIcon = document.getElementById('themeIcon');
-//themeBtn.addEventListener('click', () => {
-//    const isDark = html.dataset.theme === 'dark';
-//    html.dataset.theme = isDark ? 'light' : 'dark';
-//    themeIcon.textContent = isDark ? '☀️' : '🌙';
-//});
+const html = document.documentElement;
+const themeBtn = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+themeBtn.addEventListener('click', () => {
+    const isDark = html.dataset.theme === 'dark';
+    html.dataset.theme = isDark ? 'light' : 'dark';
+    themeIcon.textContent = isDark ? '☀️' : '🌙';
+});
 
-///* ── Hamburger ── */
-//const hamburger = document.getElementById('hamburger');
-//const mobileNav = document.getElementById('mobileNav');
-//hamburger.addEventListener('click', () => {
-//    hamburger.classList.toggle('open');
-//    mobileNav.classList.toggle('open');
-//});
-//mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-//    hamburger.classList.remove('open');
-//    mobileNav.classList.remove('open');
-//}));
+/* ── Hamburger ── */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+});
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+}));
 
-///* ── Navbar scroll shadow ── */
-//const nav = document.getElementById('mainNav');
-//window.addEventListener('scroll', () => {
-//    nav.classList.toggle('scrolled', window.scrollY > 30);
-//}, { passive: true });
+/* ── Navbar scroll shadow ── */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+}, { passive: true });
 
 /* ── Scroll reveal ── */
 const revealAll = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
