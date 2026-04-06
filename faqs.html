@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Infinite Protection</title>
+
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
+
+	<link rel="stylesheet" href="assets/css/faqs.css" asp-append-version="true" />
+
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container align-items-center">
+
+       
+        <a class="navbar-brand fw-bold" href="index.html">
+            <img id="logoImg" class="logo-dark" src="assets/images/logodark.png" width="200" height="60" alt="Infinite Protection" />
+            <img id="logoImg" class="logo-light" src="assets/images/logolight.png" width="200" height="60" alt="Infinite Protection" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- PRODUCT -->
+                <li class="nav-item ms-lg-3">
+                   <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
+			<a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="howitwork.html">How it works</a>
+                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
+                </li>
+                
+                <!-- COMPLIANCE -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="compliance.html">Compliance</a>
+                </li>
+                <!-- <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Compliance
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Business Compliance</a></li>
+                        <li><a class="dropdown-item" href="#">Compliance Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Talk To Us</a></li>
+                    </ul>
+                </li> -->
+
+                <!-- RESOURCES -->
+                <!-- <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="#">Resources</a>
+                </li> -->
+                 <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                  <!--  <ul class="dropdown-menu">
+                        <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
+                    </ul>-->
+                    
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                        <li><a class="dropdown-item" href="userguide.html">User Guide</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
+                        <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                        <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
+                    </ul>
+                </li> 
+
+                <!-- PRICING -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a> -->
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="about.html">About</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="about">About</a>-->
+                </li>
+
+                                
+                <!-- DARK MODE -->
+                <li class="nav-item ms-lg-3">
+                    
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="icon moon">🌙</span>
+                            <span class="icon sun">☀️</span>
+                        </span>
+                    </label>
+                </li>
+                <!-- TALK -->
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-outline-light">Talk to Us</a>
+                </li>
+
+                
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="faq-hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="faq-hero-inner">
+        <p class="faq-eyebrow reveal">FAQ's</p>
+        <h1 class="reveal rd1">Everything You Need to Know About SaferNet</h1>
+        <p class="faq-hero-desc reveal rd2">Find answers to the most common questions about SaferNet, how it works, and how it keeps your devices and network protected.</p>
+        <div class="faq-hero-btns reveal rd3">
+            <button class="btn-primary">See How It Works</button>
+            <button class="btn-outline">Start Free Trial</button>
+        </div>
+
+        <!-- Search -->
+        <div class="faq-search-wrap reveal rd4">
+            <svg class="faq-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
+            <input type="text" class="faq-search" id="faqSearch" placeholder="Search questions…" autocomplete="off" />
+        </div>
+
+        <!-- Quick nav -->
+        <div class="faq-quick-nav reveal rd5">
+            <span class="faq-nav-pill active" data-target="general">General</span>
+            <span class="faq-nav-pill" data-target="product">Product &amp; Features</span>
+            <span class="faq-nav-pill" data-target="setup">Setup &amp; Usage</span>
+            <span class="faq-nav-pill" data-target="security">Security &amp; Privacy</span>
+            <span class="faq-nav-pill" data-target="billing">Billing &amp; Trial</span>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     GENERAL QUESTIONS
+══════════════════════════════════════ -->
+<section class="faq-section" id="general">
+    <div class="container-sm">
+        <div class="reveal">
+            <span class="faq-section-label">General</span>
+            <h2 class="faq-section-title">General Questions</h2>
+            <p class="faq-section-sub">Basic information about SaferNet, what it does, and who it's built for.</p>
+        </div>
+        <div class="faq-accordion">
+
+            <div class="faq-item reveal rd1">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What is SaferNet?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>SaferNet is an all-in-one cybersecurity solution offering 24/7 VPN encryption, virus and malware protection, and internet controls — all managed from a single dashboard. It's designed to protect families, small businesses, and remote teams without requiring any technical expertise.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd2">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Who is SaferNet for?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>SaferNet is ideal for small and medium-sized businesses, families, ministries, nonprofits, and remote or hybrid teams. If you need consistent, easy-to-manage cybersecurity across multiple devices and users — without an IT department — SaferNet was built for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd3">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Why should I use SaferNet?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Most people don't know when they're being hacked. Using SaferNet's Entourage feature, you'll be able to see all attempted intrusions — on some devices we've seen as many as 20 attempts in a single hour. SaferNet protects proactively so you never find out about a breach the hard way.</p>
+                        <p>Unlike other VPNs that only activate on demand, SaferNet's VPN is always on — the moment you turn on your device, you're protected. The same 256-bit AES encryption used by the military and banks shields your data at all times.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd4">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What is a VPN and why is one necessary?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>A Virtual Private Network (VPN) creates a secure, encrypted tunnel around your internet traffic so that no one — not hackers, governments, or even your Internet Service Provider — can see what you're sending or receiving online.</p>
+                        <p>A VPN is necessary because tools to intercept your data have become increasingly sophisticated. Without one, sensitive passwords, identity details, and financial information can all be exposed, leading to compromised accounts, identity theft, and worse.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd5">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Can I use SaferNet for my business?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Absolutely. SaferNet is an ideal cybersecurity and network monitoring solution for businesses of all sizes. With SaferNet, businesses are protected from malware and other unwanted online entities. The internet controls and monitoring capabilities mean that business owners can keep an eye on network activity for all employees and restrict access to certain websites or categories of websites — for example, blocking all social media on company devices during work hours.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PRODUCT & FEATURES
+══════════════════════════════════════ -->
+<section class="faq-section" id="product">
+    <div class="container-sm">
+        <div class="reveal">
+            <span class="faq-section-label">Product</span>
+            <h2 class="faq-section-title">Product &amp; Features</h2>
+            <p class="faq-section-sub">Learn about the core tools and security features included in SaferNet.</p>
+        </div>
+        <div class="faq-accordion">
+
+            <div class="faq-item reveal rd1">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What features does SaferNet include?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>SaferNet covers three key areas of online security: a 24/7 VPN that encrypts all your traffic, virus and malware protection that blocks ransomware, spyware, adware, and phishing attempts in real-time, and internet controls that let administrators filter content categories and monitor all device activity from a central dashboard.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd2">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Does SaferNet work on multiple devices?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Yes. SaferNet is available on almost every device — Windows, macOS, Android, Apple iOS (phones and tablets), Kindle Fire, and in beta on Chromebook. You can protect an unlimited number of devices, all managed from one account dashboard.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd3">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Will SaferNet slow down my internet?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>SaferNet is engineered for performance. The app is extremely lightweight — only 12MB on Windows, 30MB on macOS, 11MB on iOS, and 30MB on Android. Most users notice no meaningful difference in browsing speed, and SaferNet works seamlessly on both WiFi and cellular networks anywhere in the world.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd4">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What is malware, and what types does SaferNet protect against?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Malware is an umbrella term for unwanted software that can harm your device or compromise your accounts. SaferNet protects against Ransomware (locks your files and demands payment), Trojans (hide in downloads and become active once installed), Adware (unwanted advertising that can slow devices and signal deeper compromise), Spyware, and Phishing attempts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd5">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What is Entourage and how does it help me?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Entourage shows you all the background activity happening when you visit a website or use an app — including third-party trackers, advertising networks, and other unsolicited connections that "tag along" with legitimate traffic. SaferNet filters the unwanted Entourage and gives you a complete, transparent view of what's being allowed into your network and what's being blocked.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What do internet filters do?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>With an internet filter, an administrator can block entire content categories from accessing a network or device — for example, blocking pornography, social media, or specific websites during certain hours. SaferNet's dashboard lets you customize these controls per user profile, making it easy to set appropriate access levels for employees, children, or any user group.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What is a SaferNet profile and what does "unlimited profiles" mean?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>A profile is an individual user's account within SaferNet that can be customized with its own specific internet control settings and security levels. "Unlimited profiles" means you can create as many as you need to fit the requirements of your organization or family — there's no cap on users.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SETUP & USAGE
+══════════════════════════════════════ -->
+<section class="faq-section" id="setup">
+    <div class="container-sm">
+        <div class="reveal">
+            <span class="faq-section-label">Setup</span>
+            <h2 class="faq-section-title">Setup &amp; Usage</h2>
+            <p class="faq-section-sub">Guidance on how to install SaferNet, set up your account, and start using it.</p>
+        </div>
+        <div class="faq-accordion">
+
+            <div class="faq-item reveal rd1">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>How do I get started with SaferNet?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>First, create an account on the SaferNet website. Once your account is set up, follow the user-friendly tutorial to create profiles for all users — this simply involves naming each user and setting their security and filter levels. Then download the SaferNet app onto each device, sign in with your credentials, and assign the device to the appropriate profile. Once done for all devices, your setup is complete.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd2">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Is installation complicated?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Not at all. Setting up SaferNet only takes a few minutes per device. The process is guided step-by-step, and no technical expertise is required. Both Windows and Mac auto-launch SaferNet after installation. On mobile, it appears alongside your other installed apps.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd3">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Do I need technical knowledge to use SaferNet?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>No. SaferNet was specifically designed so that anyone — regardless of technical ability — can protect their organization or family. The dashboard is user-friendly and doesn't require constant IT oversight for setup, maintenance, or monitoring.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd4">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What operating systems does SaferNet work with?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>SaferNet is compatible with Windows 7 and 10, macOS (Mojave, Catalina, Big Sur), Android 4.1 or later, iOS 9 or later, Kindle Fire, and Chromebook (beta). It works on both WiFi and cellular networks, anywhere in the world.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd5">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Do I need to manually update SaferNet?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>On mobile devices, turning on automatic updates ensures SaferNet always stays current automatically. Desktop clients (Windows and macOS) must be downloaded and updated from the SaferNet website. We recommend enabling automatic updates wherever possible so you always have the latest threat definitions and security patches.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>How do I know SaferNet is working?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>When SaferNet is active, your device will show a VPN indicator. You can also log into your SaferNet dashboard and view your real-time activity log to confirm the software is running. Alerts appear as notifications on mobile devices, and via the Bell icon on the dashboard when logged in through a browser on desktop.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Can I remotely administer SaferNet for my team?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Yes. SaferNet can be administered remotely from the SaferNet app on any administrator-signed-in mobile device, or by logging into your account dashboard through a web browser on any desktop or laptop. This makes it easy to manage your team's security from anywhere.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>What if SaferNet is blocking something I don't want blocked?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Administrators can use the Pause feature in the SaferNet app to temporarily pause the VPN for a few minutes, allowing navigation to a specific site. For sites you visit regularly, you can permanently add them to the "Allowed Websites" list on the Control tab within that user's profile — no need to pause protection each time.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECURITY & PRIVACY
+══════════════════════════════════════ -->
+<section class="faq-section" id="security">
+    <div class="container-sm">
+        <div class="reveal">
+            <span class="faq-section-label">Security</span>
+            <h2 class="faq-section-title">Security &amp; Privacy</h2>
+            <p class="faq-section-sub">Understand how SaferNet protects your data, devices, and online activity.</p>
+        </div>
+        <div class="faq-accordion">
+
+            <div class="faq-item reveal rd1">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>How does SaferNet protect my privacy?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>SaferNet VPN encrypts all your traffic using OpenVPN and an AES-256 cipher — the same encryption standard used by the military and banks. Any entity looking in from the outside would see only unreadable, scrambled data. Because your private information is fed to the internet in this encrypted state, it remains secure and completely private.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd2">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Does SaferNet track my browsing activity?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>In the interest of user privacy, SaferNet only records a limited amount of activity based on the number of entries rather than time. For an individual who spends a regular amount of time online, a SaferNet profile shows approximately 1–2 weeks of history — after which the data is automatically deleted. SaferNet does not store your information long-term and never sells your personal data — ever.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd3">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Can SaferNet protect me on public Wi-Fi?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Yes — and this is one of SaferNet's most important use cases. On any public or private Wi-Fi network, anyone on that network with the right software can potentially look into your device. SaferNet's always-on VPN ensures your connection is private and secured at all times, even on untrusted public networks like coffee shops, airports, or hotels.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd4">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Can SaferNet be bypassed by a hacker?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>SaferNet is encrypted with AES-256. A brute force attack would need to try 2²⁵⁵ possible keys — measured in time, this would take approximately 2,117.8 trillion years on average. Beyond encryption, SaferNet's cybersecurity backend is in a near-constant state of configuration to ensure users are fully protected against the threats of today and tomorrow.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd5">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>I already use a VPN. Do I need SaferNet?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>All VPNs are not alike. SaferNet uses 256-bit encryption — the highest level available — and unlike most VPNs which are "on-demand" (only active when you manually turn them on), SaferNet is always on from the moment you turn on your device. A single unprotected minute on public Wi-Fi is all it takes for your safety to be compromised. SaferNet closes that gap permanently.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Does SaferNet gather or sell my information?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>No. SaferNet does not store any information long-term, and SaferNet does not sell any of your personal information — ever. Your data is yours, and SaferNet's entire purpose is to protect it, not monetize it.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="faq-section-footer reveal">
+            <p class="faq-still">Still have questions?</p>
+            <a href="#" class="faq-advisor-link">
+                Talk to a Security Advisor
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     BILLING & TRIAL
+══════════════════════════════════════ -->
+<section class="faq-section" id="billing">
+    <div class="container-sm">
+        <div class="reveal">
+            <span class="faq-section-label">Billing</span>
+            <h2 class="faq-section-title">Billing &amp; Trial</h2>
+            <p class="faq-section-sub">Everything you need to know about pricing, the free trial, and cancellation.</p>
+        </div>
+        <div class="faq-accordion">
+
+            <div class="faq-item reveal rd1">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>How does the free trial work?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Everyone gets a free trial to try SaferNet with full access to every feature. You will enter your credit card upon signup, but it will not be billed until after the trial period ends. To cancel before your trial is over, simply go to the hamburger menu on your dashboard and click "Billing Information" — no need to call anyone. Your subscription is completely in your own control.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd2">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Is there a setup fee or cancellation penalty?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>There is no setup fee and no cancellation penalty. You can cancel at any time directly from your account settings — no phone calls, no questions asked. SaferNet is designed to earn your continued trust, not lock you in.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd3">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>How much does additional device coverage cost?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Additional devices are just $2.99/month each. You can add as many as you need directly from your dashboard — there's no cap on device count, and every device gets the exact same level of protection regardless of how many you add.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item reveal rd4">
+                <button class="faq-trigger" aria-expanded="false">
+                    <h3>Is SaferNet easy to uninstall if I decide to cancel?</h3>
+                    <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span>
+                </button>
+                <div class="faq-body">
+                    <div class="faq-body-inner">
+                        <p>Yes. SaferNet is easy to remove from any device if you decide to cancel. Simply uninstall it like any other app on your device. If you lost or broke a device and can't log out locally, log into your account dashboard online, navigate to that user's profile, and disconnect and delete the old device from the Monitor tab.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="faq-section-footer reveal">
+            <p class="faq-still">Still have questions?</p>
+            <a href="#" class="faq-advisor-link">
+                Talk to a Security Advisor
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ── NO RESULTS ── -->
+<div class="no-results container-sm" id="noResults">
+    No questions matched your search. Try different keywords or <a href="#" onclick="clearSearch()" style="color:var(--green);font-weight:600;">clear the search</a>.
+</div>
+
+<!-- ══════════════════════════════════════
+     STILL HAVE QUESTIONS
+══════════════════════════════════════ -->
+<section class="still-section">
+    <div class="container-md">
+        <div class="still-inner">
+
+            <div class="still-left reveal">
+                <h2>Still Have Questions?</h2>
+                <p>If you couldn't find the answer you're looking for, our security team is ready to help — quickly and without jargon.</p>
+                <p class="faq-still">Still have questions?</p>
+                <a href="#" class="faq-advisor-link" style="margin-bottom:24px;display:inline-flex;">
+                    Talk to a Security Advisor →
+                </a>
+                <div class="still-contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12c-.88-2.63-1.07-5.43-.83-8.18A2 2 0 0 1 5.05 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.91 9.91a16 16 0 0 0 6.18 6.18l1.27-.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                        </div>
+                        <h4>Call Us</h4>
+                        <p>1-800-555-1234</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                        </div>
+                        <h4>Email Us</h4>
+                        <p>support@safernet.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="still-right reveal rd2">
+                <div class="faq-stat-card">
+                    <div class="stat-num">24/7</div>
+                    <p class="stat-label">Our support team and your VPN protection are both always on — no gaps, no waiting.</p>
+                </div>
+                <div class="faq-stat-card">
+                    <div class="stat-num">256-bit</div>
+                    <p class="stat-label">AES-256 encryption — the same standard used by the military and financial institutions.</p>
+                </div>
+                <div class="faq-stat-card">
+                    <div class="stat-num">4.7★</div>
+                    <p class="stat-label">Average customer rating from verified reviews. Real protection, real satisfaction.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SECTION -->
+                <div class="footer-about">
+                    <div class="logo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        </svg>
+                        <span>SaferNet</span>
+                    </div>
+
+                    <p>
+                        Enterprise-grade cybersecurity, simplified for small business.
+                        Protecting your devices, users, and connections with confidence.
+                    </p>
+
+                    <div class="badge">
+                        SOC 2 Certified
+                    </div>
+                </div>
+
+                <!-- SOLUTIONS -->
+                <div class="footer-links">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="platform.html">Platform</a></li>
+                        <li><a href="vpnprotection.html">VPN Protection</a></li>
+                        <li><a href="malwaredefense.html">Malware Defense</a></li>
+                        <li><a href="contentfiltering.html">Content Filtering</a></li>
+                        <li><a href="pentesting.html">Pen Testing</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY -->
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="howitwork.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="casestudies.html">Case Studies</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+
+                    <p>
+  <i class="bi bi-envelope"></i> 
+  <a href="mailto:support@safernet.com">support@safernet.com</a>
+</p>
+
+<p>
+  <i class="bi bi-telephone"></i> 
+  <a href="tel:18005551234">1-800-555-1234</a>
+</p>
+
+<p>
+  <i class="bi bi-geo-alt"></i> 
+  <a href="https://www.google.com/maps?q=123+Security+Blvd,+Suite+400,+Austin,+TX+78701" target="_blank">
+    123 Security Blvd, Suite 400<br>
+    Austin, TX 78701
+  </a>
+</p>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+
+                <p>© 2026 SaferNet. All rights reserved.</p>
+
+                <div class="footer-policy">
+                    <a href="privacypolicy.html">Privacy Policy</a>
+                    <a href="termsofservice.html">Terms of Service</a>
+                    <a href="security.html">Security</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+  
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/site.js" asp-append-version="true"></script>
+
+	<script src="assets/js/faqs.js" asp-append-version="true"></script>
+
+    <!--@await RenderSectionAsync("Scripts", required: false) -->
+
+</body>
+</html>

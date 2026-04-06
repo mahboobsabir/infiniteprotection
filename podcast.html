@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Infinite Protection</title>
+
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
+
+	<link rel="stylesheet" href="assets/css/podcasts.css" asp-append-version="true" />
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container align-items-center">
+
+       
+        <a class="navbar-brand fw-bold" href="index.html">
+            <img id="logoImg" class="logo-dark" src="assets/images/logodark.png" width="200" height="60" alt="Infinite Protection" />
+            <img id="logoImg" class="logo-light" src="assets/images/logolight.png" width="200" height="60" alt="Infinite Protection" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- PRODUCT -->
+                <li class="nav-item ms-lg-3">
+                   <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
+			<a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="howitwork.html">How it works</a>
+                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
+                </li>
+                
+                <!-- COMPLIANCE -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="compliance.html">Compliance</a>
+                </li>
+                <!-- <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Compliance
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Business Compliance</a></li>
+                        <li><a class="dropdown-item" href="#">Compliance Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Talk To Us</a></li>
+                    </ul>
+                </li> -->
+
+                <!-- RESOURCES -->
+                <!-- <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="#">Resources</a>
+                </li> -->
+                 <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                  <!--  <ul class="dropdown-menu">
+                        <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
+                    </ul>-->
+                    
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                        <li><a class="dropdown-item" href="userguide.html">User Guide</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
+                        <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                        <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
+                    </ul>
+                </li> 
+
+                <!-- PRICING -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a> -->
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="about.html">About</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="about">About</a>-->
+                </li>
+
+                                
+                <!-- DARK MODE -->
+                <li class="nav-item ms-lg-3">
+                    
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="icon moon">🌙</span>
+                            <span class="icon sun">☀️</span>
+                        </span>
+                    </label>
+                </li>
+                <!-- TALK -->
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-outline-light">Talk to Us</a>
+                </li>
+
+                
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section class="pod-hero">
+    <div class="pod-hero-glow pod-hero-glow-1"></div>
+    <div class="pod-hero-glow pod-hero-glow-2"></div>
+    <div class="container">
+        <div class="pod-hero-inner">
+            <p class="pod-eyebrow reveal">Podcasts</p>
+            <h1 class="reveal reveal-delay-1">Digital Desperados: Stories from the Cyber Frontier</h1>
+            <p class="pod-hero-desc reveal reveal-delay-2">Step into the hidden world of cybercrime, hacking, and digital threats with the Digital Desperados Podcast by SaferNet. Each episode uncovers real stories from the dark side of the internet—designed to educate, inform, and prepare you for the risks of today's digital world.</p>
+            <p class="pod-hero-desc reveal reveal-delay-3">From infamous hackers to modern cyber threats, our podcast turns complex cybersecurity topics into engaging, real-world stories.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FEATURED EPISODES
+══════════════════════════════════ -->
+<section class="pod-section pod-section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="reveal">Featured Episodes</h2>
+            <p class="reveal reveal-delay-1">Explore some of our most popular episodes from the Digital Desperados series.</p>
+        </div>
+
+        <div class="episodes-grid">
+
+            <!-- Episode 1 -->
+            <div class="episode-card reveal reveal-delay-1">
+                <div class="episode-thumb">
+                    <div class="episode-thumb-bg ep-bg-1">
+                        <div class="ep-illustration">
+                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="60" cy="60" r="50" stroke="rgba(74,222,128,0.2)" stroke-width="1" />
+                                <circle cx="60" cy="60" r="36" stroke="rgba(74,222,128,0.3)" stroke-width="1" />
+                                <circle cx="60" cy="60" r="22" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.5)" stroke-width="1.5" />
+                                <path d="M60 46v7M60 60v2" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" />
+                                <path d="M52 72h16M48 68l4-8h16l4 8" fill="none" stroke="#4ADE80" stroke-width="1.5" stroke-linejoin="round" />
+                                <circle cx="30" cy="40" r="4" fill="rgba(253,176,34,0.6)" />
+                                <circle cx="90" cy="38" r="3" fill="rgba(74,222,128,0.5)" />
+                                <circle cx="88" cy="82" r="4" fill="rgba(253,176,34,0.4)" />
+                                <circle cx="32" cy="78" r="3" fill="rgba(74,222,128,0.4)" />
+                                <line x1="30" y1="40" x2="48" y2="56" stroke="rgba(74,222,128,0.25)" stroke-width="1" stroke-dasharray="3 3" />
+                                <line x1="90" y1="38" x2="72" y2="54" stroke="rgba(74,222,128,0.25)" stroke-width="1" stroke-dasharray="3 3" />
+                            </svg>
+                        </div>
+                        <div class="ep-number-badge">Episode 1</div>
+                    </div>
+                </div>
+                <div class="episode-body">
+                    <div class="ep-meta">
+                        <span>Jason Carter</span>
+                        <div class="ep-meta-dot"></div>
+                        <span>19 Aug, 2025</span>
+                    </div>
+                    <h3>Protecting Teens from Online Threats</h3>
+                    <p>In this episode of the Digital Desperados podcast, brought to you by the knights in shining armor at SaferNet VPN.</p>
+                    <div class="ep-author">
+                        <div class="ep-avatar">JC</div>
+                        <div class="ep-author-info">
+                            By <strong>Jason Carter</strong> &nbsp;·&nbsp; 19 Aug, 2025
+                        </div>
+                    </div>
+                    <button class="btn-listen">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+                        Listen Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Episode 2 -->
+            <div class="episode-card reveal reveal-delay-2">
+                <div class="episode-thumb">
+                    <div class="episode-thumb-bg ep-bg-2">
+                        <div class="ep-illustration">
+                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                                <rect x="25" y="30" width="70" height="60" rx="6" fill="rgba(168,85,247,0.12)" stroke="rgba(168,85,247,0.4)" stroke-width="1.5" />
+                                <rect x="33" y="38" width="54" height="8" rx="3" fill="rgba(168,85,247,0.25)" />
+                                <rect x="33" y="50" width="40" height="6" rx="3" fill="rgba(168,85,247,0.15)" />
+                                <rect x="33" y="60" width="48" height="6" rx="3" fill="rgba(168,85,247,0.15)" />
+                                <rect x="33" y="70" width="30" height="6" rx="3" fill="rgba(168,85,247,0.15)" />
+                                <circle cx="88" cy="38" r="14" fill="rgba(253,176,34,0.15)" stroke="rgba(253,176,34,0.5)" stroke-width="1.5" />
+                                <path d="M83 38l3 3 6-6" stroke="#FDB022" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="ep-number-badge">Episode 2</div>
+                    </div>
+                </div>
+                <div class="episode-body">
+                    <div class="ep-meta">
+                        <span>Jason Carter</span>
+                        <div class="ep-meta-dot"></div>
+                        <span>19 Aug, 2025</span>
+                    </div>
+                    <h3>Protecting Teens from Online Threats</h3>
+                    <p>In this episode of the Digital Desperados podcast, brought to you by the knights in shining armor at SaferNet VPN.</p>
+                    <div class="ep-author">
+                        <div class="ep-avatar">JC</div>
+                        <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 19 Aug, 2025</div>
+                    </div>
+                    <button class="btn-listen">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+                        Listen Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Episode 3 -->
+            <div class="episode-card reveal reveal-delay-3">
+                <div class="episode-thumb">
+                    <div class="episode-thumb-bg ep-bg-3">
+                        <div class="ep-illustration">
+                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                                <path d="M60 25 L80 35 L80 58 C80 72 70 82 60 87 C50 82 40 72 40 58 L40 35 Z" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.45)" stroke-width="1.5" />
+                                <path d="M60 38 L70 44 L70 59 C70 67 65 73 60 76 C55 73 50 67 50 59 L50 44 Z" fill="rgba(74,222,128,0.2)" stroke="rgba(74,222,128,0.4)" stroke-width="1" />
+                                <path d="M53 57 l5 5 9-9" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="35" cy="30" r="5" fill="rgba(253,176,34,0.5)" stroke="rgba(253,176,34,0.7)" stroke-width="1" />
+                                <circle cx="88" cy="75" r="4" fill="rgba(74,222,128,0.4)" />
+                                <path d="M35 30 Q48 40 50 48" stroke="rgba(253,176,34,0.3)" stroke-width="1" stroke-dasharray="3 3" />
+                            </svg>
+                        </div>
+                        <div class="ep-number-badge">Episode 3</div>
+                    </div>
+                </div>
+                <div class="episode-body">
+                    <div class="ep-meta">
+                        <span>Jason Carter</span>
+                        <div class="ep-meta-dot"></div>
+                        <span>19 Aug, 2025</span>
+                    </div>
+                    <h3>Protecting Teens from Online Threats</h3>
+                    <p>In this episode of the Digital Desperados podcast, brought to you by the knights in shining armor at SaferNet VPN.</p>
+                    <div class="ep-author">
+                        <div class="ep-avatar">JC</div>
+                        <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 19 Aug, 2025</div>
+                    </div>
+                    <button class="btn-listen">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+                        Listen Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Episode 4 -->
+            <div class="episode-card reveal reveal-delay-1">
+                <div class="episode-thumb">
+                    <div class="episode-thumb-bg ep-bg-4">
+                        <div class="ep-illustration">
+                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                                <rect x="30" y="35" width="60" height="50" rx="5" fill="rgba(253,176,34,0.08)" stroke="rgba(253,176,34,0.35)" stroke-width="1.5" />
+                                <circle cx="60" cy="55" r="12" fill="rgba(253,176,34,0.2)" stroke="rgba(253,176,34,0.5)" stroke-width="1.5" />
+                                <path d="M56 55 h8 M60 51 v8" stroke="#FDB022" stroke-width="2" stroke-linecap="round" />
+                                <rect x="38" y="72" width="44" height="6" rx="3" fill="rgba(253,176,34,0.2)" />
+                                <circle cx="32" cy="32" r="5" fill="rgba(239,68,68,0.5)" />
+                                <circle cx="90" cy="80" r="4" fill="rgba(253,176,34,0.5)" />
+                            </svg>
+                        </div>
+                        <div class="ep-number-badge">Episode 4</div>
+                    </div>
+                </div>
+                <div class="episode-body">
+                    <div class="ep-meta">
+                        <span>Jason Carter</span>
+                        <div class="ep-meta-dot"></div>
+                        <span>19 Aug, 2025</span>
+                    </div>
+                    <h3>Protecting Teens from Online Threats</h3>
+                    <p>In this episode of the Digital Desperados podcast, brought to you by the knights in shining armor at SaferNet VPN.</p>
+                    <div class="ep-author">
+                        <div class="ep-avatar">JC</div>
+                        <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 19 Aug, 2025</div>
+                    </div>
+                    <button class="btn-listen">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+                        Listen Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Episode 5 -->
+            <div class="episode-card reveal reveal-delay-2">
+                <div class="episode-thumb">
+                    <div class="episode-thumb-bg ep-bg-5">
+                        <div class="ep-illustration">
+                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                                <circle cx="60" cy="55" r="28" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1.5" />
+                                <circle cx="60" cy="55" r="16" fill="rgba(96,165,250,0.15)" stroke="rgba(96,165,250,0.45)" stroke-width="1" />
+                                <circle cx="60" cy="55" r="6" fill="rgba(96,165,250,0.5)" stroke="rgba(96,165,250,0.8)" stroke-width="1" />
+                                <line x1="60" y1="27" x2="60" y2="35" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" />
+                                <line x1="60" y1="75" x2="60" y2="83" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" />
+                                <line x1="32" y1="55" x2="40" y2="55" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" />
+                                <line x1="80" y1="55" x2="88" y2="55" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" />
+                                <circle cx="42" cy="37" r="4" fill="rgba(253,176,34,0.5)" />
+                                <circle cx="80" cy="72" r="3" fill="rgba(74,222,128,0.5)" />
+                            </svg>
+                        </div>
+                        <div class="ep-number-badge">Episode 5</div>
+                    </div>
+                </div>
+                <div class="episode-body">
+                    <div class="ep-meta">
+                        <span>Jason Carter</span>
+                        <div class="ep-meta-dot"></div>
+                        <span>19 Aug, 2025</span>
+                    </div>
+                    <h3>Protecting Teens from Online Threats</h3>
+                    <p>In this episode of the Digital Desperados podcast, brought to you by the knights in shining armor at SaferNet VPN.</p>
+                    <div class="ep-author">
+                        <div class="ep-avatar">JC</div>
+                        <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 19 Aug, 2025</div>
+                    </div>
+                    <button class="btn-listen">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+                        Listen Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     LATEST ARTICLES
+══════════════════════════════════ -->
+<section class="pod-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="reveal">Latest Articles</h2>
+            <p class="reveal reveal-delay-1">Stay updated with our newest insights and guides.</p>
+        </div>
+
+        <div class="articles-grid">
+
+            <!-- Article 1 -->
+            <div class="article-card reveal reveal-delay-1">
+                <div class="article-thumb">
+                    <div class="article-thumb-bg art-bg-1">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                            <rect x="20" y="25" width="60" height="50" rx="5" fill="rgba(96,165,250,0.15)" stroke="rgba(96,165,250,0.4)" stroke-width="1.5" />
+                            <path d="M30 42 h40 M30 52 h30 M30 62 h20" stroke="rgba(96,165,250,0.5)" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="72" cy="28" r="10" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.5)" stroke-width="1.5" />
+                            <path d="M68 28 h8 M72 24 v8" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        <div class="article-cat-badge">Cloud Security</div>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <h3>Why Cloud Tools Like Google Drive Don't Make You 100% Secure</h3>
+                    <p>The Cloud Security Myth. A common tale you may hear today in the world of business is that using cloud architecture systems means that you</p>
+                    <div class="article-footer">
+                        <div class="article-author-row">
+                            <div class="art-avatar">JC</div>
+                            <div>
+                                <div class="art-author-name">Jason Carter</div>
+                                <div class="art-date">19 Aug, 2025</div>
+                            </div>
+                        </div>
+                        <a href="#" class="art-read-link">
+                            Read
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article-card reveal reveal-delay-2">
+                <div class="article-thumb">
+                    <div class="article-thumb-bg art-bg-2">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                            <path d="M50 20 L68 30 L68 52 C68 63 60 71 50 75 C40 71 32 63 32 52 L32 30 Z" fill="rgba(74,222,128,0.15)" stroke="rgba(74,222,128,0.45)" stroke-width="1.5" />
+                            <path d="M43 48 l5 5 9-9" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="25" cy="25" r="6" fill="rgba(253,176,34,0.4)" />
+                            <circle cx="76" cy="70" r="5" fill="rgba(74,222,128,0.4)" />
+                        </svg>
+                        <div class="article-cat-badge">Family Safety</div>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <h3>Cybersecurity for Christian Families: Protecting Everyone at Home</h3>
+                    <p>Christian families are online more than ever—for work, school, ministry, and staying connected with friends and family. The internet is a blessing, but</p>
+                    <div class="article-footer">
+                        <div class="article-author-row">
+                            <div class="art-avatar">JC</div>
+                            <div>
+                                <div class="art-author-name">Jason Carter</div>
+                                <div class="art-date">19 Aug, 2025</div>
+                            </div>
+                        </div>
+                        <a href="#" class="art-read-link">
+                            Read
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="article-card reveal reveal-delay-3">
+                <div class="article-thumb">
+                    <div class="article-thumb-bg art-bg-3">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                            <rect x="18" y="30" width="64" height="40" rx="5" fill="rgba(253,176,34,0.12)" stroke="rgba(253,176,34,0.4)" stroke-width="1.5" />
+                            <rect x="26" y="38" width="28" height="24" rx="3" fill="rgba(253,176,34,0.2)" />
+                            <circle cx="40" cy="50" r="7" fill="rgba(253,176,34,0.3)" stroke="rgba(253,176,34,0.6)" stroke-width="1" />
+                            <path d="M37 50 l2 2 4-4" stroke="#FDB022" stroke-width="1.5" stroke-linecap="round" />
+                            <rect x="60" y="38" width="16" height="6" rx="2" fill="rgba(253,176,34,0.25)" />
+                            <rect x="60" y="48" width="16" height="6" rx="2" fill="rgba(253,176,34,0.2)" />
+                            <rect x="60" y="58" width="10" height="6" rx="2" fill="rgba(253,176,34,0.15)" />
+                        </svg>
+                        <div class="article-cat-badge">Endpoint</div>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <h3>How Antivirus Endpoint Protection Secures Your Remote Workforce</h3>
+                    <p>No matter where work happens—home offices, cafes, airports, or coworking spaces—ensuring your devices and data are safe is now a foundational part of business success.</p>
+                    <div class="article-footer">
+                        <div class="article-author-row">
+                            <div class="art-avatar">JC</div>
+                            <div>
+                                <div class="art-author-name">Jason Carter</div>
+                                <div class="art-date">19 Aug, 2025</div>
+                            </div>
+                        </div>
+                        <a href="#" class="art-read-link">
+                            Read
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="article-card reveal reveal-delay-1">
+                <div class="article-thumb">
+                    <div class="article-thumb-bg art-bg-4">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                            <rect x="22" y="28" width="56" height="44" rx="5" fill="rgba(168,85,247,0.12)" stroke="rgba(168,85,247,0.4)" stroke-width="1.5" />
+                            <circle cx="38" cy="48" r="10" fill="rgba(168,85,247,0.2)" stroke="rgba(168,85,247,0.5)" stroke-width="1" />
+                            <path d="M35 48 l2 2 4-4" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" />
+                            <rect x="52" y="38" width="20" height="5" rx="2" fill="rgba(168,85,247,0.3)" />
+                            <rect x="52" y="46" width="16" height="5" rx="2" fill="rgba(168,85,247,0.2)" />
+                            <rect x="52" y="54" width="20" height="5" rx="2" fill="rgba(168,85,247,0.15)" />
+                            <circle cx="76" cy="32" r="8" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.4)" stroke-width="1.5" />
+                            <path d="M73 32 h6 M76 29 v6" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        <div class="article-cat-badge">Ransomware</div>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <h3>What If Hackers Lock Your Files Tonight? Avoid It Ransomware Software</h3>
+                    <p>Files carry the weight of business. Contracts. Payroll. Client data. Everything sits on digital ground and shifts every day. One smart threat can make it</p>
+                    <div class="article-footer">
+                        <div class="article-author-row">
+                            <div class="art-avatar">JC</div>
+                            <div>
+                                <div class="art-author-name">Jason Carter</div>
+                                <div class="art-date">19 Aug, 2025</div>
+                            </div>
+                        </div>
+                        <a href="#" class="art-read-link">
+                            Read
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="article-card reveal reveal-delay-2">
+                <div class="article-thumb">
+                    <div class="article-thumb-bg art-bg-5">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                            <circle cx="50" cy="50" r="28" fill="none" stroke="rgba(74,222,128,0.3)" stroke-width="1.5" />
+                            <circle cx="50" cy="50" r="16" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.4)" stroke-width="1" />
+                            <path d="M36 50 Q43 38 50 50 Q57 62 64 50" stroke="#4ADE80" stroke-width="1.5" fill="none" stroke-linecap="round" />
+                            <circle cx="36" cy="50" r="3" fill="#4ADE80" />
+                            <circle cx="64" cy="50" r="3" fill="#4ADE80" />
+                            <path d="M50 22 v6 M50 72 v6 M22 50 h6 M72 50 h6" stroke="rgba(74,222,128,0.4)" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        <div class="article-cat-badge">Privacy</div>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <h3>What Is Online Privacy Protection and Why Does It Matter More Than Ever</h3>
+                    <p>As digital activity continues to rise, we are providing tools that help protect what matters most online. Our online privacy protection services are designed to</p>
+                    <div class="article-footer">
+                        <div class="article-author-row">
+                            <div class="art-avatar">JC</div>
+                            <div>
+                                <div class="art-author-name">Jason Carter</div>
+                                <div class="art-date">19 Aug, 2025</div>
+                            </div>
+                        </div>
+                        <a href="#" class="art-read-link">
+                            Read
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="article-card reveal reveal-delay-3">
+                <div class="article-thumb">
+                    <div class="article-thumb-bg art-bg-6">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                            <rect x="20" y="25" width="60" height="50" rx="5" fill="rgba(239,68,68,0.10)" stroke="rgba(239,68,68,0.35)" stroke-width="1.5" />
+                            <path d="M30 40 h40 M30 50 h30 M30 60 h36" stroke="rgba(239,68,68,0.4)" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="76" cy="30" r="9" fill="rgba(74,222,128,0.2)" stroke="rgba(74,222,128,0.5)" stroke-width="1.5" />
+                            <path d="M72 30 l3 3 5-5" stroke="#4ADE80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="article-cat-badge">Business</div>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <h3>Business Internet Security That Fits Modern Workplace Needs</h3>
+                    <p>Digital protection plays a crucial yet often undervalued role in today's work environment. Whether you're managing internal files, using cloud apps, or collaborating across departments.</p>
+                    <div class="article-footer">
+                        <div class="article-author-row">
+                            <div class="art-avatar">JC</div>
+                            <div>
+                                <div class="art-author-name">Jason Carter</div>
+                                <div class="art-date">19 Aug, 2025</div>
+                            </div>
+                        </div>
+                        <a href="#" class="art-read-link">
+                            Read
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CTA
+══════════════════════════════════ -->
+<section class="pod-cta">
+    <div class="cta-glow"></div>
+    <div class="cta-inner">
+        <p class="cta-label reveal">Protect Your Devices Today</p>
+        <h2 class="reveal reveal-delay-1">Start Your Secure Experience</h2>
+        <p class="reveal reveal-delay-2">Take control of your digital safety today. Download SaferNet and experience powerful, simple cybersecurity built for modern users.</p>
+        <button class="cta-btn reveal reveal-delay-3">Download SaferNet Now</button>
+        <div class="cta-trust reveal reveal-delay-4">
+            <span>No credit card required</span>
+            <span>30-day money-back guarantee</span>
+            <span>Cancel anytime</span>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SECTION -->
+                <div class="footer-about">
+                    <div class="logo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        </svg>
+                        <span>SaferNet</span>
+                    </div>
+
+                    <p>
+                        Enterprise-grade cybersecurity, simplified for small business.
+                        Protecting your devices, users, and connections with confidence.
+                    </p>
+
+                    <div class="badge">
+                        SOC 2 Certified
+                    </div>
+                </div>
+
+                <!-- SOLUTIONS -->
+                <div class="footer-links">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="platform.html">Platform</a></li>
+                        <li><a href="vpnprotection.html">VPN Protection</a></li>
+                        <li><a href="malwaredefense.html">Malware Defense</a></li>
+                        <li><a href="contentfiltering.html">Content Filtering</a></li>
+                        <li><a href="pentesting.html">Pen Testing</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY -->
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="howitwork.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="casestudies.html">Case Studies</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+
+                    <p>
+  <i class="bi bi-envelope"></i> 
+  <a href="mailto:support@safernet.com">support@safernet.com</a>
+</p>
+
+<p>
+  <i class="bi bi-telephone"></i> 
+  <a href="tel:18005551234">1-800-555-1234</a>
+</p>
+
+<p>
+  <i class="bi bi-geo-alt"></i> 
+  <a href="https://www.google.com/maps?q=123+Security+Blvd,+Suite+400,+Austin,+TX+78701" target="_blank">
+    123 Security Blvd, Suite 400<br>
+    Austin, TX 78701
+  </a>
+</p>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+
+                <p>© 2026 SaferNet. All rights reserved.</p>
+
+                <div class="footer-policy">
+                    <a href="privacypolicy.html">Privacy Policy</a>
+                    <a href="termsofservice.html">Terms of Service</a>
+                    <a href="security.html">Security</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+  
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/site.js" asp-append-version="true"></script>
+
+	<script src="assets/js/podcasts.js" asp-append-version="true"></script>
+
+    <!--@await RenderSectionAsync("Scripts", required: false) -->
+
+</body>
+</html>
