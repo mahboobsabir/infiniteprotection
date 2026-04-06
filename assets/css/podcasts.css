@@ -61,7 +61,7 @@ body.light-mode {
     --yellow-border: rgba(217,119,6,0.25);
 }
 
-*, *::before, *::after {
+/**, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -88,7 +88,7 @@ img {
     display: block;
     max-width: 100%;
 }
-
+*/
 svg {
     display: block;
 }
@@ -126,19 +126,19 @@ svg {
 }
 
 /* ── CONTAINERS ── */
-.container {
+.podcasts-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-.container-md {
+.podcasts-container-md {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-.container-sm {
+.podcasts-container-sm {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 24px;
