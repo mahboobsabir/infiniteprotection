@@ -54,7 +54,7 @@ body.light-mode {
     --yellow-border: rgba(217,119,6,0.28);
 }
 
-*, *::before, *::after {
+/**, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -79,7 +79,7 @@ a {
 
 svg {
     display: block;
-}
+}*/
 
 /* ── SCROLL REVEAL ── */
 .reveal {
@@ -114,22 +114,22 @@ svg {
 }
 
 /* ── CONTAINERS ── */
-.container {
+.faqs-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 40px 24px;
 }
 
-.container-md {
+.faqs-container-md {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 40px 24px;
 }
 
-.container-sm {
+.faqs-container-sm {
     max-width: 780px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 40px 24px;
 }
 
 /* ── BUTTONS ── */

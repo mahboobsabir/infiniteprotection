@@ -55,7 +55,7 @@ body.light-mode {
     --yellow-border: rgba(217,119,6,0.28);
 }
 
-*, *::before, *::after {
+/**, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -80,7 +80,7 @@ a {
 
 svg {
     display: block;
-}
+}*/
 
 /* ── SCROLL REVEAL ── */
 .reveal {
@@ -119,19 +119,19 @@ svg {
 }
 
 /* ── CONTAINERS ── */
-.container {
+.compliance-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-.container-md {
+.compliance-container-md {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-.container-sm {
+.compliance-container-sm {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 24px;
