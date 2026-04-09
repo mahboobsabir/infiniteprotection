@@ -279,9 +279,9 @@ body.sn-light .sn-btn-primary {
     /*max-width: 760px;*/
 }
 
-#sn-hero-defend h1 {
+#sn-hero-defend h2 {
     font-family: 'Sora',sans-serif;
-    font-size: clamp(32px,5vw,58px);
+    font-size: 53px;
     font-weight: 600;
     line-height: 1.10;
     color: var(--sn-text);
@@ -290,10 +290,10 @@ body.sn-light .sn-btn-primary {
 }
 
 .sn-hero-desc {
-    font-size: clamp(15px,1.8vw,18px);
+    font-size:18px;
     line-height: 1.75;
     color: var(--sn-muted);
-   /* max-width: 640px;*/
+    /* max-width: 640px;*/
     margin-bottom: 32px;
     transition: color var(--sn-trans);
 }
