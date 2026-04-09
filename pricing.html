@@ -154,121 +154,225 @@
 <!-- ════════════════════════════════════════════
      SECTION 2 — CHOOSE YOUR PLAN
 ════════════════════════════════════════════ -->
-<section class="pricing-section" id="plans">
+<section id="pricing" class="pricing-section" style="padding-top:120px;">
     <div class="pricing-container">
 
-        <div style="text-align:center;max-width:700px;margin:0 auto 64px;" class="reveal">
-            <h2 class="pricing-h2">Choose your plan</h2>
-            <p class="pricing-body">All plans include full access to both automated pen testing and endpoint<br> protection. Save more with longer commitments.</p>
+        <!-- Header -->
+        <div class="pricing-header reveal">
+            <p class="pricing-label">Pricing Plans</p>
+            <h2>Complete Security, Transparent Pricing</h2>
+            <p class="pricing-sub">
+                Three enterprise-ready packages built around penetration testing and endpoint protection.
+                Every plan is fully customizable to your organization's specific needs.
+            </p>
         </div>
 
-        <div class="plans-grid">
+        <!-- Pricing Cards -->
+        <div class="pricing-grid stagger-children">
 
-            <!-- 1 Month -->
-            <div class="plan-card reveal reveal-delay-1">
-                <div class="plan-name">1 Month</div>
-                <div class="plan-subtitle">&nbsp;</div>
-                <div class="price-row">
-                    <span class="price-dollar">$</span>
-                    <span class="price-amount">8.99</span>
-                    <span class="price-period">/ month</span>
+            <!-- ── ESSENTIAL ── -->
+            <div class="pricing-card">
+                <div class="plan-icon blue">
+                    <i class="fa-solid fa-shield-halved"></i>
                 </div>
-                <p class="price-note">Billed monthly</p>
-                <button class="btn-plan btn-plan-outline">Start Free Trial</button>
-                <ul class="pricing-feature-list">
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>Malware Protection</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>Internet Control</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>24/7 VPN</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>Virus Protection</span>
-                    </li>
+                <h3>Essential</h3>
+                <span class="plan-tag blue">Annual Billing</span>
+                <div class="price-block">
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">199</span>
+                        <span class="period" style="font-size:20px;padding-bottom:10px;">.99</span>
+                        <span class="period">/ year</span>
+                    </div>
+                    <p class="billing">Billed annually · per month per device</p>
+                </div>
+                <div class="price-note">
+                    <i class="fa-solid fa-circle-info" style="color:#4aaeff;margin-right:6px;"></i>
+                    Up to <strong>20 SaferNet devices</strong> included &nbsp;·&nbsp; $19,999/yr at full deployment
+                </div>
+                <button class="btn-outline2">Get Started</button>
+                <ul class="price-features">
+                    <li class="feat-group-label">Penetration Testing</li>
+                    <li><strong>2 Basic Scans</strong> per year</li>
+                    <li>Internal &amp; External scan coverage</li>
+                    <li>Targets most commonly vulnerable areas</li>
+                    <li class="feat-divider"></li>
+                    <li class="feat-group-label">Endpoint Protection</li>
+                    <li><strong>20 SaferNet devices</strong> included</li>
+                    <li>Always-on VPN &amp; malware defense</li>
+                    <li>Content filtering &amp; internet control</li>
+                    <li>24/7 threat monitoring</li>
                 </ul>
-                <a href="#" class="advisor-link">Talk to a Security Advisor →</a>
+                <a class="advisor" href="#">Talk to a Security Advisor <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- 6 Month (featured) -->
-            <div class="plan-card featured reveal reveal-delay-2">
-                <div class="plan-badge badge-yellow">20% Discount</div>
-                <div class="plan-name">6 Month</div>
-                <div class="plan-subtitle" style="padding-bottom:10px;">Most Popular</div>
-                <div class="price-row">
-                    <span class="price-dollar">$</span>
-                    <span class="price-amount">7.20</span>
-                    <span class="price-period">/ month</span>
+            <!-- ── GROWTH (Popular) ── -->
+            <div class="pricing-card popular">
+                <div class="discount">⭐ Most Popular</div>
+                <div class="plan-icon yellow" style="margin-top:18px;">
+                    <i class="fa-solid fa-rocket"></i>
                 </div>
-                <p class="price-note">$43.20 billed every 6 months</p>
-                <button class="btn-plan btn-plan-yellow">Start Free Trial</button>
-                <ul class="pricing-feature-list">
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>Malware Protection</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>Internet Control</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>24/7 VPN</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>Virus Protection</span>
-                    </li>
+                <h3>Growth</h3>
+                <span class="plan-tag yellow">Bi-Annual Billing</span>
+                <div class="pbadge">Best Value for Growing Businesses</div>
+                <div class="price-block">
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">699</span>
+                        <span class="period" style="font-size:20px;padding-bottom:10px;">.99</span>
+                        <span class="period">/ 6 mo</span>
+                    </div>
+                    <p class="billing">Billed bi-annually · $1,399.98/yr</p>
+                </div>
+                <div class="price-note">
+                    <i class="fa-solid fa-circle-info" style="color:var(--accent-yellow);margin-right:6px;"></i>
+                    Up to <strong>40 SaferNet devices</strong> included &nbsp;·&nbsp; $55,999/yr at full deployment
+                </div>
+                <button class="btn-primary2">Get Started</button>
+                <ul class="price-features">
+                    <li class="feat-group-label">Penetration Testing</li>
+                    <li><strong>2 Full Scans</strong> conducted twice per year</li>
+                    <li class="highlight">4 total scans annually</li>
+                    <li>Complete internal &amp; external evaluation</li>
+                    <li>Full website &amp; software system assessment</li>
+                    <li class="feat-divider"></li>
+                    <li class="feat-group-label">Endpoint Protection</li>
+                    <li><strong>40 SaferNet devices</strong> included</li>
+                    <li>Always-on VPN &amp; malware defense</li>
+                    <li>Content filtering &amp; internet control</li>
+                    <li>24/7 threat monitoring &amp; alerts</li>
                 </ul>
-                <a href="#" class="advisor-link">Talk to a Security Advisor →</a>
+                <a class="advisor" href="#">Talk to a Security Advisor <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- 12 Month -->
-            <div class="plan-card reveal reveal-delay-3">
-                <div class="plan-badge badge-green">30% Discount</div>
-                <div class="plan-name" style="margin-top:8px;">12 Month</div>
-                <div class="plan-subtitle">&nbsp;</div>
-                <div class="price-row">
-                    <span class="price-dollar">$</span>
-                    <span class="price-amount">6.30</span>
-                    <span class="price-period">/ month</span>
+            <!-- ── COMPLETE ── -->
+            <div class="pricing-card">
+                <div class="plan-icon green">
+                    <i class="fa-solid fa-crown"></i>
                 </div>
-                <p class="price-note">$75.60 billed every 12 months</p>
-                <button class="btn-plan btn-plan-outline">Start Free Trial</button>
-                <ul class="pricing-feature-list">
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>Malware Protection</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>Internet Control</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>24/7 VPN</span>
-                    </li>
-                    <li class="pricing-feature-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                        <span>Virus Protection</span>
-                    </li>
+                <h3>Complete</h3>
+                <span class="plan-tag green">Quarterly Billing</span>
+                <div class="price-block">
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">1,299</span>
+                        <span class="period" style="font-size:20px;padding-bottom:10px;">.99</span>
+                        <span class="period">/ qtr</span>
+                    </div>
+                    <p class="billing">Billed quarterly · $5,199.96/yr</p>
+                </div>
+                <div class="price-note">
+                    <i class="fa-solid fa-circle-info" style="color:var(--accent-green);margin-right:6px;"></i>
+                    Up to <strong>100 SaferNet devices</strong> included &nbsp;·&nbsp; $25,999/yr at full deployment
+                </div>
+                <button class="btn-outline2">Get Started</button>
+                <ul class="price-features">
+                    <li class="feat-group-label">Penetration Testing</li>
+                    <li><strong>4 Full Scans</strong> per quarter</li>
+                    <li class="highlight">8 total scans annually</li>
+                    <li>4 internal + 4 external scan cycles</li>
+                    <li>Deepest threat &amp; compliance coverage</li>
+                    <li class="feat-divider"></li>
+                    <li class="feat-group-label">Endpoint Protection</li>
+                    <li><strong>100 SaferNet devices</strong> included</li>
+                    <li>Always-on VPN &amp; malware defense</li>
+                    <li>Content filtering &amp; internet control</li>
+                    <li>Priority 24/7 monitoring &amp; response</li>
                 </ul>
-                <a href="#" class="advisor-link">Talk to a Security Advisor →</a>
+                <a class="advisor" href="#">Talk to a Security Advisor <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
+        </div><!-- /pricing-grid -->
+        <!-- ══════════════════════════════════
+             PENETRATION TESTING — SCAN TYPES
+             ══════════════════════════════════ -->
+        <div class="scan-section">
+            <div class="scan-section-header">
+                <p class="pricing-label" style="margin-bottom:10px;">Penetration Testing Explained</p>
+                <h3>What's included in every scan?</h3>
+                <p>
+                    All basic and full scans are classified as penetration tests. Our team simulates real-world
+                    attacks to expose vulnerabilities before bad actors find them.
+                </p>
+            </div>
+
+            <div class="scan-grid stagger-children">
+
+                <div class="scan-card basic">
+                    <div class="scan-icon">🔍</div>
+                    <span class="scan-type-badge">Basic Scan</span>
+                    <h4>Quick Vulnerability Scan</h4>
+                    <p>
+                        A targeted penetration test focused on the most commonly vulnerable entry points.
+                        Ideal for routine security checks and baseline threat assessment.
+                    </p>
+                </div>
+
+                <div class="scan-card full">
+                    <div class="scan-icon">🔬</div>
+                    <span class="scan-type-badge">Full Scan</span>
+                    <h4>Comprehensive Evaluation</h4>
+                    <p>
+                        A deep-dive penetration test covering all aspects of a website or software system —
+                        leaving no potential exploit unexamined.
+                    </p>
+                </div>
+
+                <div class="scan-card external">
+                    <div class="scan-icon">🌐</div>
+                    <span class="scan-type-badge">External Scan</span>
+                    <h4>Outside-In Assessment</h4>
+                    <p>
+                        Evaluates your defenses from an attacker's perspective. Identifies where a hacker
+                        could gain access or cause damage from the public internet.
+                    </p>
+                </div>
+
+                <div class="scan-card internal">
+                    <div class="scan-icon">🏢</div>
+                    <span class="scan-type-badge">Internal Scan</span>
+                    <h4>Inside-Out Risk Analysis</h4>
+                    <p>
+                        Assesses risks from within your environment — evaluating the potential damage if
+                        a breach or insider threat occurs inside your network.
+                    </p>
+                </div>
+
+            </div><!-- /scan-grid -->
+            <!-- Compliance add-ons -->
+            <div class="compliance-strip reveal">
+                <div class="compliance-left">
+                    <h4><i class="fa-solid fa-file-shield" style="color:var(--accent-green);margin-right:10px;"></i>Compliance Scans — Add-On</h4>
+                    <p>
+                        Add compliance-specific penetration testing to any package.
+                        We map findings directly to your required framework controls.
+                    </p>
+                </div>
+                <div class="compliance-badges">
+                    <span class="comp-badge"><i class="fa-solid fa-check" style="margin-right:5px;"></i>ISO 27001</span>
+                    <span class="comp-badge"><i class="fa-solid fa-check" style="margin-right:5px;"></i>PCI DSS</span>
+                    <span class="comp-badge"><i class="fa-solid fa-check" style="margin-right:5px;"></i>SOC 2</span>
+                    <span class="comp-badge"><i class="fa-solid fa-check" style="margin-right:5px;"></i>HIPAA</span>
+                </div>
+            </div>
+
+        </div><!-- /scan-section -->
+        <!-- Footer -->
+        <div class="pricing-footer reveal">
+            <p>Additional SaferNet devices available at <strong>$2.99 / device / month</strong></p>
+            <p>All packages are fully customizable to your organization's specific security requirements.</p>
+            <div class="guarantee">
+                <i class="fa-solid fa-shield-check"></i>
+                30-day money-back guarantee &nbsp;·&nbsp; No lock-in contracts &nbsp;·&nbsp; Cancel anytime
+            </div>
+            <br />
+            <span class="customize-note">
+                <i class="fa-solid fa-sliders" style="margin-right:8px;"></i>
+                Need a custom plan? Talk to our team — every package can be tailored to your needs.
+            </span>
         </div>
 
-        <div class="plans-footer reveal">
-            <p>Additional devices: $2.99 / month</p>
-            <p>All plans include unlimited users and 24/7 support.</p>
-        </div>
-    </div>
+    </div><!-- /pricing-container -->
 </section>
 
 
@@ -301,7 +405,7 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
                 </div>
                 <div>
-                    <h3>SaferNet Endpoint Protection</h3>
+                    <h3>Infinite Protection  Endpoint Protection</h3>
                     <p>Malware blocking, VPN encryption, and content filtering on every device</p>
                 </div>
             </div>
@@ -433,7 +537,7 @@
                 </button>
                 <div class="faq-body">
                     <div class="faq-body-inner">
-                        You get full access to every feature—automated penetration testing, endpoint protection, VPN, and our security dashboard—completely free for 30 days. No credit card is required to start, and you won't be charged anything until your trial ends. If you decide SaferNet isn't right for you, simply cancel before day 30 with no questions asked.
+                        You get full access to every feature—automated penetration testing, endpoint protection, VPN, and our security dashboard—completely free for 30 days. No credit card is required to start, and you won't be charged anything until your trial ends. If you decide Infinite Protection  isn't right for you, simply cancel before day 30 with no questions asked.
                     </div>
                 </div>
             </div>
