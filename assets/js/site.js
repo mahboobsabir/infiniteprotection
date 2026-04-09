@@ -1,5 +1,5 @@
 /* =============================================
-   SAFERNET — Enhanced JavaScript
+   Infinite Protection  — Enhanced JavaScript
    Scroll Reveal | Navbar | Counter | Dark Mode
    ============================================= */
 (function () {
