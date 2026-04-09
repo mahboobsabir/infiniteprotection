@@ -1,0 +1,1504 @@
+/* ═══════════════════════════════════════════════
+   TOKENS — dark defaults
+═══════════════════════════════════════════════ */
+:root {
+    --zed-green: #4ADE80;
+    --zed-green-dim: rgba(74,222,128,0.12);
+    --zed-green-bdr: rgba(74,222,128,0.30);
+    --zed-yellow: #FDB022;
+    --zed-yellow-dim: rgba(253,176,34,0.12);
+    --zed-yellow-bdr: rgba(253,176,34,0.30);
+    --zed-trans: 0.38s ease;
+    --zed-bg: #0a1628;
+    --zed-bg2: #0d1d35;
+    --zed-bg3: #0f2847;
+    --zed-bg4: #152f52;
+    --zed-surface: rgba(255,255,255,0.05);
+    --zed-surface2: rgba(255,255,255,0.08);
+    --zed-surface3: rgba(255,255,255,0.11);
+    --zed-border: rgba(255,255,255,0.09);
+    --zed-border2: rgba(255,255,255,0.16);
+    --zed-text: #ffffff;
+    --zed-muted: rgba(255,255,255,0.62);
+    --zed-faint: rgba(255,255,255,0.36);
+    --zed-hero-grad: linear-gradient(160deg,#0a1628 0%,#0d1d35 50%,#0f2847 100%);
+    --zed-sec-grad: linear-gradient(to bottom,#0f2847,#152f52);
+    --zed-sec-grad2: linear-gradient(to bottom,#0a1628,#0d1d35);
+    --zed-shadow: 0 8px 32px rgba(0,0,0,0.42);
+    --zed-shadow-green: 0 0 30px rgba(74,222,128,0.14);
+}
+
+body.zed-light {
+    --zed-bg: #f0f4fa;
+    --zed-bg2: #e4ecf7;
+    --zed-bg3: #d8e6f5;
+    --zed-bg4: #ccdcee;
+    --zed-surface: rgba(255,255,255,0.82);
+    --zed-surface2: rgba(255,255,255,0.95);
+    --zed-surface3: rgba(255,255,255,1);
+    --zed-border: rgba(0,0,0,0.09);
+    --zed-border2: rgba(0,0,0,0.16);
+    --zed-text: #0a1628;
+    --zed-muted: rgba(10,22,40,0.62);
+    --zed-faint: rgba(10,22,40,0.36);
+    --zed-hero-grad: linear-gradient(160deg,#dbeafe 0%,#e0f2fe 50%,#eff6ff 100%);
+    --zed-sec-grad: linear-gradient(to bottom,#e8f0fd,#dce8fa);
+    --zed-sec-grad2: linear-gradient(to bottom,#f0f4fa,#e4ecf7);
+    --zed-shadow: 0 8px 32px rgba(10,22,40,0.12);
+    --zed-shadow-green: 0 0 30px rgba(22,163,74,0.10);
+    --zed-green: #16a34a;
+    --zed-green-dim: rgba(22,163,74,0.10);
+    --zed-green-bdr: rgba(22,163,74,0.28);
+    --zed-yellow: #d97706;
+    --zed-yellow-dim: rgba(217,119,6,0.10);
+    --zed-yellow-bdr: rgba(217,119,6,0.28);
+}
+
+/* ═══════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════ */
+/**, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sora',sans-serif;
+    background: var(--zed-bg);
+    color: var(--zed-text);
+    transition: background var(--zed-trans),color var(--zed-trans);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+svg {
+    display: block;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}*/
+
+/* ── CONTAINER ── */
+.zed-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+.zed-container-md {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+.zed-container-sm {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+/* ── SCROLL REVEAL ── */
+.zed-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .65s ease,transform .65s ease;
+}
+
+    .zed-reveal.zed-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.zed-reveal-left {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: opacity .65s ease,transform .65s ease;
+}
+
+    .zed-reveal-left.zed-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+.zed-reveal-right {
+    opacity: 0;
+    transform: translateX(32px);
+    transition: opacity .65s ease,transform .65s ease;
+}
+
+    .zed-reveal-right.zed-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+.zed-d1 {
+    transition-delay: .08s;
+}
+
+.zed-d2 {
+    transition-delay: .16s;
+}
+
+.zed-d3 {
+    transition-delay: .24s;
+}
+
+.zed-d4 {
+    transition-delay: .32s;
+}
+
+.zed-d5 {
+    transition-delay: .40s;
+}
+
+.zed-d6 {
+    transition-delay: .48s;
+}
+
+/* ── SHARED BUTTONS ── */
+.zed-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 28px;
+    background: var(--zed-yellow);
+    color: #0a1628;
+    border: none;
+    border-radius: 7px;
+    font-family: 'Sora',sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background .25s,transform .2s,box-shadow .25s;
+}
+
+    .zed-btn-primary:hover {
+        background: #e59a15;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px rgba(253,176,34,.38);
+    }
+
+body.zed-light .zed-btn-primary {
+    background: #d97706;
+    color: #fff;
+}
+
+    body.zed-light .zed-btn-primary:hover {
+        background: #b45309;
+    }
+
+.zed-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 28px;
+    background: transparent;
+    color: var(--zed-text);
+    border: 2px solid var(--zed-border2);
+    border-radius: 7px;
+    font-family: 'Sora',sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background var(--zed-trans),border-color var(--zed-trans),transform .2s,color var(--zed-trans);
+}
+
+    .zed-btn-outline:hover {
+        background: var(--zed-surface2);
+        border-color: var(--zed-green);
+        transform: translateY(-2px);
+    }
+
+/* ── EYEBROW ── */
+.zed-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--zed-green);
+    margin-bottom: 14px;
+    transition: color var(--zed-trans);
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION 1 — ZED HERO (zed-hero-section)
+═══════════════════════════════════════════════ */
+#zed-hero-section {
+    position: relative;
+    overflow: hidden;
+    background: var(--zed-hero-grad);
+    padding: 100px 28px 90px;
+    transition: background var(--zed-trans);
+}
+
+.zed-hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    pointer-events: none;
+}
+
+.zed-hero-glow-1 {
+    width: 600px;
+    height: 600px;
+    background: rgba(74,222,128,0.07);
+    top: -120px;
+    right: -80px;
+}
+
+.zed-hero-glow-2 {
+    width: 500px;
+    height: 500px;
+    background: rgba(253,176,34,0.05);
+    bottom: -100px;
+    left: -60px;
+}
+
+.zed-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+}
+
+#zed-hero-section h1 {
+    font-family: 'Sora',sans-serif;
+    font-size: clamp(32px,5vw,58px);
+    font-weight: 800;
+    line-height: 1.10;
+    color: var(--zed-text);
+    margin-bottom: 22px;
+    transition: color var(--zed-trans);
+}
+
+.zed-hero-desc {
+    font-size: clamp(15px,1.8vw,18px);
+    line-height: 1.75;
+    color: var(--zed-muted);
+    max-width: 640px;
+    margin-bottom: 10px;
+    transition: color var(--zed-trans);
+}
+
+.zed-hero-desc-sub {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--zed-muted);
+    max-width: 640px;
+    margin-bottom: 32px;
+    transition: color var(--zed-trans);
+}
+
+.zed-hero-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* hero decorative grid visual */
+.zed-hero-visual {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 420px;
+    opacity: .50;
+    pointer-events: none;
+}
+
+    .zed-hero-visual svg {
+        width: 100%;
+        height: auto;
+    }
+
+/* ═══════════════════════════════════════════════
+   SECTION 2 — WHAT IS ZED (zed-what-section)
+═══════════════════════════════════════════════ */
+#zed-what-section {
+    padding: 90px 28px;
+    background: var(--zed-sec-grad);
+    border-top: 1px solid var(--zed-border);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+.zed-what-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+.zed-what-left h2 {
+    font-size: clamp(26px,3.5vw,40px);
+    font-weight: 700;
+    color: var(--zed-text);
+    margin-bottom: 20px;
+    transition: color var(--zed-trans);
+}
+
+.zed-what-left p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--zed-muted);
+    margin-bottom: 14px;
+    transition: color var(--zed-trans);
+}
+
+    .zed-what-left p:last-of-type {
+        margin-bottom: 28px;
+    }
+
+.zed-what-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* right side — animated ZED badge */
+.zed-what-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zed-badge-wrap {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zed-badge-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(74,222,128,0.22);
+    animation: zedRingPulse 3s ease-in-out infinite;
+}
+
+    .zed-badge-ring:nth-child(1) {
+        width: 320px;
+        height: 320px;
+        animation-delay: 0s;
+    }
+
+    .zed-badge-ring:nth-child(2) {
+        width: 250px;
+        height: 250px;
+        animation-delay: .8s;
+        opacity: .6;
+    }
+
+    .zed-badge-ring:nth-child(3) {
+        width: 180px;
+        height: 180px;
+        animation-delay: 1.6s;
+        opacity: .8;
+    }
+
+@keyframes zedRingPulse {
+    0%,100% {
+        opacity: .18;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .45;
+        transform: scale(1.04);
+    }
+}
+
+.zed-badge-core {
+    position: relative;
+    z-index: 2;
+    width: 130px;
+    height: 130px;
+    background: var(--zed-green-dim);
+    border: 2px solid var(--zed-green-bdr);
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: var(--zed-shadow-green);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+    .zed-badge-core svg {
+        color: var(--zed-green);
+    }
+
+    .zed-badge-core span {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        color: var(--zed-green);
+        transition: color var(--zed-trans);
+    }
+
+.zed-badge-dot {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: var(--zed-green);
+    border-radius: 50%;
+    animation: zedDotFloat 4s ease-in-out infinite;
+}
+
+    .zed-badge-dot:nth-child(4) {
+        top: 28px;
+        left: 60px;
+        animation-delay: 0s;
+    }
+
+    .zed-badge-dot:nth-child(5) {
+        top: 80px;
+        right: 16px;
+        animation-delay: 1s;
+        background: var(--zed-yellow);
+    }
+
+    .zed-badge-dot:nth-child(6) {
+        bottom: 55px;
+        left: 18px;
+        animation-delay: 2s;
+    }
+
+    .zed-badge-dot:nth-child(7) {
+        bottom: 28px;
+        right: 50px;
+        animation-delay: 1.5s;
+        background: var(--zed-yellow);
+    }
+
+@keyframes zedDotFloat {
+    0%,100% {
+        transform: translateY(0);
+        opacity: .8;
+    }
+
+    50% {
+        transform: translateY(-12px);
+        opacity: 1;
+    }
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION 3 — WHY CONTINUOUS EVALUATION (zed-eval-section)
+═══════════════════════════════════════════════ */
+#zed-eval-section {
+    padding: 90px 28px;
+    background: var(--zed-sec-grad2);
+    border-top: 1px solid var(--zed-border);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+.zed-eval-header {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+    .zed-eval-header h2 {
+        font-size: clamp(26px,3.5vw,40px);
+        font-weight: 700;
+        color: var(--zed-text);
+        margin-bottom: 14px;
+        transition: color var(--zed-trans);
+    }
+
+    .zed-eval-header p {
+        font-size: 16px;
+        color: var(--zed-muted);
+        line-height: 1.7;
+        max-width: 640px;
+        margin: 0 auto 14px;
+        transition: color var(--zed-trans);
+    }
+
+.zed-eval-sub {
+    font-size: 15px;
+    color: var(--zed-muted);
+    text-align: center;
+    margin-bottom: 40px;
+    transition: color var(--zed-trans);
+}
+
+.zed-eval-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+    margin-bottom: 44px;
+}
+
+.zed-eval-card {
+    background: var(--zed-surface);
+    border: 1px solid var(--zed-border);
+    border-radius: 12px;
+    padding: 28px 20px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    transition: all var(--zed-trans);
+}
+
+    .zed-eval-card:hover {
+        border-color: var(--zed-green-bdr);
+        transform: translateY(-5px);
+        box-shadow: var(--zed-shadow-green);
+        background: var(--zed-surface2);
+    }
+
+.zed-eval-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--zed-green-dim);
+    border: 1px solid var(--zed-green-bdr);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+    .zed-eval-icon svg {
+        color: var(--zed-green);
+    }
+
+.zed-eval-card p {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--zed-muted);
+    transition: color var(--zed-trans);
+    font-weight: 500;
+}
+
+.zed-eval-conclusion {
+    background: var(--zed-surface);
+    border: 1px solid var(--zed-border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    text-align: center;
+    margin-bottom: 0;
+    backdrop-filter: blur(8px);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+    .zed-eval-conclusion p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--zed-muted);
+        max-width: 680px;
+        margin: 0 auto;
+        transition: color var(--zed-trans);
+    }
+
+/* ═══════════════════════════════════════════════
+   SECTION 4 — HOW ZED WORKS (zed-how-section)
+═══════════════════════════════════════════════ */
+#zed-how-section {
+    padding: 90px 28px;
+    background: var(--zed-sec-grad);
+    border-top: 1px solid var(--zed-border);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+.zed-how-header {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+    .zed-how-header h2 {
+        font-size: clamp(26px,3.5vw,40px);
+        font-weight: 700;
+        color: var(--zed-text);
+        margin-bottom: 14px;
+        transition: color var(--zed-trans);
+    }
+
+    .zed-how-header p {
+        font-size: 16px;
+        color: var(--zed-muted);
+        line-height: 1.7;
+        max-width: 620px;
+        margin: 0 auto 14px;
+        transition: color var(--zed-trans);
+    }
+
+.zed-how-sub {
+    font-size: 15px;
+    color: var(--zed-muted);
+    text-align: center;
+    margin-bottom: 40px;
+    transition: color var(--zed-trans);
+}
+
+.zed-how-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+    margin-bottom: 44px;
+}
+
+.zed-how-card {
+    background: var(--zed-surface);
+    border: 1px solid var(--zed-border);
+    border-radius: 14px;
+    padding: 28px 22px;
+    backdrop-filter: blur(8px);
+    transition: all var(--zed-trans);
+    position: relative;
+    overflow: hidden;
+}
+
+    .zed-how-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 14px;
+        border: 1.5px solid transparent;
+        background: linear-gradient(135deg,rgba(74,222,128,.18),transparent 60%) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity var(--zed-trans);
+    }
+
+    .zed-how-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--zed-shadow);
+    }
+
+        .zed-how-card:hover::before {
+            opacity: 1;
+        }
+
+.zed-how-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--zed-yellow-dim);
+    border: 1px solid var(--zed-yellow-bdr);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+    .zed-how-icon svg {
+        color: var(--zed-yellow);
+    }
+
+.zed-how-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--zed-text);
+    margin-bottom: 10px;
+    transition: color var(--zed-trans);
+}
+
+.zed-how-card p {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--zed-muted);
+    transition: color var(--zed-trans);
+}
+
+.zed-how-note {
+    background: var(--zed-surface);
+    border: 1px solid var(--zed-border);
+    border-radius: 12px;
+    padding: 26px 32px;
+    text-align: center;
+    margin-bottom: 36px;
+    backdrop-filter: blur(8px);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+    .zed-how-note p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--zed-muted);
+        max-width: 700px;
+        margin: 0 auto;
+        transition: color var(--zed-trans);
+    }
+
+.zed-how-btns {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION 5 — SECURITY & COMPLIANCE (zed-compliance-section)
+═══════════════════════════════════════════════ */
+#zed-compliance-section {
+    padding: 90px 28px;
+    background: var(--zed-sec-grad2);
+    border-top: 1px solid var(--zed-border);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+.zed-compliance-header {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+    .zed-compliance-header h2 {
+        font-size: clamp(26px,3.5vw,40px);
+        font-weight: 700;
+        color: var(--zed-text);
+        margin-bottom: 14px;
+        transition: color var(--zed-trans);
+    }
+
+    .zed-compliance-header p {
+        font-size: 16px;
+        color: var(--zed-muted);
+        line-height: 1.7;
+        max-width: 640px;
+        margin: 0 auto;
+        transition: color var(--zed-trans);
+    }
+
+.zed-compliance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.zed-comp-card {
+    background: var(--zed-surface);
+    border: 1px solid var(--zed-border);
+    border-radius: 16px;
+    padding: 36px 32px;
+    backdrop-filter: blur(8px);
+    transition: all var(--zed-trans);
+}
+
+    .zed-comp-card:hover {
+        border-color: var(--zed-green-bdr);
+        transform: translateY(-4px);
+        box-shadow: var(--zed-shadow-green);
+    }
+
+.zed-comp-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--zed-green-dim);
+    border: 1px solid var(--zed-green-bdr);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+    .zed-comp-icon svg {
+        color: var(--zed-green);
+    }
+
+.zed-comp-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--zed-text);
+    margin-bottom: 12px;
+    transition: color var(--zed-trans);
+}
+
+.zed-comp-card > p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--zed-muted);
+    margin-bottom: 20px;
+    transition: color var(--zed-trans);
+}
+
+.zed-comp-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+    .zed-comp-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13px;
+        color: var(--zed-muted);
+        line-height: 1.55;
+        transition: color var(--zed-trans);
+    }
+
+.zed-comp-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--zed-green);
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.zed-comp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--zed-green);
+    transition: color var(--zed-trans),gap .2s;
+}
+
+    .zed-comp-link:hover {
+        gap: 10px;
+    }
+
+/* ═══════════════════════════════════════════════
+   SECTION 6 — ATTACK SURFACE (zed-attack-section)
+═══════════════════════════════════════════════ */
+#zed-attack-section {
+    padding: 90px 28px;
+    background: var(--zed-sec-grad);
+    border-top: 1px solid var(--zed-border);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+.zed-attack-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+.zed-attack-left h2 {
+    font-size: clamp(26px,3.5vw,40px);
+    font-weight: 700;
+    color: var(--zed-text);
+    margin-bottom: 16px;
+    transition: color var(--zed-trans);
+}
+
+.zed-attack-left > p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--zed-muted);
+    margin-bottom: 30px;
+    transition: color var(--zed-trans);
+}
+
+.zed-attack-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.zed-attack-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--zed-surface);
+    border: 1px solid var(--zed-border);
+    border-radius: 9px;
+    padding: 14px 18px;
+    transition: border-color var(--zed-trans),background var(--zed-trans),transform .25s;
+}
+
+    .zed-attack-item:hover {
+        border-color: var(--zed-green-bdr);
+        transform: translateX(4px);
+    }
+
+.zed-attack-icon-sm {
+    width: 34px;
+    height: 34px;
+    background: var(--zed-green-dim);
+    border: 1px solid var(--zed-green-bdr);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+    .zed-attack-icon-sm svg {
+        color: var(--zed-green);
+    }
+
+.zed-attack-item span {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--zed-text);
+    transition: color var(--zed-trans);
+}
+
+.zed-attack-note {
+    font-size: 14px;
+    color: var(--zed-muted);
+    margin-bottom: 28px;
+    line-height: 1.6;
+    transition: color var(--zed-trans);
+}
+
+.zed-attack-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* right — animated scanning visual */
+.zed-attack-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zed-scan-visual {
+    position: relative;
+    width: 320px;
+    height: 360px;
+}
+
+.zed-scan-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(74,222,128,0.20);
+    animation: zedRingPulse 3s ease-in-out infinite;
+}
+
+    .zed-scan-ring:nth-child(1) {
+        width: 300px;
+        height: 300px;
+        top: 30px;
+        left: 10px;
+        animation-delay: 0s;
+    }
+
+    .zed-scan-ring:nth-child(2) {
+        width: 230px;
+        height: 230px;
+        top: 65px;
+        left: 45px;
+        animation-delay: .8s;
+        opacity: .6;
+    }
+
+    .zed-scan-ring:nth-child(3) {
+        width: 160px;
+        height: 160px;
+        top: 100px;
+        left: 80px;
+        animation-delay: 1.6s;
+        opacity: .8;
+    }
+
+.zed-scan-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-54%);
+    width: 110px;
+    height: 110px;
+    background: var(--zed-green-dim);
+    border: 1.5px solid var(--zed-green-bdr);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--zed-shadow-green);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+.zed-scan-bar {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: var(--zed-surface);
+    border: 1px solid var(--zed-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+.zed-scan-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--zed-green);
+    flex-shrink: 0;
+    animation: zedPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes zedPulse {
+    0%,100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .6;
+        transform: scale(1.2);
+    }
+}
+
+.zed-scan-bar span {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--zed-green);
+    transition: color var(--zed-trans);
+}
+
+.zed-scan-dot {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: var(--zed-green);
+    border-radius: 50%;
+    animation: zedDotFloat 4s ease-in-out infinite;
+}
+
+    .zed-scan-dot:nth-child(4) {
+        top: 40px;
+        left: 70px;
+        animation-delay: 0s;
+    }
+
+    .zed-scan-dot:nth-child(5) {
+        top: 95px;
+        right: 22px;
+        animation-delay: 1s;
+        background: var(--zed-yellow);
+    }
+
+    .zed-scan-dot:nth-child(6) {
+        bottom: 80px;
+        left: 20px;
+        animation-delay: 2s;
+    }
+
+    .zed-scan-dot:nth-child(7) {
+        bottom: 70px;
+        right: 55px;
+        animation-delay: 1.5s;
+        background: var(--zed-yellow);
+    }
+
+/* ═══════════════════════════════════════════════
+   SECTION 7 — BUILT FOR MODERN DIGITAL (zed-modern-section)
+═══════════════════════════════════════════════ */
+#zed-modern-section {
+    padding: 90px 28px;
+    background: var(--zed-sec-grad2);
+    border-top: 1px solid var(--zed-border);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+.zed-modern-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.zed-modern-left h2 {
+    font-size: clamp(26px,3.5vw,40px);
+    font-weight: 700;
+    color: var(--zed-text);
+    margin-bottom: 16px;
+    transition: color var(--zed-trans);
+}
+
+.zed-modern-left > p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--zed-muted);
+    margin-bottom: 14px;
+    transition: color var(--zed-trans);
+}
+
+.zed-modern-sub {
+    font-size: 14px;
+    color: var(--zed-muted);
+    margin-bottom: 28px;
+    line-height: 1.6;
+    transition: color var(--zed-trans);
+}
+
+.zed-env-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.zed-env-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--zed-text);
+    transition: color var(--zed-trans);
+}
+
+.zed-env-check {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--zed-green-dim);
+    border: 1px solid var(--zed-green-bdr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+    .zed-env-check svg {
+        color: var(--zed-green);
+    }
+
+.zed-modern-note {
+    font-size: 14px;
+    color: var(--zed-muted);
+    line-height: 1.65;
+    margin-bottom: 28px;
+    transition: color var(--zed-trans);
+}
+
+.zed-modern-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* right — architecture visual */
+.zed-modern-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zed-arch-visual {
+    width: 340px;
+    background: var(--zed-surface);
+    border: 1px solid var(--zed-border);
+    border-radius: 16px;
+    padding: 28px;
+    backdrop-filter: blur(8px);
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+.zed-arch-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.zed-arch-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.zed-arch-card {
+    background: var(--zed-surface2);
+    border: 1px solid var(--zed-border2);
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+    transition: all var(--zed-trans);
+}
+
+    .zed-arch-card:hover {
+        border-color: var(--zed-green-bdr);
+    }
+
+    .zed-arch-card .zed-arch-icon {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .zed-arch-card p {
+        font-size: 10px;
+        color: var(--zed-muted);
+        transition: color var(--zed-trans);
+    }
+
+.zed-arch-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.zed-arch-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right,transparent,var(--zed-green-bdr),transparent);
+}
+
+.zed-arch-hub {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--zed-green-dim);
+    border: 2px solid var(--zed-green-bdr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zedPulse 2.5s ease-in-out infinite;
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+    .zed-arch-hub svg {
+        color: var(--zed-green);
+    }
+
+.zed-arch-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px;
+    background: rgba(74,222,128,0.08);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--zed-green);
+    border: 1px solid var(--zed-green-bdr);
+    transition: all var(--zed-trans);
+}
+
+.zed-arch-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--zed-green);
+    animation: zedPulse 1.5s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION 8 — CTA (zed-cta-section)
+═══════════════════════════════════════════════ */
+#zed-cta-section {
+    padding: 100px 28px;
+    background: var(--zed-sec-grad);
+    border-top: 1px solid var(--zed-border);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: background var(--zed-trans),border-color var(--zed-trans);
+}
+
+.zed-cta-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    height: 700px;
+    background: rgba(74,222,128,0.06);
+    border-radius: 50%;
+    filter: blur(160px);
+    pointer-events: none;
+}
+
+.zed-cta-glow-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 400px;
+    background: rgba(253,176,34,0.05);
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.zed-cta-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+    .zed-cta-inner h2 {
+        font-size: clamp(30px,5vw,52px);
+        font-weight: 800;
+        line-height: 1.12;
+        color: var(--zed-text);
+        margin-bottom: 18px;
+        transition: color var(--zed-trans);
+    }
+
+    .zed-cta-inner p {
+        font-size: 17px;
+        color: var(--zed-muted);
+        line-height: 1.7;
+        margin-bottom: 14px;
+        transition: color var(--zed-trans);
+    }
+
+.zed-cta-tagline {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--zed-muted);
+    margin-bottom: 36px;
+    transition: color var(--zed-trans);
+}
+
+.zed-cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.zed-cta-trust {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+    .zed-cta-trust span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: var(--zed-faint);
+        transition: color var(--zed-trans);
+    }
+
+        .zed-cta-trust span::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: var(--zed-green);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media(max-width:1024px) {
+    .zed-eval-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .zed-how-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px) {
+    #zed-hero-section {
+        padding: 80px 16px 70px;
+    }
+
+    #zed-what-section, #zed-eval-section, #zed-how-section,
+    #zed-compliance-section, #zed-attack-section,
+    #zed-modern-section, #zed-cta-section {
+        padding: 64px 16px;
+    }
+
+    .zed-what-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .zed-what-right {
+        display: none;
+    }
+
+    .zed-eval-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .zed-how-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .zed-compliance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .zed-attack-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .zed-attack-right {
+        display: none;
+    }
+
+    .zed-modern-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .zed-modern-right {
+        display: none;
+    }
+
+    .zed-hero-btns, .zed-what-btns, .zed-how-btns, .zed-attack-btns, .zed-modern-btns {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .zed-cta-btns {
+        align-items: center;
+    }
+
+    .zed-hero-visual {
+        display: none;
+    }
+}
+
+@media(max-width:480px) {
+    .zed-eval-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .zed-compliance-grid {
+        grid-template-columns: 1fr;
+    }
+}
