@@ -1,51 +1,32 @@
 ﻿(function () {
-    /* ── THEME SYNC — same key as site.js ── */
-    (function syncThemeEarly() {
-        const saved = localStorage.getItem('theme');
-        if (saved === 'light') document.body.classList.add('sn-light');
-        else document.body.classList.remove('sn-light');
-    })();
+    const html = document.documentElement;
+    const btn = document.getElementById('themeBtn');
+    const nav = document.getElementById('mn');
+    const saved = localStorage.getItem('sn-theme') || 'dark';
+    html.setAttribute('data-theme', saved);
 
-    /* ── Also listen for external toggle changes (from layout) ── */
-    const layoutToggle = document.getElementById('theme-toggle');
-    if (layoutToggle) {
-        layoutToggle.addEventListener('change', () => {
-            if (layoutToggle.checked) document.body.classList.add('sn-light');
-            else document.body.classList.remove('sn-light');
-        });
-    }
-
-    /* ── Watch localStorage for cross-page theme changes ── */
-    window.addEventListener('storage', e => {
-        if (e.key === 'theme') {
-            if (e.newValue === 'light') document.body.classList.add('sn-light');
-            else document.body.classList.remove('sn-light');
-        }
+    btn.addEventListener('click', () => {
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('sn-theme', next);
     });
 
-    /* ── SCROLL REVEAL ── */
-    const revEls = document.querySelectorAll(
-        '.sn-reveal,.sn-reveal-left,.sn-reveal-right'
-    );
     const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.classList.add('sn-visible');
-                obs.unobserve(e.target);
-            }
-        });
-    }, { threshold: 0.10 });
-    revEls.forEach(el => obs.observe(el));
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+    }, { threshold: 0.09 });
+    document.querySelectorAll('.rv,.rl,.rr').forEach(el => obs.observe(el));
 
-    /* ── PILLAR / THREAT CARD HOVER TILT ── */
-    document.querySelectorAll('.sn-pillar-card,.sn-layer-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const r = card.getBoundingClientRect();
+    document.querySelectorAll('.card').forEach(c => {
+        c.addEventListener('mousemove', e => {
+            const r = c.getBoundingClientRect();
             const x = (e.clientX - r.left) / r.width - 0.5;
             const y = (e.clientY - r.top) / r.height - 0.5;
-            card.style.transform = `translateY(-5px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg)`;
+            c.style.transform = `translateY(-5px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg)`;
         });
-        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+        c.addEventListener('mouseleave', () => { c.style.transform = ''; });
     });
 
+    window.addEventListener('scroll', () => {
+        nav.style.height = window.scrollY > 50 ? '54px' : '66px';
+    }, { passive: true });
 })();

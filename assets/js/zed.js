@@ -1,51 +1,66 @@
 ﻿(function () {
-    /* ── THEME SYNC — same key as site.js ── */
-    (function syncThemeEarly() {
-        const saved = localStorage.getItem('theme');
-        if (saved === 'light') document.body.classList.add('zed-light');
-        else document.body.classList.remove('zed-light');
-    })();
+    const html = document.documentElement;
+    const btn = document.getElementById('themeBtn');
+    const nav = document.getElementById('mn');
+    const saved = localStorage.getItem('zed-theme') || 'dark';
+    html.setAttribute('data-theme', saved);
 
-    /* ── Listen for external toggle changes (from layout) ── */
-    const layoutToggle = document.getElementById('theme-toggle');
-    if (layoutToggle) {
-        layoutToggle.addEventListener('change', () => {
-            if (layoutToggle.checked) document.body.classList.add('zed-light');
-            else document.body.classList.remove('zed-light');
-        });
-    }
-
-    /* ── Watch localStorage for cross-page theme changes ── */
-    window.addEventListener('storage', e => {
-        if (e.key === 'theme') {
-            if (e.newValue === 'light') document.body.classList.add('zed-light');
-            else document.body.classList.remove('zed-light');
-        }
+    btn.addEventListener('click', () => {
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('zed-theme', next);
     });
 
-    /* ── SCROLL REVEAL ── */
-    const revEls = document.querySelectorAll(
-        '.zed-reveal,.zed-reveal-left,.zed-reveal-right'
-    );
+    /* scroll reveal */
     const obs = new IntersectionObserver(entries => {
         entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.classList.add('zed-visible');
-                obs.unobserve(e.target);
-            }
+            if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
         });
-    }, { threshold: 0.10 });
-    revEls.forEach(el => obs.observe(el));
+    }, { threshold: 0.09 });
+    document.querySelectorAll('.rv,.rl,.rr').forEach(el => obs.observe(el));
 
-    /* ── CARD HOVER TILT ── */
-    document.querySelectorAll('.zed-eval-card,.zed-how-card,.zed-comp-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const r = card.getBoundingClientRect();
+    /* card tilt */
+    document.querySelectorAll('.card,.scan-card,.faq-item,.pc-card,.comp-badge').forEach(c => {
+        c.addEventListener('mousemove', e => {
+            const r = c.getBoundingClientRect();
             const x = (e.clientX - r.left) / r.width - 0.5;
             const y = (e.clientY - r.top) / r.height - 0.5;
-            card.style.transform = `translateY(-5px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg)`;
+            c.style.transform = `translateY(-5px) rotateY(${x * 4}deg) rotateX(${-y * 4}deg)`;
         });
-        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+        c.addEventListener('mouseleave', () => { c.style.transform = ''; });
     });
 
+    /* nav shrink on scroll */
+    window.addEventListener('scroll', () => {
+        nav.style.height = window.scrollY > 50 ? '54px' : '68px';
+    }, { passive: true });
+
+    /* animated scan bars — trigger when in view */
+    const barObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.querySelectorAll('.sc-bar-fill').forEach(b => {
+                    b.style.animationPlayState = 'running';
+                });
+                barObs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.surface-chart').forEach(el => {
+        el.querySelectorAll('.sc-bar-fill').forEach(b => b.style.animationPlayState = 'paused');
+        barObs.observe(el);
+    });
+
+    /* FAQ toggle */
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('open');
+            const ico = item.querySelector('.faq-icon svg path');
+            if (item.classList.contains('open')) {
+                ico.setAttribute('d', 'M5 12h14');
+            } else {
+                ico.setAttribute('d', 'M12 5v14M5 12h14');
+            }
+        });
+    });
 })();
