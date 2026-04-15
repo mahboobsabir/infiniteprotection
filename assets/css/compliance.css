@@ -149,8 +149,8 @@ svg {
     border: none;
     border-radius: 8px;
     font-family: 'Sora',sans-serif;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
     transition: background .25s,transform .2s,box-shadow .2s;
@@ -262,7 +262,7 @@ body.light-mode .btn-primary {
 }
 
 .hero-desc {
-    font-size: clamp(15px,1.8vw,17px);
+    font-size: clamp(16px, 2vw, 19px);
     line-height: 1.75;
     color: var(--text-muted);
     margin-bottom: 32px;
@@ -454,7 +454,7 @@ body.light-mode .comp-badge:hover {
     }
 
     .journey-header p {
-        font-size: 16px;
+        font-size: 17px;
         color: var(--text-muted);
         max-width: 600px;
         margin: 0 auto;
@@ -560,9 +560,9 @@ body.light-mode .comp-badge:hover {
     }
 
     .tools-header p {
-        font-size: 16px;
+        font-size: 17px;
         color: var(--text-muted);
-        max-width: 620px;
+        max-width: 690px;
         margin: 0 auto;
         line-height: 1.7;
         transition: color var(--trans);
@@ -619,7 +619,7 @@ body.light-mode .comp-badge:hover {
 }
 
 .tool-card p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.65;
     color: var(--text-muted);
     flex: 1;
@@ -630,7 +630,7 @@ body.light-mode .comp-badge:hover {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--green);
     transition: gap .2s,color var(--trans);
@@ -669,9 +669,9 @@ body.light-mode .comp-badge:hover {
     }
 
     .standards-header p {
-        font-size: 16px;
+        font-size: 17px;
         color: var(--text-muted);
-        max-width: 580px;
+        max-width: 650px;
         margin: 0 auto;
         line-height: 1.7;
         transition: color var(--trans);
@@ -760,7 +760,7 @@ body.light-mode .comp-badge:hover {
 }
 
 .assess-left > p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.7;
     color: var(--text-muted);
     margin-bottom: 32px;
@@ -808,7 +808,7 @@ body.light-mode .comp-badge:hover {
     }
 
 .assess-q p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6;
     color: var(--text-muted);
     transition: color var(--trans);
@@ -915,7 +915,7 @@ body.light-mode .vuln-stat {
     }
 
     .bundles-header p {
-        font-size: 16px;
+        font-size: 17px;
         color: var(--text-muted);
         max-width: 580px;
         margin: 0 auto;
@@ -984,7 +984,7 @@ body.light-mode .bundle-tag {
 }
 
 .bundle-subtitle {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-muted);
     margin-bottom: 22px;
     transition: color var(--trans);
@@ -1023,7 +1023,7 @@ body.light-mode .bundle-tag {
     border: 1.5px solid var(--border2);
     border-radius: 8px;
     font-family: 'Sora',sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: background var(--trans),border-color var(--trans),transform .2s,color var(--trans);
@@ -1089,10 +1089,10 @@ body.light-mode .btn-bundle-yellow {
 
 .cta-eyebrow {
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 650;
     letter-spacing: .14em;
     text-transform: uppercase;
-    color: var(--green);
+   color: var(--green);
     margin-bottom: 14px;
     transition: color var(--trans);
 }
@@ -1134,7 +1134,7 @@ body.light-mode .btn-bundle-yellow {
         display: flex;
         align-items: center;
         gap: 6px;
-        font-size: 13px;
+        font-size: 15px;
         color: var(--text-faint);
         transition: color var(--trans);
     }
