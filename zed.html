@@ -49,10 +49,9 @@
                    <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
 			<a class="nav-link" href="product.html">Product</a>
                 </li>
-                <li class="nav-item ms-lg-3">
+              <!--  <li class="nav-item ms-lg-3">
                     <a class="nav-link" href="howitwork.html">How it works</a>
-                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
-                </li>
+                </li> -->
                 
                 <!-- COMPLIANCE -->
                 <li class="nav-item ms-lg-3">
@@ -132,427 +131,393 @@
     </div>
 </nav>
 
-
-<!-- ═══════════════════════════════════════════════
-     SECTION 1 — ZED HERO
-═══════════════════════════════════════════════ -->
-<section id="zed-hero-section">
-    <div class="zed-hero-glow zed-hero-glow-1"></div>
-    <div class="zed-hero-glow zed-hero-glow-2"></div>
-
-    <!-- decorative visual (desktop only) -->
-    <div class="zed-hero-visual">
-        <svg viewBox="0 0 420 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="10" width="120" height="80" rx="8" fill="rgba(74,222,128,0.06)" stroke="rgba(74,222,128,0.20)" stroke-width="1" />
-            <rect x="150" y="10" width="120" height="80" rx="8" fill="rgba(74,222,128,0.04)" stroke="rgba(74,222,128,0.15)" stroke-width="1" />
-            <rect x="290" y="10" width="120" height="80" rx="8" fill="rgba(253,176,34,0.05)" stroke="rgba(253,176,34,0.18)" stroke-width="1" />
-            <rect x="10" y="110" width="120" height="80" rx="8" fill="rgba(74,222,128,0.04)" stroke="rgba(74,222,128,0.15)" stroke-width="1" />
-            <rect x="150" y="110" width="120" height="80" rx="8" fill="rgba(74,222,128,0.08)" stroke="rgba(74,222,128,0.25)" stroke-width="1" />
-            <rect x="290" y="110" width="120" height="80" rx="8" fill="rgba(74,222,128,0.04)" stroke="rgba(74,222,128,0.15)" stroke-width="1" />
-            <rect x="80" y="210" width="260" height="110" rx="10" fill="rgba(74,222,128,0.06)" stroke="rgba(74,222,128,0.22)" stroke-width="1.5" />
-            <circle cx="210" cy="265" r="30" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.40)" stroke-width="1.5" />
-            <path d="M200 265l7 7 13-14" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-            <text x="40" y="58" font-family="Sora,sans-serif" font-size="11" fill="rgba(74,222,128,0.60)" font-weight="600">Continuous</text>
-            <text x="40" y="72" font-family="Sora,sans-serif" font-size="11" fill="rgba(74,222,128,0.60)" font-weight="600">Monitoring</text>
-            <text x="167" y="58" font-family="Sora,sans-serif" font-size="11" fill="rgba(74,222,128,0.55)" font-weight="600">Vulnerability</text>
-            <text x="167" y="72" font-family="Sora,sans-serif" font-size="11" fill="rgba(74,222,128,0.55)" font-weight="600">Detection</text>
-            <text x="305" y="58" font-family="Sora,sans-serif" font-size="11" fill="rgba(253,176,34,0.65)" font-weight="600">Real-Time</text>
-            <text x="305" y="72" font-family="Sora,sans-serif" font-size="11" fill="rgba(253,176,34,0.65)" font-weight="600">Analysis</text>
-            <text x="22" y="158" font-family="Sora,sans-serif" font-size="11" fill="rgba(74,222,128,0.50)" font-weight="600">Threat Intel</text>
-            <text x="162" y="158" font-family="Sora,sans-serif" font-size="11" fill="rgba(74,222,128,0.65)" font-weight="600">Auto Defense</text>
-            <text x="305" y="158" font-family="Sora,sans-serif" font-size="11" fill="rgba(74,222,128,0.50)" font-weight="600">Zero Exposure</text>
-            <text x="165" y="288" font-family="Sora,sans-serif" font-size="10" fill="rgba(74,222,128,0.75)" font-weight="700">ZED Active</text>
-            <line x1="70" y1="50" x2="150" y2="50" stroke="rgba(74,222,128,0.15)" stroke-width="1" stroke-dasharray="4 4" />
-            <line x1="210" y1="50" x2="290" y2="50" stroke="rgba(74,222,128,0.15)" stroke-width="1" stroke-dasharray="4 4" />
-            <line x1="70" y1="150" x2="150" y2="150" stroke="rgba(74,222,128,0.12)" stroke-width="1" stroke-dasharray="4 4" />
-            <line x1="210" y1="150" x2="290" y2="150" stroke="rgba(74,222,128,0.12)" stroke-width="1" stroke-dasharray="4 4" />
-            <line x1="140" y1="90" x2="140" y2="110" stroke="rgba(74,222,128,0.15)" stroke-width="1" />
-            <line x1="280" y1="90" x2="280" y2="110" stroke="rgba(74,222,128,0.12)" stroke-width="1" />
-            <line x1="80" y1="190" x2="80" y2="210" stroke="rgba(74,222,128,0.15)" stroke-width="1" />
-            <line x1="210" y1="190" x2="210" y2="210" stroke="rgba(74,222,128,0.15)" stroke-width="1" />
-            <line x1="340" y1="190" x2="340" y2="210" stroke="rgba(74,222,128,0.12)" stroke-width="1" />
-        </svg>
-    </div>
-
-    <div class="zed-container">
-        <div class="zed-hero-inner">
-            <p class="zed-eyebrow zed-reveal">Zero Exposure Defense (ZED)</p>
-            <h1 class="zed-reveal zed-d1">Security That Never Stops Watching</h1>
-            <p class="zed-hero-desc zed-reveal zed-d2">Traditional security tools only react after a threat appears. Zero Exposure Defense (ZED) takes a different approach — continuously monitoring and evaluating your digital environment to detect vulnerabilities before attackers can exploit them.</p>
-            <p class="zed-hero-desc-sub zed-reveal zed-d3">ZED is designed to keep your systems in a constant state of readiness by identifying risks, analyzing behavior, and strengthening defenses in real time.</p>
-            <div class="zed-hero-btns zed-reveal zed-d4">
-                <button class="zed-btn-primary">
-                    How It Works
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                </button>
-                <button class="zed-btn-outline">Start Free Trial</button>
-            </div>
+<!-- ═══════ HERO ═══════ -->
+<section id="hero">
+    <div class="hg1"></div><div class="hg2"></div>
+    <div class="hgrid"></div>
+    <div class="scan-overlay"><div class="scan-beam"></div></div>
+    <div class="hi">
+        <div class="hbadge rv"><span class="hbdot"></span>CONTINUOUS VULNERABILITY SCANNING</div>
+        <h1 class="rv d1">Find <em>Vulnerabilities</em><br>Before <span>Attackers</span> Do</h1>
+        <p class="hdesc rv d2">ZED continuously scans your websites, software, and networks to identify risks before they become breaches. Modern penetration testing that is faster, more affordable, and continuous.</p>
+        <p class="hsub rv d2">Built for small and mid-size businesses that need enterprise-level security without the complexity.</p>
+        <p class="htag rv d3">Continuous protection. Real visibility. Stronger security.</p>
+        <div class="ctr rv d3">
+            <button class="bc">Get a Free Security Scan</button>
+            <button class="bo">See How It Works</button>
+        </div>
+        <div class="hstats">
+            <div class="rv d1" style="text-align:center"><div class="hsn">24/7</div><div class="hsl">Continuous Scanning</div></div>
+            <div class="rv d2" style="text-align:center"><div class="hsn">4x</div><div class="hsl">Scan Types</div></div>
+            <div class="rv d3" style="text-align:center"><div class="hsn">SMB</div><div class="hsl">Built For</div></div>
+            <div class="rv d4" style="text-align:center"><div class="hsn">0</div><div class="hsl">Days Exposed</div></div>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════
-     SECTION 2 — WHAT IS ZERO EXPOSURE DEFENSE
-═══════════════════════════════════════════════ -->
-<section id="zed-what-section">
-    <div class="zed-container">
-        <div class="zed-what-inner">
-
-            <div class="zed-what-left">
-                <p class="zed-eyebrow zed-reveal">Understanding the Framework</p>
-                <h2 class="zed-reveal zed-d1">What Is Zero Exposure Defense?</h2>
-                <p class="zed-reveal zed-d2">Zero Exposure Defense (ZED) is an advanced security framework that continuously evaluates devices, networks, and connections to remove exposure to cyber threats.</p>
-                <p class="zed-reveal zed-d3">Instead of relying on static protection, ZED actively scans for exposure, monitors activity patterns, and responds instantly to suspicious behavior. This proactive model reduces the attack surface and ensures threats are neutralized before they become incidents.</p>
-                <div class="zed-what-btns zed-reveal zed-d4">
-                    <button class="zed-btn-primary">See How It Works</button>
-                    <button class="zed-btn-outline">Schedule a Demo</button>
+<!-- ═══════ WHAT IS ZED ═══════ -->
+<section id="what" class="bga">
+    <div class="w">
+        <div class="what-wrap">
+            <div class="col">
+                <p class="brow rl">The Platform</p>
+                <h2 class="rl d1">What is Zero Exposure Defense (ZED)?</h2>
+                <p class="rl d2">Zero Exposure Defense (ZED) is a modern penetration testing and vulnerability scanning platform designed to continuously identify risks across your business.</p>
+                <p class="rl d2" style="margin-bottom:22px">ZED scans your websites, software, networks, and digital assets to find vulnerabilities before attackers can exploit them. Instead of relying on one-time testing or reactive security tools, ZED continuously evaluates your environment and strengthens your security posture over time.</p>
+                <p class="col-note rl d3">This proactive approach helps reduce exposure, identify weaknesses early, and prevent security incidents before they happen.</p>
+                <div class="lb rl d4">
+                    <button class="bc">Get a Free Security Scan</button>
+                    <button class="bo">Schedule a Demo</button>
                 </div>
             </div>
-
-            <div class="zed-what-right">
-                <div class="zed-badge-wrap">
-                    <div class="zed-badge-ring"></div>
-                    <div class="zed-badge-ring"></div>
-                    <div class="zed-badge-ring"></div>
-                    <div class="zed-badge-core">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-                            <path d="m9 12 2 2 4-4" />
-                        </svg>
-                        <span>ZED Active</span>
+            <div class="zed-vis rr d2">
+                <div class="zed-terminal">
+                    <div class="zt-head">
+                        <div class="zt-dots">
+                            <div class="zt-dot" style="background:#F87171"></div>
+                            <div class="zt-dot" style="background:#FDB022"></div>
+                            <div class="zt-dot" style="background:#4ADE80"></div>
+                        </div>
+                        <div class="zt-title">zed — scan terminal</div>
                     </div>
-                    <div class="zed-badge-dot"></div>
-                    <div class="zed-badge-dot"></div>
-                    <div class="zed-badge-dot"></div>
-                    <div class="zed-badge-dot"></div>
+                    <div class="zt-body">
+                        <div class="zt-line"><span class="zt-prompt">$</span><span class="zt-cmd">zed scan --target business.com</span></div>
+                        <div class="zt-line"><span class="zt-out">Initializing scan engine...</span></div>
+                        <div class="zt-line"><span class="zt-out">Discovering attack surface...</span></div>
+                        <div class="zt-line"><span class="zt-out warn">⚠ Open port 8080 detected</span></div>
+                        <div class="zt-line"><span class="zt-out warn">⚠ Outdated TLS version found</span></div>
+                        <div class="zt-line"><span class="zt-out ok">✓ Firewall rules — OK</span></div>
+                        <div class="zt-line"><span class="zt-out warn">⚠ SQL injection risk: /api</span></div>
+                        <div class="zt-line"><span class="zt-out ok">✓ Authentication — OK</span></div>
+                        <div class="zt-line"><span class="zt-out">Generating report...</span></div>
+                        <div class="zt-line"><span class="zt-prompt">$</span><span class="zt-cursor"></span></div>
+                        <div class="zt-scan-bar"><div class="zt-scan-fill"></div></div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════
-     SECTION 3 — WHY CONTINUOUS SECURITY EVALUATION
-═══════════════════════════════════════════════ -->
-<section id="zed-eval-section">
-    <div class="zed-container">
-        <div class="zed-eval-header">
-            <h2 class="zed-reveal">Why Continuous Security Evaluation Matters</h2>
-            <p class="zed-reveal zed-d1">Cyber threats evolve every second, learning patterns and seeking gaps. Traditional security checks that run occasionally cannot keep up with these rapidly changing threats.</p>
-            <p class="zed-eval-sub zed-reveal zed-d2">Continuous security evaluation also lets ZED identify, monitor and mitigate:</p>
-        </div>
-        <div class="zed-eval-grid">
-            <div class="zed-eval-card zed-reveal zed-d1">
-                <div class="zed-eval-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
-                </div>
-                <p>Detecting vulnerabilities as soon as they appear</p>
+<!-- ═══════ WHY CONTINUOUS SCANNING ═══════ -->
+<section id="continuous" class="bgb">
+    <div class="w">
+        <div class="two-col">
+            <div class="col">
+                <p class="brow rl">Why It Matters</p>
+                <h2 class="rl d1">Why Continuous Security Scanning Matters</h2>
+                <p class="rl d2">Cyber threats evolve constantly. New vulnerabilities, misconfigurations, and attack methods appear every day. One-time testing is no longer enough.</p>
+                <p class="col-note rl d2">Continuous security scanning helps you:</p>
+                <ul class="fl">
+                    <li class="fi rl d3"><div class="fck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5" /></svg></div><div class="ft"><h4>Detect Vulnerabilities Early</h4><p>Detect vulnerabilities as soon as they appear, before attackers have a chance to exploit them.</p></div></li>
+                    <li class="fi rl d4"><div class="fck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5" /></svg></div><div class="ft"><h4>Identify Attack Paths</h4><p>Identify potential attack paths and weak points across your entire environment continuously.</p></div></li>
+                    <li class="fi rl d4"><div class="fck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5" /></svg></div><div class="ft"><h4>Monitor for Unusual Behavior</h4><p>Monitor for unusual behavior and risks that could signal an emerging attack or breach.</p></div></li>
+                    <li class="fi rl d5"><div class="fck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5" /></svg></div><div class="ft"><h4>Strengthen Defenses Continuously</h4><p>Strengthen defenses before threats escalate and become costly security incidents.</p></div></li>
+                </ul>
+                <p class="col-note rl d5">Instead of reacting after a breach, ZED helps you stay ahead of threats with continuous protection.</p>
             </div>
-            <div class="zed-eval-card zed-reveal zed-d2">
-                <div class="zed-eval-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" /><circle cx="12" cy="12" r="3" /></svg>
+            <div class="col-vis rr d2">
+                <div class="threat-ticker" style="width:320px">
+                    <div class="ticker-label"><div class="ticker-dot"></div>LIVE THREAT INTELLIGENCE</div>
+                    <div class="ticker-items">
+                        <div class="ticker-item"><span class="ti-name">SQL Injection — /api/users</span><span class="ti-badge ti-high">HIGH</span></div>
+                        <div class="ticker-item"><span class="ti-name">Outdated OpenSSL v1.0.2</span><span class="ti-badge ti-high">HIGH</span></div>
+                        <div class="ticker-item"><span class="ti-name">Exposed admin panel</span><span class="ti-badge ti-med">MED</span></div>
+                        <div class="ticker-item"><span class="ti-name">Missing HSTS header</span><span class="ti-badge ti-med">MED</span></div>
+                        <div class="ticker-item"><span class="ti-name">Weak TLS cipher suite</span><span class="ti-badge ti-low">LOW</span></div>
+                        <div class="ticker-item"><span class="ti-name">Open port 8080 exposed</span><span class="ti-badge ti-high">HIGH</span></div>
+                    </div>
                 </div>
-                <p>Monitoring unusual devices or malware behavior</p>
             </div>
-            <div class="zed-eval-card zed-reveal zed-d3">
-                <div class="zed-eval-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1" /><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" /><line x1="6" y1="1" x2="6" y2="4" /><line x1="10" y1="1" x2="10" y2="4" /><line x1="14" y1="1" x2="14" y2="4" /></svg>
-                </div>
-                <p>Identifying potential attack paths and access points</p>
-            </div>
-            <div class="zed-eval-card zed-reveal zed-d4">
-                <div class="zed-eval-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg>
-                </div>
-                <p>Strengthening defenses before threats escalate</p>
-            </div>
-        </div>
-        <div class="zed-eval-conclusion zed-reveal zed-d5">
-            <p>This constant oversight keeps your entire digital environment evaluated and secure. With ZED, you identify your security needs in real time to evaluate and eliminate risks before they put your organization at risk.</p>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════
-     SECTION 4 — HOW ZED WORKS
-═══════════════════════════════════════════════ -->
-<section id="zed-how-section">
-    <div class="zed-container">
-        <div class="zed-how-header">
-            <h2 class="zed-reveal">How ZED Works</h2>
-            <p class="zed-reveal zed-d1">Today's workforce relies on laptops, smartphones, and tablets to stay productive. Unfortunately, these devices are also prime targets for cybercriminals.</p>
-            <p class="zed-how-sub zed-reveal zed-d2">Without proper protection, endpoints can expose organizations to:</p>
+<!-- ═══════ HOW ZED WORKS ═══════ -->
+<section id="how" class="bga">
+    <div class="w">
+        <div class="sh">
+            <p class="brow rv">Process</p>
+            <h2 class="rv d1">How ZED Works</h2>
+            <p class="rv d2">ZED continuously scans your digital environment to identify vulnerabilities, risks, and exposure points across your business.</p>
         </div>
-        <div class="zed-how-grid">
-            <div class="zed-how-card zed-reveal zed-d1">
-                <div class="zed-how-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
-                </div>
+        <div class="steps">
+            <div class="step card hb rv d1" style="border-radius:14px">
+                <div class="step-num">01</div>
+                <div class="step-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6s4-2 11-2 11 2 11 2" /><path d="M1 12s4-2 11-2 11 2 11 2" /><path d="M1 18s4-2 11-2 11 2 11 2" /></svg></div>
                 <h3>Continuous Threat Monitoring</h3>
-                <p>ZED constantly observes network activity, scanning communications, configurations, and endpoints to spot patterns that indicate compromise or attack behavior.</p>
+                <p>ZED monitors your websites, software, and networks to detect suspicious activity and emerging risks.</p>
             </div>
-            <div class="zed-how-card zed-reveal zed-d2">
-                <div class="zed-how-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
-                </div>
+            <div class="step card hb rv d2" style="border-radius:14px">
+                <div class="step-num">02</div>
+                <div class="step-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg></div>
                 <h3>Vulnerability Detection</h3>
-                <p>ZED scans for known and emerging vulnerabilities in software, configurations, and endpoints — providing security teams with a live map of the attack surface.</p>
+                <p>ZED scans for weaknesses in software, configurations, and exposed services that attackers could exploit.</p>
             </div>
-            <div class="zed-how-card zed-reveal zed-d3">
-                <div class="zed-how-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
-                </div>
+            <div class="step card hb rv d3" style="border-radius:14px">
+                <div class="step-num">03</div>
+                <div class="step-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg></div>
                 <h3>Real-Time Risk Analysis</h3>
-                <p>ZED's analysis engine processes data from all sources in real time, ranking threats by severity and helping security teams identify vulnerabilities, detect threats.</p>
+                <p>When risks are identified, ZED evaluates severity and impact so you know what matters most.</p>
             </div>
-            <div class="zed-how-card zed-reveal zed-d4">
-                <div class="zed-how-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <div class="step card hb rv d4" style="border-radius:14px">
+                <div class="step-num">04</div>
+                <div class="step-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg></div>
+                <h3>Continuous Defense Strengthening</h3>
+                <p>ZED helps you identify and address vulnerabilities before they become security incidents.</p>
+            </div>
+        </div>
+        <p class="sec-foot rv d5">ZED continuously evaluates your environment to reduce exposure and strengthen your overall security posture.</p>
+    </div>
+</section>
+
+<!-- ═══════ SCAN TYPES ═══════ -->
+<section id="scans" class="bgb">
+    <div class="w">
+        <div class="sh">
+            <p class="brow rv brow-c">Scan Types</p>
+            <h2 class="rv d1">Types of Security Scans</h2>
+            <p class="rv d2">ZED uses multiple types of scans to identify vulnerabilities and reduce your risk across your entire business.</p>
+        </div>
+        <div class="scan-grid">
+            <div class="scan-card ext rv d1">
+                <div class="ico ib" style="width:44px;height:44px;border-radius:10px;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg></div>
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><h3 style="margin-bottom:0">External Scanning</h3><span class="tag tb2">OUTSIDE-IN</span></div>
+                <p>Identifies vulnerabilities that attackers can see from the internet, including exposed services, open ports, and outdated software.</p>
+            </div>
+            <div class="scan-card int rv d2">
+                <div class="ico ic" style="width:44px;height:44px;border-radius:10px;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg></div>
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><h3 style="margin-bottom:0">Internal Scanning</h3><span class="tag tc2">INSIDE-OUT</span></div>
+                <p>Identifies risks inside your network, showing what could happen if an attacker gains access to your systems.</p>
+            </div>
+            <div class="scan-card bas rv d3">
+                <div class="ico ib" style="width:44px;height:44px;border-radius:10px;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /></svg></div>
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><h3 style="margin-bottom:0">Basic Scans</h3><span class="tag tb2">ESSENTIAL</span></div>
+                <p>Identify common and critical vulnerabilities that create immediate risk and need to be addressed first.</p>
+            </div>
+            <div class="scan-card com rv d4">
+                <div class="ico ic" style="width:44px;height:44px;border-radius:10px;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg></div>
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><h3 style="margin-bottom:0">Complete Scans</h3><span class="tag tc2">ADVANCED</span></div>
+                <p>Uncover deeper and more advanced vulnerabilities across your entire environment for comprehensive coverage.</p>
+            </div>
+        </div>
+        <p class="sec-foot rv d5">Together, these scans provide a complete view of your security and help reduce your overall attack surface.</p>
+    </div>
+</section>
+
+<!-- ═══════ MODERN PEN TESTING ═══════ -->
+<section id="pentest" class="bgc">
+    <div class="w">
+        <div class="sh">
+            <p class="brow rv">Evolution</p>
+            <h2 class="rv d1">Modern Penetration Testing</h2>
+            <p class="rv d2">Penetration testing began with white hat hackers — ethical security professionals hired to safely try to break into systems and find weaknesses before criminals did. This often took months and cost tens of thousands of dollars.</p>
+        </div>
+        <div class="pen-compare">
+            <div class="pc-card old rv d1">
+                <div class="pc-head">
+                    <div class="ico ir" style="width:36px;height:36px;border-radius:8px;margin-bottom:0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg></div>
+                    <span class="pc-label old">Traditional Testing</span>
                 </div>
-                <h3>Automated Defense Response</h3>
-                <p>ZED can take automated corrective actions the moment it detects a vulnerability or compromise, isolating endpoints, updating configurations, and alerting administrators.</p>
+                <div class="pc-rows">
+                    <div class="pc-row"><span class="pc-row-l">Duration</span><span class="pc-row-v bad">Months</span></div>
+                    <div class="pc-row"><span class="pc-row-l">Cost</span><span class="pc-row-v bad">$10,000s</span></div>
+                    <div class="pc-row"><span class="pc-row-l">Frequency</span><span class="pc-row-v bad">Once a year</span></div>
+                    <div class="pc-row"><span class="pc-row-l">Coverage</span><span class="pc-row-v bad">Point in time</span></div>
+                    <div class="pc-row"><span class="pc-row-l">Complexity</span><span class="pc-row-v bad">Enterprise only</span></div>
+                </div>
+            </div>
+            <div class="pc-card new2 rv d2">
+                <div class="pc-head">
+                    <div class="ico ib" style="width:36px;height:36px;border-radius:8px;margin-bottom:0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg></div>
+                    <span class="pc-label new2">ZED Modern Testing</span>
+                </div>
+                <div class="pc-rows">
+                    <div class="pc-row"><span class="pc-row-l">Duration</span><span class="pc-row-v good">Minutes to hours</span></div>
+                    <div class="pc-row"><span class="pc-row-l">Cost</span><span class="pc-row-v good">Affordable</span></div>
+                    <div class="pc-row"><span class="pc-row-l">Frequency</span><span class="pc-row-v good">Continuous</span></div>
+                    <div class="pc-row"><span class="pc-row-l">Coverage</span><span class="pc-row-v good">Always current</span></div>
+                    <div class="pc-row"><span class="pc-row-l">Complexity</span><span class="pc-row-v good">Built for SMBs</span></div>
+                </div>
             </div>
         </div>
-        <div class="zed-how-note zed-reveal zed-d5">
-            <p>Endpoint protection ensures that every device connecting to your network remains secure, preventing attackers from gaining access to sensitive information or business operations.</p>
-        </div>
-        <div class="zed-how-btns zed-reveal zed-d5">
-            <button class="zed-btn-primary">See How It Works</button>
-            <button class="zed-btn-outline">Schedule a Demo</button>
+        <div class="pen-tagline rv d3">Modern penetration testing. Faster, more affordable, and continuous protection.</div>
+    </div>
+</section>
+
+<!-- ═══════ COMPLIANCE ═══════ -->
+<section id="compliance" class="bgb">
+    <div class="w">
+        <div class="comp-wrap">
+            <div class="col">
+                <p class="brow rl brow-c">Compliance</p>
+                <h2 class="rl d1">Security and Compliance Support</h2>
+                <p class="rl d2">ZED helps strengthen your security posture while supporting common compliance requirements. Continuous scanning identifies risks, gaps, and vulnerabilities that could impact your compliance readiness.</p>
+                <p class="col-note rl d3">By continuously identifying risks and gaps, ZED helps you improve security, support compliance requirements, and reduce overall exposure.</p>
+                <div class="comp-badges">
+                    <div class="comp-badge rl d2"><div class="cb-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg></div><div><div class="cb-name">SOC 2</div><div class="cb-desc">Trust & Security</div></div></div>
+                    <div class="comp-badge rl d3"><div class="cb-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg></div><div><div class="cb-name">ISO 27001</div><div class="cb-desc">Info Security</div></div></div>
+                    <div class="comp-badge rl d4"><div class="cb-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg></div><div><div class="cb-name">PCI DSS</div><div class="cb-desc">Payment Security</div></div></div>
+                    <div class="comp-badge rl d5"><div class="cb-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg></div><div><div class="cb-name">HIPAA</div><div class="cb-desc">Healthcare Privacy</div></div></div>
+                </div>
+                <div class="lb rl d5">
+                    <button class="bc">Get a Free Security Scan</button>
+                    <button class="bo">Schedule a Demo</button>
+                </div>
+            </div>
+            <div class="col-vis rr d2">
+                <div class="surface-chart">
+                    <div class="sc-title">Attack Surface Reduction</div>
+                    <div class="sc-bars">
+                        <div class="sc-bar-row"><span class="sc-bar-label">Open Ports</span><div class="sc-bar-track"><div class="sc-bar-fill b3" style="--w:82%"></div></div><span class="sc-bar-pct">82%</span></div>
+                        <div class="sc-bar-row"><span class="sc-bar-label">Outdated SW</span><div class="sc-bar-track"><div class="sc-bar-fill b2" style="--w:67%"></div></div><span class="sc-bar-pct">67%</span></div>
+                        <div class="sc-bar-row"><span class="sc-bar-label">Misconfigs</span><div class="sc-bar-track"><div class="sc-bar-fill b1" style="--w:74%"></div></div><span class="sc-bar-pct">74%</span></div>
+                        <div class="sc-bar-row"><span class="sc-bar-label">Exposed APIs</span><div class="sc-bar-track"><div class="sc-bar-fill b2" style="--w:58%"></div></div><span class="sc-bar-pct">58%</span></div>
+                    </div>
+                    <div class="sc-footer"><div class="sc-pulse"></div>Vulnerabilities reduced after ZED</div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════
-     SECTION 5 — SECURITY & COMPLIANCE MONITORING
-═══════════════════════════════════════════════ -->
-<section id="zed-compliance-section">
-    <div class="zed-container">
-        <div class="zed-compliance-header">
-            <h2 class="zed-reveal">Security & Compliance Monitoring</h2>
-            <p class="zed-reveal zed-d1">Zero Exposure Defense monitors your entire environment for both strong security and proper compliance. With automated scanning and intelligent reports, ZED helps identify vulnerabilities, detect risks, and ensure your environment follows industry security standards.</p>
+<!-- ═══════ REDUCE ATTACK SURFACE ═══════ -->
+<section id="surface" class="bga">
+    <div class="w">
+        <div class="sh">
+            <p class="brow rv">Defense</p>
+            <h2 class="rv d1">Reduce Your Attack Surface</h2>
+            <p class="rv d2">Attackers look for the easiest way in. ZED helps reduce your attack surface by identifying and addressing vulnerabilities before they can be exploited.</p>
         </div>
-        <div class="zed-compliance-grid">
+        <div class="g3" style="margin-bottom:36px">
+            <div class="card hb rv d1">
+                <div class="ico ib"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg></div>
+                <h3>Find Hidden Risks</h3>
+                <p>Identify exposed services, outdated software, and misconfigurations that create security gaps attackers can exploit.</p>
+            </div>
+            <div class="card hb rv d2">
+                <div class="ico ib"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg></div>
+                <h3>Prioritize What Matters Most</h3>
+                <p>Understand which vulnerabilities create the highest risk so you can focus your resources on what matters first.</p>
+            </div>
+            <div class="card hb rv d3">
+                <div class="ico ib"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg></div>
+                <h3>Strengthen Your Defenses</h3>
+                <p>Address vulnerabilities early and reduce opportunities for attackers to gain access to your business.</p>
+            </div>
+        </div>
+        <p class="sec-foot rv d4">By continuously identifying and reducing risks, ZED helps keep your business secure as your environment changes and grows.</p>
+    </div>
+</section>
 
-            <div class="zed-comp-card zed-reveal zed-d1">
-                <div class="zed-comp-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
-                </div>
-                <h3>Security Scanning</h3>
-                <p>Proactively identify vulnerabilities before they become security problems. ZED continuously scans your entire environment with precision.</p>
-                <ul class="zed-comp-list">
-                    <li><span class="zed-comp-dot"></span>Keep tabs on known vulnerabilities and security patterns</li>
-                    <li><span class="zed-comp-dot"></span>Scans configurations outside and potential threat exposure</li>
-                    <li><span class="zed-comp-dot"></span>Identifies standard industry protocols, networks and the behavior</li>
+<!-- ═══════ BUILT FOR MODERN BUSINESS ═══════ -->
+<section id="modern" class="bgb">
+    <div class="w">
+        <div class="two-col">
+            <div class="col">
+                <p class="brow rl">Modern Business</p>
+                <h2 class="rl d1">Built for Modern Business Environments</h2>
+                <p class="rl d2">Today's businesses rely on websites, cloud platforms, remote teams, and connected devices. Each creates new opportunities for attackers.</p>
+                <p class="col-note rl d2">ZED is designed to secure modern business environments by continuously scanning:</p>
+                <ul class="env-list">
+                    <li class="env-item rl d3"><div class="env-dot"></div>Websites and web applications</li>
+                    <li class="env-item rl d4"><div class="env-dot"></div>Cloud environments and digital assets</li>
+                    <li class="env-item rl d4"><div class="env-dot"></div>Networks and exposed services</li>
+                    <li class="env-item rl d5"><div class="env-dot"></div>Business software and platforms</li>
+                    <li class="env-item rl d5"><div class="env-dot"></div>Remote and hybrid environments</li>
                 </ul>
-                <a href="#" class="zed-comp-link">
-                    Activate Real Security Today
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                </a>
-            </div>
-
-            <div class="zed-comp-card zed-reveal zed-d2">
-                <div class="zed-comp-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
-                </div>
-                <h3>Compliance Scanning</h3>
-                <p>Ensure your systems meet industry security policies and reducing compliance risk. ZED automates audit preparation and generates compliance reports.</p>
-                <ul class="zed-comp-list">
-                    <li><span class="zed-comp-dot"></span>Protection of system configurations against policy violations</li>
-                    <li><span class="zed-comp-dot"></span>Monitoring access controls and security posture standards</li>
-                    <li><span class="zed-comp-dot"></span>Preparation of compliance reports in seconds or audit</li>
-                </ul>
-                <a href="#" class="zed-comp-link">
-                    Start Scanning with Confidence
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                </a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════
-     SECTION 6 — REDUCING YOUR ATTACK SURFACE
-═══════════════════════════════════════════════ -->
-<section id="zed-attack-section">
-    <div class="zed-container">
-        <div class="zed-attack-inner">
-
-            <div class="zed-attack-left">
-                <p class="zed-eyebrow zed-reveal">Surface Reduction</p>
-                <h2 class="zed-reveal zed-d1">Reducing Your Attack Surface</h2>
-                <p class="zed-reveal zed-d2">One of the biggest cybersecurity challenges is the expanding attack surface created by remote work, cloud tools, and connected devices. Zero Exposure Defense addresses this by:</p>
-                <ul class="zed-attack-list">
-                    <li class="zed-attack-item zed-reveal zed-d2">
-                        <span class="zed-attack-icon-sm">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" /><circle cx="12" cy="12" r="3" /></svg>
-                        </span>
-                        <span>Identifying exposed endpoints</span>
-                    </li>
-                    <li class="zed-attack-item zed-reveal zed-d3">
-                        <span class="zed-attack-icon-sm">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
-                        </span>
-                        <span>Securing vulnerable connections</span>
-                    </li>
-                    <li class="zed-attack-item zed-reveal zed-d4">
-                        <span class="zed-attack-icon-sm">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><line x1="23" y1="11" x2="17" y2="11" /></svg>
-                        </span>
-                        <span>Preventing unauthorized access attempts</span>
-                    </li>
-                    <li class="zed-attack-item zed-reveal zed-d5">
-                        <span class="zed-attack-icon-sm">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
-                        </span>
-                        <span>Continuously strengthening system defenses</span>
-                    </li>
-                </ul>
-                <p class="zed-attack-note zed-reveal zed-d5">This ensures every employee remains remotely protected without disrupting productivity or workflow.</p>
-                <div class="zed-attack-btns zed-reveal zed-d6">
-                    <button class="zed-btn-primary">How It Works</button>
-                    <button class="zed-btn-outline">Schedule a Demo</button>
+                <p class="col-note rl d6">As your business grows and changes, ZED continuously adapts to help protect what matters most.</p>
+                <div class="lb rl d6">
+                    <button class="bc">Get a Free Security Scan</button>
+                    <button class="bo">Schedule a Demo</button>
                 </div>
             </div>
-
-            <div class="zed-attack-right zed-reveal zed-reveal-right">
-                <div class="zed-scan-visual">
-                    <div class="zed-scan-ring"></div>
-                    <div class="zed-scan-ring"></div>
-                    <div class="zed-scan-ring"></div>
-                    <div class="zed-scan-center">
-                        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-                            <path d="m9 12 2 2 4-4" />
-                        </svg>
+            <div class="col-vis rr d2">
+                <div class="zed-terminal" style="width:300px">
+                    <div class="zt-head">
+                        <div class="zt-dots">
+                            <div class="zt-dot" style="background:#F87171"></div>
+                            <div class="zt-dot" style="background:#FDB022"></div>
+                            <div class="zt-dot" style="background:#4ADE80"></div>
+                        </div>
+                        <div class="zt-title">zed — environment map</div>
                     </div>
-                    <div class="zed-scan-dot"></div>
-                    <div class="zed-scan-dot"></div>
-                    <div class="zed-scan-dot"></div>
-                    <div class="zed-scan-dot"></div>
-                    <div class="zed-scan-bar">
-                        <div class="zed-scan-pulse"></div>
-                        <span>ZED Scanning · Attack Surface Reduced</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════
-     SECTION 7 — BUILT FOR MODERN DIGITAL ENVIRONMENTS
-═══════════════════════════════════════════════ -->
-<section id="zed-modern-section">
-    <div class="zed-container">
-        <div class="zed-modern-inner">
-
-            <div class="zed-modern-left">
-                <p class="zed-eyebrow zed-reveal">Universal Coverage</p>
-                <h2 class="zed-reveal zed-d1">Built for Modern Digital Environments</h2>
-                <p class="zed-reveal zed-d2">ZED is designed to protect organizations operating in dynamic, cloud-based environments. Whether employees work in-office or on the move, ZED continuously evaluates the security posture of every device and connection.</p>
-                <p class="zed-modern-sub zed-reveal zed-d3">This ensures protection remains active regardless of location, network, or device type.</p>
-                <ul class="zed-env-list">
-                    <li class="zed-env-item zed-reveal zed-d3">
-                        <span class="zed-env-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5" /></svg></span>
-                        On-premise enterprise infrastructure
-                    </li>
-                    <li class="zed-env-item zed-reveal zed-d4">
-                        <span class="zed-env-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5" /></svg></span>
-                        Cloud and hybrid environments
-                    </li>
-                    <li class="zed-env-item zed-reveal zed-d4">
-                        <span class="zed-env-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5" /></svg></span>
-                        Remote and distributed workforces
-                    </li>
-                    <li class="zed-env-item zed-reveal zed-d5">
-                        <span class="zed-env-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5" /></svg></span>
-                        SaaS platforms and third-party integrations
-                    </li>
-                </ul>
-                <p class="zed-modern-note zed-reveal zed-d5">ZED adapts to your existing infrastructure — no rip-and-replace required. It integrates seamlessly and starts evaluating your security posture from day one.</p>
-                <div class="zed-modern-btns zed-reveal zed-d6">
-                    <button class="zed-btn-primary">See How It Works</button>
-                    <button class="zed-btn-outline">Schedule a Demo</button>
-                </div>
-            </div>
-
-            <!-- architecture visual -->
-            <div class="zed-modern-right zed-reveal zed-reveal-right zed-d2">
-                <div class="zed-arch-visual">
-                    <div class="zed-arch-row">
-                        <div class="zed-arch-card">
-                            <div class="zed-arch-icon">☁️</div>
-                            <p>Cloud Infra</p>
-                        </div>
-                        <div class="zed-arch-card">
-                            <div class="zed-arch-icon">🏢</div>
-                            <p>On-Premise</p>
-                        </div>
-                        <div class="zed-arch-card">
-                            <div class="zed-arch-icon">🌐</div>
-                            <p>Remote</p>
-                        </div>
-                    </div>
-                    <div class="zed-arch-connector">
-                        <div class="zed-arch-line"></div>
-                        <div class="zed-arch-hub">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg>
-                        </div>
-                        <div class="zed-arch-line"></div>
-                    </div>
-                    <div class="zed-arch-row-2">
-                        <div class="zed-arch-card">
-                            <div class="zed-arch-icon">🔍</div>
-                            <p>Continuous Eval</p>
-                        </div>
-                        <div class="zed-arch-card">
-                            <div class="zed-arch-icon">⚡</div>
-                            <p>Auto Response</p>
-                        </div>
-                    </div>
-                    <div class="zed-arch-status">
-                        <div class="zed-arch-status-dot"></div>
-                        All environments monitored · Zero Exposure
+                    <div class="zt-body">
+                        <div class="zt-line"><span class="zt-out ok">✓ Web apps — Protected</span></div>
+                        <div class="zt-line"><span class="zt-out ok">✓ Cloud assets — Protected</span></div>
+                        <div class="zt-line"><span class="zt-out ok">✓ Network services — Scanned</span></div>
+                        <div class="zt-line"><span class="zt-out warn">⚠ Software update needed</span></div>
+                        <div class="zt-line"><span class="zt-out ok">✓ Remote endpoints — OK</span></div>
+                        <div class="zt-line"><span class="zt-out">Adapting to changes...</span></div>
+                        <div class="zt-line"><span class="zt-out ok">✓ Coverage: 100%</span></div>
+                        <div class="zt-scan-bar" style="margin-top:14px"><div class="zt-scan-fill"></div></div>
                     </div>
                 </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════
-     SECTION 8 — CTA
-═══════════════════════════════════════════════ -->
-<section id="zed-cta-section">
-    <div class="zed-cta-glow"></div>
-    <div class="zed-cta-glow-2"></div>
-    <div class="zed-container-sm">
-        <div class="zed-cta-inner">
-            <p class="zed-eyebrow zed-reveal">Protect Your Brand Today</p>
-            <h2 class="zed-reveal zed-d1">Secure Your Digital Workspace</h2>
-            <p class="zed-reveal zed-d2">As cyber threats continue to evolve, endpoint protection is no longer optional — it's essential. SaferNet helps organizations stay protected with simple, powerful cybersecurity that works across every device and connection.</p>
-            <p class="zed-cta-tagline zed-reveal zed-d3">Protect your team. Protect your data. Stay secure with SaferNet.</p>
-            <div class="zed-cta-btns zed-reveal zed-d3">
-                <button class="zed-btn-primary">
-                    Start Free Trial
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                </button>
-                <button class="zed-btn-outline">Schedule a Demo</button>
-            </div>
-            <div class="zed-cta-trust zed-reveal zed-d4">
-                <span>No credit card required</span>
-                <span>All rights reserved</span>
-                <span>Cancel anytime</span>
             </div>
         </div>
     </div>
 </section>
 
+<!-- ═══════ CTA ═══════ -->
+<section id="cta" class="bgc">
+    <div class="cta-glow"></div>
+    <div class="cta-scan-line"></div>
+    <div class="cin">
+        <p class="brow rv" style="justify-content:center;display:block">Get Started</p>
+        <h2 class="rv d1">Continuous Protection<br><em>Starts Here</em></h2>
+        <p class="rv d2">Cyber threats do not stop, and neither should your security. ZED provides continuous vulnerability scanning and modern penetration testing to help protect your business before attackers find a way in.</p>
+        <ul class="cta-bullets rv d3">
+            <li>Find vulnerabilities early.</li>
+            <li>Reduce your attack surface.</li>
+            <li>Strengthen your security posture.</li>
+        </ul>
+        <div class="ctr rv d3">
+            <button class="bc">Get a Free Security Scan</button>
+            <button class="bo">Talk to an Expert</button>
+        </div>
+        <div class="trust rv d4">
+            <span>No credit card required</span>
+            <span>Built for small businesses</span>
+            <span>Cancel anytime</span>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ FAQ ═══════ -->
+<section id="faq" class="bgb" style="border-bottom:none">
+    <div class="w">
+        <div class="sh">
+            <p class="brow rv">FAQ</p>
+            <h2 class="rv d1">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item rv d1">
+                <div class="faq-q">What does ZED scan?<div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14" /></svg></div></div>
+                <p class="faq-a">ZED scans your websites, software, networks, and digital assets to identify vulnerabilities and security risks across your entire business environment.</p>
+            </div>
+            <div class="faq-item rv d2">
+                <div class="faq-q">How often does ZED run scans?<div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14" /></svg></div></div>
+                <p class="faq-a">ZED runs continuous scanning and can perform scheduled scans regularly to identify new vulnerabilities as they appear in your environment.</p>
+            </div>
+            <div class="faq-item rv d3">
+                <div class="faq-q">Is ZED the same as penetration testing?<div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14" /></svg></div></div>
+                <p class="faq-a">ZED provides modern, automated penetration testing combined with continuous vulnerability scanning for ongoing protection — faster and more affordable than traditional testing.</p>
+            </div>
+            <div class="faq-item rv d4">
+                <div class="faq-q">Does ZED help with compliance?<div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14" /></svg></div></div>
+                <p class="faq-a">Yes. ZED supports compliance efforts including SOC 2, ISO 27001, PCI DSS, and HIPAA by identifying security gaps and risks that could impact your compliance readiness.</p>
+            </div>
+            <div class="faq-item rv d5">
+                <div class="faq-q">Is ZED built for small businesses?<div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14" /></svg></div></div>
+                <p class="faq-a">Yes. ZED is designed specifically for small and mid-size businesses that need strong security without enterprise complexity or enterprise pricing.</p>
+            </div>
+            <div class="faq-item rv d6">
+                <div class="faq-q">How does ZED work with SaferNet?<div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14" /></svg></div></div>
+                <p class="faq-a">SaferNet protects your devices while ZED identifies vulnerabilities. Together they form Infinite Protection — two pillars that secure both how attackers get in and where they try to break in.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
     <!-- FOOTER -->
@@ -568,7 +533,7 @@
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
                         </svg>
-                        <span>SaferNet</span>
+                        <span>Infinite Protection</span>
                     </div>
 
                     <p>
@@ -634,7 +599,7 @@
             <!-- BOTTOM -->
             <div class="footer-bottom">
 
-                <p>© 2026 SaferNet. All rights reserved.</p>
+                <p>© 2026 Infinite Protection. All rights reserved.</p>
 
                 <div class="footer-policy">
                     <a href="privacypolicy.html">Privacy Policy</a>

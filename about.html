@@ -49,10 +49,9 @@
                    <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
 			<a class="nav-link" href="product.html">Product</a>
                 </li>
-                <li class="nav-item ms-lg-3">
+               <!-- <li class="nav-item ms-lg-3">
                     <a class="nav-link" href="howitwork.html">How it works</a>
-                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
-                </li>
+                </li> -->
                 
                 <!-- COMPLIANCE -->
                 <li class="nav-item ms-lg-3">
@@ -132,205 +131,326 @@
     </div>
 </nav>
 
-
-<!-- ============================
-     SECTION 1: HERO
-     ============================ -->
-<section id="about-hero">
+<!-- ===================== SECTION 1: HERO ===================== -->
+<section id="ab-hero">
     <div class="ambient-bg">
         <span class="amb1"></span>
         <span class="amb2"></span>
         <span class="amb3"></span>
     </div>
-    <div class="about-container">
-        <div class="about-hero-inner">
-            <div class="about-section-label">About Infinite Protection </div>
-            <h1 class="about-hero-title">Built for business owners who don't have time for cybersecurity.</h1>
-            <p class="about-hero-sub">Infinite Protection  makes protection simple, quiet, and trustworthy—so you can focus on your business with confidence.</p>
-            <div class="about-hero-cta">
-                <button class="about-btn-primary">Talk to a Security Advisor</button>
-                <button class="about-btn-outline">See How It Works</button>
-            </div>
-            <p class="about-hero-tagline">Clear coverage. Simple setup. Real protection.</p>
-        </div>
-    </div>
-</section>
+    <div class="ab-hero-grid"></div>
 
-<!-- ============================
-     SECTION 2: WHY Infinite Protection 
-     ============================ -->
-<section id="why">
-    <div class="about-container-md">
-        <h2 class="about-section-title text-center">Why Infinite Protection  exists</h2>
-        <div class="why-grid">
-            <div class="why-col">
-                <p>Most small business owners know cybersecurity matters—but it's confusing, expensive, and easy to push to 'later.'</p>
-                <p>When you're managing payroll, customers, and growth, security often gets replaced with hope.</p>
-            </div>
-            <div class="why-col">
-                <p>We built Infinite Protection  to remove the stress and complexity: one system that protects devices, users, and connections automatically—without an IT team or a stack of tools.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    <div class="ab-container">
+        <div class="ab-hero-inner">
 
-<!-- ============================
-     SECTION 3: OUR APPROACH
-     ============================ -->
-<section id="approach">
-    <div class="about-container">
-        <h2 class="about-section-title text-center">Our approach is simple</h2>
-        <div class="approach-grid">
+            <div class="ab-label reveal">
+                <span class="ab-label-dot"></span>
+                About Infinite Protection
+            </div>
 
-            <div class="about-glass-card approach-card">
-                <div class="approach-card-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+            <h1 class="ab-hero-title reveal" style="transition-delay:.1s">
+                Built to <span class="hl">Protect</span><br>Growing Businesses
+            </h1>
+
+            <p class="ab-hero-sub reveal" style="transition-delay:.2s">
+                Infinite Protection was created by business owners who experienced firsthand how devastating cyber threats can be. We built a simpler, more powerful way to protect small and mid-size businesses.
+            </p>
+
+            <p class="reveal" style="transition-delay:.25s; font-size:15px; font-weight:600; color:var(--accent-yellow); margin-bottom:0;">
+                Enterprise level protection. Simple and affordable.
+            </p>
+
+            <div class="ab-btn-row reveal" style="transition-delay:.3s">
+                <button class="ab-btn-primary"> Get a Free Security Scan</button>
+                <button class="ab-btn-outline">See How It Works</button>
+            </div>
+
+            <p class="ab-hero-tagline reveal" style="transition-delay:.38s">
+                Clear coverage &bull; Simple setup &bull; Real protection
+            </p>
+
+            <!-- Stats -->
+            <div class="ab-hero-stats reveal" style="transition-delay:.45s">
+                <div class="ab-stat-item">
+                    <div class="ab-stat-num" data-count="5000">0</div>
+                    <div class="ab-stat-label">+ Businesses Protected</div>
                 </div>
-                <h3>Clarity over jargon</h3>
-                <p>We explain what's happening in plain language so owners can make confident decisions.</p>
-            </div>
-
-            <div class="about-glass-card approach-card">
-                <div class="approach-card-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                <div class="ab-stat-item">
+                    <div class="ab-stat-num" data-count="99.9">0</div>
+                    <div class="ab-stat-label">% Uptime SLA</div>
                 </div>
-                <h3>Protection that runs quietly</h3>
-                <p>Security should work in the background—without constant checking or manual steps.</p>
-            </div>
-
-            <div class="about-glass-card approach-card">
-                <div class="approach-card-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                <div class="ab-stat-item">
+                    <div class="ab-stat-num" data-count="24">0</div>
+                    <div class="ab-stat-label">/7 Monitoring</div>
                 </div>
-                <h3>Proof you can trust</h3>
-                <p>We don't rely on assumptions. We validate coverage and help you improve it.</p>
+                <div class="ab-stat-item">
+                    <div class="ab-stat-num" data-count="30">0</div>
+                    <div class="ab-stat-label">Day Free Trial</div>
+                </div>
             </div>
 
         </div>
     </div>
 </section>
 
-<!-- ============================
-     SECTION 4: ONE PLATFORM
-     ============================ -->
-<section id="platform">
-    <div class="about-container-md">
-        <h2 class="about-section-title about-text-center">One platform. Complete coverage.</h2>
-        <p class="about-section-subtitle about-text-center" style="margin-top:14px; max-width:680px; margin-left:auto; margin-right:auto;">Infinite Protection  brings the essentials together so your security is consistent everywhere your team works.</p>
 
-        <div class="platform-features">
-            <div class="about-check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>Always-on secure VPN</span>
-            </div>
-            <div class="about-check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>Malware and virus protection</span>
-            </div>
-            <div class="about-check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>Web and content controls</span>
-            </div>
-            <div class="about-check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>Continuous monitoring and alerts</span>
-            </div>
-            <div class="about-check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>Clear reporting and visibility</span>
-            </div>
-            <div class="about-check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>Penetration testing to find weaknesses</span>
-            </div>
-        </div>
-
-        <div style="text-align:center">
-            <a href="#" class="explore-link">
-                <span>Explore your coverage</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-            </a>
-        </div>
+<!-- ===================== SECTION 2: OUR STORY ===================== -->
+<section id="ab-story">
+    <div class="ambient-bg" style="opacity:.5">
+        <span class="amb2" style="width:400px;height:400px;top:10%;right:-10%;"></span>
     </div>
-</section>
+    <div class="ab-container">
+        <div class="ab-story-grid">
+            <div class="ab-story-text">
+                <div class="ab-label reveal"><span class="ab-label-dot"></span> Our Story</div>
+                <h2 class="reveal" style="transition-delay:.1s">How Infinite Protection Came to Be</h2>
+                <p class="reveal" style="transition-delay:.15s">
+                    Infinite Protection was founded by a group of international entrepreneurs who experienced a cyber catastrophe firsthand. They quickly realized cybersecurity had become the weakest link in their business.
+                </p>
+                <p class="reveal" style="transition-delay:.2s">
+                    That experience sparked a mission to create powerful cybersecurity built specifically for small and mid-size businesses — protection that is simple to use, affordable, and designed for real-world business needs.
+                </p>
+                <p class="reveal" style="transition-delay:.25s">
+                    Today, Infinite Protection is an international team of innovators and cybersecurity professionals, headquartered in Colorado, with research and development teams across the United States and Europe.
+                </p>
+                <div class="highlight-quote reveal" style="transition-delay:.3s">
+                    "We built Infinite Protection to give business owners something they rarely have today. Confidence."
+                </div>
+            </div>
 
-<!-- ============================
-     SECTION 5: WE TEST
-     ============================ -->
-<section id="test">
-    <div class="about-container-md">
-        <h2 class="about-section-title about-text-center">We don't guess. We test.</h2>
-        <div class="about-glass-card test-card">
-            <p>Most businesses never truly know if their security works—they assume. Attackers don't assume. They test.</p>
-            <p>That's why Infinite Protection  includes penetration testing to identify weak points before they become real problems.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ============================
-     SECTION 6: WHO IT'S FOR
-     ============================ -->
-<section id="audience">
-    <div class="about-container-md">
-        <h2 class="about-section-title about-text-center">Who Infinite Protection  is built for</h2>
-        <p class="about-section-subtitle about-text-center">Busy teams who need strong security without the complexity.</p>
-        <div class="audience-pills">
-            <div class="pill">Small businesses</div>
-            <div class="pill">Startups and growing teams</div>
-            <div class="pill">Ministries and nonprofits</div>
-            <div class="pill">Professional services</div>
-            <div class="pill">Remote and hybrid teams</div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================
-     SECTION 7: EXPECTATIONS
-     ============================ -->
-<section id="expectations">
-    <div class="about-container-sm">
-        <h2 class="about-section-title text-center">What you can expect from us</h2>
-        <div class="expectations-list">
-            <div class="about-glass-card expect-item check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>We explain things clearly</span>
-            </div>
-            <div class="about-glass-card expect-item check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>We protect continuously</span>
-            </div>
-            <div class="about-glass-card expect-item check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>We validate security with real testing</span>
-            </div>
-            <div class="about-glass-card expect-item check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>We support you when you need help</span>
-            </div>
-            <div class="about-glass-card expect-item check-item">
-                <div class="about-check-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></div>
-                <span>We keep improving as you grow</span>
+            <div class="ab-story-visual">
+                <div class="ab-story-stat-card reveal" style="transition-delay:.1s">
+                    <div class="ab-story-stat-icon"><i class="bi bi-globe-americas"></i></div>
+                    <div>
+                        <h4>International</h4>
+                        <p>Team of innovators &amp; cybersecurity professionals across the US and Europe</p>
+                    </div>
+                </div>
+                <div class="ab-story-stat-card reveal" style="transition-delay:.18s">
+                    <div class="ab-story-stat-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div>
+                        <h4>Colorado HQ</h4>
+                        <p>Headquartered in Colorado with R&amp;D teams spanning two continents</p>
+                    </div>
+                </div>
+                <div class="ab-story-stat-card reveal" style="transition-delay:.26s">
+                    <div class="ab-story-stat-icon"><i class="bi bi-buildings-fill"></i></div>
+                    <div>
+                        <h4>SMB Focused</h4>
+                        <p>Built exclusively for small and mid-size businesses — not watered-down enterprise software</p>
+                    </div>
+                </div>
+                <div class="ab-story-stat-card reveal" style="transition-delay:.34s">
+                    <div class="ab-story-stat-icon"><i class="bi bi-award-fill"></i></div>
+                    <div>
+                        <h4>Mission Driven</h4>
+                        <p>Every feature exists to make business owners more confident, not more confused</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============================
-     SECTION 8: CTA
-     ============================ -->
-<section id="cta">
-    <div class="about-container">
-        <div class="cta-about-inner">
-            <h2 class="about-section-title" style="max-width:700px;">Ready to protect your business with confidence?</h2>
-            <p class="about-section-subtitle" style="max-width:640px;">Get a clear view of your coverage and how Infinite Protection  keeps protection running automatically.</p>
-            <div class="cta-buttons">
-                <button class="about-btn-primary">Start Free Trial</button>
-                <button class="about-btn-outline">Schedule a Consultation</button>
+
+<!-- ===================== SECTION 3: OUR VISION ===================== -->
+<section id="ab-vision" class="ab-section-alt">
+    <div class="ambient-bg" style="opacity:.6">
+        <span class="amb1" style="width:500px;height:500px;top:-10%;left:-10%;"></span>
+    </div>
+    <div class="ab-container">
+        <div class="ab-vision-inner">
+            <div class="ab-label reveal"><span class="ab-label-dot"></span> Our Vision</div>
+            <h2 class="ab-title reveal" style="transition-delay:.1s">A world where businesses<br>can grow without fear</h2>
+            <div class="ab-divider reveal" style="transition-delay:.15s"></div>
+
+            <p class="reveal" style="margin-top:28px; transition-delay:.2s">
+                We envision a connected world where safety, productivity, and privacy coexist. A world where businesses can grow, innovate, and operate online without fear of digital threats.
+            </p>
+            <p class="reveal" style="transition-delay:.25s">
+                Our goal is simple. Make powerful cybersecurity accessible, affordable, and easy to use for every growing business.
+            </p>
+
+            <div class="ab-vision-goal reveal" style="transition-delay:.3s">
+                Because every business deserves <span>enterprise-level protection</span> without enterprise complexity.
             </div>
         </div>
     </div>
 </section>
 
+
+<!-- ===================== SECTION 4: WHAT MAKES IT DIFFERENT ===================== -->
+<section id="ab-different">
+    <div class="ab-container">
+        <div class="ab-section-header">
+            <div class="ab-label reveal"><span class="ab-label-dot"></span> Our Advantage</div>
+            <h2 class="ab-title reveal" style="transition-delay:.1s">What Makes Infinite Protection Different</h2>
+            <div class="ab-divider reveal" style="transition-delay:.15s"></div>
+            <p class="ab-sub reveal" style="margin-top:20px; transition-delay:.2s">
+                Most cybersecurity solutions protect only one area. Infinite Protection protects your entire business with a unified approach.
+            </p>
+        </div>
+
+        <div class="ab-diff-grid">
+            <div class="ab-card ab-diff-card reveal">
+                <div class="ab-diff-icon"><i class="bi bi-buildings"></i></div>
+                <h3>Built for Small &amp; Mid Size Businesses</h3>
+                <p>Enterprise-level protection designed to be simple, affordable, and easy to manage — without needing a dedicated IT team or technical expertise.</p>
+            </div>
+            <div class="ab-card ab-diff-card reveal" style="transition-delay:.1s">
+                <div class="ab-diff-icon"><i class="bi bi-layers"></i></div>
+                <h3>Two Pillars Working Together</h3>
+                <p>SaferNet protects your devices while ZED identifies vulnerabilities. Together, they secure both how attackers get in and where they try to break in.</p>
+            </div>
+            <div class="ab-card ab-diff-card reveal" style="transition-delay:.2s">
+                <div class="ab-diff-icon"><i class="bi bi-arrow-repeat"></i></div>
+                <h3>Continuous Protection</h3>
+                <p>Cyber threats constantly evolve. Infinite Protection continuously protects devices and regularly scans for new vulnerabilities — not just once.</p>
+            </div>
+            <div class="ab-card ab-diff-card reveal" style="transition-delay:.3s">
+                <div class="ab-diff-icon"><i class="bi bi-grid-1x2"></i></div>
+                <h3>Simple and Unified</h3>
+                <p>No more piecing together multiple tools with gaps in between. One platform. One solution. Complete protection for your entire business.</p>
+            </div>
+        </div>
+
+        <div class="ab-diff-cta reveal" style="transition-delay:.4s">
+            <button class="ab-btn-primary"><i class="bi bi-shield-check"></i> Get Protected</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== SECTION 5: WHO WE SERVE ===================== -->
+<section id="ab-serve" class="ab-section-alt">
+    <div class="ab-container">
+        <div class="ab-section-header">
+            <div class="ab-label reveal"><span class="ab-label-dot"></span> Who We Serve</div>
+            <h2 class="ab-title reveal" style="transition-delay:.1s">Who Infinite Protection Is Built For</h2>
+            <div class="ab-divider reveal" style="transition-delay:.15s"></div>
+        </div>
+
+        <p class="ab-serve-intro reveal" style="transition-delay:.2s">
+            Infinite Protection is built for businesses that need strong cybersecurity without the complexity of enterprise solutions. If your business relies on technology, data, and connected devices, Infinite Protection is built for you.
+        </p>
+
+        <div class="ab-pills">
+            <div class="ab-pill reveal" style="transition-delay:.05s"><i class="bi bi-shop"></i> Small businesses</div>
+            <div class="ab-pill reveal" style="transition-delay:.1s"><i class="bi bi-graph-up-arrow"></i> Startups and growing teams</div>
+            <div class="ab-pill reveal" style="transition-delay:.15s"><i class="bi bi-people-fill"></i> Ministries and nonprofits</div>
+            <div class="ab-pill reveal" style="transition-delay:.2s"><i class="bi bi-briefcase-fill"></i> Professional services</div>
+            <div class="ab-pill reveal" style="transition-delay:.25s"><i class="bi bi-house-fill"></i> Remote and hybrid teams</div>
+            <div class="ab-pill reveal" style="transition-delay:.3s"><i class="bi bi-bank2"></i> Service-based businesses</div>
+        </div>
+
+        <p class="ab-serve-footer reveal" style="transition-delay:.35s">
+            <i class="bi bi-shield-fill-check" style="margin-right:8px;"></i>
+            Enterprise-level protection. Zero enterprise complexity.
+        </p>
+    </div>
+</section>
+
+
+<!-- ===================== SECTION 6: OUR APPROACH ===================== -->
+<section id="ab-approach">
+    <div class="ab-container">
+        <div class="ab-section-header">
+            <div class="ab-label reveal"><span class="ab-label-dot"></span> Our Approach</div>
+            <h2 class="ab-title reveal" style="transition-delay:.1s">We believe cybersecurity should be<br>powerful, simple, and built around you</h2>
+            <div class="ab-divider reveal" style="transition-delay:.15s"></div>
+        </div>
+
+        <div class="ab-approach-grid">
+            <div class="ab-card ab-approach-card reveal">
+                <div class="ab-approach-num">01</div>
+                <h3>Clarity Over Complexity</h3>
+                <p>We focus on simple, effective protection without technical jargon or complicated systems. We explain what's happening in plain language so owners can make confident decisions.</p>
+            </div>
+            <div class="ab-card ab-approach-card reveal" style="transition-delay:.1s">
+                <div class="ab-approach-num">02</div>
+                <h3>Protection That Works Quietly</h3>
+                <p>Security should not slow your business down. Infinite Protection runs in the background, continuously protecting your devices and networks while your team stays productive.</p>
+            </div>
+            <div class="ab-card ab-approach-card reveal" style="transition-delay:.2s">
+                <div class="ab-approach-num">03</div>
+                <h3>Built for Real-World Business Needs</h3>
+                <p>From remote employees to growing teams, Infinite Protection is designed to protect businesses as they grow and evolve — without added complexity at every step.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== SECTION 7: BUILT FOR OWNERS ===================== -->
+<section id="ab-owners" class="ab-section-alt">
+    <div class="ab-container">
+        <div class="ab-owners-grid">
+            <div class="ab-owners-text">
+                <div class="ab-label reveal"><span class="ab-label-dot"></span> For Business Owners</div>
+                <h2 class="reveal" style="transition-delay:.1s">Built for Business Owners Who Don't Have Time to Worry</h2>
+                <p class="reveal" style="transition-delay:.15s">
+                    We built Infinite Protection for business owners who do not have time to worry about cybersecurity but still need strong protection.
+                </p>
+                <p class="reveal" style="transition-delay:.2s">
+                    Our mission is simple. Provide powerful, affordable cybersecurity that protects your business while you focus on growth.
+                </p>
+                <div class="ab-mission-box reveal" style="transition-delay:.25s">
+                    <h4>Our Mission</h4>
+                    <p>Because security should not slow you down. It should protect you while you move forward.</p>
+                </div>
+            </div>
+
+            <div class="ab-expectations">
+                <p style="font-size:14px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--accent-green); margin-bottom:8px;" class="reveal">What you can expect from us</p>
+                <div class="ab-expect-item reveal" style="transition-delay:.05s">
+                    <div class="ab-expect-check"><i class="bi bi-check-lg"></i></div>
+                    We explain things clearly
+                </div>
+                <div class="ab-expect-item reveal" style="transition-delay:.1s">
+                    <div class="ab-expect-check"><i class="bi bi-check-lg"></i></div>
+                    We protect continuously
+                </div>
+                <div class="ab-expect-item reveal" style="transition-delay:.15s">
+                    <div class="ab-expect-check"><i class="bi bi-check-lg"></i></div>
+                    We validate security with real testing
+                </div>
+                <div class="ab-expect-item reveal" style="transition-delay:.2s">
+                    <div class="ab-expect-check"><i class="bi bi-check-lg"></i></div>
+                    We support you when you need help
+                </div>
+                <div class="ab-expect-item reveal" style="transition-delay:.25s">
+                    <div class="ab-expect-check"><i class="bi bi-check-lg"></i></div>
+                    We keep improving as you grow
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== SECTION 8: CTA ===================== -->
+<section id="ab-cta">
+    <div class="ab-cta-glow"></div>
+    <div class="ambient-bg" style="opacity:.6">
+        <span class="amb1" style="width:500px;height:500px;"></span>
+    </div>
+
+    <div class="ab-container" style="position:relative;z-index:2;text-align:center;">
+        <div class="ab-label reveal" style="display:inline-flex; margin:0 auto 24px;">
+            <span class="ab-label-dot"></span> Ready to Get Protected?
+        </div>
+        <h2 class="ab-title reveal" style="transition-delay:.1s; margin:0 auto 20px;">
+            Ready to protect your business<br>with confidence?
+        </h2>
+        <p class="ab-sub reveal" style="transition-delay:.2s;">
+            Get a clear view of your coverage and how Infinite Protection keeps protection running automatically — without needing an IT team.
+        </p>
+        <div class="ab-btn-row reveal" style="transition-delay:.3s; justify-content:center;">
+            <button class="ab-btn-primary">Get a Free Security Scan</button>
+            <button class="ab-btn-outline">Talk to an Expert</button>
+        </div>
+    </div>
+</section>
 
     <!-- FOOTER -->
 
@@ -345,7 +465,7 @@
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
                         </svg>
-                        <span>SaferNet</span>
+                        <span>Infinite Protection</span>
                     </div>
 
                     <p>
@@ -411,7 +531,7 @@
             <!-- BOTTOM -->
             <div class="footer-bottom">
 
-                <p>© 2026 SaferNet. All rights reserved.</p>
+                <p>© 2026 Infinite Protection. All rights reserved.</p>
 
                 <div class="footer-policy">
                     <a href="privacypolicy.html">Privacy Policy</a>

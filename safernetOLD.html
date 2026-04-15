@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Infinite Protection</title>
+
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
+
+	<link rel="stylesheet" href="assets/css/safernet.css" asp-append-version="true" />
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container align-items-center">
+
+       
+        <a class="navbar-brand fw-bold" href="index.html">
+            <img id="logoImg" class="logo-dark" src="assets/images/logodark.png" width="200" height="60" alt="Infinite Protection" />
+            <img id="logoImg" class="logo-light" src="assets/images/logolight.png" width="200" height="60" alt="Infinite Protection" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- PRODUCT -->
+                <li class="nav-item ms-lg-3">
+                   <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
+			<a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="howitwork.html">How it works</a>
+                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
+                </li>
+                
+                <!-- COMPLIANCE -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="compliance.html">Compliance</a>
+                </li>
+                <!-- <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Compliance
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Business Compliance</a></li>
+                        <li><a class="dropdown-item" href="#">Compliance Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Talk To Us</a></li>
+                    </ul>
+                </li> -->
+
+                <!-- RESOURCES -->
+                <!-- <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="#">Resources</a>
+                </li> -->
+                 <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                  <!--  <ul class="dropdown-menu">
+                        <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
+                    </ul>-->
+                    
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                        <li><a class="dropdown-item" href="userguide.html">User Guide</a></li>
+                        <li><a class="dropdown-item" href="blogs.html">Blogs</a></li>
+                        <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
+                        <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                        <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
+                    </ul>
+                </li> 
+
+                <!-- PRICING -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a> -->
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="about.html">About</a>
+                    <!--<a class="nav-link" asp-controller="Home" asp-action="about">About</a>-->
+                </li>
+
+                                
+                <!-- DARK MODE -->
+                <li class="nav-item ms-lg-3">
+                    
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="icon moon">🌙</span>
+                            <span class="icon sun">☀️</span>
+                        </span>
+                    </label>
+                </li>
+                <!-- TALK -->
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-outline-light">Talk to Us</a>
+                </li>
+
+                
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 1 — HERO
+═══════════════════════════════════════════════ -->
+<section id="sn-hero-defend">
+  <div class="sn-hero-glow sn-hero-glow-1"></div>
+  <div class="sn-hero-glow sn-hero-glow-2"></div>
+
+  <!-- decorative grid visual (desktop only) -->
+  
+
+  <div class="safernet-container">
+    <div class="sn-hero-inner">
+      <p class="sn-eyebrow sn-reveal">Online High Security with SaferNet</p>
+      <h2 class="sn-reveal sn-d1">Protect Every Device. Everywhere Employees Work.</h2>
+      <p class="sn-hero-desc sn-reveal sn-d2">Modern teams work from offices, homes, airports, and coffee shops. Every connection creates a potential<br> entry point for cyber threats. SaferNet delivers advanced endpoint protection that keeps every device secure <br>— no matter where it connects.</p>
+      <div class="sn-hero-btns sn-reveal sn-d3">
+        <button class="sn-btn-primary">See How It Works</button>
+        <button class="sn-btn-outline">Start Free Trial</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 2 — WHAT SAFERNET DOES
+═══════════════════════════════════════════════ -->
+<section id="sn-what-section">
+  <div class="safernet-container">
+    <div class="sn-what-header">
+      <h2 class="sn-reveal">What SaferNet Does</h2>
+      <p class="sn-reveal sn-d1">SaferNet is an all-in-one cybersecurity platform designed to protect users and organizations from modern digital threats. Instead of relying on multiple security tools, SaferNet combines several protection layers into one simple solution.</p>
+      <p class="sn-reveal sn-d2" style="font-size:15px;color:var(--sn-faint);">SaferNet protects devices through:</p>
+    </div>
+    <div class="sn-what-pillars">
+      <div class="sn-pillar-card sn-reveal sn-d1">
+        <div class="sn-pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>24/7 Encrypted VPN Connection</h3>
+        <p>to secure internet traffic. Always-on AES-256 encryption that protects every byte of data sent and received — automatically, from the moment devices connect.</p>
+      </div>
+      <div class="sn-pillar-card sn-reveal sn-d2">
+        <div class="sn-pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+        </div>
+        <h3>Advanced Malware &amp; Virus Protection</h3>
+        <p>against ransomware, spyware, and phishing. Real-time threat detection blocks malicious files and suspicious activity before they can cause damage to your devices or data.</p>
+      </div>
+      <div class="sn-pillar-card sn-reveal sn-d3">
+        <div class="sn-pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Internet Monitoring &amp; Controls</h3>
+        <p>for visibility across all connected devices. Administrators get a complete view of network activity and the ability to restrict access to categories of websites or specific apps.</p>
+      </div>
+    </div>
+    <p class="sn-what-footer sn-reveal sn-d4">This integrated approach ensures businesses can protect employees, data, and digital activity from evolving cyber risks.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 3 — WHY ENDPOINT PROTECTION MATTERS
+═══════════════════════════════════════════════ -->
+<section id="sn-endpoint-why">
+  <div class="safernet-container">
+    <div class="sn-endpoint-header">
+      <h2 class="sn-reveal">Why Endpoint Protection Matters</h2>
+      <p class="sn-reveal sn-d1">Today's workforce relies on laptops, smartphones, and tablets to stay productive. Unfortunately, these devices are also prime targets for cybercriminals.</p>
+      <p class="sn-endpoint-sub sn-reveal sn-d2">Without proper protection, endpoints can expose organizations to:</p>
+    </div>
+
+    <div class="sn-threat-grid">
+      <div class="sn-threat-card sn-reveal sn-d1">
+        <div class="sn-threat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p>Malware infections and ransomware attacks</p>
+      </div>
+      <div class="sn-threat-card sn-reveal sn-d2">
+        <div class="sn-threat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <p>Phishing attempts targeting employee credentials</p>
+      </div>
+      <div class="sn-threat-card sn-reveal sn-d3">
+        <div class="sn-threat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01M2 8.82a15 15 0 0 1 20 0M5 12.859a10 10 0 0 1 14 0M8.5 16.429a5 5 0 0 1 7 0"/></svg>
+        </div>
+        <p>Data loss through unsecured Wi-Fi networks</p>
+      </div>
+      <div class="sn-threat-card sn-reveal sn-d4">
+        <div class="sn-threat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <p>Unauthorized access to company systems</p>
+      </div>
+    </div>
+
+    <div class="sn-endpoint-conclusion sn-reveal">
+      <p>Endpoint protection ensures that every device connecting to your network remains secure, preventing attackers from gaining access to sensitive information or business operations.</p>
+    </div>
+    <div class="sn-endpoint-btns sn-reveal sn-d1">
+      <button class="sn-btn-primary">See How It Works</button>
+      <button class="sn-btn-outline">Schedule a Demo</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 4 — PROTECTION WHEREVER EMPLOYEES CONNECT
+═══════════════════════════════════════════════ -->
+<section id="sn-wherever-section">
+  <div class="safernet-container">
+    <div class="sn-wherever-grid">
+
+      <div class="sn-wherever-left">
+        <h2 class="sn-reveal sn-reveal-left">Protection Wherever Employees Connect</h2>
+        <p class="sn-reveal sn-reveal-left sn-d1">Employees no longer work from a single location. SaferNet ensures security follows them everywhere.</p>
+        <p class="sn-connection-desc sn-reveal sn-d1">Whether devices are connected to:</p>
+        <ul class="sn-connection-types">
+          <li class="sn-conn-item sn-reveal sn-d2">
+            <span class="sn-conn-dot"></span>
+            <span>Office networks</span>
+          </li>
+          <li class="sn-conn-item sn-reveal sn-d3">
+            <span class="sn-conn-dot"></span>
+            <span>Home Wi-Fi</span>
+          </li>
+          <li class="sn-conn-item sn-reveal sn-d4">
+            <span class="sn-conn-dot"></span>
+            <span>Public hotspots</span>
+          </li>
+          <li class="sn-conn-item sn-reveal sn-d5">
+            <span class="sn-conn-dot"></span>
+            <span>Mobile data connections</span>
+          </li>
+        </ul>
+        <p class="sn-cloud-note sn-reveal sn-d4">SaferNet's cloud-driven protection continuously secures devices in real time, preventing threats before they cause damage.</p>
+        <div class="sn-wherever-btns sn-reveal sn-d5">
+          <button class="sn-btn-primary">See How It Works</button>
+          <button class="sn-btn-outline">Schedule a Demo</button>
+        </div>
+      </div>
+
+      <div class="sn-wherever-right sn-reveal sn-reveal-right">
+        <div class="sn-device-diagram">
+          <div class="sn-diag-ring"></div>
+          <div class="sn-diag-ring"></div>
+          <div class="sn-diag-ring"></div>
+          <div class="sn-diag-center">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="sn-diag-dot"></div>
+          <div class="sn-diag-dot"></div>
+          <div class="sn-diag-dot"></div>
+          <div class="sn-diag-dot"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 5 — MULTI-LAYER SECURITY IN ONE PLATFORM
+═══════════════════════════════════════════════ -->
+<section id="sn-multilayer-section">
+  <div class="safernet-container">
+    <div class="sn-multilayer-header">
+      <h2 class="sn-reveal">Multi-Layer Security in One Platform</h2>
+      <p class="sn-reveal sn-d1">Together, these layers create a complete defense system for modern digital environments.</p>
+    </div>
+    <div class="sn-layer-grid">
+
+      <div class="sn-layer-card sn-reveal sn-d1">
+        <div class="sn-layer-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Secure VPN Encryption</h3>
+        <p>SaferNet keeps your internet connection encrypted at all times, providing sensitive data and preventing tracking or interception from any source.</p>
+        <a href="#" class="sn-layer-link">
+          Get Encrypted
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="sn-layer-card sn-reveal sn-d2">
+        <div class="sn-layer-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+        </div>
+        <h3>Real-Time Malware Protection</h3>
+        <p>Detects and blocks malware threats — ransomware, spyware, and phishing attempts — before they reach your system and compromise your data.</p>
+        <a href="#" class="sn-layer-link">
+          Start the Protection
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="sn-layer-card sn-reveal sn-d3">
+        <div class="sn-layer-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Internet Controls &amp; Visibility</h3>
+        <p>SaferNet gives full visibility into network activity and lets administrators manage access, block websites, and enforce safer browsing policies.</p>
+        <a href="#" class="sn-layer-link">
+          Control your Footprint
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 6 — DESIGNED FOR MODERN WORK
+═══════════════════════════════════════════════ -->
+<section id="sn-modern-work">
+  <div class="safernet-container">
+    <div class="sn-modern-grid">
+
+      <div class="sn-modern-left">
+        <h2 class="sn-reveal sn-reveal-left">Designed for Modern Work</h2>
+        <p class="sn-reveal sn-reveal-left sn-d1">SaferNet works seamlessly across devices and platforms, including:</p>
+        <ul class="sn-device-list">
+          <li class="sn-device-item sn-reveal sn-d1">
+            <span class="sn-device-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Windows desktops and laptops
+          </li>
+          <li class="sn-device-item sn-reveal sn-d2">
+            <span class="sn-device-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>
+            MacOS computers
+          </li>
+          <li class="sn-device-item sn-reveal sn-d3">
+            <span class="sn-device-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Android and iOS devices
+          </li>
+          <li class="sn-device-item sn-reveal sn-d4">
+            <span class="sn-device-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Tablets and mobile devices
+          </li>
+        </ul>
+        <p class="sn-modern-note sn-reveal sn-d5">This ensures every employee device remains protected without disrupting productivity or workflow.</p>
+        <div class="sn-modern-btns sn-reveal sn-d5">
+          <button class="sn-btn-primary">See How It Works</button>
+          <button class="sn-btn-outline">Schedule a Demo</button>
+        </div>
+      </div>
+
+      <!-- architecture visual -->
+      <div class="sn-modern-right sn-reveal sn-reveal-right sn-d2">
+        <div class="sn-arch-visual">
+          <div class="sn-arch-row">
+            <div class="sn-arch-card">
+              <div class="sn-arch-icon">🖥️</div>
+              <p>Windows / Mac</p>
+            </div>
+            <div class="sn-arch-card">
+              <div class="sn-arch-icon">📱</div>
+              <p>Android / iOS</p>
+            </div>
+            <div class="sn-arch-card">
+              <div class="sn-arch-icon">📟</div>
+              <p>Tablets</p>
+            </div>
+          </div>
+          <div class="sn-arch-connector">
+            <div class="sn-arch-line"></div>
+            <div class="sn-arch-hub">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div class="sn-arch-line"></div>
+          </div>
+          <div class="sn-arch-row" style="grid-template-columns:1fr 1fr;">
+            <div class="sn-arch-card">
+              <div class="sn-arch-icon">🔒</div>
+              <p>VPN Layer</p>
+            </div>
+            <div class="sn-arch-card">
+              <div class="sn-arch-icon">🛡️</div>
+              <p>Malware Block</p>
+            </div>
+          </div>
+          <div class="sn-arch-status">
+            <div class="sn-arch-status-dot"></div>
+            All devices protected · 24/7
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 7 — CTA
+═══════════════════════════════════════════════ -->
+<section id="sn-workspace-cta">
+  <div class="sn-cta-glow"></div>
+  <div class="safernet-container-sm">
+    <div class="sn-cta-inner">
+      <p class="sn-eyebrow sn-reveal">Protect Your Devices Today</p>
+      <h2 class="sn-reveal sn-d1">Secure Your Digital Workspace</h2>
+      <p class="sn-reveal sn-d2">As cyber threats continue to evolve, endpoint protection is no longer optional — it's essential. SaferNet helps organizations stay protected with simple, powerful cybersecurity that works across every device and connection.</p>
+      <p class="sn-cta-tagline sn-reveal sn-d3">Protect your team. Protect your data. Stay secure with SaferNet.</p>
+      <div class="sn-cta-btns sn-reveal sn-d3">
+        <button class="sn-btn-primary">Start Free Trial</button>
+        <button class="sn-btn-outline">Schedule a Demo</button>
+      </div>
+      <div class="sn-cta-trust sn-reveal sn-d4">
+        <span>No credit card required</span>
+        <span>30-day money-back guarantee</span>
+        <span>Cancel anytime</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SECTION -->
+                <div class="footer-about">
+                    <div class="logo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        </svg>
+                        <span>SaferNet</span>
+                    </div>
+
+                    <p>
+                        Enterprise-grade cybersecurity, simplified for small business.
+                        Protecting your devices, users, and connections with confidence.
+                    </p>
+
+                    <div class="badge">
+                        SOC 2 Certified
+                    </div>
+                </div>
+
+                <!-- SOLUTIONS -->
+                <div class="footer-links">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="platform.html">Platform</a></li>
+                        <li><a href="vpnprotection.html">VPN Protection</a></li>
+                        <li><a href="malwaredefense.html">Malware Defense</a></li>
+                        <li><a href="contentfiltering.html">Content Filtering</a></li>
+                        <li><a href="pentesting.html">Pen Testing</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY -->
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="howitwork.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="casestudies.html">Case Studies</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+
+                    <p>
+  <i class="bi bi-envelope"></i> 
+  <a href="mailto:support@safernet.com">support@safernet.com</a>
+</p>
+
+<p>
+  <i class="bi bi-telephone"></i> 
+  <a href="tel:18005551234">1-800-555-1234</a>
+</p>
+
+<p>
+  <i class="bi bi-geo-alt"></i> 
+  <a href="https://www.google.com/maps?q=123+Security+Blvd,+Suite+400,+Austin,+TX+78701" target="_blank">
+    123 Security Blvd, Suite 400<br>
+    Austin, TX 78701
+  </a>
+</p>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+
+                <p>© 2026 SaferNet. All rights reserved.</p>
+
+                <div class="footer-policy">
+                    <a href="privacypolicy.html">Privacy Policy</a>
+                    <a href="termsofservice.html">Terms of Service</a>
+                    <a href="security.html">Security</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+  
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/site.js" asp-append-version="true"></script>
+
+	<script src="assets/js/safernet.js" asp-append-version="true"></script>
+
+    <!--@await RenderSectionAsync("Scripts", required: false) -->
+
+</body>
+</html>

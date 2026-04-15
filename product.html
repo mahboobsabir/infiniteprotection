@@ -49,10 +49,9 @@
                    <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
 			<a class="nav-link" href="product.html">Product</a>
                 </li>
-                <li class="nav-item ms-lg-3">
-                    <a class="nav-link" href="howitwork.html">How it works</a>
-                    <!-- <a class="nav-link" asp-controller="Home" asp-action="howitwork">How it works</a>-->
-                </li>
+               <!-- <li class="nav-item ms-lg-3">
+                    <a class="nav-link" href="howitwork.html">How it works</a>                    
+                </li> -->
                 
                 <!-- COMPLIANCE -->
                 <li class="nav-item ms-lg-3">
@@ -133,261 +132,414 @@
 </nav>
 
 
+<!-- ===================== HERO ===================== -->
+<section class="ip-hero">
+    <div class="ip-hero-glow"></div>
+    <div class="ip-hero-glow2"></div>
+    <div class="ip-hero-grid"></div>
 
+    <div class="ip-container">
+        <div class="ip-badge reveal">
+            <span class="ip-badge-dot"></span>
+            The Platform
+        </div>
 
-<!-- ===== HERO ===== -->
-<section class="product-hero">
-    <div class="productp-hero-glow"></div>
-    <div class="product-container product-hero-content">
-        <p class="product-tag productreveal">THE PLATFORM</p>
-        <h2 class="product-heading  productreveal" @* style="transition-delay:.1s" *@>
-            Two pillars. One platform.<br>Complete protection.
-        </h2>
-        <p class="product-subtitle productreveal" style="transition-delay:.2s">
-            Automated penetration testing finds vulnerabilities in your network.
-            Endpoint<br> protection stops threats on every device. Together they create
-            seamless 24/7 <br>security.
+        <h1 class="ip-hero-title reveal" style="transition-delay:.1s">
+            Complete Cybersecurity for<br>Your Entire Business
+        </h1>
+
+        <p class="ip-hero-subtitle reveal" style="transition-delay:.2s">
+            Protect your devices, identify vulnerabilities, and stop threats before attackers get in.
         </p>
-        <div class="product-hero-buttons productreveal" style="transition-delay:.3s">
-            <button class="product-btn-primary">See How It Works</button>
-            <button class="product-btn-secondary">Start Free Trial</button>
-        </div>
-        <div class="productp-hero-stats productreveal" style="transition-delay:.45s">
-            <div class="productp-stat-item">
-                <div class="productp-stat-number" data-count="99.9">0</div>
-                <div class="productp-stat-label">% Uptime SLA</div>
-            </div>
-            <div class="productp-stat-item">
-                <div class="productp-stat-number" data-count="24">0</div>
-                <div class="productp-stat-label">/ 7 Monitoring</div>
-            </div>
-            <div class="productp-stat-item">
-                <div class="productp-stat-number" data-count="5000">0</div>
-                <div class="productp-stat-label">+ Businesses Protected</div>
-            </div>
-            <div class="productp-stat-item">
-                <div class="productp-stat-number" data-count="30">0</div>
-                <div class="productp-stat-label">Day Free Trial</div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- ===== FEATURES ===== -->
-<section class="product-features">
-    <div class="product-container">
-        <div class="productp-section-header">
-            <h2 class="productreveal">Two complementary layers of defense</h2>
-            <p class="product-section-sub productreveal" style="transition-delay:.1s">
-                Most security solutions focus on one area. Infinite Protection  protects both
-                your infrastructure and every endpoint.
-            </p>
-        </div>
-        <div class="product-feature-grid">
-            <div class="product-feature-card">
-                <div class="product-icon-box">🔍</div>
-                <h3>Automated Pen Testing</h3>
-                <p>Continuous vulnerability scanning that probes your network infrastructure 24/7 to find weaknesses before attackers do.</p>
-                <ul>
-                    <li>Network-wide vulnerability discovery</li>
-                    <li>Real-time threat intelligence</li>
-                    <li>Prioritized remediation guidance</li>
-                    <li>Compliance-ready reporting</li>
-                </ul>
-                <div class="product-tauthor"><span>PROACTIVE DEFENSE</span></div>
-            </div>
-            <div class="product-feature-card">
-                <div class="product-icon-box">🛡️</div>
-                <h3>Infinite Protection  Endpoint Protection</h3>
-                <p>Device-level protection that blocks malware, encrypts connections, and filters content across all endpoints, anywhere.</p>
-                <ul>
-                    <li>Real-time malware blocking</li>
-                    <li>Always-on VPN encryption</li>
-                    <li>Content filtering &amp; phishing protection</li>
-                    <li>Zero-touch deployment</li>
-                </ul>
-                <div class="product-tauthor"><span>REACTIVE DEFENSE</span></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== BETTER TOGETHER ===== -->
-<section class="product-loop">
-    <div class="product-container">
-        <div class="product-loop-header">
-            <h2 class="productreveal">Better together</h2>
-            <p class="productreveal" style="transition-delay:.1s">
-                Both pillars share intelligence and coordinate responses—so your security gets smarter over time.
-            </p>
-        </div>
-        <div class="product-loop-top">
-            <div class="product-loop-mini-card">
-                <div class="product-mini-icon">🔍</div>
-                <div>
-                    <h5>Pen Testing</h5>
-                    <p>Finds vulnerabilities</p>
-                </div>
-            </div>
-            <div class="product-loop-mini-card">
-                <div class="product-mini-icon"><i class="fa-solid fa-shield"></i></div>
-                <div>
-                    <h5>Endpoint Protection</h5>
-                    <p>Blocks active threats</p>
-                </div>
-            </div>
-        </div>
-        <div class="product-loop-connector">
-            <div class="line"></div>
-            <div class="zap">⚡</div>
-            <div class="line rev"></div>
-        </div>
-        <div class="product-loop-grid">
-            <div class="product-loop-card">
-                <h3>Shared Intelligence</h3>
-                <p>Discoveries feed protection rules</p>
-            </div>
-            <div class="product-loop-card">
-                <h3>Coordinated Response</h3>
-                <p>Threats trigger automatic updates</p>
-            </div>
-            <div class="product-loop-card">
-                <h3>Unified Dashboard</h3>
-                <p>One view for everything</p>
-            </div>
-        </div>
-        <div class="product-loop-result">
-            <div class="productp-result-icon">✔</div>
-            <h3>Complete, adaptive protection</h3>
-            <p>As your network evolves and new threats emerge, both systems learn and adapt—keeping you protected without manual intervention.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ===== CONTINUOUS PROTECTION LOOP ===== -->
-<section class="productp-protection-loop">
-    <div class="productp-loop-container">
-        <div class="productp-loop-header">
-            <h2 class="productreveal">The continuous protection loop</h2>
-            <p class="productreveal" style="transition-delay:.1s">
-                Infinite Protection  never stops working. Every step feeds into the next, creating a cycle of continuous improvement.
-            </p>
-        </div>
-        <div class="productp-loop-grid">
-            <div class="productp-loop-card">
-                <div class="productp-card-header">
-                    <div class="productp-protection-icon-box">🔍</div>
-                    <div><span class="productp-step">Step 1</span><h3>Discover</h3></div>
-                </div>
-                <p class="productp-card-text">Automated pen testing scans your entire network to identify vulnerabilities, misconfigurations, and potential entry points.</p>
-                <ul>
-                    <li>Network-wide vulnerability scan</li>
-                    <li>Risk prioritization</li>
-                    <li>Threat intelligence updates</li>
-                </ul>
-                <div class="productp-connector right"></div>
-            </div>
-            <div class="productp-loop-card">
-                <div class="productp-card-header">
-                    <div class="productp-protection-icon-box">🛡</div>
-                    <div><span class="productp-step">Step 2</span><h3>Protect</h3></div>
-                </div>
-                <p class="productp-card-text">Endpoint protection activates on every device, blocking malware, phishing attempts, and suspicious activity in real-time.</p>
-                <ul>
-                    <li>Active threat blocking</li>
-                    <li>VPN &amp; encryption</li>
-                    <li>Content filtering</li>
-                </ul>
-                <div class="productp-connector bottom"></div>
-            </div>
-            <div class="productp-loop-card">
-                <div class="productp-card-header">
-                    <div class="productp-protection-icon-box">📄</div>
-                    <div><span class="productp-step">Step 3</span><h3>Report</h3></div>
-                </div>
-                <p class="productp-card-text">Clear, actionable reports show what was found, what was blocked, and what needs attention.</p>
-                <ul>
-                    <li>Simple dashboards</li>
-                    <li>Instant alerts</li>
-                    <li>Compliance-ready exports</li>
-                </ul>
-                <div class="productp-connector left"></div>
-            </div>
-            <div class="productp-loop-card">
-                <div class="productp-card-header">
-                    <div class="productp-protection-icon-box">📈</div>
-                    <div><span class="productp-step">Step 4</span><h3>Improve</h3></div>
-                </div>
-                <p class="productp-card-text">Both systems learn from every discovery and every threat, automatically adapting to protect against emerging risks.</p>
-                <ul>
-                    <li>Automatic policy updates</li>
-                    <li>Adaptive threat response</li>
-                    <li>Continuous optimization</li>
-                </ul>
-                <div class="productp-connector top"></div>
-            </div>
-        </div>
-        <div class="productp-loop-footer productreveal">Repeats continuously &bull; 24/7 &bull; 365 days a year</div>
-    </div>
-</section>
-
-<!-- ===== WHY Infinite Protection  ===== -->
-<section class="productp-why-safernet">
-    <div class="productp-why-container">
-        <div class="productp-why-section-header">
-            <h2 class="productreveal">Why businesses choose Infinite Protection </h2>
-            <p class="productreveal" style="transition-delay:.1s">Enterprise-level security without the enterprise-level complexity or cost.</p>
-        </div>
-        <div class="productp-why-features-grid">
-            <div class="productp-why-feature-card">
-                <div class="productp-why-feature-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-                </div>
-                <h3>Always-on protection</h3>
-                <p>24/7 monitoring and defense—no maintenance windows, no downtime, no gaps.</p>
-            </div>
-            <div class="productp-why-feature-card">
-                <div class="productp-why-feature-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" x2="12" y1="2" y2="22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-                </div>
-                <h3>Predictable pricing</h3>
-                <p>Fixed monthly cost per endpoint. No surprise bills, no hidden fees.</p>
-            </div>
-            <div class="productp-why-feature-card">
-                <div class="productp-why-feature-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-                </div>
-                <h3>No IT team needed</h3>
-                <p>Fully managed security. We handle updates, monitoring, and threat response.</p>
-            </div>
-            <div class="productp-why-feature-card">
-                <div class="productp-why-feature-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg>
-                </div>
-                <h3>Fast deployment</h3>
-                <p>Up and running in hours, not weeks. Protection starts immediately.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== CTA ===== -->
-<section class="productp-cta-section">
-    <div class="productp-cta-bg"><div class="productp-cta-glow"></div></div>
-    <div class="productp-cta-container">
-        <p class="productp-cta-label productreveal">Ready to Get Protected?</p>
-        <h2 class="productp-cta-title productreveal" style="transition-delay:.1s">See the platform in action</h2>
-        <p class="productp-cta-description productreveal" style="transition-delay:.2s">
-            Schedule a personalized demo to see how Infinite Protection  protects your specific environment—or start your free trial today.
+        <p class="ip-hero-tagline reveal" style="transition-delay:.25s">
+            Two Pillars. One Platform. Complete Protection.
         </p>
-        <div class="productp-cta-buttons productreveal" style="transition-delay:.3s">
-            <button class="productp-btn-primary">Start Free Trial</button>
-            <button class="productp-btn-secondary">Schedule a Demo</button>
+
+        <div class="ip-trust-row reveal" style="transition-delay:.3s">
+            <span><i class="bi bi-buildings"></i> Built for Small &amp; Mid Size Businesses</span>
+            <span><i class="bi bi-arrow-repeat"></i> Continuous Protection</span>
+            <span><i class="bi bi-currency-dollar"></i> Simple and Affordable</span>
         </div>
-        <p class="productp-cta-note productreveal" style="transition-delay:.4s">No credit card required &bull; Full access for 30 days</p>
+
+        <div class="ip-hero-buttons reveal" style="transition-delay:.35s">
+            <button class="ip-btn-primary">Get Protected</button>
+            <button class="ip-btn-secondary">See Packages</button>
+        </div>
+
+        <!-- Two Pillars Visual -->
+        <div class="ip-pillars-visual reveal" style="transition-delay:.45s">
+            <div class="ip-pillar-card">
+                <div class="ip-pillar-name">SaferNet</div>
+                <div class="ip-pillar-desc">Modern Device Protection. Simple and Unified.</div>
+                <ul class="ip-pillar-features">
+                    <li><i class="bi bi-check-circle-fill"></i> Built-in VPN encrypts connections</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Advanced threat protection</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Real-time internet controls</li>
+                </ul>
+            </div>
+            <div class="ip-plus-circle">+</div>
+            <div class="ip-pillar-card">
+                <div class="ip-pillar-name">ZED</div>
+                <div class="ip-pillar-desc">Modern Penetration Testing. Faster. More Affordable.</div>
+                <ul class="ip-pillar-features">
+                    <li><i class="bi bi-check-circle-fill"></i> External &amp; internal testing</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Basic &amp; complete scans</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Compliance testing support</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
+
+<!-- ===================== TWO PILLARS DETAIL ===================== -->
+<section class="ip-section ip-section-alt">
+    <div class="ip-container">
+        <div class="ip-section-header">
+            <p class="ip-section-label reveal">Two Pillars. One Complete Protection.</p>
+            <h2 class="ip-section-title reveal" style="transition-delay:.1s">Infinite Protection combines device security<br>and vulnerability scanning</h2>
+            <p class="ip-section-sub reveal" style="transition-delay:.2s">
+                Most cybersecurity solutions only protect one area. Infinite Protection protects both how attackers get in and where they try to break in.
+            </p>
+        </div>
+
+        <div class="ip-pillars-grid">
+            <!-- SaferNet -->
+            <div class="ip-pillar-detail reveal" data-name="SaferNet">
+                <div class="ip-pillar-logo">
+                    <div class="ip-pillar-logo-icon"><i class="bi bi-shield-fill-check"></i></div>
+                    <span class="ip-pillar-logo-text">SaferNet</span>
+                </div>
+                <h3>Modern Device Protection. Simple and Unified.</h3>
+                <p>
+                    In the past, small businesses used multiple tools — VPNs for secure connections, antivirus for malware, and separate controls for user activity. It was complex, expensive, and left gaps attackers could exploit. SaferNet brings it all together in one cloud-based solution.
+                </p>
+                <ul>
+                    <li>Built-in VPN encrypts every connection</li>
+                    <li>Advanced threat protection blocks malware, ransomware, and phishing</li>
+                    <li>Internet controls provide visibility and reduce risky behavior in real time</li>
+                </ul>
+                <p style="margin-top:20px; font-size:14px; font-style:italic;">
+                    SaferNet protects every device, anywhere your team works, with one simple unified system.
+                </p>
+            </div>
+
+            <!-- ZED -->
+            <div class="ip-pillar-detail reveal" style="transition-delay:.15s" data-name="ZED">
+                <div class="ip-pillar-logo">
+                    <div class="ip-pillar-logo-icon"><i class="bi bi-search"></i></div>
+                    <span class="ip-pillar-logo-text">ZED</span>
+                </div>
+                <h3>Modern Penetration Testing. Faster. More Affordable.</h3>
+                <p>
+                    In the past, companies hired white-hat hackers to test websites, software, and networks for weaknesses — often taking months and costing tens of thousands of dollars. ZED delivers the same concept through advanced automation.
+                </p>
+                <ul>
+                    <li>External testing finds open doors from the outside</li>
+                    <li>Internal testing shows what happens if someone gets inside</li>
+                    <li>Basic scans identify common and critical risks</li>
+                    <li>Complete scans uncover deeper vulnerabilities</li>
+                    <li>Compliance testing: SOC 2, ISO 27001, PCI DSS, HIPAA</li>
+                </ul>
+                <p style="margin-top:20px; font-size:14px; font-style:italic;">
+                    What once took months now takes minutes or hours — and can be repeated regularly.
+                </p>
+            </div>
+        </div>
+
+        <div class="ip-together-banner reveal" style="transition-delay:.2s">
+            <h3>Together They Create Infinite Protection</h3>
+            <div class="ip-together-row">
+                <span><i class="bi bi-shield-fill-check" style="color:var(--accent-green);margin-right:6px;"></i> SaferNet protects your devices.</span>
+                <span class="sep">+</span>
+                <span><i class="bi bi-search" style="color:var(--accent-green);margin-right:6px;"></i> ZED finds your vulnerabilities.</span>
+                <span class="sep">→</span>
+                <span style="font-weight:600; color:var(--text-primary);">A complete protective bubble around your business.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== THREAT SECTION ===================== -->
+<section class="ip-section">
+    <div class="ip-container">
+        <div class="ip-section-header">
+            <p class="ip-section-label reveal">The Threat Reality</p>
+            <h2 class="ip-section-title reveal" style="transition-delay:.1s">Small Businesses Are the #1 Target<br>for Cyberattacks</h2>
+        </div>
+
+        <div class="ip-threat-grid">
+            <div>
+                <p class="reveal" style="font-size:15px; color:var(--text-secondary); line-height:1.75; margin-bottom:28px;">
+                    Most attacks do not target large enterprises. They target small and mid-size businesses with fewer defenses. Attackers only need one way in.
+                </p>
+                <ul class="ip-threat-list">
+                    <li class="reveal"><span class="ip-threat-icon"><i class="bi bi-laptop"></i></span>Unprotected devices</li>
+                    <li class="reveal" style="transition-delay:.08s"><span class="ip-threat-icon"><i class="bi bi-eye-slash"></i></span>Hidden vulnerabilities</li>
+                    <li class="reveal" style="transition-delay:.16s"><span class="ip-threat-icon"><i class="bi bi-clock-history"></i></span>Outdated software</li>
+                    <li class="reveal" style="transition-delay:.24s"><span class="ip-threat-icon"><i class="bi bi-wifi-off"></i></span>Remote employees on unsecured networks</li>
+                    <li class="reveal" style="transition-delay:.32s"><span class="ip-threat-icon"><i class="bi bi-patch-exclamation"></i></span>Security gaps between tools</li>
+                </ul>
+                <p class="ip-threat-cta reveal" style="transition-delay:.4s">
+                    <i class="bi bi-shield-fill-check" style="margin-right:8px;"></i>
+                    Infinite Protection secures every path attackers use to get in.
+                </p>
+            </div>
+
+            <div class="ip-shield-visual reveal" style="transition-delay:.2s">
+                <div class="ip-shield-ring"></div>
+                <div class="ip-shield-ring"></div>
+                <div class="ip-shield-ring"></div>
+                <div class="ip-shield-center">🛡️</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="ip-section ip-section-alt">
+    <div class="ip-container">
+        <div class="ip-section-header">
+            <p class="ip-section-label reveal">Step by Step</p>
+            <h2 class="ip-section-title reveal" style="transition-delay:.1s">How Infinite Protection Works</h2>
+            <p class="ip-section-sub reveal" style="transition-delay:.2s">
+                Two pillars working together to secure your entire business — continuously.
+            </p>
+        </div>
+
+        <div class="ip-how-grid">
+            <div class="ip-how-card reveal">
+                <div class="ip-how-number">1</div>
+                <h3>SaferNet Protects Your Devices</h3>
+                <p>Secures laptops, phones, and remote devices with encrypted connections, threat protection, and real-time controls — wherever your team works.</p>
+            </div>
+            <div class="ip-how-card reveal" style="transition-delay:.1s">
+                <div class="ip-how-number">2</div>
+                <h3>ZED Finds Your Vulnerabilities</h3>
+                <p>Scans websites, software, and networks to identify risks, open doors, and weaknesses before attackers find them.</p>
+            </div>
+            <div class="ip-how-card reveal" style="transition-delay:.2s">
+                <div class="ip-how-number">3</div>
+                <h3>Continuous Protection</h3>
+                <p>Together, SaferNet and ZED create a complete protective bubble around your business — securing every path attackers use to get in.</p>
+            </div>
+        </div>
+
+        <div class="ip-continuous-banner reveal" style="transition-delay:.3s">
+            <div class="ip-continuous-icon"><i class="bi bi-arrow-repeat"></i></div>
+            <div>
+                <h4>Continuous Protection — Not One-Time Testing</h4>
+                <p>Security is not a one-time event. Infinite Protection continuously protects devices and regularly scans for new vulnerabilities. 24/7. 365 days a year.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== WHAT WE PROTECT ===================== -->
+<section class="ip-section">
+    <div class="ip-container">
+        <div class="ip-section-header">
+            <p class="ip-section-label reveal">Full Coverage</p>
+            <h2 class="ip-section-title reveal" style="transition-delay:.1s">What We Protect</h2>
+            <p class="ip-section-sub reveal" style="transition-delay:.2s">
+                Cyberattacks do not target just one area. They target the easiest way in. Infinite Protection secures the most common entry points across your business.
+            </p>
+        </div>
+
+        <div class="ip-protect-grid">
+            <div class="ip-protect-card reveal">
+                <div class="ip-protect-icon"><i class="bi bi-laptop"></i></div>
+                <div>
+                    <h3>Devices</h3>
+                    <p>Laptops, phones, and remote devices are the most common way attackers get in. SaferNet protects every device, anywhere your team works.</p>
+                </div>
+            </div>
+            <div class="ip-protect-card reveal" style="transition-delay:.1s">
+                <div class="ip-protect-icon"><i class="bi bi-globe"></i></div>
+                <div>
+                    <h3>Websites &amp; Software</h3>
+                    <p>Outdated software and hidden vulnerabilities create open doors. ZED scans and identifies risks before attackers do.</p>
+                </div>
+            </div>
+            <div class="ip-protect-card reveal" style="transition-delay:.2s">
+                <div class="ip-protect-icon"><i class="bi bi-hdd-network"></i></div>
+                <div>
+                    <h3>Networks</h3>
+                    <p>Internet connections and exposed services create security gaps. ZED finds and helps close those gaps.</p>
+                </div>
+            </div>
+            <div class="ip-protect-card reveal" style="transition-delay:.3s">
+                <div class="ip-protect-icon"><i class="bi bi-people"></i></div>
+                <div>
+                    <h3>Remote Teams</h3>
+                    <p>Employees working from home, traveling, or using public WiFi increase risk. SaferNet protects them wherever they are.</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="ip-protect-footer reveal" style="transition-delay:.4s">
+            <i class="bi bi-shield-fill-check" style="margin-right:8px;"></i>
+            Infinite Protection secures every path attackers use to get in.
+        </p>
+    </div>
+</section>
+
+
+<!-- ===================== WHAT MAKES IT DIFFERENT ===================== -->
+<section class="ip-section ip-section-alt">
+    <div class="ip-container">
+        <div class="ip-section-header">
+            <p class="ip-section-label reveal">Our Advantage</p>
+            <h2 class="ip-section-title reveal" style="transition-delay:.1s">What Makes Infinite Protection Different</h2>
+            <p class="ip-section-sub reveal" style="transition-delay:.2s">
+                Most cybersecurity solutions protect one area. Infinite Protection protects your entire business with two pillars working together.
+            </p>
+        </div>
+
+        <div class="ip-diff-grid">
+            <div class="ip-diff-card reveal">
+                <h3><i class="bi bi-layers"></i> Two Pillars. One Platform.</h3>
+                <p>SaferNet protects your devices while ZED identifies vulnerabilities. Together, they secure both how attackers get in and where they try to break in.</p>
+            </div>
+            <div class="ip-diff-card reveal" style="transition-delay:.1s">
+                <h3><i class="bi bi-buildings"></i> Built for Small &amp; Mid Size Businesses</h3>
+                <p>Enterprise-level protection designed to be simple, affordable, and easy to manage — no dedicated IT team required.</p>
+            </div>
+            <div class="ip-diff-card reveal" style="transition-delay:.2s">
+                <h3><i class="bi bi-arrow-repeat"></i> Continuous Protection, Not One-Time Testing</h3>
+                <p>Security is not a one-time event. Infinite Protection continuously protects devices and regularly scans for new vulnerabilities.</p>
+            </div>
+            <div class="ip-diff-card reveal" style="transition-delay:.3s">
+                <h3><i class="bi bi-grid-1x2"></i> Simple and Unified</h3>
+                <p>No more piecing together multiple tools. One platform. One solution. Complete protection for your entire business.</p>
+            </div>
+        </div>
+
+        <p class="ip-diff-footer reveal" style="transition-delay:.4s; margin-top:32px;">
+            Infinite Protection delivers enterprise-grade cybersecurity made simple for growing businesses.
+        </p>
+    </div>
+</section>
+
+
+<!-- ===================== COMPLIANCE ===================== -->
+<section class="ip-section">
+    <div class="ip-container">
+        <div class="ip-compliance-grid">
+            <div>
+                <p class="ip-section-label reveal">Regulatory Readiness</p>
+                <div class="ip-compliance-text reveal" style="transition-delay:.1s">
+                    <h3>Compliance Made Simple</h3>
+                    <p>
+                        Meeting compliance requirements can be complex and expensive. Infinite Protection helps simplify the process. ZED supports compliance testing, and regular scanning helps identify risks, strengthen security, and support your compliance requirements.
+                    </p>
+                </div>
+            </div>
+            <div class="ip-compliance-badges">
+                <div class="ip-comp-badge reveal">
+                    <div class="ip-comp-badge-name">SOC 2</div>
+                    <div class="ip-comp-badge-label">Security &amp; Availability</div>
+                </div>
+                <div class="ip-comp-badge reveal" style="transition-delay:.1s">
+                    <div class="ip-comp-badge-name">ISO 27001</div>
+                    <div class="ip-comp-badge-label">Info Security Mgmt</div>
+                </div>
+                <div class="ip-comp-badge reveal" style="transition-delay:.2s">
+                    <div class="ip-comp-badge-name">PCI DSS</div>
+                    <div class="ip-comp-badge-label">Payment Card Security</div>
+                </div>
+                <div class="ip-comp-badge reveal" style="transition-delay:.3s">
+                    <div class="ip-comp-badge-name">HIPAA</div>
+                    <div class="ip-comp-badge-label">Healthcare Privacy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== PRICING PACKAGES ===================== -->
+<section class="ip-section ip-section-alt">
+    <div class="ip-container">
+        <div class="ip-section-header">
+            <p class="ip-section-label reveal">Packages</p>
+            <h2 class="ip-section-title reveal" style="transition-delay:.1s">Choose Your Level of Protection</h2>
+            <p class="ip-section-sub reveal" style="transition-delay:.2s">
+                Every package combines SaferNet device protection and ZED vulnerability scanning to secure your entire business.
+            </p>
+        </div>
+
+        <div class="ip-pricing-grid">
+            <!-- Essential -->
+            <div class="ip-pricing-card reveal">
+                <h3>Essential Protection</h3>
+                <p class="ip-pricing-tagline">Built for small businesses getting started with cybersecurity</p>
+                <ul class="ip-pricing-features">
+                    <li><i class="bi bi-check-circle-fill"></i> SaferNet device protection</li>
+                    <li><i class="bi bi-check-circle-fill"></i> External vulnerability scanning</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Basic risk identification</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Continuous protection</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Compliance-ready foundation</li>
+                </ul>
+                <p class="ip-pricing-best">Best for: Small teams and growing businesses</p>
+            </div>
+
+            <!-- Growth -->
+            <div class="ip-pricing-card featured reveal" style="transition-delay:.1s">
+                <span class="ip-pricing-badge">Popular</span>
+                <h3>Growth Protection</h3>
+                <p class="ip-pricing-tagline">Stronger protection for growing businesses</p>
+                <ul class="ip-pricing-features">
+                    <li><i class="bi bi-check-circle-fill"></i> Everything in Essential</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Internal &amp; external scanning</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Basic and complete scans</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Priority risk identification</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Compliance: SOC 2, ISO 27001, PCI DSS, HIPAA</li>
+                </ul>
+                <p class="ip-pricing-best">Best for: Growing teams handling sensitive data</p>
+            </div>
+
+            <!-- Complete -->
+            <div class="ip-pricing-card reveal" style="transition-delay:.2s">
+                <h3>Complete Protection</h3>
+                <p class="ip-pricing-tagline">Full protection for businesses needing the highest security</p>
+                <ul class="ip-pricing-features">
+                    <li><i class="bi bi-check-circle-fill"></i> Everything in Growth</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Advanced vulnerability scanning</li>
+                    <li><i class="bi bi-check-circle-fill"></i> More frequent testing</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Deeper risk identification</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Full compliance support</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Enterprise-level protection</li>
+                </ul>
+                <p class="ip-pricing-best">Best for: Businesses requiring complete protection &amp; compliance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== CTA ===================== -->
+<section class="ip-cta">
+    <div class="ip-cta-glow"></div>
+    <div class="ip-container" style="position:relative; z-index:2;">
+        <p class="ip-section-label reveal">Ready to Get Protected?</p>
+        <h2 class="reveal" style="transition-delay:.1s">Two Pillars. One Platform.<br>Complete Protection.</h2>
+        <p class="reveal" style="transition-delay:.2s">
+            Infinite Protection combines SaferNet device security with ZED vulnerability scanning to create a complete protective bubble around your business.
+        </p>
+        <div class="ip-hero-buttons reveal" style="transition-delay:.3s">
+            <button class="ip-btn-primary">Get Protected</button>
+            <button class="ip-btn-secondary">Talk to an Expert</button>
+        </div>
+        <p class="ip-cta-note reveal" style="transition-delay:.4s">
+            Built for Small and Mid Size Businesses &bull; Simple and Affordable &bull; Continuous Protection
+        </p>
+    </div>
+</section>
 
 
     <!-- FOOTER -->
@@ -403,7 +555,7 @@
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
                         </svg>
-                        <span>SaferNet</span>
+                        <span>Infinite Protection</span>
                     </div>
 
                     <p>
@@ -469,7 +621,7 @@
             <!-- BOTTOM -->
             <div class="footer-bottom">
 
-                <p>© 2026 SaferNet. All rights reserved.</p>
+                <p>© 2026 Infinite Protection. All rights reserved.</p>
 
                 <div class="footer-policy">
                     <a href="privacypolicy.html">Privacy Policy</a>
