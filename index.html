@@ -441,16 +441,7 @@
                                 <stop offset="100%" stop-color="#c0ccd8" />
                             </linearGradient>
                             <!-- Glow filters -->
-                            @* <filter id="blueNeon" x="-40%" y="-40%" width="180%" height="180%">
-                                <feGaussianBlur stdDeviation="5" result="b1" />
-                                <feGaussianBlur stdDeviation="12" in="SourceGraphic" result="b2" />
-                                <feMerge><feMergeNode in="b2" /><feMergeNode in="b1" /><feMergeNode in="SourceGraphic" /></feMerge>
-                            </filter>
-                            <filter id="greenNeon" x="-40%" y="-40%" width="180%" height="180%">
-                                <feGaussianBlur stdDeviation="5" result="b1" />
-                                <feGaussianBlur stdDeviation="12" in="SourceGraphic" result="b2" />
-                                <feMerge><feMergeNode in="b2" /><feMergeNode in="b1" /><feMergeNode in="SourceGraphic" /></feMerge>
-                            </filter> *@
+                            
                             <filter id="goldNeon" x="-50%" y="-50%" width="200%" height="200%">
                                 <feGaussianBlur stdDeviation="4" result="b" />
                                 <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
@@ -1033,8 +1024,8 @@
 
         <!-- Bottom CTA -->
         <div class="ip-s4__cta reveal">
-            @* <a class="ip-btn-primary" href="d:\websites-29-07-2024\infiniteprotection\infiniteprotection\infiniteprotection\views\home\howitwork.cshtml">See How It Works</a> *@
-            <a asp-controller="Home" asp-action="howitwork" class="ip-btn-primary">See How It Works</a>
+             <a class="ip-btn-primary" href="howitwork.html">See How It Works</a>
+            <!--<a asp-controller="Home" asp-action="howitwork" class="ip-btn-primary">See How It Works</a> -->
             <a href="#demo" class="ip-btn-outline">Schedule a Demo</a>
         </div>
 
@@ -1835,7 +1826,7 @@
 
                     <p>
   <i class="bi bi-envelope"></i> 
-  <a href="mailto:support@safernet.com">support@safernet.com</a>
+  <a href="mailto:support@infiniteprotection.com">support@infiniteprotection.com</a>
 </p>
 
 <p>
