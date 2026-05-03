@@ -339,3 +339,394 @@ function applyTheme(isLight) {
             : '/assets/images/logodark.png';
     }
 }
+
+
+    (function () {
+        'use strict';
+
+    /* ── Build bar chart ── */
+    const barData = [26,40,30,55,34,50,62,44,58,46,36,64,70,52,78,56,44,68,83,60,48,72,78,86,66,54,80];
+    const barsEl = document.getElementById('pstBars');
+    if (barsEl) {
+        barData.forEach(function (h, i) {
+            var b = document.createElement('div');
+            b.className = 'pst-bar';
+            b.style.height = (h * 0.52) + 'px';
+            var isG = (i % 5 === 4);
+            b.style.background = isG
+                ? 'linear-gradient(to top, var(--accent-green, #4ADE80), rgba(74,222,128,.3))'
+                : 'linear-gradient(to top, #4aaeff, rgba(74,174,255,.3))';
+            b.style.opacity = (0.38 + (h / 86) * 0.62).toFixed(2);
+            barsEl.appendChild(b);
+        });
+        }
+
+    /* ── Build world map dots ── */
+    var wmEl = document.getElementById('pstWorldMap');
+    if (wmEl) {
+            var dots = [
+    // N. America
+    [12,30],[18,24],[22,38],[16,46],[26,42],[30,36],[14,52],[28,28],
+    // S. America
+    [26,64],[30,72],[24,78],[34,68],
+    // Europe
+    [48,18],[52,14],[56,22],[54,28],[60,16],[62,24],
+    // Africa
+    [50,38],[54,46],[58,56],[50,62],[56,50],[52,34],
+    // Asia
+    [66,18],[70,24],[74,16],[78,28],[82,20],[86,32],[90,22],[94,34],[88,14],[76,36],
+    // SE Asia
+    [88,44],[92,48],[96,40],
+    // Australia
+    [88,60],[92,66],[88,70],[96,64]
+    ];
+    dots.forEach(function (d) {
+                var cx = (d[0] / 100) * 160;
+    var cy = (d[1] / 100) * 46;
+    var r  = Math.random() * 1.3 + 0.8;
+    var delay = (Math.random() * 2.5).toFixed(2);
+    var dur   = (1.5 + Math.random() * 2).toFixed(2);
+    var c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c.setAttribute('cx', cx);
+    c.setAttribute('cy', cy);
+    c.setAttribute('r',  r);
+    c.setAttribute('fill', 'rgba(74,222,128,.65)');
+    c.style.animation = 'pstDotPulse ' + dur + 's ' + delay + 's ease-in-out infinite';
+    wmEl.appendChild(c);
+            });
+    // inject dot keyframe once
+    if (!document.getElementById('pstDotKf')) {
+                var s = document.createElement('style');
+    s.id = 'pstDotKf';
+    s.textContent = '@keyframes pstDotPulse{0 %, 100 % { opacity: .28; transform: scale(1) }50%{opacity:.9;transform:scale(1.6)}}';
+    document.head.appendChild(s);
+            }
+        }
+
+    /* ── Counter ── */
+    function pstCounter(el) {
+            var disp = el.dataset.display;
+    if (disp) {el.textContent = disp; return; }
+    var target  = parseFloat(el.dataset.target);
+    var suffix  = el.dataset.suffix  || '';
+    var dec     = parseInt(el.dataset.dec) || 0;
+    var comma   = el.dataset.comma === '1';
+    var dur     = 1700;
+    var start   = performance.now();
+    (function step(now) {
+                var p = Math.min((now - start) / dur, 1);
+    var e = 1 - Math.pow(1 - p, 3);
+    var v = target * e;
+    el.textContent = (comma ? Math.floor(v).toLocaleString() : v.toFixed(dec)) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+            })(start);
+        }
+
+    /* ── Wave draw ── */
+    function pstDrawWave(card) {
+        card.querySelectorAll('.pst-wpath').forEach(function (p) {
+            p.style.animation = 'pstWaveDraw 1.5s .2s ease forwards';
+        });
+    if (!document.getElementById('pstWaveKf')) {
+                var s = document.createElement('style');
+    s.id = 'pstWaveKf';
+    s.textContent = '@keyframes pstWaveDraw{to{stroke - dashoffset:0}}';
+    document.head.appendChild(s);
+            }
+        }
+
+    /* ── Bars pop ── */
+    function pstAnimBars(card) {
+        card.querySelectorAll('.pst-bar').forEach(function (b, i) {
+            setTimeout(function () { b.style.transform = 'scaleY(1)'; }, i * 16 + 80);
+        });
+        }
+
+    /* ── Section header reveal ── */
+    function pstRevealHeaders() {
+        document.querySelectorAll('#protection-stats .pst-reveal').forEach(function (el) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { e.target.classList.add('pst-up'); io.unobserve(e.target); }
+                });
+            }, { threshold: .15 });
+            io.observe(el);
+        });
+        }
+
+    /* ── Card reveal + animate ── */
+    function pstRevealCards() {
+        document.querySelectorAll('#protection-stats .pst-card').forEach(function (card) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var delay = parseInt(card.dataset.pstDelay) || 0;
+                    setTimeout(function () {
+                        card.classList.add('pst-visible');
+                        var num = card.querySelector('.pst-num');
+                        if (num) pstCounter(num);
+                        pstDrawWave(card);
+                        pstAnimBars(card);
+                    }, delay);
+                    io.unobserve(card);
+                });
+            }, { threshold: .12 });
+            io.observe(card);
+        });
+        }
+
+    /* ── Init ── */
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+            pstRevealHeaders();
+            pstRevealCards();
+        });
+        } else {
+        pstRevealHeaders();
+    pstRevealCards();
+        }
+
+    }());
+
+
+//--------------------------OUR TEAM ---------------
+(function () {
+    'use strict';
+
+    /* ── Generate floating particles in bg ── */
+    var bgEl = document.getElementById('etBg');
+    if (bgEl) {
+        for (var i = 0; i < 28; i++) {
+            var d = document.createElement('div');
+            d.className = 'et-dot' + (i % 3 === 2 ? ' et-dot--g' : '');
+            var size = (Math.random() * 3 + 1.5).toFixed(1) + 'px';
+            d.style.cssText = [
+                '--op:' + (Math.random() * .35 + .1).toFixed(2),
+                '--dur:' + (4 + Math.random() * 4).toFixed(1) + 's',
+                '--del:' + (Math.random() * 4).toFixed(2) + 's',
+                'width:' + size, 'height:' + size,
+                'left:' + (Math.random() * 100).toFixed(1) + '%',
+                'top:' + (Math.random() * 100).toFixed(1) + '%'
+            ].join(';');
+            bgEl.appendChild(d);
+        }
+    }
+
+    /* ── Header/footer reveal ── */
+    function etRevealStatics() {
+        document.querySelectorAll('#expert-team .et-reveal').forEach(function (el) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { e.target.classList.add('et-up'); io.unobserve(e.target); }
+                });
+            }, { threshold: .15 });
+            io.observe(el);
+        });
+    }
+
+    /* ── Card reveal ── */
+    function etRevealCards() {
+        document.querySelectorAll('#expert-team .et-card').forEach(function (card) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var delay = parseInt(card.dataset.etDelay) || 0;
+                    setTimeout(function () { card.classList.add('et-visible'); }, delay);
+                    io.unobserve(card);
+                });
+            }, { threshold: .1 });
+            io.observe(card);
+        });
+    }
+
+    /* ── Card click → toggle active ── */
+    function etCardToggle() {
+        document.querySelectorAll('#expert-team .et-card').forEach(function (card) {
+            card.addEventListener('click', function () {
+                document.querySelectorAll('#expert-team .et-card').forEach(function (c) {
+                    c.classList.remove('et-active');
+                });
+                card.classList.add('et-active');
+            });
+        });
+    }
+
+    /* ── Init ── */
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+            etRevealStatics();
+            etRevealCards();
+            etCardToggle();
+        });
+    } else {
+        etRevealStatics();
+        etRevealCards();
+        etCardToggle();
+    }
+
+}());
+
+
+//                < !-- ════════════════════════════════════════════
+//JAVASCRIPT  —  paste before </body >
+//    or merge into your existing JS file
+//     ════════════════════════════════════════════ -->
+  
+        (function () {
+            'use strict';
+
+        /* ── 1. Canvas particles ── */
+        function watInitCanvas() {
+        var canvas = document.getElementById('wat-canvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+
+        function resize() {
+            var sec = canvas.parentElement;
+        canvas.width  = sec.offsetWidth;
+        canvas.height = sec.offsetHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        var isLight  = document.body.classList.contains('light-mode');
+        var colorB   = isLight ? '0,100,200'   : '74,174,255';
+        var colorG   = isLight ? '0,160,70'    : '74,222,128';
+
+        // Re-check theme on toggle
+        var observer = new MutationObserver(function () {
+            isLight = document.body.classList.contains('light-mode');
+        colorB  = isLight ? '0,100,200' : '74,174,255';
+        colorG  = isLight ? '0,160,70'  : '74,222,128';
+        });
+        observer.observe(document.body, {attributes: true, attributeFilter: ['class'] });
+
+        var pts = Array.from({length: 55 }, function () {
+            return {
+            x:  Math.random(),
+        y:  Math.random(),
+        vx: (Math.random() - .5) * .35,
+        vy: (Math.random() - .5) * .35,
+        r:  Math.random() * 1.4 + .4,
+        a:  Math.random() * .45 + .08,
+                g:  Math.random() > .5
+            };
+        });
+
+        var raf;
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var W = canvas.width, H = canvas.height;
+
+        pts.forEach(function (p) {
+            p.x += p.vx / W * 60;
+        p.y += p.vy / H * 60;
+        if (p.x < 0) p.x = 1; if (p.x > 1) p.x = 0;
+        if (p.y < 0) p.y = 1; if (p.y > 1) p.y = 0;
+
+        var col = p.g ? colorG : colorB;
+        ctx.beginPath();
+        ctx.arc(p.x * W, p.y * H, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(' + col + ',' + p.a + ')';
+        ctx.fill();
+            });
+
+        // draw connections
+        for (var i = 0; i < pts.length; i++) {
+                for (var j = i + 1; j < pts.length; j++) {
+                    var dx = (pts[i].x - pts[j].x) * canvas.width;
+        var dy = (pts[i].y - pts[j].y) * canvas.height;
+        var d  = Math.sqrt(dx * dx + dy * dy);
+        if (d < 110) {
+                        var col = pts[i].g ? colorG : colorB;
+        ctx.beginPath();
+        ctx.moveTo(pts[i].x * W, pts[i].y * H);
+        ctx.lineTo(pts[j].x * W, pts[j].y * H);
+        ctx.strokeStyle = 'rgba(' + col + ',' + (.06 * (1 - d / 110)) + ')';
+        ctx.lineWidth = .5;
+        ctx.stroke();
+                    }
+                }
+            }
+        raf = requestAnimationFrame(draw);
+        }
+        draw();
+    }
+
+        /* ── 2. Intersection Observer — step reveal ── */
+        function watReveal() {
+        // Header + footer
+        var headerEl = document.getElementById('watHeader');
+        var footerEl = document.getElementById('watFooter');
+
+        var genObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                    e.target.classList.add('wat-up');
+                    genObs.unobserve(e.target);
+                }
+            });
+        }, {threshold: .15 });
+
+        if (headerEl) genObs.observe(headerEl);
+
+        // Steps
+        var steps = document.querySelectorAll('.wat-step');
+        var stepObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                    var delay = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+                    setTimeout(function () {
+                        e.target.classList.add('wat-visible');
+                    }, delay);
+                    stepObs.unobserve(e.target);
+                }
+            });
+        }, {threshold: .12 });
+
+        steps.forEach(function (s) {stepObs.observe(s); });
+
+        // Footer bar
+        if (footerEl) {
+            var ftObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                    e.target.classList.add('wat-visible');
+                    ftObs.unobserve(e.target);
+                }
+            });
+            }, {threshold: .2 });
+        ftObs.observe(footerEl);
+        }
+    }
+
+        /* ── INIT ── */
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function () {
+                watInitCanvas();
+                watReveal();
+            });
+    } else {
+            watInitCanvas();
+        watReveal();
+    }
+
+        })();
+
+
+
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Dots
+document.querySelectorAll('.t-dot').forEach((dot, i, dots) => {
+    dot.addEventListener('click', () => {
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+    });
+});
+
+
