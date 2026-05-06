@@ -529,7 +529,463 @@ a {
 }
 
 /* ===================== SECTION BASE ===================== */
-.ip-section {
+
+
+
+
+/* ===================================================
+   SHARED BUTTONS (namespace ip- to avoid conflicts)
+   =================================================== */
+.ip-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 28px;
+    background: var(--accent-yellow, #FDB022);
+    color: #0a1628;
+    border: none;
+    border-radius: var(--radius, 6px);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.2s, box-shadow 0.2s;
+}
+
+    .ip-btn-primary:hover {
+        background: #e59a15;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px rgba(253,176,34,0.35);
+        color: #0a1628;
+        text-decoration: none;
+    }
+
+.ip-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 28px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: var(--radius, 6px);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+
+    .ip-btn-outline:hover {
+        background: rgba(255,255,255,0.08);
+        border-color: #fff;
+        transform: translateY(-2px);
+        color: #fff;
+        text-decoration: none;
+    }
+
+body.light-mode .ip-btn-outline {
+    color: #0a1628;
+    border-color: rgba(10,22,40,0.45);
+}
+
+    body.light-mode .ip-btn-outline:hover {
+        background: rgba(10,22,40,0.06);
+        border-color: #0a1628;
+        color: #0a1628;
+    }
+
+
+/* ===================================================
+   TWO PILLARS SECTION
+   =================================================== */
+.ip-pillars {
+    background: #000;
+    padding: 80px 20px 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ip-pillars__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ip-pillars__header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ip-eyebrow {
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.05);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 22px;
+}
+
+.ip-pillars__title {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(28px, 4.5vw, 54px);
+    font-weight: 700;
+    color: var(--tp2-text);
+    line-height: 1.12;
+    margin: 0 0 18px;
+}
+
+.ip-pillars__sub {
+    font-size: clamp(14px, 1.4vw, 17px);
+    color: rgba(255,255,255,0.5);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+/* stage layout: card | columns+shield | card */
+.ip-pillars__stage {
+    display: grid;
+    grid-template-columns: 1fr 460px 1fr;
+    gap: 0;
+    align-items: end;
+    min-height: 460px;
+}
+
+/* ── Pillar Cards ── */
+.ip-pcard {
+    background: rgba(22, 32, 48, 0.85);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 28px 26px 24px;
+    position: relative;
+    align-self: center;
+    z-index: 10;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+    .ip-pcard:hover {
+        transform: translateY(-6px);
+    }
+
+.ip-pcard--left {
+    border-color: rgba(74,174,255,0.15);
+    margin-right: -20px;
+}
+
+.ip-pcard--right {
+    border-color: rgba(74,222,128,0.15);
+    margin-left: -20px;
+}
+
+.ip-pcard--left:hover {
+    border-color: rgba(74,174,255,0.4);
+}
+
+.ip-pcard--right:hover {
+    border-color: rgba(74,222,128,0.4);
+}
+
+.ip-pcard__head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.ip-pcard__icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ip-pcard__icon--blue {
+    background: rgba(74,174,255,0.12);
+    border: 1px solid rgba(74,174,255,0.25);
+}
+
+.ip-pcard__icon--green {
+    background: rgba(74,222,128,0.12);
+    border: 1px solid rgba(74,222,128,0.25);
+}
+
+.ip-pcard__name {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--tp2-text);
+    margin: 0;
+}
+
+.ip-pcard__desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+.ip-pcard__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+    .ip-pcard__list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: rgba(255,255,255,0.75);
+    }
+
+.ip-feat-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ip-feat-icon--blue {
+    background: rgba(74,174,255,0.10);
+    border: 1px solid rgba(74,174,255,0.2);
+}
+
+.ip-feat-icon--green {
+    background: rgba(74,222,128,0.10);
+    border: 1px solid rgba(74,222,128,0.2);
+}
+
+.ip-pcard__footer {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.55;
+    margin: 0;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-style: italic;
+}
+
+/* ── Centre: columns + shield ── */
+.ip-pillars__centre {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    min-height: 460px;
+}
+
+.ip-arc-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 220px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.ip-arc {
+    width: 100%;
+    height: 100%;
+}
+
+/* column base styles */
+.ip-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.ip-col-cap {
+    width: 72px;
+    height: 22px;
+    border-radius: 4px 4px 0 0;
+}
+
+.ip-col-shaft {
+    width: 58px;
+    flex: 1;
+    min-height: 280px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.ip-col-flutes {
+    width: 100%;
+    display: flex;
+    gap: 3px;
+    padding: 0 6px;
+}
+
+    .ip-col-flutes span {
+        flex: 1;
+        border-radius: 1px;
+        opacity: 0.6;
+    }
+
+.ip-col-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ip-col-base-top {
+    width: 80px;
+    height: 18px;
+    border-radius: 0 0 2px 2px;
+    margin-top: -1px;
+}
+
+.ip-col-base-bot {
+    width: 90px;
+    height: 12px;
+    border-radius: 0 0 3px 3px;
+}
+
+/* BLUE column */
+.ip-column--blue .ip-col-cap {
+    background: linear-gradient(180deg, #5fb0ff, #3a78c4);
+    box-shadow: 0 0 20px rgba(74,174,255,0.4);
+}
+
+.ip-column--blue .ip-col-shaft {
+    background: linear-gradient(180deg, #3a78c4, #1a3a70);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.4), 0 0 30px rgba(74,174,255,0.15);
+}
+
+.ip-column--blue .ip-col-flutes span {
+    background: linear-gradient(180deg, rgba(74,174,255,0.5), rgba(20,60,120,0.8));
+}
+
+.ip-column--blue .ip-col-base-top {
+    background: linear-gradient(180deg, #2a5090, #1a3060);
+}
+
+.ip-column--blue .ip-col-base-bot {
+    background: linear-gradient(180deg, #1a3060, #0f2040);
+    box-shadow: 0 6px 20px rgba(74,174,255,0.25);
+}
+
+/* GREEN column */
+.ip-column--green .ip-col-cap {
+    background: linear-gradient(180deg, #5AE880, #2aaa50);
+    box-shadow: 0 0 20px rgba(74,222,128,0.4);
+}
+
+.ip-column--green .ip-col-shaft {
+    background: linear-gradient(180deg, #2aaa50, #0e5a2a);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.4), 0 0 30px rgba(74,222,128,0.15);
+}
+
+.ip-column--green .ip-col-flutes span {
+    background: linear-gradient(180deg, rgba(74,222,128,0.5), rgba(10,60,25,0.8));
+}
+
+.ip-column--green .ip-col-base-top {
+    background: linear-gradient(180deg, #0e5a2a, #083a1a);
+}
+
+.ip-column--green .ip-col-base-bot {
+    background: linear-gradient(180deg, #083a1a, #052010);
+    box-shadow: 0 6px 20px rgba(74,222,128,0.25);
+}
+
+/* shield */
+.ip-shield-wrap {
+    position: relative;
+    z-index: 5;
+    margin: 0 -30px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ip-shield-svg {
+    width: 180px;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(74,174,255,0.12)) drop-shadow(0 0 60px rgba(74,222,128,0.08));
+    margin-bottom: -10px;
+}
+
+.ip-shield-glow {
+    width: 200px;
+    height: 50px;
+    background: radial-gradient(ellipse, rgba(80,130,200,0.3), transparent 70%);
+    border-radius: 50%;
+    filter: blur(12px);
+}
+
+/* bottom CTA */
+.ip-pillars__cta {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.ip-pillars__cta-text {
+    font-size: clamp(14px, 1.4vw, 17px);
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 24px;
+}
+
+.ip-pillars__cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* light mode — keep dark background per design */
+body.light-mode .ip-pillars {
+    background: #050a14;
+}
+
+body.light-mode .ip-pcard {
+    background: rgba(20,30,50,0.92);
+}
+
+/* responsive */
+@media (max-width: 960px) {
+    .ip-pillars__stage {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        min-height: auto;
+    }
+
+    .ip-pillars__centre {
+        display: none;
+    }
+
+    .ip-pcard--left {
+        margin-right: 0;
+    }
+
+    .ip-pcard--right {
+        margin-left: 0;
+    }
+}
+
+
+/*.ip-section {
     padding: 100px 24px;
     transition: background .4s;
 }
@@ -569,10 +1025,10 @@ a {
     max-width: 680px;
     margin: auto;
     transition: color .4s;
-}
+}*/
 
 /* ===================== PILLARS DETAIL ===================== */
-.ip-pillars-grid {
+/*.ip-pillars-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
@@ -711,10 +1167,10 @@ a {
     .ip-together-row .sep {
         color: var(--accent-green);
         font-size: 20px;
-    }
+    }*/
 
 /* ===================== THREAT SECTION ===================== */
-.ip-threat-grid {
+/*.ip-threat-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
@@ -837,7 +1293,7 @@ a {
     50% {
         transform: translateY(-8px);
     }
-}
+}*/
 
 /* ===================== HOW IT WORKS ===================== */
 .ip-how-grid {
