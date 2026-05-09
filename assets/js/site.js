@@ -729,4 +729,83 @@ document.querySelectorAll('.t-dot').forEach((dot, i, dots) => {
     });
 });
 
+// --------------- EXPAND YOUR PROTECTION-----------------------------
 
+/* ── Intersection Observer — reveal on scroll ── */
+(function () {
+    const revealEls = document.querySelectorAll('.eyp-reveal, .eyp-panel, .eyp-why');
+    const whyItems = document.querySelectorAll('.eyp-why-item');
+
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('eyp-visible', 'eyp-up');
+                obs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => obs.observe(el));
+
+    /* Staggered why-list items */
+    const whyObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const items = e.target.querySelectorAll('.eyp-why-item');
+                items.forEach((it, i) => {
+                    setTimeout(() => it.classList.add('eyp-visible'), i * 110);
+                });
+                whyObs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    const whyPanel = document.querySelector('.eyp-why');
+    if (whyPanel) whyObs.observe(whyPanel);
+
+    /* Staggered panel delays */
+    document.querySelectorAll('.eyp-panel').forEach((p, i) => {
+        p.style.transitionDelay = (0.06 + i * 0.08) + 's';
+    });
+})();
+
+/* ── Floating particles ── */
+(function () {
+    const section = document.getElementById('eyp-section');
+    const colors = ['#4aaeff', '#4ADE80', '#00cfff', '#4ADE80', '#4aaeff'];
+    for (let i = 0; i < 18; i++) {
+        const d = document.createElement('div');
+        d.className = 'eyp-particle';
+        const size = Math.random() * 4 + 2;
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        const dur = Math.random() * 5 + 4;
+        const del = Math.random() * 4;
+        d.style.cssText = `
+      left:${x}%; top:${y}%;
+      width:${size}px; height:${size}px;
+      background:${colors[i % colors.length]};
+      opacity:${Math.random() * 0.35 + 0.1};
+      animation: eypPtFloat ${dur}s ${del}s ease-in-out infinite alternate;
+    `;
+        section.appendChild(d);
+    }
+    /* inject keyframe */
+    const s = document.createElement('style');
+    s.textContent = `@keyframes eypPtFloat {
+    from { transform: translateY(0) scale(1); opacity: inherit; }
+    to   { transform: translateY(-16px) scale(1.5); opacity: 0.05; }
+  }`;
+    document.head.appendChild(s);
+})();
+
+/* ── Mouse-tracking glow on panels ── */
+document.querySelectorAll('.eyp-panel, .eyp-why').forEach(panel => {
+    panel.addEventListener('mousemove', e => {
+        const rect = panel.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
+        const y = ((e.clientY - rect.top) / rect.height * 100).toFixed(1);
+        panel.style.setProperty('--mx', x + '%');
+        panel.style.setProperty('--my', y + '%');
+    });
+});
