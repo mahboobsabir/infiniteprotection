@@ -1986,245 +1986,454 @@
                 /* ============================================================
            SECTION 9 – FINAL CTA / HERO 2
         ============================================================ */
-                #product-cta {
-                    background: radial-gradient(ellipse 70% 60% at 65% 50%, rgba(0,80,200,0.12) 0%, transparent 65%), var(--bg);
-                    min-height: 560px;
-                    display: flex;
-                    align-items: center;
+        /* ============================================================
+   SECTION 9 – FINAL CTA / HERO 2
+============================================================ */
+        #product-cta {
+            background: radial-gradient(ellipse 70% 60% at 65% 50%, rgba(0,80,200,0.12) 0%, transparent 65%), var(--bg);
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* ============================================================
+           SECTION 9 – FINAL CTA (new background + icons layout)
+        ============================================================ */
+        #cta {
+            position: relative;
+            padding: 0;
+            overflow: hidden;
+            min-height: 620px;
+            display: flex;
+            flex-direction: column;
+            background: #050d1a;
+        }
+
+        .cta-bg-image {
+            position: absolute;
+            inset: 0;
+            background-image: url('assets/images/productpage/product-sec9-Main.png');
+            background-size: cover;
+            background-position: center right;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+
+        .cta-bg-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient( to right, rgba(5,13,26,0.98) 0%, rgba(5,13,26,0.92) 38%, rgba(5,13,26,0.55) 62%, rgba(5,13,26,0.08) 100% );
+            z-index: 1;
+        }
+
+        .cta-main-content {
+            position: relative;
+            z-index: 2;
+            padding: 80px 5% 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .cta-left-panel {
+            max-width: 560px;
+        }
+
+        .cta-bottom-strip {
+            position: relative;
+            z-index: 2;
+            background: rgba(5,13,26,0.92);
+            border-top: 1px solid rgba(0,230,118,0.12);
+            padding: 28px 5%;
+        }
+
+        .cta-bottom-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* Stats row with custom images */
+        .cta-stats-row {
+            display: flex;
+            gap: 0;
+            align-items: stretch;
+        }
+
+        .cta-stat-card {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 20px;
+            border-right: 1px solid rgba(255,255,255,0.07);
+            transition: background 0.25s;
+        }
+
+            .cta-stat-card:last-child {
+                border-right: none;
+            }
+
+            .cta-stat-card:hover {
+                background: rgba(0,230,118,0.04);
+            }
+
+        .cta-stat-img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            flex-shrink: 0;
+            filter: drop-shadow(0 0 8px rgba(0,200,120,0.3));
+        }
+
+        .cta-stat-text-wrap {
+            flex: 1;
+        }
+
+        .cta-stat-label {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 3px;
+            font-family: 'Sora', sans-serif;
+        }
+
+        .cta-stat-sub {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Trust logos row */
+        .cta-trust-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .cta-trust-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+            .cta-trust-label svg {
+                color: var(--green);
+            }
+
+        .cta-trust-logos-list {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            margin-left: auto;
+        }
+
+        .cta-trust-logo-img {
+            height: 32px;
+            object-fit: contain;
+            opacity: 0.75;
+            filter: grayscale(20%) brightness(1.1);
+            transition: opacity 0.25s, filter 0.25s;
+        }
+
+            .cta-trust-logo-img:hover {
+                opacity: 1;
+                filter: grayscale(0%) brightness(1.2);
+            }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .cta-stats-row {
+                flex-wrap: wrap;
+            }
+
+            .cta-stat-card {
+                flex: 0 0 calc(50% - 1px);
+                border-right: 1px solid rgba(255,255,255,0.07);
+            }
+
+                .cta-stat-card:nth-child(2) {
+                    border-right: none;
                 }
 
-                .product-cta-grid {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 4rem;
-                    align-items: center;
+                .cta-stat-card:nth-child(4) {
+                    border-right: none;
                 }
 
-                .product-cta-badge {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 8px;
-                    background: var(--card);
-                    border: 1px solid var(--card-border);
-                    border-radius: 8px;
-                    padding: 8px 14px;
-                    font-size: 0.82rem;
-                    font-weight: 600;
-                    color: var(--green);
-                    margin-bottom: 1.5rem;
+                .cta-stat-card:nth-child(3), .cta-stat-card:nth-child(4) {
+                    border-top: 1px solid rgba(255,255,255,0.07);
                 }
 
-                .product-cta-h2 {
-                    font-family: 'Sora', sans-serif;
-                    font-size: clamp(2.2rem, 4vw, 3.2rem);
-                    font-weight: 600;
-                    line-height: 1.08;
-                    margin-bottom: 0.8rem;
+            .cta-trust-logos-list {
+                margin-left: 0;
+            }
+
+            .cta-bg-image {
+                background-position: top right;
+                background-size: 70%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cta-stat-card {
+                flex: 0 0 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.07);
+            }
+
+                .cta-stat-card:last-child {
+                    border-bottom: none;
                 }
 
-                    .product-cta-h2 .accent {
-                        color: var(--green);
-                    }
+            .cta-trust-logos-list {
+                gap: 16px;
+            }
 
-                .product-cta-desc {
-                    font-size: 0.98rem;
-                    color: var(--text-muted);
-                    line-height: 1.6;
-                    margin-bottom: 1.5rem;
-                    max-width: 480px;
-                }
+            .cta-trust-logo-img {
+                height: 24px;
+            }
+        }
 
-                .product-cta-checks {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.5rem;
-                    margin-bottom: 2rem;
-                }
+        .product-cta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
 
-                .product-cta-check {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    font-size: 0.9rem;
-                    color: var(--text-muted);
-                }
+        .product-cta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--green);
+            margin-bottom: 1.5rem;
+        }
 
-                    .product-cta-check svg {
-                        color: var(--green);
-                        width: 18px;
-                        height: 18px;
-                    }
+        .product-cta-h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 600;
+            line-height: 1.08;
+            margin-bottom: 0.8rem;
+        }
 
-                .product-cta-secure {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    font-size: 0.82rem;
-                    color: var(--text-subtle);
-                    margin-top: 1rem;
-                }
+            .product-cta-h2 .accent {
+                color: var(--green);
+            }
 
-                .cta-secure svg {
-                    width: 14px;
-                    height: 14px;
-                }
+        .product-cta-desc {
+            font-size: 0.98rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            max-width: 480px;
+        }
 
-                .product-cta-visual {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 420px;
-                }
+        .product-cta-checks {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
 
-                .product-cta-shield-wrap {
-                    position: absolute;
-                    top: 50%;
-                    left: 55%;
-                    transform: translate(-50%, -55%);
-                    width: 260px;
-                }
+        .product-cta-check {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
 
-                .product-cta-shield-svg {
-                    width: 100%;
-                    filter: drop-shadow(0 0 50px rgba(0,200,255,0.4));
-                    animation: float 4s ease-in-out infinite;
-                }
+            .product-cta-check svg {
+                color: var(--green);
+                width: 18px;
+                height: 18px;
+            }
 
-                .product-cta-products {
-                    position: absolute;
-                    bottom: 8%;
-                    left: 5%;
-                    display: flex;
-                    gap: 1rem;
-                }
+        .product-cta-secure {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: var(--text-subtle);
+            margin-top: 1rem;
+        }
 
-                .product-cta-product {
-                    background: var(--card);
-                    border: 1px solid;
-                    border-radius: 12px;
-                    padding: 14px 18px;
-                    text-align: center;
-                    width: 110px;
-                    backdrop-filter: blur(10px);
-                }
+        .cta-secure svg {
+            width: 14px;
+            height: 14px;
+        }
 
-                    .product-cta-product.blue {
-                        border-color: rgba(0,100,255,0.35);
-                    }
+        .product-cta-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 420px;
+        }
 
-                    .product-cta-product.green-b {
-                        border-color: var(--card-border);
-                    }
+        .product-cta-shield-wrap {
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -55%);
+            width: 260px;
+        }
 
-                .product-cta-product-logo {
-                    width: 36px;
-                    height: 36px;
-                    border-radius: 8px;
-                    margin: 0 auto 6px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-weight: 600;
-                    font-size: 0.9rem;
-                }
+        .product-cta-shield-svg {
+            width: 100%;
+            filter: drop-shadow(0 0 50px rgba(0,200,255,0.4));
+            animation: float 4s ease-in-out infinite;
+        }
 
-                .product-cta-product.blue .cta-product-logo {
-                    background: rgba(0,80,200,0.3);
-                    color: #4da6ff;
-                }
+        .product-cta-products {
+            position: absolute;
+            bottom: 8%;
+            left: 5%;
+            display: flex;
+            gap: 1rem;
+        }
 
-                .product-cta-product.green-b .cta-product-logo {
-                    background: rgba(0,150,80,0.3);
-                    color: var(--green);
-                }
+        .product-cta-product {
+            background: var(--card);
+            border: 1px solid;
+            border-radius: 12px;
+            padding: 14px 18px;
+            text-align: center;
+            width: 110px;
+            backdrop-filter: blur(10px);
+        }
 
-                .product-cta-product-name {
-                    font-size: 0.8rem;
-                    font-weight: 600;
-                    margin-bottom: 3px;
-                }
+            .product-cta-product.blue {
+                border-color: rgba(0,100,255,0.35);
+            }
 
-                .product-cta-product-tag {
-                    font-size: 0.68rem;
-                    color: var(--text-muted);
-                    text-transform: uppercase;
-                    letter-spacing: 0.06em;
-                }
+            .product-cta-product.green-b {
+                border-color: var(--card-border);
+            }
 
-                .product-infinity-between {
-                    position: absolute;
-                    bottom: 14%;
-                    left: calc(50% - 30px);
-                    color: var(--cyan);
-                    font-size: 1.5rem;
-                    animation: glow-pulse 2s ease-in-out infinite;
-                }
+        .product-cta-product-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            margin: 0 auto 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
 
-                .product-cta-stats {
-                    background: var(--trust-bar);
-                    border: 1px solid var(--divider);
-                    border-radius: 12px;
-                    padding: 16px 24px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    gap: 1rem;
-                    margin-top: 2rem;
-                }
+        .product-cta-product.blue .cta-product-logo {
+            background: rgba(0,80,200,0.3);
+            color: #4da6ff;
+        }
 
-                .product-cta-stat-item {
-                    text-align: center;
-                }
+        .product-cta-product.green-b .cta-product-logo {
+            background: rgba(0,150,80,0.3);
+            color: var(--green);
+        }
 
-                .product-cta-stat-icon {
-                    font-size: 1.2rem;
-                    margin-bottom: 4px;
-                }
+        .product-cta-product-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
 
-                .product-cta-stat-title {
-                    font-size: 0.78rem;
-                    font-weight: 600;
-                    margin-bottom: 2px;
-                }
+        .product-cta-product-tag {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
 
-                .product-cta-stat-desc {
-                    font-size: 0.72rem;
-                    color: var(--text-muted);
-                }
+        .product-infinity-between {
+            position: absolute;
+            bottom: 14%;
+            left: calc(50% - 30px);
+            color: var(--cyan);
+            font-size: 1.5rem;
+            animation: glow-pulse 2s ease-in-out infinite;
+        }
 
-                .product-cta-trust-bar {
-                    display: flex;
-                    align-items: center;
-                    gap: 14px;
-                    background: var(--card);
-                    border: 1px solid var(--divider);
-                    border-radius: 12px;
-                    padding: 14px 22px;
-                    margin-top: 1.5rem;
-                    font-size: 0.88rem;
-                    color: var(--text-muted);
-                    flex-wrap: wrap;
-                }
+        .product-cta-stats {
+            background: var(--trust-bar);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
 
-                    .product-cta-trust-bar .accent {
-                        color: var(--green);
-                    }
+        .product-cta-stat-item {
+            text-align: center;
+        }
 
-                .product-cta-trust-bar-logos {
-                    display: flex;
-                    gap: 1.5rem;
-                    margin-left: auto;
-                    flex-wrap: wrap;
-                }
+        .product-cta-stat-icon {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
 
-                .product-cta-trust-logo {
-                    font-size: 0.73rem;
-                    font-weight: 600;
-                    color: var(--text-muted);
-                    letter-spacing: 0.04em;
-                }
+        .product-cta-stat-title {
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .product-cta-stat-desc {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .product-cta-trust-bar {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--card);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            padding: 14px 22px;
+            margin-top: 1.5rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+            .product-cta-trust-bar .accent {
+                color: var(--green);
+            }
+
+        .product-cta-trust-bar-logos {
+            display: flex;
+            gap: 1.5rem;
+            margin-left: auto;
+            flex-wrap: wrap;
+        }
+
+        .product-cta-trust-logo {
+            font-size: 0.73rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.04em;
+        }
 
                 /* ============================================================
            FOOTER
@@ -3750,7 +3959,99 @@
     </section>
 
     <!-- ===== SECTION 9: FINAL CTA ===== -->
+    <!-- ===== SECTION 9: FINAL CTA ===== -->
     <section id="cta">
+
+        <!-- Background hero image -->
+        <div class="cta-bg-image"></div>
+        <!-- Dark gradient overlay so left text stays readable -->
+        <div class="cta-bg-overlay"></div>
+
+        <!-- Main content (left-aligned text + CTAs) -->
+        <div class="cta-main-content product-animate-on-scroll">
+            <div class="cta-left-panel">
+                <div class="product-cta-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
+                    Complete Protection. Total Confidence.
+                </div>
+                <h2 class="product-cta-h2">Two Pillars. One Platform.<br><span class="product-accent">Complete Protection.</span></h2>
+                <p class="product-cta-desc">Enterprise-grade cybersecurity built for small and mid-size businesses.</p>
+                <div class="product-cta-checks">
+                    <div class="product-cta-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>Protect your devices everywhere</div>
+                    <div class="product-cta-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>Identify and eliminate cyber risks</div>
+                </div>
+                <div class="product-hero-btns">
+                    <a href="#pricing" class="product-btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                        Get Protected →
+                    </a>
+                    <a href="#" class="product-btn-outline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+                        Talk to an Expert →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom strip: icon-stats + trust logos -->
+        <div class="cta-bottom-strip">
+            <div class="cta-bottom-inner">
+
+                <!-- 4 icon stat cards using uploaded images -->
+                <div class="cta-stats-row product-animate-on-scroll">
+
+                    <div class="cta-stat-card">
+                        <img src="assets/images/productpage/product-sec9-1.png" alt="Enterprise-Grade Security" class="cta-stat-img" />
+                        <div class="cta-stat-text-wrap">
+                            <div class="cta-stat-label">Enterprise-Grade Security</div>
+                            <div class="cta-stat-sub">Advanced protection meeting the highest standards.</div>
+                        </div>
+                    </div>
+
+                    <div class="cta-stat-card">
+                        <img src="assets/images/productpage/product-sec9-2.png" alt="24/7 Continuous Monitoring" class="cta-stat-img" />
+                        <div class="cta-stat-text-wrap">
+                            <div class="cta-stat-label">24/7 Continuous Monitoring</div>
+                            <div class="cta-stat-sub">Real-time threat detection and automated response.</div>
+                        </div>
+                    </div>
+
+                    <div class="cta-stat-card">
+                        <img src="assets/images/productpage/product-sec9-3.png" alt="Built for Your Business" class="cta-stat-img" />
+                        <div class="cta-stat-text-wrap">
+                            <div class="cta-stat-label">Built for Your Business</div>
+                            <div class="cta-stat-sub">Scalable solutions that grow as your business grows.</div>
+                        </div>
+                    </div>
+
+                    <div class="cta-stat-card">
+                        <img src="assets/images/productpage/product-sec9-4.png" alt="Expert Support" class="cta-stat-img" />
+                        <div class="cta-stat-text-wrap">
+                            <div class="cta-stat-label">Expert Support</div>
+                            <div class="cta-stat-sub">Real people. Real support. Whenever you need it.</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Trust logos row using uploaded images -->
+                <div class="cta-trust-row product-animate-on-scroll">
+                    <div class="cta-trust-label">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
+                        Trusted by <span class="product-accent">&nbsp;thousands of businesses&nbsp;</span>
+                    </div>
+                    <div class="cta-trust-logos-list">
+                        <img src="assets/images/productpage/product-sec9-31.png" alt="Acme Corp" class="cta-trust-logo-img" />
+                        <img src="assets/images/productpage/product-sec9-32.png" alt="Vertex Solutions" class="cta-trust-logo-img" />
+                        <img src="assets/images/productpage/product-sec9-33.png" alt="Nexora" class="cta-trust-logo-img" />
+                        <img src="assets/images/productpage/product-sec9-34.png" alt="BluePeak Technologies" class="cta-trust-logo-img" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--<section id="cta">
         <div class="product-grid-bg"></div>
         <div class="product-glow-circle" style="width:500px;height:400px;background:rgba(0,80,200,0.1);top:-50px;right:5%;"></div>
         <div class="product-container">
@@ -3775,74 +4076,72 @@
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
                             Talk to an Expert →
                         </a>
-                    </div>
-                    <!--<div class="product-cta-secure">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
-                        Secure. Compliant. Always Protected.
                     </div>-->
-                </div>
+    <!--<div class="product-cta-secure">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+        Secure. Compliant. Always Protected.
+    </div>-->
+    <!--</div>
 
-                <div class="product-cta-visual product-animate-on-scroll">
-                    <div class="product-cta-shield-wrap">
-                        <svg class="product-cta-shield-svg" viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <radialGradient id="ctaShield" cx="50%" cy="40%" r="60%">
-                                    <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.2" />
-                                    <stop offset="100%" stop-color="#001a44" stop-opacity="0.8" />
-                                </radialGradient>
-                            </defs>
-                            <path d="M130 8 L245 52 L245 145 Q245 240 130 290 Q15 240 15 145 L15 52 Z"
-                                  fill="url(#ctaShield)" stroke="#00e5ff" stroke-width="2"
-                                  style="filter:drop-shadow(0 0 25px rgba(0,229,255,0.5))" />
-                            <path d="M130 28 L225 66 L225 145 Q225 224 130 268 Q35 224 35 145 L35 66 Z"
-                                  fill="none" stroke="#00e676" stroke-width="1" opacity="0.4" />
-                        </svg>
-                    </div>
-
-                    <div class="product-cta-products">
-                        <div class="product-cta-product product-blue">
-                            <div class="product-cta-product-logo">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
-                            </div>
-                            <div class="product-cta-product-name">SaferNet</div>
-                            <div class="product-cta-product-tag">Device Protection</div>
-                        </div>
-                        <div class="product-infinity-between">∞</div>
-                        <div class="product-cta-product product-green-b">
-                            <div class="product-cta-product-logo" style="font-family:'Sora Condensed',sans-serif;font-weight:600;font-size:1rem;background:rgba(0,150,80,0.3);color:var(--green);">Z</div>
-                            <div class="product-cta-product-name">ZED</div>
-                            <div class="product-cta-product-tag">Vulnerability Scanning</div>
-                        </div>
-                    </div>
-                </div>
+        <div class="product-cta-visual product-animate-on-scroll">
+            <div class="product-cta-shield-wrap">
+                <svg class="product-cta-shield-svg" viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="ctaShield" cx="50%" cy="40%" r="60%">
+                            <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.2" />
+                            <stop offset="100%" stop-color="#001a44" stop-opacity="0.8" />
+                        </radialGradient>
+                    </defs>
+                    <path d="M130 8 L245 52 L245 145 Q245 240 130 290 Q15 240 15 145 L15 52 Z"
+                          fill="url(#ctaShield)" stroke="#00e5ff" stroke-width="2"
+                          style="filter:drop-shadow(0 0 25px rgba(0,229,255,0.5))" />
+                    <path d="M130 28 L225 66 L225 145 Q225 224 130 268 Q35 224 35 145 L35 66 Z"
+                          fill="none" stroke="#00e676" stroke-width="1" opacity="0.4" />
+                </svg>
             </div>
 
-            <!-- Stats bar -->
-            <div class="product-cta-stats product-animate-on-scroll">
-                <div class="product-cta-stat-item">
-                    <div class="product-cta-stat-icon">🛡</div>
-                    <div class="product-cta-stat-title">Enterprise-Grade Security</div>
-                    <div class="product-cta-stat-desc">Advanced protection that meets the highest standards.</div>
+            <div class="product-cta-products">
+                <div class="product-cta-product product-blue">
+                    <div class="product-cta-product-logo">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
+                    </div>
+                    <div class="product-cta-product-name">SaferNet</div>
+                    <div class="product-cta-product-tag">Device Protection</div>
                 </div>
-                <div class="product-cta-stat-item">
-                    <div class="product-cta-stat-icon">🕐</div>
-                    <div class="product-cta-stat-title">24/7 Continuous Monitoring</div>
-                    <div class="product-cta-stat-desc">Real-time threat detection and automated response.</div>
-                </div>
-                <div class="product-cta-stat-item">
-                    <div class="product-cta-stat-icon">📈</div>
-                    <div class="product-cta-stat-title">Built for Your Business</div>
-                    <div class="product-cta-stat-desc">Scalable solutions that grow as your business grows.</div>
-                </div>
-                <div class="product-cta-stat-item">
-                    <div class="product-cta-stat-icon">👥</div>
-                    <div class="product-cta-stat-title">Expert Support</div>
-                    <div class="product-cta-stat-desc">Real people. Real support. Whenever you need it.</div>
+                <div class="product-infinity-between">∞</div>
+                <div class="product-cta-product product-green-b">
+                    <div class="product-cta-product-logo" style="font-family:'Sora Condensed',sans-serif;font-weight:600;font-size:1rem;background:rgba(0,150,80,0.3);color:var(--green);">Z</div>
+                    <div class="product-cta-product-name">ZED</div>
+                    <div class="product-cta-product-tag">Vulnerability Scanning</div>
                 </div>
             </div>
-
-            <!-- Trust bar -->
-            <div class="product-cta-trust-bar product-animate-on-scroll">
+        </div>
+    </div>-->
+    <!-- Stats bar -->
+    <!--<div class="product-cta-stats product-animate-on-scroll">
+        <div class="product-cta-stat-item">
+            <div class="product-cta-stat-icon">🛡</div>
+            <div class="product-cta-stat-title">Enterprise-Grade Security</div>
+            <div class="product-cta-stat-desc">Advanced protection that meets the highest standards.</div>
+        </div>
+        <div class="product-cta-stat-item">
+            <div class="product-cta-stat-icon">🕐</div>
+            <div class="product-cta-stat-title">24/7 Continuous Monitoring</div>
+            <div class="product-cta-stat-desc">Real-time threat detection and automated response.</div>
+        </div>
+        <div class="product-cta-stat-item">
+            <div class="product-cta-stat-icon">📈</div>
+            <div class="product-cta-stat-title">Built for Your Business</div>
+            <div class="product-cta-stat-desc">Scalable solutions that grow as your business grows.</div>
+        </div>
+        <div class="product-cta-stat-item">
+            <div class="product-cta-stat-icon">👥</div>
+            <div class="product-cta-stat-title">Expert Support</div>
+            <div class="product-cta-stat-desc">Real people. Real support. Whenever you need it.</div>
+        </div>
+    </div>-->
+    <!-- Trust bar -->
+    <!--<div class="product-cta-trust-bar product-animate-on-scroll">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
                 Trusted by <span class="product-accent">&nbsp;thousands of businesses&nbsp;</span> to keep their operations safe every day.
                 <div class="product-cta-trust-bar-logos">
@@ -3853,14 +4152,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-
-
-
-
-
-
+    </section>-->
     <!-- FOOTER -->
 
 
@@ -4102,20 +4394,20 @@
                 const dur = Math.random() * 5 + 4;
                 const del = Math.random() * 4;
                 d.style.cssText = `
-          left:${x}%; top:${y}%;
-          width:${size}px; height:${size}px;
-          background:${colors[i % colors.length]};
-          opacity:${Math.random() * 0.35 + 0.1};
-          animation: eypPtFloat ${dur}s ${del}s ease-in-out infinite alternate;
-        `;
+              left:${x}%; top:${y}%;
+              width:${size}px; height:${size}px;
+              background:${colors[i % colors.length]};
+              opacity:${Math.random() * 0.35 + 0.1};
+              animation: eypPtFloat ${dur}s ${del}s ease-in-out infinite alternate;
+            `;
                 section.appendChild(d);
             }
             /* inject keyframe */
             const s = document.createElement('style');
             s.textContent = `@keyframes eypPtFloat {
-        from { transform: translateY(0) scale(1); opacity: inherit; }
-        to   { transform: translateY(-16px) scale(1.5); opacity: 0.05; }
-      }`;
+            from { transform: translateY(0) scale(1); opacity: inherit; }
+            to   { transform: translateY(-16px) scale(1.5); opacity: 0.05; }
+          }`;
             document.head.appendChild(s);
         })();
 
