@@ -26,606 +26,724 @@
 <body>
 
     <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container align-items-center">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container align-items-center">
 
-       
-        <a class="navbar-brand fw-bold" href="index.html">
-            <img id="logoImg" class="logo-dark" src="assets/images/logodark.png" width="200" height="60" alt="Infinite Protection" />
-            <img id="logoImg" class="logo-light" src="assets/images/logolight.png" width="200" height="60" alt="Infinite Protection" />
-        </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img id="logoImg" class="logo-dark" src="assets/images/logodark.png" width="200" height="60" alt="Infinite Protection" />
+                <img id="logoImg" class="logo-light" src="assets/images/logolight.png" width="200" height="60" alt="Infinite Protection" />
+            </a>
 
-        <div class="collapse navbar-collapse" id="menu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <ul class="navbar-nav ms-auto align-items-lg-center">
+            <div class="collapse navbar-collapse" id="menu">
 
-                <!-- PRODUCT -->
-                <li class="nav-item ms-lg-3">
-                   <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
-			<a class="nav-link" href="product.html">Product</a>
-                </li>
-               <!-- <li class="nav-item ms-lg-3">
-                    <a class="nav-link" href="howitwork.html">How it works</a>
-                </li> -->
-                
-                <!-- COMPLIANCE -->
-                <li class="nav-item ms-lg-3">
-                    <a class="nav-link" href="compliance.html">Compliance</a>
-                </li>
-                <!-- <li class="nav-item dropdown ms-lg-3">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        Compliance
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Business Compliance</a></li>
-                        <li><a class="dropdown-item" href="#">Compliance Tools</a></li>
-                        <li><a class="dropdown-item" href="#">Talk To Us</a></li>
-                    </ul>
-                </li> -->
+                <ul class="navbar-nav ms-auto align-items-lg-center">
 
-                <!-- RESOURCES -->
-                <!-- <li class="nav-item ms-lg-3">
-                    <a class="nav-link" href="#">Resources</a>
-                </li> -->
-                 <li class="nav-item dropdown ms-lg-3">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        Resources
-                    </a>
-                  <!--  <ul class="dropdown-menu">
-                        <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
-                        <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
-                        <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
-                        <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
-                        <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
-                        <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
-                    </ul>-->
-                    
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
-                        <li><a class="dropdown-item" href="userguide.html">User Guide</a></li>
-                        <li><a class="dropdown-item" href="blogs.html">Blogs</a></li>
-                        <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
-                        <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
-                        <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
-                    </ul>
-                </li> 
+                    <!-- PRODUCT -->
+                    <li class="nav-item ms-lg-3">
+                        <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
+                        <a class="nav-link" href="product.html">Product</a>
+                    </li>
+                    <!-- <li class="nav-item ms-lg-3">
+                         <a class="nav-link" href="howitwork.html">How it works</a>
+                     </li> -->
+                    <!-- COMPLIANCE -->
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link" href="compliance.html">Compliance</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            Compliance
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Business Compliance</a></li>
+                            <li><a class="dropdown-item" href="#">Compliance Tools</a></li>
+                            <li><a class="dropdown-item" href="#">Talk To Us</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- RESOURCES -->
+                    <!-- <li class="nav-item ms-lg-3">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li> -->
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            Resources
+                        </a>
+                        <!--  <ul class="dropdown-menu">
+                              <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
+                              <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
+                              <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
+                              <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
+                              <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
+                              <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
+                          </ul>-->
 
-                <!-- PRICING -->
-                <li class="nav-item ms-lg-3">
-                    <a class="nav-link" href="pricing.html">Pricing</a>
-                    <!--<a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a> -->
-                </li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
+                            <li><a class="dropdown-item" href="userguide.html">User Guide</a></li>
+                            <li><a class="dropdown-item" href="blogs.html">Blogs</a></li>
+                            <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
+                            <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                            <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
+                        </ul>
+                    </li>
 
-                <li class="nav-item ms-lg-3">
-                    <a class="nav-link" href="about.html">About</a>
-                    <!--<a class="nav-link" asp-controller="Home" asp-action="about">About</a>-->
-                </li>
+                    <!-- PRICING -->
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                        <!--<a class="nav-link" asp-controller="Home" asp-action="pricing">Pricing</a> -->
+                    </li>
 
-                                
-                <!-- DARK MODE -->
-                <li class="nav-item ms-lg-3">
-                    
-                    <label class="switch">
-                        <input type="checkbox" id="theme-toggle">
-                        <span class="slider">
-                            <span class="icon moon">🌙</span>
-                            <span class="icon sun">☀️</span>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link" href="about.html">About</a>
+                        <!--<a class="nav-link" asp-controller="Home" asp-action="about">About</a>-->
+                    </li>
+
+
+                    <!-- DARK MODE -->
+                    <li class="nav-item ms-lg-3">
+
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider">
+                                <span class="icon moon">🌙</span>
+                                <span class="icon sun">☀️</span>
+                            </span>
+                        </label>
+                    </li>
+                    <!-- TALK -->
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light">Talk to Us</a>
+                    </li>
+
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 1 — TRANSPARENT PRICING, POWERFUL PROTECTION
+    ══════════════════════════════════════════ -->
+    <section id="pricing-hero" aria-label="Pricing Hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="ph-glow-1"></div>
+        <div class="ph-glow-2"></div>
+
+        <div class="ph-inner">
+
+            <!-- LEFT -->
+            <div class="ph-left reveal-left">
+                <div>
+                    <span class="section-eyebrow">PRICING</span>
+                    <h1 class="ph-title">
+                        Transparent pricing,<br>powerful <span>protection</span>
+                    </h1>
+                </div>
+                <p class="ph-desc">Simple per-endpoint pricing with no hidden fees. Start with a 30-day free trial — no credit card required.</p>
+
+                <div class="ph-guarantee">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L4 5v5c0 3.87 2.57 7.5 6 8.5 3.43-1 6-4.63 6-8.5V5L10 2z" fill="rgba(74,222,128,.2)" stroke="#4ADE80" stroke-width="1.5" /><path d="M7 10l2 2 4-4" stroke="#4ADE80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                    <span><strong>100% money-back guarantee</strong> for your first 30 days</span>
+                </div>
+
+                <div class="ph-actions">
+                    <a href="#start-trial" class="btn-green"><i class="fas fa-shield-halved"></i> Start Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="#pricing-faq" class="btn-outline-dark"><i class="far fa-calendar-check"></i> Schedule a Demo</a>
+                </div>
+
+                <div class="ph-assurance">
+
+                    <!-- No Credit Card -->
+                    <div class="ph-assur-item">
+                        <span class="ph-assur-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M3 7.5h18M6 4h12c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                <path d="M8 16l8-8"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"
+                                      stroke-linecap="round" />
+                            </svg>
                         </span>
-                    </label>
-                </li>
-                <!-- TALK -->
-                <li class="nav-item ms-lg-3">
-                    <a class="btn btn-outline-light">Talk to Us</a>
-                </li>
 
-                
-
-            </ul>
-
-        </div>
-    </div>
-</nav>
-
-<!-- ════════════════════════════════════════════
-     SECTION 1 — HERO / PRICING HEADER
-════════════════════════════════════════════ -->
-<section class="pricing-section" id="pricing-hero">
-    <div class="glow-left"></div>
-    <div class="glow-right"></div>
-
-    <div class="pricing-container-sm" style="position:relative;z-index:1;text-align:center;">
-        <p class="pricing-section-label pricing-label-yellow reveal">Pricing</p>
-        <h1 class="pricing-h1 reveal reveal-delay-1">Transparent pricing, powerful protection</h1>
-        <p class="pricing-lead reveal reveal-delay-2" style="max-width:700px;margin:0 auto;font-size:21px;">
-            Simple per-endpoint pricing with no hidden fees. Start with a 30-day free trial—no credit card required.
-        </p>
-        <div class="guarantee-badge reveal reveal-delay-3">
-            <span>100% money-back guarantee</span> for your first 30 days
-        </div>
-    </div>
-</section>
-
-
-<!-- ════════════════════════════════════════════
-     SECTION 2 — CHOOSE YOUR PLAN
-════════════════════════════════════════════ -->
-<section id="pricing" class="pricing-section" style="padding-top:120px;">
-    <div class="pricing-container">
-
-        <!-- Header -->
-        <div class="pricing-header reveal">
-            <p class="pricing-label">Pricing Plans</p>
-            <h2>Complete Security, Transparent Pricing</h2>
-            <p class="pricing-sub">
-                Three enterprise-ready packages built around penetration testing and endpoint protection.
-                Every plan is fully customizable to your organization's specific needs.
-            </p>
-        </div>
-
-        <!-- Pricing Cards -->
-        <div class="pricing-grid stagger-children">
-
-            <!-- ── ESSENTIAL ── -->
-            <div class="pricing-card">
-                <div class="plan-icon blue">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <h3>Essential</h3>
-                <span class="plan-tag blue">Annual Billing</span>
-                <div class="price-block">
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">199</span>
-                        <span class="period" style="font-size:20px;padding-bottom:10px;">.99</span>
-                        <span class="period">/ year</span>
+                        <span>No credit card required</span>
                     </div>
-                    <p class="billing">Billed annually · per month per device</p>
-                </div>
-                <div class="price-note">
-                    <i class="fa-solid fa-circle-info" style="color:#4aaeff;margin-right:6px;"></i>
-                    Up to <strong>20 SaferNet devices</strong> included &nbsp;·&nbsp; $19,999/yr at full deployment
-                </div>
-                <button class="btn-outline2">Get Started</button>
-                <ul class="price-features">
-                    <li class="feat-group-label">Penetration Testing</li>
-                    <li><strong>2 Basic Scans</strong> per year</li>
-                    <li>Internal &amp; External scan coverage</li>
-                    <li>Targets most commonly vulnerable areas</li>
-                    <li class="feat-divider"></li>
-                    <li class="feat-group-label">Endpoint Protection</li>
-                    <li><strong>20 SaferNet devices</strong> included</li>
-                    <li>Always-on VPN &amp; malware defense</li>
-                    <li>Content filtering &amp; internet control</li>
-                    <li>24/7 threat monitoring</li>
-                </ul>
-                <a class="advisor" href="#">Talk to a Security Advisor <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
 
-            <!-- ── GROWTH (Popular) ── -->
-            <div class="pricing-card popular">
-                <div class="discount">⭐ Most Popular</div>
-                <div class="plan-icon yellow" style="margin-top:18px;">
-                    <i class="fa-solid fa-rocket"></i>
-                </div>
-                <h3>Growth</h3>
-                <span class="plan-tag yellow">Bi-Annual Billing</span>
-                <div class="pbadge">Best Value for Growing Businesses</div>
-                <div class="price-block">
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">699</span>
-                        <span class="period" style="font-size:20px;padding-bottom:10px;">.99</span>
-                        <span class="period">/ 6 mo</span>
+                    <!-- Money Back -->
+                    <div class="ph-assur-item">
+                        <span class="ph-assur-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M21 12a9 9 0 1 1-2.64-6.36"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"
+                                      stroke-linecap="round" />
+                                <path d="M21 3v6h-6"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                            </svg>
+                        </span>
+
+                        <span>30-day money-back guarantee</span>
                     </div>
-                    <p class="billing">Billed bi-annually · $1,399.98/yr</p>
-                </div>
-                <div class="price-note">
-                    <i class="fa-solid fa-circle-info" style="color:var(--accent-yellow);margin-right:6px;"></i>
-                    Up to <strong>40 SaferNet devices</strong> included &nbsp;·&nbsp; $55,999/yr at full deployment
-                </div>
-                <button class="btn-primary2">Get Started</button>
-                <ul class="price-features">
-                    <li class="feat-group-label">Penetration Testing</li>
-                    <li><strong>2 Full Scans</strong> conducted twice per year</li>
-                    <li class="highlight">4 total scans annually</li>
-                    <li>Complete internal &amp; external evaluation</li>
-                    <li>Full website &amp; software system assessment</li>
-                    <li class="feat-divider"></li>
-                    <li class="feat-group-label">Endpoint Protection</li>
-                    <li><strong>40 SaferNet devices</strong> included</li>
-                    <li>Always-on VPN &amp; malware defense</li>
-                    <li>Content filtering &amp; internet control</li>
-                    <li>24/7 threat monitoring &amp; alerts</li>
-                </ul>
-                <a class="advisor" href="#">Talk to a Security Advisor <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
 
-            <!-- ── COMPLETE ── -->
-            <div class="pricing-card">
-                <div class="plan-icon green">
-                    <i class="fa-solid fa-crown"></i>
-                </div>
-                <h3>Complete</h3>
-                <span class="plan-tag green">Quarterly Billing</span>
-                <div class="price-block">
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">1,299</span>
-                        <span class="period" style="font-size:20px;padding-bottom:10px;">.99</span>
-                        <span class="period">/ qtr</span>
+                    <!-- Cancel Anytime -->
+                    <div class="ph-assur-item">
+                        <span class="ph-assur-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9"
+                                        stroke="currentColor"
+                                        stroke-width="1.8" />
+                                <path d="M9 9l6 6M15 9l-6 6"
+                                      stroke="currentColor"
+                                      stroke-width="1.8"
+                                      stroke-linecap="round" />
+                            </svg>
+                        </span>
+
+                        <span>Cancel anytime</span>
                     </div>
-                    <p class="billing">Billed quarterly · $5,199.96/yr</p>
-                </div>
-                <div class="price-note">
-                    <i class="fa-solid fa-circle-info" style="color:var(--accent-green);margin-right:6px;"></i>
-                    Up to <strong>100 SaferNet devices</strong> included &nbsp;·&nbsp; $25,999/yr at full deployment
-                </div>
-                <button class="btn-outline2">Get Started</button>
-                <ul class="price-features">
-                    <li class="feat-group-label">Penetration Testing</li>
-                    <li><strong>4 Full Scans</strong> per quarter</li>
-                    <li class="highlight">8 total scans annually</li>
-                    <li>4 internal + 4 external scan cycles</li>
-                    <li>Deepest threat &amp; compliance coverage</li>
-                    <li class="feat-divider"></li>
-                    <li class="feat-group-label">Endpoint Protection</li>
-                    <li><strong>100 SaferNet devices</strong> included</li>
-                    <li>Always-on VPN &amp; malware defense</li>
-                    <li>Content filtering &amp; internet control</li>
-                    <li>Priority 24/7 monitoring &amp; response</li>
-                </ul>
-                <a class="advisor" href="#">Talk to a Security Advisor <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
 
-        </div><!-- /pricing-grid -->
-        <!-- ══════════════════════════════════
-             PENETRATION TESTING — SCAN TYPES
-             ══════════════════════════════════ -->
-        <div class="scan-section">
-            <div class="scan-section-header">
-                <p class="pricing-label" style="margin-bottom:10px;">Penetration Testing Explained</p>
-                <h3>What's included in every scan?</h3>
-                <p>
-                    All basic and full scans are classified as penetration tests. Our team simulates real-world
-                    attacks to expose vulnerabilities before bad actors find them.
-                </p>
-            </div>
-
-            <div class="scan-grid stagger-children">
-
-                <div class="scan-card basic">
-                    <div class="scan-icon">🔍</div>
-                    <span class="scan-type-badge">Basic Scan</span>
-                    <h4>Quick Vulnerability Scan</h4>
-                    <p>
-                        A targeted penetration test focused on the most commonly vulnerable entry points.
-                        Ideal for routine security checks and baseline threat assessment.
-                    </p>
-                </div>
-
-                <div class="scan-card full">
-                    <div class="scan-icon">🔬</div>
-                    <span class="scan-type-badge">Full Scan</span>
-                    <h4>Comprehensive Evaluation</h4>
-                    <p>
-                        A deep-dive penetration test covering all aspects of a website or software system —
-                        leaving no potential exploit unexamined.
-                    </p>
-                </div>
-
-                <div class="scan-card external">
-                    <div class="scan-icon">🌐</div>
-                    <span class="scan-type-badge">External Scan</span>
-                    <h4>Outside-In Assessment</h4>
-                    <p>
-                        Evaluates your defenses from an attacker's perspective. Identifies where a hacker
-                        could gain access or cause damage from the public internet.
-                    </p>
-                </div>
-
-                <div class="scan-card internal">
-                    <div class="scan-icon">🏢</div>
-                    <span class="scan-type-badge">Internal Scan</span>
-                    <h4>Inside-Out Risk Analysis</h4>
-                    <p>
-                        Assesses risks from within your environment — evaluating the potential damage if
-                        a breach or insider threat occurs inside your network.
-                    </p>
-                </div>
-
-            </div><!-- /scan-grid -->
-            <!-- Compliance add-ons -->
-            <div class="compliance-strip reveal">
-                <div class="compliance-left">
-                    <h4><i class="fa-solid fa-file-shield" style="color:var(--accent-green);margin-right:10px;"></i>Compliance Scans — Add-On</h4>
-                    <p>
-                        Add compliance-specific penetration testing to any package.
-                        We map findings directly to your required framework controls.
-                    </p>
-                </div>
-                <div class="compliance-badges">
-                    <span class="comp-badge"><i class="fa-solid fa-check" style="margin-right:5px;"></i>ISO 27001</span>
-                    <span class="comp-badge"><i class="fa-solid fa-check" style="margin-right:5px;"></i>PCI DSS</span>
-                    <span class="comp-badge"><i class="fa-solid fa-check" style="margin-right:5px;"></i>SOC 2</span>
-                    <span class="comp-badge"><i class="fa-solid fa-check" style="margin-right:5px;"></i>HIPAA</span>
                 </div>
             </div>
 
-        </div><!-- /scan-section -->
-        <!-- Footer -->
-        <div class="pricing-footer reveal">
-            <p>Additional SaferNet devices available at <strong>$2.99 / device / month</strong></p>
-            <p>All packages are fully customizable to your organization's specific security requirements.</p>
-            <div class="guarantee">
-                <i class="fa-solid fa-shield-check"></i>
-                30-day money-back guarantee &nbsp;·&nbsp; No lock-in contracts &nbsp;·&nbsp; Cancel anytime
-            </div>
-            <br />
-            <span class="customize-note">
-                <i class="fa-solid fa-sliders" style="margin-right:8px;"></i>
-                Need a custom plan? Talk to our team — every package can be tailored to your needs.
-            </span>
-        </div>
-
-    </div><!-- /pricing-container -->
-</section>
+            <!-- RIGHT — Shield + floating status -->
+            <div class="ph-right reveal-right">
+                <div class="ph-shield-wrap">
 
 
-<!-- ════════════════════════════════════════════
-     SECTION 3 — WHAT EVERY PLAN INCLUDES
-════════════════════════════════════════════ -->
-<section class="pricing-section" id="includes">
-    <div class="pricing-container-md">
-
-        <div style="text-align:center;max-width:700px;margin:0 auto 64px;" class="reveal">
-            <h2 class="pricing-h2">What every plan includes</h2>
-            <p class="pricing-body">Full access to both pillars of protection, no matter which plan you choose. No feature tiers, no hidden limitations.</p>
-        </div>
-
-        <div class="includes-grid">
-
-            <!-- Card helper macro (repeated 12×) -->
-            <div class="include-card reveal reveal-delay-1">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Automated Penetration Testing</h3>
-                    <p>24/7 network scanning to find vulnerabilities before attackers do</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-2">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Infinite Protection  Endpoint Protection</h3>
-                    <p>Malware blocking, VPN encryption, and content filtering on every device</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-1">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Real-time Threat Monitoring</h3>
-                    <p>Continuous surveillance with instant alerts for critical issues</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-2">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Unified Security Dashboard</h3>
-                    <p>One simple view of your entire security posture</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-1">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Compliance-Ready Reporting</h3>
-                    <p>Automated reports that meet industry standards (HIPAA, PCI DSS, etc.)</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-2">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Zero-Touch Deployment</h3>
-                    <p>Simple setup with no technical expertise required</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-1">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Automatic Updates</h3>
-                    <p>Security policies and threat definitions update automatically</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-2">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>24/7 Expert Support</h3>
-                    <p>Real humans available whenever you need help</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-1">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Unlimited Users</h3>
-                    <p>Add as many team members as you need at no extra cost</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-2">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Mobile &amp; Desktop Coverage</h3>
-                    <p>Protection for Windows, macOS, iOS, and Android devices</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-1">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Phishing Protection</h3>
-                    <p>AI-powered email and web filtering to stop social<br> engineering attacks</p>
-                </div>
-            </div>
-
-            <div class="include-card reveal reveal-delay-2">
-                <div class="include-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                </div>
-                <div>
-                    <h3>Data Encryption</h3>
-                    <p>End-to-end encryption for all network traffic</p>
-                </div>
-            </div>
-
-        </div>
-
-        <p class="includes-footer reveal">Every feature. Every plan. No exceptions.</p>
-    </div>
-</section>
-
-
-<!-- ════════════════════════════════════════════
-     SECTION 4 — FAQ / PRICING QUESTIONS
-════════════════════════════════════════════ -->
-<section class="pricing-section" id="faq">
-    <div class="pricing-container-sm">
-
-        <div style="text-align:center;max-width:700px;margin:0 auto 64px;" class="reveal">
-            <h2 class="pricing-h2">Pricing questions</h2>
-            <p class="pricing-body">Simple, transparent answers to common questions about our pricing and plans.</p>
-        </div>
-
-        <div class="faq-list">
-
-            <div class="faq-item reveal reveal-delay-1">
-                <button class="faq-trigger" aria-expanded="false">
-                    <h3>What happens during the 30-day free trial?</h3>
-                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                </button>
-                <div class="faq-body">
-                    <div class="faq-body-inner">
-                        You get full access to every feature—automated penetration testing, endpoint protection, VPN, and our security dashboard—completely free for 30 days. No credit card is required to start, and you won't be charged anything until your trial ends. If you decide Infinite Protection  isn't right for you, simply cancel before day 30 with no questions asked.
+                    <!-- Floating Status Cards -->
+                    <div class="ph-status-card">
+                        <div class="psc-icon"><i class="fas fa-lock"></i></div>
+                        <div class="psc-info">
+                            <span class="psc-label">DATA SECURE</span>
+                            <span class="psc-value">Encryption On</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="faq-item reveal reveal-delay-2">
-                <button class="faq-trigger" aria-expanded="false">
-                    <h3>Can I switch plans later?</h3>
-                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                </button>
-                <div class="faq-body">
-                    <div class="faq-body-inner">
-                        Absolutely. You can upgrade or downgrade your plan at any time from your account dashboard. If you upgrade mid-cycle, we'll prorate the difference. Downgrading takes effect at the start of your next billing period so you always get the full value of what you've paid for.
+                    <div class="ph-status-card">
+                        <div class="psc-icon"><i class="fas fa-shield-halved"></i></div>
+                        <div class="psc-info">
+                            <span class="psc-label">THREAT PROTECTED</span>
+                            <span class="psc-value">24/7 Monitoring</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="faq-item reveal reveal-delay-3">
-                <button class="faq-trigger" aria-expanded="false">
-                    <h3>What if I need more than one device?</h3>
-                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                </button>
-                <div class="faq-body">
-                    <div class="faq-body-inner">
-                        Each plan covers one endpoint. Additional devices are just $2.99/month each—and you can add as many as you need directly from your dashboard. There's no cap on the number of devices, and every device gets the exact same level of protection.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item reveal reveal-delay-4">
-                <button class="faq-trigger" aria-expanded="false">
-                    <h3>Is there a setup fee or cancellation penalty?</h3>
-                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                </button>
-                <div class="faq-body">
-                    <div class="faq-body-inner">
-                        None whatsoever. There's no setup fee, no onboarding charge, and no penalty for cancelling. You can cancel at any time from your account settings. If you're within the first 30 days, you'll receive a full refund—no questions asked.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item reveal reveal-delay-5">
-                <button class="faq-trigger" aria-expanded="false">
-                    <h3>Do you offer discounts for larger teams?</h3>
-                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                </button>
-                <div class="faq-body">
-                    <div class="faq-body-inner">
-                        Yes—teams with 10 or more devices qualify for custom volume pricing. Reach out to our security advisors and we'll put together a tailored quote based on your team size and security needs. Enterprise contracts with dedicated support are also available.
+                    <div class="ph-status-card">
+                        <div class="psc-icon"><i class="fas fa-calendar-days"></i></div>
+                        <div class="psc-info">
+                            <span class="psc-label">30-DAY FREE TRIAL</span>
+                            <span class="psc-value">No credit card needed</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </div>
+    </section>
 
-        <div class="faq-footer reveal">
-            <p>Still have questions?</p>
-            <a href="#">Talk to a Security Advisor →</a>
+    <!-- ══════════════════════════════════════════
+         SECTION 2 — WHAT EVERY PLAN INCLUDES
+    ══════════════════════════════════════════ -->
+    <section id="every-plan" aria-label="What Every Plan Includes">
+        <div class="ep-grid-line"></div>
+
+        <div class="ep-inner">
+            <div class="ep-header reveal">
+                <span class="section-eyebrow">EVERY PLAN. EVERY ADVANTAGE.</span>
+                <h2 class="section-title">What every plan <span>includes</span></h2>
+                <p class="section-subtitle">Powerful security features designed to protect, monitor, and future-proof your business.</p>
+            </div>
+            <div class="ep-features stagger-children">
+
+                <!-- 1 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Automated Penetration Testing
+                        </div>
+
+                        <div class="ep-card-desc">
+                            24/7 automated scanning to find vulnerabilities before attackers do.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Endpoint Protection
+                        </div>
+
+                        <div class="ep-card-desc">
+                            Malware blocking, VPN encryption, and content filtering on every device.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Real-Time Threat Monitoring
+                        </div>
+
+                        <div class="ep-card-desc">
+                            Continuous monitoring to catch and stop threats instantly.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Unified Security Dashboard
+                        </div>
+
+                        <div class="ep-card-desc">
+                            One single view of your entire security posture.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Compliance-Ready Reporting
+                        </div>
+
+                        <div class="ep-card-desc">
+                            Automated reports that meet industry standards (HIPAA, PCI DSS, etc.).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Zero-Touch Deployment
+                        </div>
+
+                        <div class="ep-card-desc">
+                            Simple setup with no technical experts required.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Automatic Updates
+                        </div>
+
+                        <div class="ep-card-desc">
+                            Security policies and threat definitions update automatically.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            24/7 Expert Support
+                        </div>
+
+                        <div class="ep-card-desc">
+                            Real humans available whenever you need help.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Unlimited Users
+                        </div>
+
+                        <div class="ep-card-desc">
+                            Add as many team members as you need at no extra cost.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Mobile &amp; Desktop Coverage
+                        </div>
+
+                        <div class="ep-card-desc">
+                            Protection for Windows, macOS, iOS, and Android devices.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Phishing Protection
+                        </div>
+
+                        <div class="ep-card-desc">
+                            AI-powered email and web filtering to stop phishing attacks.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12 -->
+                <div class="ep-card">
+                    <div class="ep-chk">
+                        <i class="fas fa-check"></i>
+                    </div>
+
+                    <div class="ep-card-body">
+                        <div class="ep-card-title">
+                            Data Encryption
+                        </div>
+
+                        <div class="ep-card-desc">
+                            End-to-end encryption for all network traffic and sensitive data.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- ══════════════════════════════════════════
+         SECTION 3 — WHAT'S INCLUDED IN EVERY SCAN
+    ══════════════════════════════════════════ -->
+    <section id="every-scan" aria-label="What's Included in Every Scan">
+        <div class="es-bg-accent"></div>
 
+        <div class="es-inner">
+            <div class="es-header reveal">
+                <span class="section-eyebrow">INCLUDED IN EVERY PLAN</span>
+                <h2 class="section-title">What's <span>included</span> in every scan?</h2>
+                <p class="section-subtitle">At Infinite Protection, we simulate real-world attacks to uncover weaknesses before attackers can exploit them.</p>
+            </div>
 
-<!-- ════════════════════════════════════════════
-     SECTION 5 — START FREE TRIAL CTA
-════════════════════════════════════════════ -->
-<section class="pricing-section" id="cta">
-    <div class="cta-glow"></div>
-    <div class="pricing-container-xs" style="position:relative;z-index:1;">
-        <p class="pricing-section-label pricing-label-green reveal">Ready to Get Started?</p>
-        <h2 class="pricing-h1 reveal reveal-delay-1">Start your 30-day free trial</h2>
-        <p class="lead reveal reveal-delay-2" style="max-width:650px;margin:0 auto 40px;color: rgba(255,255,255,0.50);">
-            Full access to automated pen testing and endpoint protection. No credit card required. Cancel anytime.
-        </p>
-        <div class="btn-row reveal reveal-delay-3">
-            <a href="#" class="btn-primary">Start Free Trial</a>
-            <a href="#" class="btn-outline">Schedule a Demo</a>
+            <div class="es-scan-cards stagger-children">
+
+                <div class="es-scan-card">
+                    <div class="es-scan-icon es-icon-blue"><i class="fas fa-magnifying-glass"></i></div>
+                    <div class="es-scan-title">Quick Vulnerability Scan</div>
+                    <div class="es-scan-desc">A targeted overview of key security risks and misconfigurations.</div>
+                </div>
+
+                <div class="es-scan-card">
+                    <div class="es-scan-icon es-icon-green"><i class="fas fa-clipboard-check"></i></div>
+                    <div class="es-scan-title">Comprehensive Evaluation</div>
+                    <div class="es-scan-desc">A deep-dive assessment covering networks, systems, applications, and user behavior.</div>
+                </div>
+
+                <div class="es-scan-card">
+                    <div class="es-scan-icon es-icon-gold"><i class="fas fa-crosshairs"></i></div>
+                    <div class="es-scan-title">Custom-Fit Assessment</div>
+                    <div class="es-scan-desc">Built around your infrastructure and goals. You choose the scope — we deliver clarity.</div>
+                </div>
+
+                <div class="es-scan-card">
+                    <div class="es-scan-icon es-icon-purple"><i class="fas fa-diagram-project"></i></div>
+                    <div class="es-scan-title">Inside-Out Risk Analysis</div>
+                    <div class="es-scan-desc">Assessing threats from the inside out to uncover blind spots and access exposures.</div>
+                </div>
+
+            </div>
+
+            <!-- Compliance Add-On -->
+            <div class="es-compliance reveal">
+                <div class="es-comp-left">
+                    <div class="es-comp-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div>
+                        <div class="es-comp-title">Compliance Scans — Add-On</div>
+                        <div class="es-comp-desc">Add compliance-specific penetration testing to any package. We map findings directly to your required framework controls.</div>
+                    </div>
+                </div>
+                <div class="es-comp-badges">
+                    <div class="es-comp-badge"><i class="fas fa-globe"></i> ISO 27001</div>
+                    <div class="es-comp-badge"><i class="fas fa-credit-card"></i> PCI DSS</div>
+                    <div class="es-comp-badge"><i class="fas fa-shield-halved"></i> SOC 2</div>
+                    <div class="es-comp-badge"><i class="fas fa-staff-snake"></i> HIPAA</div>
+                </div>
+            </div>
+
+            <div class="es-footer-note reveal">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L3 4.5v5c0 3.31 2.57 6.4 6 7.27C12.43 15.9 15 12.81 15 9.5v-5L9 1.5z" fill="rgba(74,222,128,.15)" stroke="#4ADE80" stroke-width="1.4" /><path d="M6 9l2 2 4-4" stroke="#4ADE80" stroke-width="1.6" stroke-linecap="round" /></svg>
+                <span>All add-ons are fully customizable to your organization's needs.</span>
+                <a href="#">Need a custom scan? Talk to our team <i class="fas fa-arrow-right"></i></a>
+            </div>
+
         </div>
-        <div class="trust-bullets reveal reveal-delay-4">
-            <div class="trust-bullet"><div class="dot-green-sm"></div><span>No credit card required</span></div>
-            <div class="trust-bullet"><div class="dot-green-sm"></div><span>30-day money-back guarantee</span></div>
-            <div class="trust-bullet"><div class="dot-green-sm"></div><span>Cancel anytime</span></div>
-        </div>
-    </div>
-</section>
+    </section>
 
+    <!-- ══════════════════════════════════════════
+         SECTION 4 — START YOUR 30-DAY FREE TRIAL
+    ══════════════════════════════════════════ -->
+    <section id="start-trial" aria-label="Start Your 30-Day Free Trial">
+        <div class="st-glow-left"></div>
+        <div class="st-glow-right"></div>
+
+        <div class="st-inner">
+
+            <!-- LEFT -->
+            <div class="st-left reveal-left">
+                <div>
+                    <span class="section-eyebrow">READY TO GET STARTED?</span>
+                    <h2 class="st-title">Start your 30-day<br><span>free trial</span></h2>
+                </div>
+                <p class="st-desc">Full access to automated penetration testing and endpoint protection. No credit card required. Cancel anytime.</p>
+
+                <div class="st-actions">
+                    <a href="#" class="btn-green"><i class="fas fa-shield-halved"></i> Start Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="btn-outline-dark"><i class="far fa-calendar-check"></i> Schedule a Demo</a>
+                </div>
+
+                <div class="st-perks">
+                    <div class="st-perk"><i class="far fa-credit-card" style="color:var(--accent-green)"></i> No credit card required</div>
+                    <div class="st-perk"><i class="fas fa-rotate-left" style="color:var(--accent-green)"></i> 30-day money-back guarantee</div>
+                    <div class="st-perk"><i class="fas fa-xmark" style="color:var(--accent-green)"></i> Cancel anytime</div>
+                </div>
+
+                <!-- Trust ratings -->
+                <div class="st-trust reveal" style="max-width:420px;">
+                    <div class="st-trust-label">Trusted by businesses worldwide</div>
+                    <div class="st-ratings no-wrap">
+                        <div class="st-rating-item">
+                            <div class="st-rating-platform" style="color:#1c6fe8;">▶ Capterra</div>
+                            <div class="st-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="st-score">4.8</div>
+                        </div>
+                        <div class="st-divider"></div>
+                        <div class="st-rating-item">
+                            <div class="st-rating-platform" style="color:#e8543a;">● G2</div>
+                            <div class="st-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="st-score">4.9</div>
+                        </div>
+                        <div class="st-divider"></div>
+                        <div class="st-rating-item">
+                            <div class="st-rating-platform" style="color:#00b67a;">★ Trustpilot</div>
+                            <div class="st-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                            </div>
+                            <div class="st-score">4.7</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="st-right reveal-right">
+                <div class="st-shield-wrap">
+                    <div class="ph-pulse" style="width:260px;height:260px;"></div>
+                    <div class="ph-pulse" style="width:340px;height:340px;"></div>
+                    <div class="ph-pulse" style="width:420px;height:420px;"></div>
+
+                    <svg class="st-shield-svg" viewBox="0 0 200 230" fill="none">
+                        <defs>
+                            <linearGradient id="sg2" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#4ADE80" stop-opacity=".3" />
+                                <stop offset="100%" stop-color="#4AADFF" stop-opacity=".12" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M100 10L20 42v56c0 46 32.5 88 80 100 47.5-12 80-54 80-100V42L100 10z" fill="url(#sg2)" stroke="#4ADE80" stroke-width="2" />
+                        <path d="M65 115l24 24 46-46" stroke="#4ADE80" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <div class="st-status-card">
+                        <div class="psc-icon"><i class="fas fa-lock"></i></div>
+                        <div class="psc-info">
+                            <span class="psc-label">SECURE</span>
+                            <span class="psc-value">Your data is encrypted and safe</span>
+                        </div>
+                        <div class="psc-dot"></div>
+                    </div>
+                    <div class="st-status-card">
+                        <div class="psc-icon"><i class="fas fa-shield-halved"></i></div>
+                        <div class="psc-info">
+                            <span class="psc-label">PROTECTED</span>
+                            <span class="psc-value">Real-time threat protection active</span>
+                        </div>
+                        <div class="psc-dot"></div>
+                    </div>
+                    <div class="st-status-card">
+                        <div class="psc-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="psc-info">
+                            <span class="psc-label">MONITORING ACTIVE</span>
+                            <span class="psc-value">24/7 threat monitoring in progress</span>
+                        </div>
+                        <div class="psc-dot"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 5 — PRICING FAQ
+    ══════════════════════════════════════════ -->
+    <section id="pricing-faq" aria-label="Pricing FAQ">
+        <div class="faq-glow"></div>
+
+        <div class="faq-inner">
+
+            <!-- LEFT — Sticky info -->
+            <div class="faq-left reveal-left">
+                <span class="section-eyebrow">PRICING FAQ</span>
+                <h2 class="faq-left-title">Pricing <span>questions</span></h2>
+                <p class="faq-left-sub">Simple, transparent answers to common questions about our pricing and plans.</p>
+
+                <div class="faq-help-card">
+                    <div class="faq-help-icon"><i class="fas fa-headset"></i></div>
+                    <div>
+                        <div class="faq-help-title">Need help deciding?</div>
+                        <div class="faq-help-text">Our security experts are here to help you choose the right plan.</div>
+                        <a href="#" class="btn-outline-dark" style="font-size:.85rem;padding:10px 18px;">Talk to an Expert <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="faq-footer mt-4">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L3 4.5v5c0 3.31 2.57 6.4 6 7.27C12.43 15.9 15 12.81 15 9.5v-5L9 1.5z" fill="rgba(74,222,128,.15)" stroke="#4ADE80" stroke-width="1.4" /><path d="M6 9l2 2 4-4" stroke="#4ADE80" stroke-width="1.6" stroke-linecap="round" /></svg>
+                    <span>Still have questions? Our team is happy to help.</span>
+                    <a href="#">Contact Support <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- RIGHT — Accordion -->
+            <div class="faq-right reveal-right">
+                <div class="faq-list">
+
+                    <div class="faq-item open">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <div style="display:flex;align-items:center;gap:12px;">
+                                <div class="faq-q-badge"><i class="fas fa-question"></i></div>
+                                <span class="faq-q-text">What happens during the 30-day free trial?</span>
+                            </div>
+                            <div class="faq-q-icon"><i class="fas fa-chevron-up"></i></div>
+                        </div>
+                        <div class="faq-a">
+                            <p class="faq-a-text">You get full access to all features in your selected plan. No credit card required, and you can cancel anytime. There are no obligations — the trial is completely free for 30 days, after which you can choose to subscribe or walk away with no charges.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span class="faq-q-text">Can I switch plans later?</span>
+                            <div class="faq-q-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-a">
+                            <p class="faq-a-text">Absolutely. You can upgrade or downgrade your plan at any time from your account dashboard. Upgrades take effect immediately; downgrades take effect at the start of your next billing cycle. Your data is never lost during a plan switch.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span class="faq-q-text">What if I need more than one device?</span>
+                            <div class="faq-q-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-a">
+                            <p class="faq-a-text">Our plans are priced per endpoint, so you simply add more devices to your plan as needed. Whether you have 5 or 500 endpoints, pricing scales linearly with no surprise fees. Volume discounts are available for larger deployments.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span class="faq-q-text">Is there a setup fee or cancellation penalty?</span>
+                            <div class="faq-q-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-a">
+                            <p class="faq-a-text">No setup fees and no cancellation penalties — ever. We believe in earning your trust through results, not lock-in contracts. You can cancel your subscription at any time from your account settings with just a few clicks.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <span class="faq-q-text">Do you offer discounts for larger teams?</span>
+                            <div class="faq-q-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-a">
+                            <p class="faq-a-text">Yes! We offer tiered volume discounts starting at 10 endpoints. Teams of 50+ endpoints qualify for custom enterprise pricing, which includes dedicated account management, priority support SLAs, and tailored compliance reporting. Contact our sales team for a quote.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
     <!-- FOOTER -->
 
-    
+
     <footer class="footer">
         <div class="footer-container">
 
@@ -679,22 +797,22 @@
                     <h3>Contact Us</h3>
 
                     <p>
-  <i class="bi bi-envelope"></i> 
-  <a href="mailto:support@safernet.com">support@safernet.com</a>
-</p>
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:support@safernet.com">support@safernet.com</a>
+                    </p>
 
-<p>
-  <i class="bi bi-telephone"></i> 
-  <a href="tel:18005551234">1-800-555-1234</a>
-</p>
+                    <p>
+                        <i class="bi bi-telephone"></i>
+                        <a href="tel:18005551234">1-800-555-1234</a>
+                    </p>
 
-<p>
-  <i class="bi bi-geo-alt"></i> 
-  <a href="https://www.google.com/maps?q=123+Security+Blvd,+Suite+400,+Austin,+TX+78701" target="_blank">
-    123 Security Blvd, Suite 400<br>
-    Austin, TX 78701
-  </a>
-</p>
+                    <p>
+                        <i class="bi bi-geo-alt"></i>
+                        <a href="https://www.google.com/maps?q=123+Security+Blvd,+Suite+400,+Austin,+TX+78701" target="_blank">
+                            123 Security Blvd, Suite 400<br>
+                            Austin, TX 78701
+                        </a>
+                    </p>
 
                 </div>
 
@@ -715,15 +833,15 @@
 
         </div>
     </footer>
-  
-  
-  
+
+
+
 
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/site.js" asp-append-version="true"></script>
-	<script src="assets/js/pricing.js" asp-append-version="true"></script>
+    <script src="assets/js/pricing.js" asp-append-version="true"></script>
 
     <!--@await RenderSectionAsync("Scripts", required: false) -->
 
