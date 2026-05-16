@@ -7,7 +7,7 @@
 .section-eyebrow {
     font-family: 'Sora', sans-serif;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: .16em;
     text-transform: uppercase;
     color: var(--accent-green);
@@ -18,7 +18,7 @@
 .section-title {
     font-family: 'Sora', sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
+    font-weight: 600;
     color: var(--text-primary);
     line-height: 1.15;
     margin-bottom: 16px;
@@ -45,7 +45,7 @@
     background: var(--accent-green);
     color: #071a0e;
     font-family: 'Sora', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: .95rem;
     padding: 14px 28px;
     border-radius: 10px;
@@ -102,9 +102,17 @@
     position: relative;
     overflow: hidden;
     background: var(--bg-primary);
-    /*padding: 80px 50px;*/
+    padding: 100px 50px;
     transition: background var(--transition);
-    background-image:url("../images/pricing/pricing-sec-1-Mainback.png");
+    background-image: url("../images/pricing/pricing-sec-1-Mainback.png");
+
+    min-height: 800px; /* instead of height */
+    display: flex;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .ph-inner {
@@ -150,7 +158,7 @@
 .ph-title {
     font-family: 'Sora', sans-serif;
     font-size: clamp(2.4rem, 4.5vw, 3.6rem);
-    font-weight: 800;
+    font-weight: 600;
     color: var(--text-primary);
     line-height: 1.1;
     transition: color var(--transition);
@@ -192,7 +200,7 @@
 
 .ph-assurance {
     display: flex;
-    gap: 28px;
+    gap: 20px;
     /*flex-wrap: wrap;*/
 }
 
@@ -303,13 +311,13 @@ body.light-mode .ph-status-card {
 .ph-status-card:nth-child(1) {
     animation-delay: .6s;
     top: 3%;
-    left: -120px;
+    left: 20px;
 }
 
 /* CARD 2 */
 .ph-status-card:nth-child(2) {
     animation-delay: 1.2s;
-    top: 42%;
+    top: 22%;
     right: -120px;
 }
 
@@ -377,7 +385,7 @@ body.light-mode .ph-status-card {
 
 .psc-label {
     font-size: .7rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--accent-green);
@@ -424,7 +432,7 @@ body.light-mode .ph-status-card {
 }
 .ph-assurance {
     display: flex;
-    gap: 34px;
+    gap: 20px;
     /*flex-wrap: wrap;*/
     margin-top: 10px;
 }
@@ -432,7 +440,7 @@ body.light-mode .ph-status-card {
 .ph-assur-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 5px;
     color: var(--text-muted);
     font-size: .9rem;
     line-height: 1.5;
@@ -475,13 +483,44 @@ body.light-mode .ph-assur-icon {
     }
 }
 
+@media (max-width: 900px) {
+    #pricing-hero {
+        min-height: auto;
+        padding: 120px 24px 80px;
+    }
+
+    .ph-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .ph-left {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    #pricing-hero {
+        padding: 110px 20px 70px;
+    }
+
+    .ph-title {
+        font-size: 2.2rem;
+        line-height: 1.15;
+    }
+
+    .ph-desc {
+        font-size: 1rem;
+    }
+}
 /* ===================================================
    SECTION 2 — WHAT EVERY PLAN INCLUDES
    =================================================== */
 
 #every-plan {
     padding: 90px 0 10px;
-    background: #020817;
+    /*background: #020817;*/
+    background: var(--bg-primary);
     position: relative;
     overflow: visible;
     background-image: url("../images/pricing/pricing-sec-2-Main.png");
@@ -527,9 +566,9 @@ body.light-mode .ph-assur-icon {
 
 .section-eyebrow {
     display: inline-block;
-    color: #00e6a8;
+    color: var(--accent-green);
     font-size: 13px;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 1.8px;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -540,12 +579,12 @@ body.light-mode .ph-assur-icon {
     color: #ffffff;
     font-size: clamp(34px, 3vw, 46px);
     line-height: 1.12;
-    font-weight: 800;
+    font-weight: 600;
     margin: 0 0 10px;
 }
 
     .section-title span {
-        color: #00e6a8;
+        color: var(--accent-green);
     }
 
 .section-subtitle {
@@ -605,8 +644,8 @@ body.light-mode .ph-assur-icon {
     height: 36px;
     min-width: 36px;
     border-radius: 50%;
-    border: 2px solid #00e6a8;
-    color: #00e6a8;
+    border: 2px solid var(--accent-green);
+    color: var(--accent-green);
     background: transparent;
     display: flex;
     align-items: center;
@@ -619,7 +658,7 @@ body.light-mode .ph-assur-icon {
     font-family: 'Sora', sans-serif;
     color: #ffffff;
     font-size: 15.5px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.35;
     margin-bottom: 8px;
 }
@@ -905,7 +944,7 @@ body.light-mode .ph-assur-icon {
 
 .es-scan-title {
     font-family: 'Sora', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1rem;
     color: var(--text-primary);
     transition: color var(--transition);
@@ -954,7 +993,7 @@ body.light-mode .ph-assur-icon {
 
 .es-comp-title {
     font-family: 'Sora', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1rem;
     color: var(--text-primary);
     margin-bottom: 4px;
@@ -1025,18 +1064,17 @@ body.light-mode .ph-assur-icon {
 #start-trial {
     position: relative;
     overflow: hidden;
-    min-height: 720px;
-    background-color: #020817;
+    /*background-color: #020817;*/
+    background-color: var(--bg-primary);
     background-image: url("../images/pricing/pricing-sec-4-Main.png");
     /*background-size: cover;*/
     /*background-position: center center;*/
     background-repeat: no-repeat;
     transition: background var(--transition);
-
     min-height: 620px;
-    background-size: contain;      /* was cover */
+    background-size: contain; /* was cover */
     background-position: right center;
-    background-color: #020817;
+    /*background-color: #020817;*/
 }
 
     /* dark overlay only on left side like image */
@@ -1050,7 +1088,7 @@ body.light-mode .ph-assur-icon {
     }
 
 body.light-mode #start-trial {
-    background-color: #eaf4ff;
+    background-color: var(--bg-primary);
 }
 
     body.light-mode #start-trial::before {
@@ -1105,8 +1143,8 @@ body.light-mode #start-trial {
 
 .st-title {
     font-family: 'Sora', sans-serif;
-    font-size: clamp(2.7rem, 5vw, 4.1rem);
-    font-weight: 800;
+    font-size: clamp(2.7rem, 5vw, 3.5rem);
+    font-weight: 600;
     color: #f8fafc;
     line-height: 1.05;
     letter-spacing: -1.8px;
@@ -1139,7 +1177,7 @@ body.light-mode .st-desc {
 
 .st-perks {
     display: flex;
-    gap: 26px;
+    gap: 20px;
     flex-wrap: wrap;
     margin-top: 4px;
 }
@@ -1147,7 +1185,7 @@ body.light-mode .st-desc {
 .st-perk {
     display: flex;
     align-items: center;
-    gap: 10px;
+    /*gap: 5px;*/
     max-width: 145px;
     font-size: .88rem;
     line-height: 1.45;
@@ -1175,7 +1213,8 @@ body.light-mode .st-perk {
 }
 
 body.light-mode .st-trust {
-    background: rgba(255,255,255,.82);
+    /*background: rgba(255,255,255,.82);*/
+    background: var(--bg-primary);
     border-color: rgba(0,80,140,.15);
 }
 
@@ -1321,7 +1360,7 @@ body.light-mode .st-status-card {
 .psc-label {
     font-family: 'Sora', sans-serif;
     font-size: .9rem;
-    font-weight: 800;
+    font-weight: 600;
     color: #ffffff;
     letter-spacing: .3px;
 }
@@ -1393,7 +1432,8 @@ body.light-mode .psc-value {
         }
 
     body.light-mode #start-trial::before {
-        background: linear-gradient( 180deg, rgba(242,248,255,.98) 0%, rgba(242,248,255,.9) 54%, rgba(242,248,255,.45) 100% );
+        background: var(--bg-primary);
+        /*background: linear-gradient( 180deg, rgba(242,248,255,.98) 0%, rgba(242,248,255,.9) 54%, rgba(242,248,255,.45) 100% );*/
     }
 
     .st-inner {
@@ -1565,7 +1605,7 @@ body.light-mode .psc-value {
 .st-title {
     font-family: 'Sora', sans-serif;
     font-size: clamp(2.2rem, 4vw, 3.2rem);
-    font-weight: 800;
+    font-weight: 600;
     color: var(--text-primary);
     line-height: 1.12;
     transition: color var(--transition);
@@ -1736,12 +1776,224 @@ body.light-mode .st-status-card {
 /* ===================================================
    SECTION 5 — PRICING FAQ
    =================================================== */
+
 #pricing-faq {
+    padding: 90px 0;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(90deg, rgba(2, 8, 18, .08) 0%, rgba(2, 8, 18, .35) 34%, rgba(2, 8, 18, .82) 52%, rgba(2, 8, 18, .98) 100%), url("../images/pricing/pricing-sec-5-Main.png");
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    min-height: 760px;
+
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background var(--transition), color var(--transition);
+}
+
+.faq-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.faq-left {
+    min-height: 1px;
+}
+
+.faq-right {
+    max-width: 680px;
+    margin-left: auto;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+    .faq-header .section-eyebrow {
+        color: var(--accent-green);
+        letter-spacing: 4px;
+        font-weight: 600;
+        font-size: .78rem;
+    }
+
+.faq-main-title {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 12px 0 12px;
+}
+
+    .faq-main-title span {
+        color: var(--accent-green);
+    }
+
+.faq-main-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.faq-list {
+    max-height: 560px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+    .faq-list::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .faq-list::-webkit-scrollbar-thumb {
+        background: rgba(74,222,128,.45);
+        border-radius: 20px;
+    }
+
+.faq-item {
+    background: rgba(4, 16, 34, .72);
+    border: 1px solid rgba(74, 174, 255, .20);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+    transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+    .faq-item.open {
+        border-color: rgba(74,222,128,.65);
+        box-shadow: 0 0 28px rgba(0, 230, 118, .12);
+    }
+
+.faq-q {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: nowrap; /* prevent next line */
+    padding: 20px 24px;
+}
+
+.faq-a-text {
+    flex: 1;
+    min-width: 0;
+    color: rgba(255,255,255,.72);
+}
+
+.faq-help-card,
+.faq-footer {
+    display: none;
+}
+
+.faq-a {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .35s ease, opacity .25s ease;
+    padding: 0px 20px;
+}
+
+.faq-item.open .faq-a {
+    max-height: 300px;
+    opacity: 1;
+}
+@media (max-width: 900px) {
+    #pricing-faq {
+        background-position: left center;
+    }
+
+    .faq-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-left {
+        display: none;
+    }
+
+    .faq-right {
+        max-width: 100%;
+    }
+}
+
+
+/* LIGHT MODE */
+body.light-mode #pricing-faq {
+    background-color: var(--bg-primary);
+}
+
+body.light-mode .faq-item {
+    background: rgba(255,255,255,.88);
+    border-color: rgba(0,100,200,.16);
+    box-shadow: 0 10px 28px rgba(10,22,40,.08);
+}
+
+    body.light-mode .faq-item.open {
+        border-color: rgba(0,160,70,.45);
+        box-shadow: 0 10px 30px rgba(0,160,70,.12);
+    }
+
+body.light-mode .faq-q-text,
+body.light-mode .faq-main-title {
+    color: #0a1628;
+}
+
+body.light-mode .faq-main-sub,
+body.light-mode .faq-a-text {
+    color: rgba(10,22,40,.68);
+}
+
+body.light-mode .faq-a-text {
+    border-top-color: rgba(10,22,40,.10);
+}
+
+body.light-mode .faq-q-icon {
+    background: rgba(0,160,70,.08);
+    border-color: rgba(0,160,70,.22);
+    color: #009944;
+}
+
+/* Scrollbar light mode */
+body.light-mode .faq-list::-webkit-scrollbar-thumb {
+    background: rgba(0,160,70,.45);
+}
+
+@media (max-width: 640px) {
+    #pricing-faq {
+        padding: 70px 0;
+        background-image: linear-gradient(rgba(2,8,18,.86), rgba(2,8,18,.96)), url("../images/pricing/pricing-sec-5-Main.png");
+    }
+
+    .faq-inner {
+        padding: 0 20px;
+    }
+
+    .faq-q {
+        padding: 18px;
+    }
+
+    .faq-q-text {
+        font-size: .9rem;
+    }
+}
+/*#pricing-faq {
     padding: 100px 0 90px;
     background: var(--bg-primary);
     position: relative;
     overflow: hidden;
     transition: background var(--transition);
+    background-image: url("../images/pricing/pricing-sec-5-Main.png");
+    background-size: cover;
+    background-position: center center;
+
 }
 
 .faq-glow {
@@ -1940,10 +2192,10 @@ body.light-mode .st-status-card {
 
         .faq-footer a:hover {
             text-decoration: underline;
-        }
+        }*/
 
 /* First FAQ item has question mark badge */
-.faq-q-badge {
+/*.faq-q-badge {
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -1955,7 +2207,7 @@ body.light-mode .st-status-card {
     color: var(--accent-green);
     font-size: .85rem;
     flex-shrink: 0;
-}
+}*/
 
 /* ===================================================
    RESPONSIVE
@@ -1987,10 +2239,120 @@ body.light-mode .st-status-card {
     }
 }
 
+/* ===================================================
+   PRICING PAGE — GLOBAL LIGHT MODE FIX
+   Put this at END of pricing CSS
+=================================================== */
+
+/* Fix common text */
+body.light-mode #pricing-hero,
+body.light-mode #every-plan,
+body.light-mode #every-scan,
+body.light-mode #start-trial,
+body.light-mode #pricing-faq {
+    color: var(--text-primary);
+}
+
+body.light-mode .section-title,
+body.light-mode .faq-main-title,
+body.light-mode .ep-card-title,
+body.light-mode .es-card-title,
+body.light-mode .st-title {
+    color: #0a1628 !important;
+}
+
+body.light-mode .section-subtitle,
+body.light-mode .ep-card-desc,
+body.light-mode .es-card-desc,
+body.light-mode .st-desc,
+body.light-mode .faq-main-sub,
+body.light-mode .faq-a-text {
+    color: rgba(10,22,40,.68) !important;
+}
+
+/* SECTION 2 — Every Plan */
+body.light-mode #every-plan::before {
+    background: linear-gradient( 90deg, rgba(240,244,248,.15) 0%, rgba(240,244,248,.35) 35%, rgba(240,244,248,.82) 55%, rgba(240,244,248,.96) 100% ) !important;
+}
+
+body.light-mode .ep-card {
+    background: rgba(255,255,255,.88) !important;
+    border-color: rgba(0,140,90,.22) !important;
+    box-shadow: 0 10px 28px rgba(10,22,40,.08) !important;
+}
+
+    body.light-mode .ep-card:hover {
+        background: rgba(255,255,255,.96) !important;
+        border-color: rgba(0,160,70,.42) !important;
+    }
+
+/* SECTION 3 — Every Scan */
+body.light-mode #every-scan {
+    background-image: linear-gradient( 90deg, rgba(240,244,248,.15) 0%, rgba(240,244,248,.38) 32%, rgba(240,244,248,.84) 54%, rgba(240,244,248,.97) 100% ), url("../images/pricing/pricing-sec-3-Main.png") !important;
+}
+
+body.light-mode .es-scan-card,
+body.light-mode .es-card,
+body.light-mode .es-compliance {
+    background: rgba(255,255,255,.88) !important;
+    border-color: rgba(0,100,200,.16) !important;
+    box-shadow: 0 10px 28px rgba(10,22,40,.08) !important;
+}
+
+/* SECTION 4 — Start Trial */
+body.light-mode #start-trial {
+    background-image: linear-gradient( 90deg, rgba(240,244,248,.96) 0%, rgba(240,244,248,.86) 45%, rgba(240,244,248,.35) 75%, rgba(240,244,248,.08) 100% ), url("../images/pricing/pricing-sec-4-Main.png") !important;
+}
+
+body.light-mode .st-card,
+body.light-mode .st-trust,
+body.light-mode .st-status-card {
+    background: rgba(255,255,255,.9) !important;
+    border-color: rgba(0,160,70,.22) !important;
+    box-shadow: 0 10px 28px rgba(10,22,40,.08) !important;
+}
+
+/* SECTION 5 — FAQ */
+body.light-mode #pricing-faq {
+    background-image: linear-gradient( 90deg, rgba(240,244,248,.10) 0%, rgba(240,244,248,.35) 34%, rgba(240,244,248,.86) 54%, rgba(240,244,248,.98) 100% ), url("../images/pricing/pricing-sec-5-Main.png") !important;
+}
+
+body.light-mode .faq-item {
+    background: rgba(255,255,255,.9) !important;
+    border-color: rgba(0,100,200,.16) !important;
+    box-shadow: 0 10px 28px rgba(10,22,40,.08) !important;
+}
+
+    body.light-mode .faq-item.open {
+        border-color: rgba(0,160,70,.45) !important;
+        box-shadow: 0 10px 30px rgba(0,160,70,.12) !important;
+    }
+
+body.light-mode .faq-q-text {
+    color: #0a1628 !important;
+}
+
+body.light-mode .faq-q-icon {
+    background: rgba(0,160,70,.08) !important;
+    border-color: rgba(0,160,70,.24) !important;
+    color: #009944 !important;
+}
+
+/* Mobile overlay correction */
+@media (max-width: 640px) {
+    body.light-mode #pricing-faq {
+        background-image: linear-gradient(rgba(240,244,248,.88), rgba(240,244,248,.96)), url("../images/pricing/pricing-sec-5-Main.png") !important;
+    }
+
+    body.light-mode #every-plan::before {
+        background: rgba(240,244,248,.86) !important;
+    }
+}
 /* Navbar dark mode toggle placement */
-.nav-theme-toggle {
+/*.nav-theme-toggle {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-left: 16px;
 }
+*/
