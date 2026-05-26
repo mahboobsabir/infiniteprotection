@@ -155,18 +155,92 @@
                     <!-- Stat cards -->
                     <div class="hero-stat-grid stagger-children">
                         <div class="hero-stat-card">
-                            <div class="hero-stat-icon">
-                                <i data-lucide="shield-check" style="width:22px;height:22px;"></i>
-                            </div>
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+
+                                <!-- Outer glow -->
+                                <defs>
+                                    <filter id="shieldGlow">
+                                        <feGaussianBlur stdDeviation="4" result="blur" />
+                                    </filter>
+                                </defs>
+
+                                <!-- Circle -->
+                                <circle cx="40" cy="40" r="34"
+                                        stroke="#22f07e"
+                                        stroke-width="1.5"
+                                        opacity="0.8" />
+
+                                <circle cx="40" cy="40" r="34"
+                                        stroke="#22f07e"
+                                        stroke-width="2"
+                                        opacity="0.4"
+                                        filter="url(#shieldGlow)" />
+
+                                <!-- Shield -->
+                                <path d="M40 24L52 29V39C52 47 47 54 40 57
+C33 54 28 47 28 39V29L40 24Z"
+                                      stroke="#22f07e"
+                                      stroke-width="3"
+                                      fill="none"
+                                      stroke-linejoin="round" />
+
+                                <!-- Star -->
+                                <path d="M40 34L42 38H47L43 41L45 46L40 43L35 46L37 41L33 38H38L40 34Z"
+                                      stroke="#22f07e"
+                                      stroke-width="2"
+                                      fill="none"
+                                      stroke-linejoin="round" />
+
+                            </svg>
                             <div>
                                 <div class="hero-stat-num">10+</div>
                                 <div class="hero-stat-label">Years of Experience</div>
                             </div>
                         </div>
                         <div class="hero-stat-card">
-                            <div class="hero-stat-icon">
-                                <i data-lucide="users" style="width:22px;height:22px;"></i>
-                            </div>
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+
+                                    <defs>
+                                        <filter id="usersGlow">
+                                            <feGaussianBlur stdDeviation="4" result="blur" />
+                                        </filter>
+                                    </defs>
+
+                                    <!-- Circle -->
+                                    <circle cx="40" cy="40" r="34"
+                                            stroke="#22f07e"
+                                            stroke-width="1.5"
+                                            opacity="0.8" />
+
+                                    <circle cx="40" cy="40" r="34"
+                                            stroke="#22f07e"
+                                            stroke-width="2"
+                                            opacity="0.4"
+                                            filter="url(#usersGlow)" />
+
+                                    <!-- Center User -->
+                                    <circle cx="40" cy="32" r="7"
+                                            stroke="#22f07e"
+                                            stroke-width="3" />
+                                    s
+                                    <path d="M28 52C28 45 33 41 40 41C47 41 52 45 52 52"
+                                          stroke="#22f07e"
+                                          stroke-width="3"
+                                          stroke-linecap="round" />
+
+                                    <!-- Right user -->
+                                    <circle cx="50" cy="34" r="5"
+                                            stroke="#22f07e"
+                                            stroke-width="2" />
+
+                                    <path d="M50 43C54 43 58 46 58 50"
+                                          stroke="#22f07e"
+                                          stroke-width="2"
+                                          stroke-linecap="round" />
+
+                                </svg>
                             <div>
                                 <div class="hero-stat-num">2,000+</div>
                                 <div class="hero-stat-label">Businesses Protected</div>
