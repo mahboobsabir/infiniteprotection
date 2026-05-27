@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
 
     <style>
-                /* ============================================================
+        /* ============================================================
            CSS VARIABLES & THEME
         ============================================================ */
                 :root {
@@ -1369,18 +1369,16 @@
                             box-shadow: 0 16px 40px var(--green-glow);
                         }
 
-                .product-protect2-icon-wrap {
-                    width: 80px;
-                    height: 80px;
-                    border-radius: 50%;
-                    background: rgba(0,50,120,0.3);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 2rem;
-                    flex-shrink: 0;
-                    border: 1px solid rgba(0,100,200,0.25);
-                }
+        .product-protect2-icon-wrap {
+            width: 68px;
+            height: 68px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,230,118,0.10);
+            border: 1px solid rgba(0,230,118,0.25);
+        }
 
                 .product-protect2-card.right .protect2-icon-wrap {
                     background: rgba(0,100,60,0.25);
@@ -2265,6 +2263,7 @@
                 color: var(--green);
             }
 
+
         .product-cta-desc {
             font-size: 0.98rem;
             color: var(--text-muted);
@@ -2465,45 +2464,7 @@
             letter-spacing: 0.04em;
         }
 
-                /* ============================================================
-           FOOTER
-        ============================================================ */
-                /*footer {
-          background: var(--bg2);
-          border-top: 1px solid var(--divider);
-          padding: 3rem 5% 2rem;
-        }
-
-        .footer-grid {
-          display: grid;
-          grid-template-columns: 2fr 1fr 1fr 1fr;
-          gap: 2rem;
-          max-width: 1200px;
-          margin: 0 auto 2.5rem;
-        }
-
-        .footer-brand p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.8rem; line-height: 1.6; max-width: 260px; }
-
-        .footer-col-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; }
-        .footer-col-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-        .footer-col-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
-        .footer-col-links a:hover { color: var(--green); }
-
-        .product-footer-bottom {
-          border-top: 1px solid var(--divider);
-          padding-top: 1.5rem;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          max-width: 1200px;
-          margin: 0 auto;
-          font-size: 0.82rem;
-          color: var(--text-subtle);
-          flex-wrap: wrap;
-          gap: 0.8rem;
-        }*/
-
-                /* ============================================================
+       /* ============================================================
            GRID BACKGROUND EFFECT
         ============================================================ */
                 .product-grid-bg {
@@ -2517,6 +2478,52 @@
                 [data-theme="light"] .product-grid-bg {
                     background-image: linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
                 }
+
+
+        /* ===== FINAL CTA LIGHT MODE FIX ===== */
+        body.light-mode #cta {
+            background: #f7f9fc;
+        }
+
+            body.light-mode #cta .cta-bg-overlay {
+                background: linear-gradient( to right, rgba(247,249,252,0.98) 0%, rgba(247,249,252,0.94) 38%, rgba(247,249,252,0.62) 65%, rgba(247,249,252,0.18) 100% );
+            }
+
+            body.light-mode #cta .product-cta-h2,
+            body.light-mode #cta .cta-stat-label {
+                color: #0a1628;
+            }
+
+            body.light-mode #cta .product-cta-desc,
+            body.light-mode #cta .product-cta-check,
+            body.light-mode #cta .cta-stat-sub,
+            body.light-mode #cta .cta-trust-label {
+                color: #334b6f;
+            }
+
+            body.light-mode #cta .product-cta-badge,
+            body.light-mode #cta .cta-stat-card,
+            body.light-mode #cta .cta-trust-row {
+                background: rgba(255,255,255,0.94);
+                border: 1px solid rgba(0,230,118,0.25);
+                box-shadow: 0 12px 35px rgba(10,22,40,0.08);
+            }
+
+            body.light-mode #cta .cta-bottom-strip {
+                background: rgba(238,242,247,0.94);
+                border-top: 1px solid rgba(0,230,118,0.22);
+            }
+
+            body.light-mode #cta svg {
+                color: #00e676;
+                stroke: #00e676;
+            }
+
+            body.light-mode #cta .product-btn-outline {
+                background: rgba(255,255,255,0.95);
+                color: #0a1628;
+                border-color: rgba(0,230,118,0.35);
+            }
 
                 /* ============================================================
            RESPONSIVE
@@ -2725,6 +2732,149 @@
                     pointer-events: none;
                     filter: blur(60px);
                 }
+
+
+
+        /* ===== PRODUCT PAGE LIGHT MODE FIX ===== */
+        body.light-mode {
+            --bg: #eef2f7;
+            --bg2: #e4eaf3;
+            --bg3: #d8e2f0;
+            --card: rgba(255,255,255,0.94);
+            --feature-card: rgba(255,255,255,0.96);
+            --pricing-card: rgba(255,255,255,0.97);
+            --text: #0a1628;
+            --text-muted: #334b6f;
+            --text-subtle: #607a9e;
+            --divider: rgba(0,0,0,0.09);
+            --green: #00a854;
+            --cyan: #0077cc;
+            --btn-outline-bg: rgba(255,255,255,0.9);
+        }
+
+            /* Section backgrounds in light mode */
+            body.light-mode #product-pillars,
+            body.light-mode #threat,
+            body.light-mode #howit,
+            body.light-mode #whatprotect,
+            body.light-mode #different,
+            body.light-mode #compliance,
+            body.light-mode #eyp-section {
+                background: linear-gradient(180deg, #f7f9fc 0%, #eef3f8 100%);
+            }
+
+            /* Hero light overlay */
+            body.light-mode #product-hero {
+                background: #f7f9fc;
+            }
+
+                body.light-mode #product-hero .hero-bg-overlay {
+                    background: linear-gradient( to right, rgba(247,249,252,0.98) 0%, rgba(247,249,252,0.92) 38%, rgba(247,249,252,0.55) 62%, rgba(247,249,252,0.12) 100% );
+                }
+
+            /* Text visibility */
+            body.light-mode .product-section-h2,
+            body.light-mode .product-threat-h2,
+            body.light-mode .product-hero-h1,
+            body.light-mode .product-pillar-name,
+            body.light-mode .product-protect-title,
+            body.light-mode .product-protect2-title,
+            body.light-mode .product-diff-content-title,
+            body.light-mode .product-step-content-title,
+            body.light-mode .product-threat-item-title,
+            body.light-mode .product-status-card-title {
+                color: #0a1628;
+            }
+
+            body.light-mode .product-section-desc,
+            body.light-mode .product-hero-desc,
+            body.light-mode .product-pillar-tagline,
+            body.light-mode .product-pillar-features li,
+            body.light-mode .product-threat-desc,
+            body.light-mode .product-threat-item-desc,
+            body.light-mode .product-step-content-desc,
+            body.light-mode .product-protect-desc,
+            body.light-mode .product-protect2-desc,
+            body.light-mode .product-diff-desc,
+            body.light-mode .product-status-card-sub,
+            body.light-mode .product-pillars-footer-sub {
+                color: #334b6f;
+            }
+
+            /* Cards */
+            body.light-mode .product-pillar-card,
+            body.light-mode .product-threat-item,
+            body.light-mode .product-how-step,
+            body.light-mode .product-protect-card,
+            body.light-mode .product-protect2-card,
+            body.light-mode .product-diff-card,
+            body.light-mode .product-status-card,
+            body.light-mode .product-pillars-footer,
+            body.light-mode .product-how-footer,
+            body.light-mode .product-protect-footer,
+            body.light-mode .product-protect2-footer {
+                background: rgba(255,255,255,0.94);
+                color: #0a1628;
+                border-color: rgba(0,120,200,0.18);
+            }
+
+            /* Buttons */
+            body.light-mode .product-btn-outline {
+                color: #0a1628;
+                background: rgba(255,255,255,0.9);
+                border-color: rgba(0,100,200,0.3);
+            }
+
+        .product-protect2-icon-wrap svg,
+        .product-protect2-footer-icon svg {
+            width: 30px;
+            height: 30px;
+            color: #00e676;
+            stroke: #00e676;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+            /* Optional hover glow */
+            .product-protect2-icon-wrap svg:hover,
+            .product-protect2-footer-icon svg:hover {
+                filter: drop-shadow(0 0 8px rgba(0,230,118,0.45));
+            }
+
+        .product-diff-img {
+            width: 86px;
+            height: 86px;
+            min-width: 86px;
+            border-radius: 18px;
+            background: rgba(0,230,118,0.10);
+            border: 1px solid rgba(0,230,118,0.28);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .product-diff-img svg {
+                width: 38px;
+                height: 38px;
+                fill: none;
+                stroke: #00e676;
+                color: #00e676;
+                stroke-width: 2.2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+
+        body.light-mode .product-diff-img {
+            background: rgba(0,230,118,0.12);
+            border-color: rgba(0,230,118,0.35);
+        }
+
+            body.light-mode .product-diff-img svg {
+                stroke: #00e676;
+                color: #00e676;
+            }
     </style>
 
 </head>
@@ -3226,21 +3376,18 @@
 
             <!-- Shield header visual -->
             <div style="text-align:center;margin-bottom:2.5rem;" class="product-animate-on-scroll">
-                <!--<svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M60 5 L110 25 L110 48 Q110 68 60 78 Q10 68 10 48 L10 25 Z"
-                        fill="none" stroke="url(#shieldDual)" stroke-width="2" style="filter:drop-shadow(0 0 12px rgba(0,200,255,0.5))"/>
-                  <defs>
-                    <linearGradient id="shieldDual" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#00e5ff"/>
-                      <stop offset="100%" stop-color="#00e676"/>
-                    </linearGradient>
-                  </defs>
-                </svg>-->
+                
             </div>
 
             <div class="product-protect2-grid">
                 <div class="product-protect2-card product-animate-on-scroll">
-                    <div class="product-protect2-icon-wrap">💻</div>
+                    <div class="product-protect2-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <rect x="3" y="4" width="18" height="12" rx="2"></rect>
+                            <path d="M8 20h8"></path>
+                            <path d="M12 16v4"></path>
+                        </svg>
+                    </div>
                     <div class="product-protect2-content">
                         <div class="product-protect2-title">Devices</div>
                         <div class="product-protect2-divider"></div>
@@ -3249,7 +3396,14 @@
                     <div class="product-protect2-arrow">›</div>
                 </div>
                 <div class="product-protect2-card product-right product-animate-on-scroll">
-                    <div class="product-protect2-icon-wrap" style="background:rgba(0,100,60,0.25);border-color:rgba(0,200,100,0.2);">🌐</div>
+                    <div class="product-protect2-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" color="#00e676" stroke="#00e676" stroke-width="2.2">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M3 12h18"></path>
+                            <path d="M12 3a15 15 0 0 1 4 9 15 15 0 0 1-4 9"></path>
+                            <path d="M12 3a15 15 0 0 0-4 9 15 15 0 0 0 4 9"></path>
+                        </svg>
+                    </div>
                     <div class="product-protect2-content">
                         <div class="product-protect2-title">Networks</div>
                         <div class="product-protect2-divider" style="background:var(--green);"></div>
@@ -3258,7 +3412,12 @@
                     <div class="product-protect2-arrow" style="border-color:var(--card-border);color:var(--green);">›</div>
                 </div>
                 <div class="product-protect2-card product-animate-on-scroll">
-                    <div class="product-protect2-icon-wrap">⚙️</div>
+                    <div class="product-protect2-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.6 1.6 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.6 1.6 0 0 0-1.82-.33 1.6 1.6 0 0 0-1 1.46V21a2 2 0 1 1-4 0v-.09a1.6 1.6 0 0 0-1-1.46 1.6 1.6 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.6 1.6 0 0 0 .33-1.82 1.6 1.6 0 0 0-1.46-1H3a2 2 0 1 1 0-4h.09a1.6 1.6 0 0 0 1.46-1 1.6 1.6 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.6 1.6 0 0 0 1.82.33h0A1.6 1.6 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.6 1.6 0 0 0 1 1.46h0a1.6 1.6 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.6 1.6 0 0 0-.33 1.82v0A1.6 1.6 0 0 0 20.91 10H21a2 2 0 1 1 0 4h-.09a1.6 1.6 0 0 0-1.46 1z"></path>
+                        </svg>
+                    </div>
                     <div class="product-protect2-content">
                         <div class="product-protect2-title">Business Software</div>
                         <div class="product-protect2-divider"></div>
@@ -3267,7 +3426,12 @@
                     <div class="product-protect2-arrow">›</div>
                 </div>
                 <div class="product-protect2-card right product-animate-on-scroll">
-                    <div class="product-protect2-icon-wrap" style="background:rgba(0,100,60,0.25);border-color:rgba(0,200,100,0.2);">☁️</div>
+                    <div class="product-protect2-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <path d="M20 17.5a4.5 4.5 0 0 0-1-8.9A6 6 0 0 0 7 9"></path>
+                            <path d="M7 9a4 4 0 0 0 0 8h13"></path>
+                        </svg>
+                    </div>
                     <div class="product-protect2-content">
                         <div class="product-protect2-title">Remote Teams</div>
                         <div class="product-protect2-divider" style="background:var(--green);"></div>
@@ -3278,7 +3442,12 @@
             </div>
 
             <div class="product-protect2-footer product-animate-on-scroll">
-                <span class="product-protect2-footer-icon">🛡</span>
+                <span class="product-protect2-footer-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                </span>
                 Your entire business — <span class="product-accent">&nbsp;protected&nbsp;</span> from endpoint to network.
             </div>
         </div>
@@ -3294,27 +3463,49 @@
 
             <div class="product-diff-grid">
                 <div class="product-diff-card product-animate-on-scroll">
-                    <div class="product-diff-img">🏛️</div>
+                    <!-- Two Pillars. One Platform -->
+                    <div class="product-diff-img">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3L3 8l9 5 9-5-9-5z"></path>
+                            <path d="M3 12l9 5 9-5"></path>
+                            <path d="M3 16l9 5 9-5"></path>
+                        </svg>
+                    </div>
                     <div>
-                        <div class="product-diff-icon product-blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 20h20M4 20V10M20 20V10M8 20V10M16 20V10M12 20V10M2 10l10-8 10 8" /></svg></div>
+                        
                         <div class="product-diff-content-title">Two Pillars. One Platform</div>
                         <div class="product-diff-divider"></div>
                         <div class="product-diff-desc">Device protection with SaferNet and vulnerability scanning with ZED — working together in one powerful platform.</div>
                     </div>
                 </div>
                 <div class="product-diff-card product-green-border product-animate-on-scroll">
-                    <div class="product-diff-img">🏪</div>
+                    <!-- Built for Small Businesses -->
+                    <div class="product-diff-img">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 21h18"></path>
+                            <path d="M5 21V8l7-5 7 5v13"></path>
+                            <path d="M9 21v-6h6v6"></path>
+                            <path d="M9 10h.01"></path>
+                            <path d="M15 10h.01"></path>
+                        </svg>
+                    </div>
                     <div>
-                        <div class="product-diff-icon green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg></div>
+                        
                         <div class="product-diff-content-title">Built for Small Businesses</div>
                         <div class="product-diff-divider" style="background:var(--green);"></div>
                         <div class="product-diff-desc">Designed specifically for the needs, budget, and resources of small and mid-size businesses.</div>
                     </div>
                 </div>
                 <div class="product-diff-card product-animate-on-scroll">
-                    <div class="product-diff-img">🛡️</div>
+                    <!-- Continuous Protection -->
+                    <div class="product-diff-img">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M9 12l2 2 4-4"></path>
+                        </svg>
+                    </div>
                     <div>
-                        <div class="product-diff-icon blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg></div>
+                        
                         <div class="product-diff-content-title">Continuous Protection</div>
                         <div class="product-diff-divider"></div>
                         <div class="product-diff-desc">24/7 monitoring, real-time threat detection, and automated response to stop threats before they impact your business.</div>
@@ -3330,7 +3521,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="product-diff-icon product-green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 12 11 14 15 10" /><rect x="2" y="3" width="20" height="18" rx="3" /></svg></div>
+                        
                         <div class="product-diff-content-title">Simple and Unified</div>
                         <div class="product-diff-divider" style="background:var(--green);"></div>
                         <div class="product-diff-desc">One easy-to-use dashboard. One unified experience. Total visibility and control without the complexity.</div>
@@ -3362,16 +3553,7 @@
 
             <!-- Shield visual header -->
             <div style="text-align:center;margin-bottom:2.5rem;" class="product-animate-on-scroll">
-                <!--<svg width="130" height="85" viewBox="0 0 130 85" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="compGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#00e5ff"/>
-                      <stop offset="100%" stop-color="#00e676"/>
-                    </linearGradient>
-                  </defs>
-                  <path d="M65 5 L120 28 L120 52 Q120 74 65 83 Q10 74 10 52 L10 28 Z"
-                        fill="none" stroke="url(#compGrad)" stroke-width="2" style="filter:drop-shadow(0 0 15px rgba(0,200,255,0.5))"/>
-                </svg>-->
+                
             </div>
 
             <div class="product-compliance-cards">
@@ -3425,83 +3607,7 @@
         </div>
     </section>
 
-    <!-- ===== SECTION 8: PRICING ===== -->
-    <!--<section id="pricing">
-      <div class="product-grid-bg"></div>
-      <div class="product-container">
-        <div class="product-section-tag product-animate-on-scroll">FLEXIBLE PLANS. POWERFUL PROTECTION.</div>
-        <h2 class="product-section-h2 product-animate-on-scroll">Choose Your <span class="product-accent">Level of Protection</span></h2>
-        <p class="product-section-desc product-animate-on-scroll">Select the protection level that fits your business today — and scale confidently as you grow.</p>
 
-        <div class="product-pricing-grid">
-
-          <div class="product-pricing-card product-animate-on-scroll">
-            <div class="product-pricing-icon">🛡</div>
-            <div class="product-pricing-name">Essential</div>
-            <div class="product-pricing-for">For small teams getting started</div>
-            <div class="product-pricing-divider"></div>
-            <div class="product-pricing-price"><sup>$</sup>199<span class="product-per"> / month</span></div>
-            <ul class="product-pricing-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Real-time device protection</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Vulnerability scanning</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unified security dashboard</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Email and web protection</li>
-            </ul>
-            <a href="#" class="product-btn-pricing-outline">Get Started →</a>
-          </div>
-
-
-          <div class="product-pricing-card popular product-animate-on-scroll">
-            <div class="product-popular-badge">⭐ MOST POPULAR</div>
-            <div class="product-pricing-icon" style="background:rgba(0,230,118,0.15);border-color:rgba(0,230,118,0.3);">📈</div>
-            <div class="product-pricing-name">Growth</div>
-            <div class="product-pricing-for">For growing businesses</div>
-            <div class="product-pricing-divider"></div>
-            <div class="product-pricing-price"><sup>$</sup>699<span class="product-per"> / month</span></div>
-            <ul class="product-pricing-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Continuous monitoring</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Compliance reporting</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Advanced threat detection</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Priority response support</li>
-            </ul>
-            <a href="#" class="product-btn-pricing-primary">Get Started →</a>
-          </div>
-
-
-          <div class="product-pricing-card product-animate-on-scroll">
-            <div class="product-pricing-icon">⭐</div>
-            <div class="product-pricing-name">Complete</div>
-            <div class="product-pricing-for">Enterprise-grade protection</div>
-            <div class="product-pricing-divider"></div>
-            <div class="product-pricing-price"><sup>$</sup>1,299<span class="product-per"> / month</span></div>
-            <ul class="product-pricing-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Full penetration testing</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Advanced threat response</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Compliance management</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dedicated support team</li>
-            </ul>
-            <a href="#" class="product-btn-pricing-outline">Get Started →</a>
-          </div>
-        </div>
-
-        <div class="product-pricing-trust product-animate-on-scroll">
-          <div class="product-pricing-trust-text">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-            Trusted by <span class="product-accent">&nbsp;thousands of businesses&nbsp;</span> protecting their operations every day.
-          </div>
-          <div class="product-pricing-trust-logos">
-            <span class="product-trust-logo">△ Acme Corp</span>
-            <span class="product-trust-logo">✓ Vertex Solutions</span>
-            <span class="product-trust-logo">N Nexora</span>
-            <span class="product-trust-logo">⛰ BluePeak Technologies</span>
-          </div>
-        </div>
-
-        <p class="product-pricing-talk product-animate-on-scroll">Need help choosing the right plan? <a href="#">Talk to our experts →</a></p>
-      </div>
-    </section>
-
-    -->
     <!-- ════════════════════════════════════
      PRICING SECTION
      ════════════════════════════════════ -->
@@ -3989,7 +4095,6 @@
     </section>
 
     <!-- ===== SECTION 9: FINAL CTA ===== -->
-    <!-- ===== SECTION 9: FINAL CTA ===== -->
     <section id="cta">
 
         <!-- Background hero image -->
@@ -4081,108 +4186,7 @@
             </div>
         </div>
     </section>
-    <!--<section id="cta">
-        <div class="product-grid-bg"></div>
-        <div class="product-glow-circle" style="width:500px;height:400px;background:rgba(0,80,200,0.1);top:-50px;right:5%;"></div>
-        <div class="product-container">
-            <div class="product-cta-grid">
-                <div class="product-animate-on-scroll">
-                    <div class="product-cta-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
-                        Complete Protection. Total Confidence.
-                    </div>
-                    <h2 class="product-cta-h2">Two Pillars. One Platform.<br><span class="product-accent">Complete Protection.</span></h2>
-                    <p class="product-cta-desc">Enterprise-grade cybersecurity built for small and mid-size businesses.</p>
-                    <div class="product-cta-checks">
-                        <div class="product-cta-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>Protect your devices everywhere</div>
-                        <div class="product-cta-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>Identify and eliminate cyber risks</div>
-                    </div>
-                    <div class="product-hero-btns">
-                        <a href="#pricing" class="product-btn-primary">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
-                            Get Protected →
-                        </a>
-                        <a href="#" class="product-btn-outline">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
-                            Talk to an Expert →
-                        </a>
-                    </div>-->
-    <!--<div class="product-cta-secure">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
-        Secure. Compliant. Always Protected.
-    </div>-->
-    <!--</div>
 
-        <div class="product-cta-visual product-animate-on-scroll">
-            <div class="product-cta-shield-wrap">
-                <svg class="product-cta-shield-svg" viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <radialGradient id="ctaShield" cx="50%" cy="40%" r="60%">
-                            <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.2" />
-                            <stop offset="100%" stop-color="#001a44" stop-opacity="0.8" />
-                        </radialGradient>
-                    </defs>
-                    <path d="M130 8 L245 52 L245 145 Q245 240 130 290 Q15 240 15 145 L15 52 Z"
-                          fill="url(#ctaShield)" stroke="#00e5ff" stroke-width="2"
-                          style="filter:drop-shadow(0 0 25px rgba(0,229,255,0.5))" />
-                    <path d="M130 28 L225 66 L225 145 Q225 224 130 268 Q35 224 35 145 L35 66 Z"
-                          fill="none" stroke="#00e676" stroke-width="1" opacity="0.4" />
-                </svg>
-            </div>
-
-            <div class="product-cta-products">
-                <div class="product-cta-product product-blue">
-                    <div class="product-cta-product-logo">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4da6ff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
-                    </div>
-                    <div class="product-cta-product-name">SaferNet</div>
-                    <div class="product-cta-product-tag">Device Protection</div>
-                </div>
-                <div class="product-infinity-between">∞</div>
-                <div class="product-cta-product product-green-b">
-                    <div class="product-cta-product-logo" style="font-family:'Sora Condensed',sans-serif;font-weight:600;font-size:1rem;background:rgba(0,150,80,0.3);color:var(--green);">Z</div>
-                    <div class="product-cta-product-name">ZED</div>
-                    <div class="product-cta-product-tag">Vulnerability Scanning</div>
-                </div>
-            </div>
-        </div>
-    </div>-->
-    <!-- Stats bar -->
-    <!--<div class="product-cta-stats product-animate-on-scroll">
-        <div class="product-cta-stat-item">
-            <div class="product-cta-stat-icon">🛡</div>
-            <div class="product-cta-stat-title">Enterprise-Grade Security</div>
-            <div class="product-cta-stat-desc">Advanced protection that meets the highest standards.</div>
-        </div>
-        <div class="product-cta-stat-item">
-            <div class="product-cta-stat-icon">🕐</div>
-            <div class="product-cta-stat-title">24/7 Continuous Monitoring</div>
-            <div class="product-cta-stat-desc">Real-time threat detection and automated response.</div>
-        </div>
-        <div class="product-cta-stat-item">
-            <div class="product-cta-stat-icon">📈</div>
-            <div class="product-cta-stat-title">Built for Your Business</div>
-            <div class="product-cta-stat-desc">Scalable solutions that grow as your business grows.</div>
-        </div>
-        <div class="product-cta-stat-item">
-            <div class="product-cta-stat-icon">👥</div>
-            <div class="product-cta-stat-title">Expert Support</div>
-            <div class="product-cta-stat-desc">Real people. Real support. Whenever you need it.</div>
-        </div>
-    </div>-->
-    <!-- Trust bar -->
-    <!--<div class="product-cta-trust-bar product-animate-on-scroll">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
-                Trusted by <span class="product-accent">&nbsp;thousands of businesses&nbsp;</span> to keep their operations safe every day.
-                <div class="product-cta-trust-bar-logos">
-                    <span class="product-cta-trust-logo">△ Acme Corp</span>
-                    <span class="product-cta-trust-logo">✓ Vertex Solutions</span>
-                    <span class="product-cta-trust-logo">N Nexora</span>
-                    <span class="product-cta-trust-logo">⛰ BluePeak Technologies</span>
-                </div>
-            </div>
-        </div>
-    </section>-->
     <!-- FOOTER -->
 
 
