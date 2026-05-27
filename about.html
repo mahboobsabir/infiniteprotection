@@ -27,6 +27,7 @@
 <body>
 
     <!-- NAVBAR -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container align-items-center">
 
@@ -44,18 +45,25 @@
 
                 <ul class="navbar-nav ms-auto align-items-lg-center">
 
-                    <!-- PRODUCT -->
-                    <li class="nav-item ms-lg-3">
-                        <!-- <a class="nav-link" asp-controller="Home" asp-action="product">Product</a>-->
-                        <a class="nav-link" href="product.html">Product</a>
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            Platform
+                        </a>
+
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="product.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="safernet.html">Safernet</a></li>
+                            <li><a class="dropdown-item" href="zed.html">Zed Penetration Testing</a></li>
+                            <li><a class="dropdown-item" href="compliance.html">Zed Compliance Testing</a></li>
+                            <li><a class="dropdown-item" href="howitwork.html">How they work together</a></li>
+                        </ul>
                     </li>
-                    <!-- <li class="nav-item ms-lg-3">
-                         <a class="nav-link" href="howitwork.html">How it works</a>
-                     </li> -->
+
                     <!-- COMPLIANCE -->
-                    <li class="nav-item ms-lg-3">
+                    <!--<li class="nav-item ms-lg-3">
                         <a class="nav-link" href="compliance.html">Compliance</a>
-                    </li>
+                    </li>-->
                     <!-- <li class="nav-item dropdown ms-lg-3">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             Compliance
@@ -74,14 +82,6 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             Resources
                         </a>
-                        <!--  <ul class="dropdown-menu">
-                              <a class="nav-link" asp-controller="Home" asp-action="downloads">Downloads</a>
-                              <a class="nav-link" asp-controller="Home" asp-action="userguide">User Guide</a>
-                              <a class="nav-link" asp-controller="Home" asp-action="blogs">Blogs</a>
-                              <a class="nav-link" asp-controller="Home" asp-action="podcast">Podcast</a>
-                              <a class="nav-link" asp-controller="Home" asp-action="faqs">FAQs</a>
-                              <a class="nav-link" asp-controller="Home" asp-action="affliatepartners">Affliate Partners</a>
-                          </ul>-->
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="downloads.html">Downloads</a></li>
@@ -89,7 +89,7 @@
                             <li><a class="dropdown-item" href="blogs.html">Blogs</a></li>
                             <li><a class="dropdown-item" href="podcast.html">Podcast</a></li>
                             <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
-                            <li><a class="dropdown-item" href="affiliate.html">Affiliate Partners</a></li>
+                            <li><a class="dropdown-item" href="affiliate.html">Partner Program</a></li>
                         </ul>
                     </li>
 
@@ -120,9 +120,6 @@
                     <li class="nav-item ms-lg-3">
                         <a class="btn btn-outline-light">Talk to Us</a>
                     </li>
-
-
-
                 </ul>
 
             </div>
@@ -199,48 +196,48 @@ C33 54 28 47 28 39V29L40 24Z"
                             </div>
                         </div>
                         <div class="hero-stat-card">
-                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
 
-                                    <defs>
-                                        <filter id="usersGlow">
-                                            <feGaussianBlur stdDeviation="4" result="blur" />
-                                        </filter>
-                                    </defs>
+                                <defs>
+                                    <filter id="usersGlow">
+                                        <feGaussianBlur stdDeviation="4" result="blur" />
+                                    </filter>
+                                </defs>
 
-                                    <!-- Circle -->
-                                    <circle cx="40" cy="40" r="34"
-                                            stroke="#22f07e"
-                                            stroke-width="1.5"
-                                            opacity="0.8" />
+                                <!-- Circle -->
+                                <circle cx="40" cy="40" r="34"
+                                        stroke="#22f07e"
+                                        stroke-width="1.5"
+                                        opacity="0.8" />
 
-                                    <circle cx="40" cy="40" r="34"
-                                            stroke="#22f07e"
-                                            stroke-width="2"
-                                            opacity="0.4"
-                                            filter="url(#usersGlow)" />
+                                <circle cx="40" cy="40" r="34"
+                                        stroke="#22f07e"
+                                        stroke-width="2"
+                                        opacity="0.4"
+                                        filter="url(#usersGlow)" />
 
-                                    <!-- Center User -->
-                                    <circle cx="40" cy="32" r="7"
-                                            stroke="#22f07e"
-                                            stroke-width="3" />
-                                    s
-                                    <path d="M28 52C28 45 33 41 40 41C47 41 52 45 52 52"
-                                          stroke="#22f07e"
-                                          stroke-width="3"
-                                          stroke-linecap="round" />
+                                <!-- Center User -->
+                                <circle cx="40" cy="32" r="7"
+                                        stroke="#22f07e"
+                                        stroke-width="3" />
+                                s
+                                <path d="M28 52C28 45 33 41 40 41C47 41 52 45 52 52"
+                                      stroke="#22f07e"
+                                      stroke-width="3"
+                                      stroke-linecap="round" />
 
-                                    <!-- Right user -->
-                                    <circle cx="50" cy="34" r="5"
-                                            stroke="#22f07e"
-                                            stroke-width="2" />
+                                <!-- Right user -->
+                                <circle cx="50" cy="34" r="5"
+                                        stroke="#22f07e"
+                                        stroke-width="2" />
 
-                                    <path d="M50 43C54 43 58 46 58 50"
-                                          stroke="#22f07e"
-                                          stroke-width="2"
-                                          stroke-linecap="round" />
+                                <path d="M50 43C54 43 58 46 58 50"
+                                      stroke="#22f07e"
+                                      stroke-width="2"
+                                      stroke-linecap="round" />
 
-                                </svg>
+                            </svg>
                             <div>
                                 <div class="hero-stat-num">2,000+</div>
                                 <div class="hero-stat-label">Businesses Protected</div>
@@ -633,11 +630,11 @@ C33 54 28 47 28 39V29L40 24Z"
                 <div class="footer-links">
                     <h3>Solutions</h3>
                     <ul>
-                        <li><a href="platform.html">Platform</a></li>
-                        <li><a href="vpnprotection.html">VPN Protection</a></li>
-                        <li><a href="malwaredefense.html">Malware Defense</a></li>
-                        <li><a href="contentfiltering.html">Content Filtering</a></li>
-                        <li><a href="pentesting.html">Pen Testing</a></li>
+                        <li><a href="product.html">Overview</a></li>
+                        <li><a href="safernet.html">Safernet</a></li>
+                        <li><a href="zed.html">Zed Penetration Testing</a></li>
+                        <li><a href="compliance.html">Zed Compliance Testing</a></li>
+                        <li><a href="howitwork.html">How they work together</a></li>
                     </ul>
                 </div>
 
@@ -646,9 +643,9 @@ C33 54 28 47 28 39V29L40 24Z"
                     <h3>Company</h3>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="howitwork.html">How It Works</a></li>
+                        <li><a href="howitwork.html">Prodcut</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="casestudies.html">Case Studies</a></li>
+                        <li><a href="affiliate.html">Partner Program</a></li>
                         <li><a href="blogs.html">Blogs</a></li>
                     </ul>
                 </div>
@@ -659,7 +656,7 @@ C33 54 28 47 28 39V29L40 24Z"
 
                     <p>
                         <i class="bi bi-envelope"></i>
-                        <a href="mailto:support@safernet.com">support@safernet.com</a>
+                        <a href="mailto:support@infiniteprotection.com">support@infiniteprotectio.com</a>
                     </p>
 
                     <p>
