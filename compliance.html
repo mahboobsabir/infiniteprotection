@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Infinite Protection</title>
-
-    
+    <title>Compliance Made Simple</title>
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
@@ -19,13 +17,3731 @@
     <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
 
-	<link rel="stylesheet" href="assets/css/compliance.css" asp-append-version="true" />
+    <style>
+        /** {
+            box-sizing: border-box;
+        }*/
+
+        :root {
+            --dark-bg-1: #020713;
+            --dark-bg-2: #031225;
+            --dark-bg-3: #020815;
+            --white: #ffffff;
+            --gold: #ffc928;
+            --gold-dark: #f6ab10;
+            --green: #35f342;
+            --green-dark: #006a18;
+            --blue: #1da1ff;
+            --cyan: #00a8ff;
+            --purple: #c78cff;
+            --violet: #aa62ff;
+            --text-dark: #071428;
+            --text-muted-dark: #22334c;
+        }
+
+        /* html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Sora', sans-serif;
+            background: #020713;
+        }*/
+
+        .compliance-section {
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            padding: 70px 5% 55px;
+            color: var(--white);
+            background: radial-gradient(circle at 78% 35%, rgba(0, 132, 255, .35), transparent 32%), radial-gradient(circle at 12% 18%, rgba(0, 81, 180, .28), transparent 30%), linear-gradient(135deg, var(--dark-bg-1) 0%, var(--dark-bg-2) 48%, var(--dark-bg-3) 100%);
+            transition: background .45s ease, color .45s ease;
+        }
+
+            .compliance-section::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: linear-gradient(rgba(0, 153, 255, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 153, 255, .07) 1px, transparent 1px);
+                background-size: 44px 44px;
+                opacity: .28;
+                pointer-events: none;
+            }
+
+            .compliance-section::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(circle at center right, rgba(0, 153, 255, .18), transparent 38%);
+                pointer-events: none;
+            }
+
+        .compliance-container,
+        .bottom-bar,
+        .theme-toggle {
+            position: relative;
+            z-index: 2;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            right: 5%;
+            top: 25px;
+            border: 1px solid rgba(255,255,255,.25);
+            background: rgba(255,255,255,.08);
+            color: inherit;
+            padding: 10px 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: .3s ease;
+            font-weight: 600;
+        }
+
+            .theme-toggle:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(0,0,0,.25);
+            }
+
+        .compliance-container {
+            display: grid;
+            grid-template-columns: 1fr 1.05fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .compliance-content {
+            animation: fadeLeft .9s ease both;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            letter-spacing: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+            .eyebrow::after {
+                content: "";
+                display: inline-block;
+                width: 150px;
+                height: 1px;
+                background: linear-gradient(90deg, var(--gold), transparent);
+                margin-left: 18px;
+                vertical-align: middle;
+            }
+
+        .compliance-content h1 {
+            margin: 0 0 25px;
+            font-size: clamp(52px, 6vw, 58px);
+            line-height: .95;
+            font-weight: 600;
+            letter-spacing: -3px;
+        }
+
+            .compliance-content h1 span {
+                color: var(--gold);
+                text-shadow: 0 8px 25px rgba(255, 201, 40, .28);
+            }
+
+        .lead,
+        .desc {
+            max-width: 680px;
+            font-size: 18px;
+            line-height: 1.45;
+            margin: 0 0 20px;
+            color: rgba(255,255,255,.94);
+        }
+
+        .desc {
+            font-size: 18px;
+        }
+
+        .standard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(135px, 1fr));
+            gap: 10px;
+            margin: 35px 0;
+            max-width: 720px;
+        }
+
+        .standard-card {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            border: 1px solid rgba(255,255,255,.16);
+            background: rgba(3, 20, 50, .7);
+            border-radius: 10px;
+            padding: 16px;
+            transition: .35s ease;
+            backdrop-filter: blur(10px);
+        }
+
+            .standard-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 0 30px rgba(0, 153, 255, .22);
+            }
+
+            .standard-card svg,
+            .bottom-item svg,
+            .btn-compliance svg {
+                width: 36px;
+                height: 36px;
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 1.8;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+
+            .standard-card h4,
+            .orbit-card h4,
+            .bottom-item h4 {
+                margin: 0 0 2px;
+                font-size: 14px;
+                color: inherit;
+            }
+
+            .standard-card p,
+            .orbit-card p,
+            .bottom-item p {
+                margin: 0;
+                font-size: 12px;
+                color: rgba(255,255,255,.9);
+            }
+
+        .green {
+            color: var(--green);
+        }
+
+        .purple {
+            color: var(--purple);
+        }
+
+        .blue {
+            color: var(--blue);
+        }
+
+        .violet {
+            color: var(--violet);
+        }
+
+        .button-row {
+            display: flex;
+            gap: 18px;
+            flex-wrap: nowrap;
+        }
+
+        .btn-compliance{
+            min-width: 250px;
+            min-height: 70px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: .35s ease;
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+
+            .btn-compliance span {
+                font-size: 20px;
+                line-height: 1;
+            }
+
+        .btn-gold {
+            color: #061018;
+            background: linear-gradient(135deg, #ffd64b, var(--gold-dark));
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,.4), 0 18px 35px rgba(246,171,16,.18);
+        }
+
+        .btn-green {
+            color: #fff;
+            background: linear-gradient(135deg, #089b24, var(--green-dark));
+            box-shadow: inset 0 0 0 1px rgba(53,243,66,.5), 0 18px 35px rgba(0,106,24,.22);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .compliance-visual {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeRight .9s ease both;
+        }
+
+        .orbit {
+            position: relative;
+            width: min(700px, 100%);
+            aspect-ratio: 1;
+            border: 2px solid rgba(0, 153, 255, .55);
+            border-radius: 50%;
+            animation: floatOrbit 7s ease-in-out infinite;
+        }
+
+            .orbit::before {
+                content: "";
+                position: absolute;
+                inset: 8%;
+                border-radius: 50%;
+                border: 1px dashed rgba(0, 153, 255, .22);
+            }
+
+            .orbit::after {
+                content: "";
+                position: absolute;
+                inset: -5px;
+                border-radius: 50%;
+                background: conic-gradient(from 0deg, transparent, rgba(0, 174, 255, .45), transparent, transparent);
+                filter: blur(18px);
+                opacity: .45;
+                animation: rotateGlow 10s linear infinite;
+                z-index: -1;
+            }
+
+        .orbit-dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #00a8ff;
+            box-shadow: 0 0 18px #00a8ff;
+        }
+
+        .dot-1 {
+            top: -5px;
+            left: 50%;
+        }
+
+        .dot-2 {
+            top: 26%;
+            right: 1%;
+        }
+
+        .dot-3 {
+            bottom: 17%;
+            right: 18%;
+        }
+
+        .dot-4 {
+            bottom: 22%;
+            left: 18%;
+        }
+
+        .dot-5 {
+            top: 18%;
+            left: 7%;
+        }
+
+        .orbit-card {
+            position: absolute;
+            width: 145px;
+            height: 145px;
+            display: grid;
+            place-content: center;
+            text-align: center;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 40, 95, .92), rgba(2, 8, 28, .95));
+            border: 2px solid currentColor;
+            box-shadow: 0 0 32px currentColor;
+            z-index: 3;
+        }
+
+            .orbit-card svg {
+                width: 48px;
+                height: 48px;
+                margin: 0 auto 8px;
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 1.8;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+
+        .orbit-1 {
+            left: 5%;
+            top: 0;
+        }
+
+        .orbit-2 {
+            right: 0;
+            top: 2%;
+        }
+
+        .orbit-3 {
+            left: 0;
+            bottom: 24%;
+        }
+
+        .orbit-4 {
+            right: 0;
+            bottom: 24%;
+        }
+
+        .shield-wrap {
+            position: absolute;
+            inset: 18%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 2;
+        }
+
+        .shield {
+            width: 330px;
+            filter: drop-shadow(0 0 35px rgba(0, 153, 255, .8));
+            animation: shieldFloat 4s ease-in-out infinite;
+        }
+
+            .shield svg {
+                width: 100%;
+            }
+
+        .shield-outer {
+            fill: rgba(0, 42, 110, .8);
+            stroke: #d9ecff;
+            stroke-width: 8;
+        }
+
+        .shield-inner {
+            fill: rgba(0, 128, 255, .20);
+            stroke: var(--cyan);
+            stroke-width: 6;
+        }
+
+        .check {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 20;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .platform {
+            width: 350px;
+            height: 80px;
+            margin-top: -10px;
+            border-radius: 50%;
+            border: 3px solid #009dff;
+            box-shadow: 0 0 25px #009dff, inset 0 0 35px rgba(0,153,255,.8);
+            background: radial-gradient(circle, rgba(0,183,255,.45), transparent 65%);
+        }
+
+        .bottom-bar {
+            margin-top: 10px;
+            padding: 28px 35px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            border: 1px solid rgba(0, 153, 255, .45);
+            border-radius: 12px;
+            background: rgba(2, 19, 49, .78);
+            backdrop-filter: blur(14px);
+            animation: fadeUp .9s ease .25s both;
+        }
+
+        .bottom-item {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            border-right: 1px solid rgba(255,255,255,.14);
+            padding-right: 20px;
+        }
+
+            .bottom-item:last-child {
+                border-right: 0;
+            }
+
+            .bottom-item svg {
+                min-width: 58px;
+                height: 58px;
+                color: var(--blue);
+            }
+
+            .bottom-item:nth-child(2) svg {
+                color: #77df35;
+            }
+
+            .bottom-item:nth-child(3) svg {
+                color: var(--purple);
+            }
+
+            .bottom-item:nth-child(4) svg {
+                color: #ffb414;
+            }
+
+        body.light-mode {
+            background: #f4f9ff;
+        }
+
+            body.light-mode .compliance-section {
+                color: var(--text-dark);
+                background: radial-gradient(circle at 78% 35%, rgba(0, 153, 255, .18), transparent 34%), linear-gradient(135deg, #f4f9ff 0%, #dcecff 50%, #ffffff 100%);
+            }
+
+                body.light-mode .compliance-section::before {
+                    opacity: .18;
+                }
+
+            body.light-mode .standard-card,
+            body.light-mode .bottom-bar {
+                background: rgba(255,255,255,.72);
+                border-color: rgba(0, 80, 160, .25);
+                box-shadow: 0 15px 35px rgba(0,0,0,.08);
+            }
+
+                body.light-mode .lead,
+                body.light-mode .desc,
+                body.light-mode .bottom-item p,
+                body.light-mode .standard-card p {
+                    color: var(--text-muted-dark);
+                }
+
+            body.light-mode .theme-toggle {
+                background: rgba(255,255,255,.8);
+                border-color: rgba(0,0,0,.15);
+            }
+
+            body.light-mode .orbit-card {
+                background: radial-gradient(circle, rgba(255,255,255,.95), rgba(218,235,255,.95));
+            }
+
+        @keyframes shieldFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-18px);
+            }
+        }
+
+        @keyframes floatOrbit {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(12px);
+            }
+        }
+
+        @keyframes rotateGlow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .compliance-container {
+                grid-template-columns: 1fr;
+            }
+
+            .compliance-visual {
+                min-height: 560px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .standard-grid,
+            .bottom-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .bottom-item {
+                border-right: 0;
+            }
+
+            .orbit {
+                width: 580px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .compliance-section {
+                padding: 80px 18px 40px;
+            }
+
+            .theme-toggle {
+                right: 18px;
+                top: 18px;
+                font-size: 13px;
+            }
+
+            .eyebrow {
+                letter-spacing: 4px;
+                font-size: 12px;
+            }
+
+                .eyebrow::after {
+                    width: 70px;
+                }
+
+            .lead,
+            .desc {
+                font-size: 18px;
+            }
+
+            .standard-grid,
+            .bottom-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-compliance{
+                width: 100%;
+                min-width: auto;
+                font-size: 16px;
+                min-height: 68px;
+            }
+
+            .compliance-visual {
+                min-height: 430px;
+            }
+
+            .orbit {
+                width: 360px;
+            }
+
+            .orbit-card {
+                width: 92px;
+                height: 92px;
+            }
+
+                .orbit-card h4 {
+                    font-size: 13px;
+                }
+
+                .orbit-card p {
+                    font-size: 11px;
+                }
+
+                .orbit-card svg {
+                    width: 30px;
+                    height: 30px;
+                }
+
+            .shield {
+                width: 180px;
+            }
+
+            .platform {
+                width: 210px;
+                height: 48px;
+            }
+
+            .bottom-bar {
+                padding: 22px;
+            }
+        }
+        /* section 2 THREE LAYERS ONE PLATFORM*/
+        .three-layer-platform-section,
+        .three-layer-platform-section * {
+            box-sizing: border-box;
+        }
+
+        .three-layer-platform-section {
+            position: relative;
+            overflow: hidden;
+            padding: 80px 5%;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 90, 180, .35), transparent 38%), radial-gradient(circle at 15% 35%, rgba(0, 140, 255, .16), transparent 30%), radial-gradient(circle at 85% 35%, rgba(255, 185, 20, .12), transparent 28%), linear-gradient(135deg, #020715 0%, #04162f 50%, #020714 100%);
+            color: #fff;
+            font-family: 'Sora', sans-serif;
+        }
+
+        body.light-mode .three-layer-platform-section {
+            background: radial-gradient(circle at 50% 0%, rgba(0, 140, 255, .14), transparent 38%), linear-gradient(135deg, #f7fbff 0%, #e7f1ff 48%, #ffffff 100%);
+            color: #071428;
+        }
+
+        .tlp-container {
+            max-width: 1740px;
+            margin: 0 auto;
+        }
+
+        .tlp-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .tlp-eyebrow {
+            color: #ffc928;
+            letter-spacing: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .tlp-heading h2 {
+            margin: 0;
+            font-size: clamp(32px, 5vw, 42px);
+            line-height: 1.06;
+            font-weight: 600;
+        }
+
+            .tlp-heading h2 span {
+                color: #ffc928;
+                text-shadow: 0 0 30px rgba(255, 201, 40, .32);
+            }
+
+        .tlp-heading p {
+            max-width: 600px;
+            margin: 18px auto 0;
+            font-size: clamp(16px, 2vw, 18px);
+            line-height: 1.45;
+            color: rgba(255,255,255,.88);
+        }
+
+        body.light-mode .tlp-heading p {
+            color: #22334c;
+        }
+
+        .tlp-main-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr auto 1.08fr;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .tlp-card,
+        .tlp-result-card {
+            min-height: 505px;
+            padding: 34px;
+            border-radius: 20px;
+            background: rgba(2, 17, 42, .82);
+            backdrop-filter: blur(16px);
+            transition: .35s ease;
+        }
+
+            .tlp-card:hover,
+            .tlp-result-card:hover {
+                transform: translateY(-8px);
+            }
+
+        .tlp-blue {
+            border: 1px solid #1da1ff;
+            box-shadow: 0 0 35px rgba(29,161,255,.18);
+        }
+
+        .tlp-green {
+            border: 1px solid #35f342;
+            box-shadow: 0 0 35px rgba(53,243,66,.16);
+        }
+
+        .tlp-purple {
+            border: 1px solid #aa62ff;
+            box-shadow: 0 0 35px rgba(170,98,255,.18);
+        }
+
+        body.light-mode .tlp-card,
+        body.light-mode .tlp-result-card {
+            background: rgba(255,255,255,.86);
+            box-shadow: 0 18px 45px rgba(0,0,0,.08);
+        }
+
+        .tlp-icon-circle {
+            width: 128px;
+            height: 128px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(255,255,255,.04);
+        }
+
+        .tlp-blue .tlp-icon-circle {
+            color: #1da1ff;
+            box-shadow: 0 0 35px rgba(29,161,255,.48);
+        }
+
+        .tlp-green .tlp-icon-circle {
+            color: #35f342;
+            box-shadow: 0 0 35px rgba(53,243,66,.42);
+        }
+
+        .tlp-purple .tlp-icon-circle {
+            color: #aa62ff;
+            box-shadow: 0 0 35px rgba(170,98,255,.48);
+        }
+
+        .tlp-icon-circle svg {
+            width: 70px;
+            height: 70px;
+        }
+
+        .three-layer-platform-section svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .tlp-number {
+            width: 38px;
+            height: 38px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .tlp-blue .tlp-number {
+            background: #1d7fff;
+        }
+
+        .tlp-green .tlp-number {
+            background: #20a935;
+        }
+
+        .tlp-purple .tlp-number {
+            background: #7d42d9;
+        }
+
+        .tlp-card h3 {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.15;
+            margin: 0 0 2px;
+        }
+
+        .tlp-card h4 {
+            text-align: center;
+            font-size: 15px;
+            margin: 0 0 8px;
+        }
+
+        .tlp-blue h4 {
+            color: #34b7ff;
+        }
+
+        .tlp-green h4 {
+            color: #45ef4f;
+        }
+
+        .tlp-purple h4 {
+            color: #c78cff;
+        }
+
+        .tlp-card ul,
+        .tlp-result-card ul {
+            list-style: none;
+            padding: 10px 0 0;
+            margin: 0;
+            border-top: 1px solid rgba(255,255,255,.18);
+        }
+
+        body.light-mode .tlp-card ul,
+        body.light-mode .tlp-result-card ul {
+            border-top-color: rgba(0,0,0,.12);
+        }
+
+        .tlp-card li,
+        .tlp-result-card li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 14px;
+            margin: 10px 0;
+            color: rgba(255,255,255,.92);
+        }
+
+        body.light-mode .tlp-card li,
+        body.light-mode .tlp-result-card li {
+            color: #22334c;
+        }
+
+        .tlp-card li svg,
+        .tlp-result-card li svg {
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+        }
+
+        .tlp-blue li svg {
+            color: #1da1ff;
+        }
+
+        .tlp-green li svg {
+            color: #35f342;
+        }
+
+        .tlp-purple li svg {
+            color: #aa62ff;
+        }
+
+        .tlp-result-card li svg {
+            color: #ffc928;
+        }
+
+        .tlp-symbol {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255,255,255,.35);
+        }
+
+        body.light-mode .tlp-symbol {
+            color: #071428;
+        }
+
+        .tlp-result-card {
+            border: 1px solid #ffc928;
+            box-shadow: 0 0 38px rgba(255,201,40,.25);
+            text-align: center;
+        }
+
+        .tlp-shield-logo {
+            width: 158px;
+            height: 158px;
+            margin: 0 auto 22px;
+            color: #ffc928;
+            filter: drop-shadow(0 0 25px rgba(255, 201, 40, .45));
+        }
+
+            .tlp-shield-logo svg {
+                width: 100%;
+                height: 100%;
+                stroke-width: 4;
+            }
+
+        .tlp-result-card h3 {
+            font-size: 30px;
+            letter-spacing: 8px;
+            margin: 0;
+        }
+
+        .tlp-result-card h4 {
+            color: #ffc928;
+            font-size: 22px;
+            letter-spacing: 8px;
+            margin: 4px 0 18px;
+        }
+
+        .tlp-bottom-bar {
+            margin-top: 28px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: 1px solid rgba(29,161,255,.55);
+            border-radius: 18px;
+            background: rgba(2, 17, 42, .82);
+            backdrop-filter: blur(16px);
+            overflow: hidden;
+        }
+
+        body.light-mode .tlp-bottom-bar {
+            background: rgba(255,255,255,.88);
+        }
+
+        .tlp-bottom-item {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 28px;
+            border-right: 1px solid rgba(255,255,255,.15);
+        }
+
+            .tlp-bottom-item:last-child {
+                border-right: none;
+            }
+
+        body.light-mode .tlp-bottom-item {
+            border-color: rgba(0,0,0,.12);
+        }
+
+        .tlp-bottom-item svg {
+            width: 62px;
+            height: 62px;
+            min-width: 62px;
+        }
+
+        .tlp-bottom-item:nth-child(1) svg {
+            color: #1da1ff;
+        }
+
+        .tlp-bottom-item:nth-child(2) svg {
+            color: #35f342;
+        }
+
+        .tlp-bottom-item:nth-child(3) svg {
+            color: #aa62ff;
+        }
+
+        .tlp-bottom-item:nth-child(4) svg {
+            color: #ffc928;
+        }
+
+        .tlp-bottom-item strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .tlp-bottom-item span {
+            display: block;
+            color: rgba(255,255,255,.78);
+            line-height: 1.5;
+            font-size: 12px;
+        }
+
+        body.light-mode .tlp-bottom-item span {
+            color: #22334c;
+        }
+
+        .tlp-reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: .85s ease;
+        }
+
+            .tlp-reveal.tlp-active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        @media (max-width: 1350px) {
+            .tlp-main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tlp-symbol {
+                text-align: center;
+            }
+
+            .tlp-card,
+            .tlp-result-card {
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .tlp-bottom-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tlp-bottom-item:nth-child(2) {
+                border-right: none;
+            }
+
+            .tlp-bottom-item:nth-child(1),
+            .tlp-bottom-item:nth-child(2) {
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .three-layer-platform-section {
+                padding: 60px 18px;
+            }
+
+            .tlp-eyebrow {
+                font-size: 13px;
+                letter-spacing: 4px;
+            }
+
+            .tlp-card,
+            .tlp-result-card {
+                padding: 28px 22px;
+            }
+
+                .tlp-card h3 {
+                    font-size: 22px;
+                }
+
+                .tlp-card li,
+                .tlp-result-card li {
+                    font-size: 16px;
+                }
+
+            .tlp-bottom-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .tlp-bottom-item {
+                border-right: none !important;
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+
+                .tlp-bottom-item:last-child {
+                    border-bottom: none;
+                }
+        }
+
+        /* ------------ SECTION 3 IP SECTION ----------------------*/
+
+        .ip-frameworks-section,
+        .ip-frameworks-section * {
+            box-sizing: border-box;
+        }
+
+        .ip-frameworks-section {
+            position: relative;
+            overflow: hidden;
+            padding: 70px 4% 45px;
+            font-family: 'Sora', sans-serif;
+            color: #fff;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 95, 180, .35), transparent 34%), radial-gradient(circle at 90% 72%, rgba(255, 180, 20, .14), transparent 28%), linear-gradient(135deg, #020715 0%, #041630 50%, #020714 100%);
+        }
+
+            .ip-frameworks-section::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(rgba(255, 184, 30, .18) 1px, transparent 1px);
+                background-size: 13px 13px;
+                opacity: .16;
+                mask-image: radial-gradient(circle at 82% 75%, #000 0%, transparent 32%);
+                pointer-events: none;
+            }
+
+        body.light-mode .ip-frameworks-section {
+            color: #071428;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 140, 255, .15), transparent 34%), linear-gradient(135deg, #f7fbff 0%, #e8f2ff 50%, #fff 100%);
+        }
+
+        .ipfw-wrap {
+            max-width: 1780px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ipfw-top-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 12px;
+            color: #ffc334;
+        }
+
+            .ipfw-top-icon span {
+                width: 170px;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, #ffc334, transparent);
+            }
+
+            .ipfw-top-icon svg {
+                width: 58px;
+                height: 58px;
+            }
+
+        .ipfw-heading {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+            .ipfw-heading h2 {
+                margin: 0;
+                font-size: clamp(42px, 5vw, 56px);
+                line-height: 1.05;
+                font-weight: 600;
+            }
+
+                .ipfw-heading h2 span,
+                .ipfw-gold h3 span {
+                    color: #ffc334;
+                }
+
+            .ipfw-heading p {
+                max-width: 900px;
+                margin: 22px auto 0;
+                font-size: clamp(14px, 2vw, 18px);
+                line-height: 1.45;
+                color: rgba(255,255,255,.84);
+            }
+
+        body.light-mode .ipfw-heading p {
+            color: #26364e;
+        }
+
+        .ipfw-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 28px;
+        }
+
+        .ipfw-card {
+            min-height: 490px;
+            padding: 34px 34px 30px;
+            border-radius: 16px;
+            text-align: center;
+            background: rgba(3, 18, 45, .78);
+            backdrop-filter: blur(14px);
+            transition: .35s ease;
+        }
+
+            .ipfw-card:hover {
+                transform: translateY(-9px);
+            }
+
+        body.light-mode .ipfw-card {
+            background: rgba(255,255,255,.86);
+            box-shadow: 0 20px 45px rgba(0,0,0,.08);
+        }
+
+        .ipfw-green {
+            border: 1px solid #63ef7a;
+            box-shadow: 0 0 32px rgba(99,239,122,.18);
+        }
+
+        .ipfw-purple {
+            border: 1px solid #c56dff;
+            box-shadow: 0 0 32px rgba(197,109,255,.18);
+        }
+
+        .ipfw-blue {
+            border: 1px solid #4ba8ff;
+            box-shadow: 0 0 32px rgba(75,168,255,.18);
+        }
+
+        .ipfw-violet {
+            border: 1px solid #bd62ff;
+            box-shadow: 0 0 32px rgba(189,98,255,.18);
+        }
+
+        .ipfw-gold {
+            border: 1px solid #ffc334;
+            box-shadow: 0 0 32px rgba(255,195,52,.22);
+        }
+
+        .ipfw-icon {
+            width: 138px;
+            height: 138px;
+            margin: 0 auto 28px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(255,255,255,.04);
+        }
+
+        .ipfw-green .ipfw-icon {
+            color: #63ef7a;
+            box-shadow: 0 0 35px rgba(99,239,122,.45);
+        }
+
+        .ipfw-purple .ipfw-icon {
+            color: #c56dff;
+            box-shadow: 0 0 35px rgba(197,109,255,.45);
+        }
+
+        .ipfw-blue .ipfw-icon {
+            color: #4ba8ff;
+            box-shadow: 0 0 35px rgba(75,168,255,.45);
+        }
+
+        .ipfw-violet .ipfw-icon {
+            color: #bd62ff;
+            box-shadow: 0 0 35px rgba(189,98,255,.45);
+        }
+
+        .ipfw-gold .ipfw-icon {
+            color: #ffc334;
+            box-shadow: 0 0 35px rgba(255,195,52,.48);
+        }
+
+        .ip-frameworks-section svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .ipfw-icon svg {
+            width: 82px;
+            height: 82px;
+        }
+
+        .ipfw-icon text {
+            fill: currentColor;
+            stroke: none;
+            font-size: 5px;
+            font-weight: 600;
+        }
+
+        .ipfw-card h3 {
+            margin: 0;
+            font-size: 28px;
+            line-height: 1.1;
+            font-weight: 600;
+        }
+
+        .ipfw-line {
+            width: 150px;
+            height: 1px;
+            margin: 28px auto 22px;
+            background: rgba(255,255,255,.16);
+            position: relative;
+        }
+
+            .ipfw-line::after {
+                content: "";
+                position: absolute;
+                width: 48px;
+                height: 3px;
+                border-radius: 10px;
+                left: 50%;
+                top: -1px;
+                transform: translateX(-50%);
+                background: currentColor;
+            }
+
+        .ipfw-card p {
+            margin: 0 0 26px;
+            font-size: 14px;
+            line-height: 1.55;
+            color: rgba(255,255,255,.88);
+        }
+
+        body.light-mode .ipfw-card p {
+            color: #26364e;
+        }
+
+        .ipfw-badge {
+            min-height: 54px;
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 1px solid currentColor;
+            background: rgba(255,255,255,.04);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+            .ipfw-badge svg {
+                width: 28px;
+                height: 28px;
+            }
+
+        .ipfw-green,
+        .ipfw-green .ipfw-badge {
+            color: #63ef7a;
+        }
+
+        .ipfw-purple,
+        .ipfw-purple .ipfw-badge {
+            color: #c56dff;
+        }
+
+        .ipfw-blue,
+        .ipfw-blue .ipfw-badge {
+            color: #4ba8ff;
+        }
+
+        .ipfw-violet,
+        .ipfw-violet .ipfw-badge {
+            color: #bd62ff;
+        }
+
+        .ipfw-gold,
+        .ipfw-gold .ipfw-badge {
+            color: #ffc334;
+        }
+
+        .ipfw-card h3,
+        .ipfw-card p {
+            color: #fff;
+        }
+
+        body.light-mode .ipfw-card h3 {
+            color: #071428;
+        }
+
+        .ipfw-bottom {
+            margin-top: 34px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            color: rgba(255,255,255,.86);
+        }
+
+            .ipfw-bottom div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                padding: 0 28px;
+                min-height: 52px;
+                border-right: 1px solid rgba(255,255,255,.35);
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+                .ipfw-bottom div:last-child {
+                    border-right: none;
+                }
+
+            .ipfw-bottom svg {
+                width: 34px;
+                height: 34px;
+                color: rgba(255,255,255,.65);
+            }
+
+        body.light-mode .ipfw-bottom {
+            color: #26364e;
+        }
+
+            body.light-mode .ipfw-bottom div {
+                border-color: rgba(0,0,0,.16);
+            }
+
+            body.light-mode .ipfw-bottom svg {
+                color: #52627a;
+            }
+
+        .ipfw-reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: .85s ease;
+        }
+
+            .ipfw-reveal.ipfw-active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        @media (max-width: 1400px) {
+            .ipfw-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .ipfw-bottom {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 22px 0;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .ipfw-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ipfw-card {
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .ip-frameworks-section {
+                padding: 55px 18px 35px;
+            }
+
+            .ipfw-top-icon span {
+                width: 75px;
+            }
+
+            .ipfw-grid,
+            .ipfw-bottom {
+                grid-template-columns: 1fr;
+            }
+
+            .ipfw-card {
+                padding: 28px 22px;
+            }
+
+                .ipfw-card h3 {
+                    font-size: 30px;
+                }
+
+                .ipfw-card p {
+                    font-size: 18px;
+                }
+
+            .ipfw-bottom div {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,.18);
+                justify-content: flex-start;
+                padding: 15px 0;
+            }
+
+                .ipfw-bottom div:last-child {
+                    border-bottom: none;
+                }
+        }
+
+        /*---------SECTION 4 IP INDUSTRY -----------------------*/
+        .ip-industry-section,
+        .ip-industry-section * {
+            box-sizing: border-box;
+        }
+
+        .ip-industry-section {
+            position: relative;
+            overflow: hidden;
+            padding: 34px 4% 42px;
+            font-family: 'Sora', sans-serif;
+            color: #fff;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 95, 180, .34), transparent 34%), radial-gradient(circle at 9% 43%, rgba(0, 150, 255, .17), transparent 25%), linear-gradient(135deg, #020715 0%, #041630 50%, #020714 100%);
+        }
+
+            .ip-industry-section::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(rgba(0, 156, 255, .25) 1px, transparent 1px);
+                background-size: 13px 13px;
+                opacity: .18;
+                mask-image: radial-gradient(circle at 10% 48%, #000 0%, transparent 28%);
+                pointer-events: none;
+            }
+
+        body.light-mode .ip-industry-section {
+            color: #071428;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 140, 255, .15), transparent 34%), linear-gradient(135deg, #f7fbff 0%, #e8f2ff 50%, #fff 100%);
+        }
+
+        .ipind-container {
+            max-width: 1760px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ipind-heading {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .ipind-eyebrow {
+            color: #ffc334;
+            letter-spacing: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .ipind-heading h2 {
+            margin: 0;
+            font-size: clamp(42px, 5vw, 52px);
+            line-height: .98;
+            font-weight: 600;
+        }
+
+            .ipind-heading h2 span {
+                color: #ffc334;
+                text-shadow: 0 0 30px rgba(255, 195, 52, .28);
+            }
+
+        .ipind-heading p {
+            margin: 16px auto 0;
+            max-width: 940px;
+            font-size: clamp(14px, 2vw, 16px);
+            line-height: 1.35;
+            color: rgba(255,255,255,.86);
+        }
+
+        body.light-mode .ipind-heading p {
+            color: #26364e;
+        }
+
+        .ipind-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+        }
+
+        .ipind-card {
+            min-height: 392px;
+            padding: 20px 10px;
+            border-radius: 15px;
+            text-align: center;
+            background: rgba(3, 18, 45, .78);
+            backdrop-filter: blur(14px);
+            transition: .35s ease;
+        }
+
+            .ipind-card:hover {
+                transform: translateY(-8px);
+            }
+
+        body.light-mode .ipind-card {
+            background: rgba(255,255,255,.86);
+            box-shadow: 0 18px 45px rgba(0,0,0,.08);
+        }
+
+        .ipind-blue {
+            border: 1px solid #238cff;
+            box-shadow: 0 0 32px rgba(35,140,255,.18);
+        }
+
+        .ipind-green {
+            border: 1px solid #35d84a;
+            box-shadow: 0 0 32px rgba(53,216,74,.18);
+        }
+
+        .ipind-gold {
+            border: 1px solid #ffc334;
+            box-shadow: 0 0 32px rgba(255,195,52,.18);
+        }
+
+        .ipind-purple {
+            border: 1px solid #a65cff;
+            box-shadow: 0 0 32px rgba(166,92,255,.18);
+        }
+
+        .ip-industry-section svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .ipind-main-icon {
+            height: 112px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+            .ipind-main-icon svg {
+                width: 112px;
+                height: 112px;
+                filter: drop-shadow(0 0 18px currentColor);
+            }
+
+        .ipind-blue .ipind-main-icon {
+            color: #238cff;
+        }
+
+        .ipind-green .ipind-main-icon {
+            color: #35d84a;
+        }
+
+        .ipind-gold .ipind-main-icon {
+            color: #ffc334;
+        }
+
+        .ipind-purple .ipind-main-icon {
+            color: #a65cff;
+        }
+
+        .ipind-card h3 {
+            margin: 0 0 8px;
+            font-size: 18px;
+            line-height: 1.12;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        body.light-mode .ipind-card h3 {
+            color: #071428;
+        }
+
+        .ipind-card p {
+            margin: 0 auto 24px;
+            min-height: 58px;
+            font-size: 14px;
+            line-height: 1.4;
+            color: rgba(255,255,255,.88);
+        }
+
+        body.light-mode .ipind-card p {
+            color: #26364e;
+        }
+
+        .ipind-badge,
+        .ipind-small-badge {
+            min-height: 72px;
+            border-radius: 8px;
+            border: 1px solid currentColor;
+            background: rgba(255,255,255,.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 13px;
+            color: currentColor;
+        }
+
+        .ipind-badge {
+            margin: 0 auto 18px;
+            padding: 12px 5px;
+        }
+
+            .ipind-badge svg,
+            .ipind-small-badge svg {
+                width: 42px;
+                height: 42px;
+                min-width: 42px;
+            }
+
+            .ipind-badge strong,
+            .ipind-badge span {
+                display: block;
+                text-align: left;
+            }
+
+            .ipind-badge strong {
+                font-size: 16px;
+                color: #fff;
+            }
+
+            .ipind-badge span {
+                font-size: 14px;
+                color: rgba(255,255,255,.9);
+            }
+
+        body.light-mode .ipind-badge strong,
+        body.light-mode .ipind-badge span {
+            color: #071428;
+        }
+
+        .ipind-purple-badge {
+            color: #a65cff;
+        }
+
+        .ipind-green-badge {
+            color: #35d84a;
+        }
+
+        .ipind-gold-badge {
+            color: #ffc334;
+        }
+
+        .ipind-badge-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .ipind-small-badge {
+            padding: 10px;
+            color: #238cff;
+        }
+
+            .ipind-small-badge span {
+                font-size: 15px;
+                line-height: 1.15;
+                text-align: left;
+                color: #fff;
+            }
+
+        body.light-mode .ipind-small-badge span {
+            color: #071428;
+        }
+
+        .ipind-card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 600;
+            color: currentColor;
+        }
+
+            .ipind-card a span {
+                font-size: 30px;
+                line-height: 1;
+            }
+
+        .ipind-blue a {
+            color: #23a7ff;
+        }
+
+        .ipind-green a {
+            color: #3df04f;
+        }
+
+        .ipind-gold a {
+            color: #ffc334;
+        }
+
+        .ipind-purple a {
+            color: #c276ff;
+        }
+
+        .ipind-bottom {
+            margin-top: 28px;
+            padding: 20px 28px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border: 1px solid rgba(35, 140, 255, .55);
+            border-radius: 14px;
+            background: rgba(3, 18, 45, .78);
+            backdrop-filter: blur(14px);
+        }
+
+        body.light-mode .ipind-bottom {
+            background: rgba(255,255,255,.88);
+        }
+
+        .ipind-bottom-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 0 24px;
+            border-right: 1px solid rgba(255,255,255,.16);
+        }
+
+            .ipind-bottom-item:last-child {
+                border-right: none;
+            }
+
+        body.light-mode .ipind-bottom-item {
+            border-color: rgba(0,0,0,.12);
+        }
+
+        .ipind-bottom-item svg {
+            width: 62px;
+            height: 62px;
+            min-width: 62px;
+            padding: 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,.04);
+        }
+
+        .ipind-bottom-item:nth-child(1) svg {
+            color: #238cff;
+        }
+
+        .ipind-bottom-item:nth-child(2) svg {
+            color: #35d84a;
+        }
+
+        .ipind-bottom-item:nth-child(3) svg {
+            color: #a65cff;
+        }
+
+        .ipind-bottom-item:nth-child(4) svg {
+            color: #ffc334;
+        }
+
+        .ipind-bottom-item:nth-child(5) svg {
+            color: #238cff;
+        }
+
+        .ipind-bottom-item strong {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .ipind-bottom-item span {
+            display: block;
+            font-size: 12px;
+            line-height: 1.45;
+            color: rgba(255,255,255,.78);
+        }
+
+        body.light-mode .ipind-bottom-item strong {
+            color: #071428;
+        }
+
+        body.light-mode .ipind-bottom-item span {
+            color: #26364e;
+        }
+
+        .ipind-reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: .85s ease;
+        }
+
+            .ipind-reveal.ipind-active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        @media (max-width: 1450px) {
+            .ipind-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .ipind-bottom {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px 0;
+            }
+
+            .ipind-bottom-item {
+                border-right: none;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .ipind-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ipind-bottom {
+                grid-template-columns: 1fr;
+            }
+
+            .ipind-bottom-item {
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+
+                .ipind-bottom-item:last-child {
+                    border-bottom: none;
+                }
+        }
+
+        @media (max-width: 600px) {
+            .ip-industry-section {
+                padding: 45px 18px 35px;
+            }
+
+            .ipind-eyebrow {
+                font-size: 13px;
+                letter-spacing: 4px;
+            }
+
+            .ipind-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ipind-card {
+                min-height: auto;
+                padding: 28px 22px;
+            }
+
+            .ipind-heading h2 {
+                font-size: 38px;
+            }
+
+            .ipind-main-icon svg {
+                width: 95px;
+                height: 95px;
+            }
+
+            .ipind-badge-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /*-- SECTION 5 IP BENEFIT START-----------------------------------------------------*/
+
+
+        .ip-benefits-section,
+        .ip-benefits-section * {
+            box-sizing: border-box;
+        }
+
+        .ip-benefits-section {
+            position: relative;
+            overflow: hidden;
+            padding: 48px 4% 44px;
+            font-family: 'Sora', sans-serif;
+            color: #fff;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 95, 180, .32), transparent 34%), radial-gradient(circle at 88% 45%, rgba(255, 190, 35, .09), transparent 28%), linear-gradient(135deg, #020715 0%, #041630 50%, #020714 100%);
+        }
+
+            .ip-benefits-section::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(rgba(0, 156, 255, .18) 1px, transparent 1px);
+                background-size: 13px 13px;
+                opacity: .18;
+                mask-image: radial-gradient(circle at 14% 50%, #000 0%, transparent 30%);
+                pointer-events: none;
+            }
+
+        body.light-mode .ip-benefits-section {
+            color: #071428;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 140, 255, .15), transparent 34%), linear-gradient(135deg, #f7fbff 0%, #e8f2ff 50%, #fff 100%);
+        }
+
+        .ipben-container {
+            max-width: 1760px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ipben-heading {
+            text-align: center;
+            margin-bottom: 44px;
+        }
+
+        .ipben-eyebrow {
+            color: #ffc334;
+            letter-spacing: 7px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .ipben-heading h2 {
+            margin: 0;
+            font-size: clamp(42px, 6vw, 52px);
+            line-height: 1;
+            font-weight: 600;
+        }
+
+            .ipben-heading h2 span {
+                color: #ffc334;
+                text-shadow: 0 0 30px rgba(255, 195, 52, .28);
+            }
+
+        .ipben-heading-line {
+            width: 120px;
+            height: 2px;
+            margin: 24px auto 20px;
+            background: linear-gradient(90deg, transparent, #ffc334, transparent);
+        }
+
+        .ipben-heading p {
+            margin: 0 auto;
+            max-width: 820px;
+            font-size: clamp(16px, 2vw, 20px);
+            line-height: 1.45;
+            color: rgba(255,255,255,.86);
+        }
+
+        body.light-mode .ipben-heading p {
+            color: #26364e;
+        }
+
+        .ipben-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+        }
+
+        .ipben-card {
+            min-height: 440px;
+            padding: 30px 30px 26px;
+            border-radius: 15px;
+            text-align: center;
+            background: rgba(3, 18, 45, .78);
+            backdrop-filter: blur(14px);
+            transition: .35s ease;
+        }
+
+            .ipben-card:hover {
+                transform: translateY(-8px);
+            }
+
+        body.light-mode .ipben-card {
+            background: rgba(255,255,255,.86);
+            box-shadow: 0 18px 45px rgba(0,0,0,.08);
+        }
+
+        .ipben-blue {
+            border: 1px solid #238cff;
+            box-shadow: 0 0 32px rgba(35,140,255,.16);
+        }
+
+        .ipben-green {
+            border: 1px solid #55e84f;
+            box-shadow: 0 0 32px rgba(85,232,79,.16);
+        }
+
+        .ipben-purple {
+            border: 1px solid #b65cff;
+            box-shadow: 0 0 32px rgba(182,92,255,.16);
+        }
+
+        .ipben-gold {
+            border: 1px solid rgba(255,195,52,.38);
+            box-shadow: 0 0 32px rgba(255,195,52,.14);
+        }
+
+        .ip-benefits-section svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .ipben-main-icon {
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+            .ipben-main-icon svg {
+                width: 170px;
+                height: 170px;
+                filter: drop-shadow(0 0 22px currentColor);
+            }
+
+        .ipben-blue .ipben-main-icon {
+            color: #238cff;
+        }
+
+        .ipben-green .ipben-main-icon {
+            color: #55e84f;
+        }
+
+        .ipben-purple .ipben-main-icon {
+            color: #b65cff;
+        }
+
+        .ipben-gold .ipben-main-icon {
+            color: #ffc334;
+        }
+
+        .ipben-card h3 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        body.light-mode .ipben-card h3 {
+            color: #071428;
+        }
+
+        .ipben-line {
+            width: 138px;
+            height: 1px;
+            margin: 24px auto 22px;
+            background: rgba(255,255,255,.12);
+            position: relative;
+        }
+
+            .ipben-line::after {
+                content: "";
+                position: absolute;
+                width: 48px;
+                height: 3px;
+                left: 50%;
+                top: -1px;
+                transform: translateX(-50%);
+                border-radius: 10px;
+                background: currentColor;
+            }
+
+        .ipben-blue .ipben-line {
+            color: #23a7ff;
+        }
+
+        .ipben-green .ipben-line {
+            color: #55e84f;
+        }
+
+        .ipben-purple .ipben-line {
+            color: #b65cff;
+        }
+
+        .ipben-gold .ipben-line {
+            color: #ffc334;
+        }
+
+        .ipben-card p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.45;
+            color: rgba(255,255,255,.88);
+        }
+
+        body.light-mode .ipben-card p {
+            color: #26364e;
+        }
+
+        .ipben-bottom {
+            margin-top: 30px;
+            padding: 26px 28px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border: 1px solid rgba(35, 140, 255, .45);
+            border-radius: 14px;
+            background: rgba(3, 18, 45, .78);
+            backdrop-filter: blur(14px);
+        }
+
+        body.light-mode .ipben-bottom {
+            background: rgba(255,255,255,.88);
+        }
+
+        .ipben-bottom-item {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            padding: 0 24px;
+            border-right: 1px solid rgba(255,255,255,.15);
+        }
+
+            .ipben-bottom-item:last-child {
+                border-right: none;
+            }
+
+        body.light-mode .ipben-bottom-item {
+            border-color: rgba(0,0,0,.12);
+        }
+
+        .ipben-bottom-item svg {
+            width: 58px;
+            height: 58px;
+            min-width: 58px;
+        }
+
+        .ipben-bottom-item:nth-child(1) svg {
+            color: #238cff;
+        }
+
+        .ipben-bottom-item:nth-child(2) svg {
+            color: #55e84f;
+        }
+
+        .ipben-bottom-item:nth-child(3) svg {
+            color: #b65cff;
+        }
+
+        .ipben-bottom-item:nth-child(4) svg {
+            color: #238cff;
+        }
+
+        .ipben-bottom-item:nth-child(5) svg {
+            color: #ffc334;
+        }
+
+        .ipben-bottom-item strong {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 7px;
+            color: #fff;
+        }
+
+        .ipben-bottom-item span {
+            display: block;
+            font-size: 12px;
+            line-height: 1.45;
+            color: rgba(255,255,255,.76);
+        }
+
+        body.light-mode .ipben-bottom-item strong {
+            color: #071428;
+        }
+
+        body.light-mode .ipben-bottom-item span {
+            color: #26364e;
+        }
+
+        .ipben-reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: .85s ease;
+        }
+
+            .ipben-reveal.ipben-active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        @media (max-width: 1450px) {
+            .ipben-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .ipben-bottom {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 22px 0;
+            }
+
+            .ipben-bottom-item {
+                border-right: none;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .ipben-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ipben-bottom {
+                grid-template-columns: 1fr;
+            }
+
+            .ipben-bottom-item {
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+
+                .ipben-bottom-item:last-child {
+                    border-bottom: none;
+                }
+        }
+
+        @media (max-width: 600px) {
+            .ip-benefits-section {
+                padding: 45px 18px 35px;
+            }
+
+            .ipben-eyebrow {
+                font-size: 13px;
+                letter-spacing: 4px;
+            }
+
+            .ipben-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ipben-card {
+                min-height: auto;
+                padding: 28px 22px;
+            }
+
+            .ipben-main-icon {
+                height: 145px;
+            }
+
+                .ipben-main-icon svg {
+                    width: 132px;
+                    height: 132px;
+                }
+
+            .ipben-card p {
+                font-size: 18px;
+            }
+        }
 
 
 
+        /*-- SECTION 5 IP BENEFIT END----------------------------------------------------- -*/
+        /*-- SECTION 6 IP DASHBOARD START-----------------------------------------------------*/
+
+        .ip-dashboard-section,
+        .ip-dashboard-section * {
+            box-sizing: border-box;
+        }
+
+        .ip-dashboard-section {
+            position: relative;
+            overflow: hidden;
+            padding: 45px 4% 60px;
+            font-family: 'Sora', sans-serif;
+            color: #fff;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 95, 180, .33), transparent 35%), linear-gradient(135deg, #020715 0%, #041630 50%, #020714 100%);
+        }
+
+        body.light-mode .ip-dashboard-section {
+            color: #071428;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 140, 255, .15), transparent 35%), linear-gradient(135deg, #f7fbff 0%, #e8f2ff 50%, #fff 100%);
+        }
+
+        .ipdash-container {
+            max-width: 1680px;
+            margin: auto;
+        }
+
+        .ipdash-heading {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .ipdash-eyebrow {
+            color: #ffc334;
+            letter-spacing: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 22px;
+        }
+
+        .ipdash-heading h2 {
+            margin: 0;
+            font-size: clamp(42px, 6vw, 58px);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+            .ipdash-heading h2 span {
+                color: #ffc334;
+            }
+
+        .ipdash-line {
+            width: 140px;
+            height: 2px;
+            margin: 18px auto;
+            background: linear-gradient(90deg, transparent, #ffc334, transparent);
+        }
+
+        .ipdash-heading p {
+            font-size: clamp(12px, 2vw, 16px);
+            line-height: 1.45;
+            color: rgba(255,255,255,.86);
+        }
+
+        body.light-mode .ipdash-heading p {
+            color: #26364e;
+        }
+
+        .ipdash-board {
+            display: grid;
+            grid-template-columns: 270px 1fr;
+            border: 1px solid rgba(35, 140, 255, .45);
+            border-radius: 22px;
+            background: rgba(3, 18, 45, .72);
+            backdrop-filter: blur(16px);
+            overflow: hidden;
+        }
+
+        body.light-mode .ipdash-board {
+            background: rgba(255,255,255,.86);
+        }
+
+        .ipdash-sidebar {
+            padding: 30px 22px;
+            border-right: 1px solid rgba(35, 140, 255, .35);
+        }
+
+        .ipdash-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffc334;
+            margin-bottom: 30px;
+        }
+
+        .ipdash-logo-icon {
+            font-size: 54px;
+            line-height: 1;
+        }
+
+        .ipdash-logo strong {
+            display: block;
+            color: #fff;
+            font-size: 25px;
+            letter-spacing: 4px;
+        }
+
+        body.light-mode .ipdash-logo strong {
+            color: #071428;
+        }
+
+        .ipdash-logo span {
+            font-size: 13px;
+            letter-spacing: 5px;
+            font-weight: 600;
+        }
+
+        .ipdash-logo-icon svg {
+            width: 60px;
+            height: 60px;
+        }
+
+        .ipdash-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+            .ipdash-menu a {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                padding: 14px;
+                border-radius: 8px;
+                color: rgba(255,255,255,.9);
+                text-decoration: none;
+                font-size: 16px;
+            }
+
+        body.light-mode .ipdash-menu a {
+            color: #26364e;
+        }
+
+        .ipdash-menu a.active,
+        .ipdash-menu a:hover {
+            background: rgba(35, 140, 255, .15);
+            box-shadow: inset 0 0 0 1px rgba(35,140,255,.45);
+        }
+
+        .ip-dashboard-section svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .ipdash-menu svg {
+            width: 25px;
+            height: 25px;
+        }
+
+        .ipdash-priority {
+            margin-top: 16px;
+            border: 1px solid #38ef5f;
+            border-radius: 10px;
+            padding: 10px;
+            color: #fff;
+        }
+
+        body.light-mode .ipdash-priority {
+            color: #071428;
+        }
+
+        .ipdash-priority svg {
+            width: 52px;
+            height: 52px;
+            color: #38ef5f;
+        }
+
+        .ipdash-priority strong {
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .ipdash-priority p {
+            margin: 0;
+            color: rgba(255,255,255,.82);
+            line-height: 1.5;
+        }
+
+        body.light-mode .ipdash-priority p {
+            color: #26364e;
+        }
+
+        .ipdash-content {
+            padding: 34px;
+        }
+
+        .ipdash-stats {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .ipdash-stat,
+        .ipdash-panel {
+            border: 1px solid rgba(35, 140, 255, .42);
+            border-radius: 10px;
+            background: rgba(5, 25, 58, .68);
+            padding: 26px;
+        }
+
+        body.light-mode .ipdash-stat,
+        body.light-mode .ipdash-panel {
+            background: rgba(255,255,255,.82);
+        }
+
+
+        .framework {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+            .framework svg {
+                width: 24px;
+                height: 24px;
+            }
+
+        .green .framework svg {
+            color: #63ef5d;
+        }
+
+        .purple .framework svg {
+            color: #bd62ff;
+        }
+
+        .blue .framework svg {
+            color: #23a7ff;
+        }
+
+        .ipdash-stat {
+            min-height: 305px;
+            text-align: center;
+        }
+
+            .ipdash-stat h4 {
+                font-size: 13px;
+                margin: 0 0 22px;
+            }
+
+        .ipdash-circle {
+            width: 145px;
+            height: 145px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            border: 6px solid #63ef5d;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 0 25px rgba(99,239,93,.3);
+        }
+
+            /*.ipdash-circle {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            position: relative;
+            border: none;
+        }*/
+
+            /*.ipdash-circle::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                border: 5px solid rgba(255,255,255,.08);
+            }
+
+            .ipdash-circle::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                border: 5px solid currentColor;
+                border-left-color: transparent;
+                border-bottom-color: transparent;
+            }*/
+
+
+            .ipdash-circle strong {
+                font-size: 50px;
+                line-height: 1;
+            }
+
+            .ipdash-circle span {
+                font-size: 16px;
+                margin-top: -28px;
+            }
+
+            .ipdash-circle svg {
+                width: 58px;
+                height: 58px;
+            }
+
+        .ipdash-icon-large svg {
+            width: 110px;
+            height: 110px;
+            color: #63ef5d;
+        }
+
+        .ipdash-stat h3 {
+            margin: 0 0 12px;
+            font-size: 23px;
+        }
+
+        .ipdash-stat p {
+            margin: 0;
+            color: #4dff65;
+        }
+
+            .ipdash-stat p span {
+                color: rgba(255,255,255,.78);
+            }
+
+        body.light-mode .ipdash-stat p span {
+            color: #26364e;
+        }
+
+        .ipdash-stat.green h3 {
+            color: #4dff65;
+        }
+
+        .ipdash-stat.red h3 {
+            color: #ff5757;
+        }
+
+        .ipdash-stat.blue h3 {
+            color: #23a7ff;
+        }
+
+        .red-ring {
+            border-color: #ff5757;
+            box-shadow: 0 0 25px rgba(255,87,87,.3);
+            color: #ff5757;
+        }
+
+            .red-ring svg {
+                color: #ff5757;
+            }
+
+        .blue-ring {
+            border-color: #23a7ff;
+            box-shadow: 0 0 25px rgba(35,167,255,.3);
+            color: #23a7ff;
+        }
+
+        .ipdash-lower {
+            display: grid;
+            grid-template-columns: .9fr 1.25fr;
+            gap: 15px;
+            margin-top: 16px;
+        }
+
+        .ipdash-panel h3 {
+            margin: 0 0 28px;
+            font-size: 16px;
+        }
+
+        .ipdash-progress {
+            display: grid;
+            grid-template-columns: 105px 1fr 55px;
+            gap: 18px;
+            align-items: center;
+            margin: 24px 0;
+        }
+
+            .ipdash-progress div {
+                height: 6px;
+                border-radius: 30px;
+                background: rgba(255,255,255,.1);
+                overflow: hidden;
+            }
+
+            .ipdash-progress i {
+                display: block;
+                height: 100%;
+                border-radius: inherit;
+                background: currentColor;
+            }
+
+            .ipdash-progress.green {
+                color: #63ef5d;
+            }
+
+            .ipdash-progress.purple {
+                color: #bd62ff;
+            }
+
+            .ipdash-progress.blue {
+                color: #23a7ff;
+            }
+
+            .ipdash-progress span {
+                color: #fff;
+            }
+
+        body.light-mode .ipdash-progress span {
+            color: #071428;
+        }
+
+        .ipdash-panel a {
+            color: #23a7ff;
+            text-decoration: none;
+        }
+
+        .ipdash-chart-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .ipdash-chart-head button {
+                background: rgba(255,255,255,.04);
+                color: inherit;
+                border: 1px solid rgba(35,140,255,.35);
+                border-radius: 8px;
+                padding: 10px 16px;
+            }
+
+        .ipdash-chart svg {
+            width: 100%;
+            height: 250px;
+        }
+
+        .ipdash-chart line {
+            stroke: rgba(255,255,255,.14);
+            stroke-dasharray: 5;
+        }
+
+        body.light-mode .ipdash-chart line {
+            stroke: rgba(0,0,0,.14);
+        }
+
+        .ipdash-chart .area {
+            fill: url(#ipdashArea);
+            stroke: none;
+        }
+
+        .ipdash-chart .line {
+            fill: none;
+            stroke: #63ef5d;
+            stroke-width: 4;
+        }
+
+        .ipdash-chart circle {
+            fill: #89ff75;
+            stroke: #63ef5d;
+        }
+
+        .ipdash-months {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255,255,255,.82);
+        }
+
+        body.light-mode .ipdash-months {
+            color: #26364e;
+        }
+
+        .ipdash-reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: .85s ease;
+        }
+
+            .ipdash-reveal.ipdash-active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        @media (max-width: 1300px) {
+            .ipdash-board {
+                grid-template-columns: 1fr;
+            }
+
+            .ipdash-sidebar {
+                border-right: none;
+                border-bottom: 1px solid rgba(35, 140, 255, .35);
+            }
+
+            .ipdash-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ipdash-lower {
+                grid-template-columns: 1fr;
+            }
+
+            .ipdash-priority {
+                margin-top: 25px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .ip-dashboard-section {
+                padding: 45px 18px;
+            }
+
+            .ipdash-eyebrow {
+                font-size: 13px;
+                letter-spacing: 4px;
+            }
+
+            .ipdash-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .ipdash-content {
+                padding: 18px;
+            }
+
+            .ipdash-progress {
+                grid-template-columns: 85px 1fr 45px;
+                gap: 10px;
+            }
+        }
+
+        /*-- SECTION 6 IP DASHBOARD END----------------------------------------------------- -*/
+
+        /*-- SECTION 7 IP FAQS STARAT----------------------------------------------------*/
+        .ip-faq-section,
+        .ip-faq-section * {
+            box-sizing: border-box;
+        }
+
+        .ip-faq-section {
+            position: relative;
+            overflow: hidden;
+            padding: 28px 4% 50px;
+            font-family: 'Sora', sans-serif;
+            color: #fff;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 95, 180, .32), transparent 34%), linear-gradient(135deg, #020715 0%, #041630 50%, #020714 100%);
+        }
+
+        body.light-mode .ip-faq-section {
+            color: #071428;
+            background: radial-gradient(circle at 50% 0%, rgba(0, 140, 255, .15), transparent 34%), linear-gradient(135deg, #f7fbff 0%, #e8f2ff 50%, #fff 100%);
+        }
+
+        .ipfaq-container {
+            max-width: 1680px;
+            margin: 0 auto;
+        }
+
+        .ipfaq-heading {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .ipfaq-eyebrow {
+            color: #ffc334;
+            letter-spacing: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .ipfaq-heading h2 {
+            margin: 0;
+            font-size: clamp(40px, 5vw, 58px);
+            line-height: 1.05;
+            font-weight: 600;
+        }
+
+            .ipfaq-heading h2 span {
+                color: #ffc334;
+            }
+
+        .ipfaq-heading p {
+            margin: 18px auto 0;
+            font-size: clamp(16px, 2vw, 19px);
+            line-height: 1.45;
+            color: rgba(255,255,255,.86);
+        }
+
+        body.light-mode .ipfaq-heading p {
+            color: #26364e;
+        }
+
+        .ipfaq-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 32px;
+        }
+
+        .ipfaq-help-card,
+        .ipfaq-cta {
+            border: 1px solid rgba(35,140,255,.45);
+            background: rgba(3,18,45,.76);
+            backdrop-filter: blur(14px);
+            border-radius: 10px;
+        }
+
+        body.light-mode .ipfaq-help-card,
+        body.light-mode .ipfaq-cta {
+            background: rgba(255,255,255,.86);
+        }
+
+        .ipfaq-help-card {
+            padding: 30px 26px;
+            text-align: center;
+        }
+
+        .ipfaq-help-icon {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #57f263;
+            border: 2px dotted #57f263;
+            box-shadow: 0 0 35px rgba(87,242,99,.18);
+        }
+
+        .ip-faq-section svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .ipfaq-help-icon svg {
+            width: 84px;
+            height: 84px;
+            stroke-width: 1;
+        }
+
+        .ipfaq-help-card h3 {
+            margin: 0 0 14px;
+            font-size: 25px;
+        }
+
+        .ipfaq-help-card > p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.55;
+            color: rgba(255,255,255,.84);
+        }
+
+        body.light-mode .ipfaq-help-card > p {
+            color: #26364e;
+        }
+
+        .ipfaq-help-line {
+            height: 1px;
+            margin: 26px 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
+        }
+
+        .ipfaq-help-item {
+            display: flex;
+            gap: 16px;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+            .ipfaq-help-item svg {
+                width: 38px;
+                height: 38px;
+                min-width: 38px;
+            }
+
+            .ipfaq-help-item.green svg {
+                color: #57f263;
+            }
+
+            .ipfaq-help-item.purple svg {
+                color: #bd62ff;
+            }
+
+            .ipfaq-help-item.blue svg {
+                color: #23a7ff;
+            }
+
+            .ipfaq-help-item strong {
+                display: block;
+                font-size: 15px;
+                margin-bottom: 6px;
+            }
+
+            .ipfaq-help-item span {
+                display: block;
+                color: rgba(255,255,255,.72);
+                font-size: 13px;
+                line-height: 1.4;
+            }
+
+        body.light-mode .ipfaq-help-item span {
+            color: #26364e;
+        }
+
+        .ipfaq-help-btn {
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            border: 1px solid #ffc334;
+            color: #ffc334;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: 600;
+        }
+
+            .ipfaq-help-btn span,
+            .ipfaq-cta-buttons a span {
+                font-size: 28px;
+                line-height: 1;
+            }
+
+        .ipfaq-list-wrap {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .ipfaq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .ipfaq-item {
+            border: 1px solid rgba(110,160,210,.28);
+            background: rgba(8,29,63,.72);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        body.light-mode .ipfaq-item {
+            background: rgba(255,255,255,.85);
+        }
+
+        .ipfaq-item button {
+            width: 100%;
+            min-height: 46px;
+            padding: 0 18px;
+            background: transparent;
+            border: none;
+            color: inherit;
+            display: grid;
+            grid-template-columns: 45px 1fr 22px;
+            align-items: center;
+            gap: 12px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .ipfaq-item button span {
+                width: 31px;
+                height: 31px;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                color: #ffc334;
+                font-size: 13px;
+                font-weight: 600;
+                background: rgba(255,195,52,.12);
+                border: 1px solid rgba(255,195,52,.3);
+            }
+
+            .ipfaq-item button b {
+                font-size: 28px;
+                font-weight: 300;
+            }
+
+        .ipfaq-item p {
+            display: none;
+            margin: 0;
+            padding: 0 22px 16px 75px;
+            color: rgba(255,255,255,.75);
+            line-height: 1.5;
+        }
+
+        body.light-mode .ipfaq-item p {
+            color: #26364e;
+        }
+
+        .ipfaq-item.active p {
+            display: block;
+        }
+
+        .ipfaq-item.active button b {
+            transform: rotate(45deg);
+        }
+
+        .ipfaq-cta {
+            margin-top: 34px;
+            padding: 30px 42px;
+            display: grid;
+            grid-template-columns: 190px 1fr auto;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .ipfaq-cta-icon {
+            width: 120px;
+            height: 90px;
+            display: grid;
+            place-items: center;
+            color: #ffc334;
+            filter: drop-shadow(0 0 18px rgba(255,195,52,.35));
+        }
+
+            .ipfaq-cta-icon svg {
+                width: 88px;
+                height: 88px;
+            }
+
+        .ipfaq-cta h3 {
+            margin: 0 0 8px;
+            font-size: 20px;
+        }
+
+            .ipfaq-cta h3 span {
+                color: #ffc334;
+            }
+
+        .ipfaq-cta p {
+            margin: 0;
+            font-size: 14px;
+            color: rgba(255,255,255,.82);
+        }
+
+        body.light-mode .ipfaq-cta p {
+            color: #26364e;
+        }
+
+        .ipfaq-cta-buttons {
+            display: flex;
+            gap: 24px;
+        }
+
+            .ipfaq-cta-buttons a {
+                min-width: 245px;
+                min-height: 50px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 22px;
+                border-radius: 7px;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            .ipfaq-cta-buttons .gold {
+                background: linear-gradient(135deg, #ffd95a, #f4aa13);
+                color: #071428;
+            }
+
+            .ipfaq-cta-buttons .green {
+                border: 1px solid #45ef4f;
+                color: #45ef4f;
+            }
+
+        .ipfaq-reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: .85s ease;
+        }
+
+            .ipfaq-reveal.ipfaq-active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        @media (max-width: 1200px) {
+            .ipfaq-layout,
+            .ipfaq-list-wrap,
+            .ipfaq-cta {
+                grid-template-columns: 1fr;
+            }
+
+            .ipfaq-cta-buttons {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .ip-faq-section {
+                padding: 35px 18px;
+            }
+
+            .ipfaq-eyebrow {
+                font-size: 14px;
+                letter-spacing: 5px;
+            }
+
+            .ipfaq-item button {
+                grid-template-columns: 40px 1fr 20px;
+                font-size: 14px;
+                padding: 0 12px;
+            }
+
+            .ipfaq-item p {
+                padding: 0 16px 14px 65px;
+            }
+
+            .ipfaq-cta {
+                padding: 24px;
+            }
+
+            .ipfaq-cta-buttons a {
+                width: 100%;
+                min-width: auto;
+            }
+        }
+        /*-- SECTION 7 IP FAQS END----------------------------------------------------- -*/
+
+        /*-- SECTION 8 IP HERO START-----------------------------------------------------*/
+
+        .ip-hero-compliance-section,
+        .ip-hero-compliance-section * {
+            box-sizing: border-box;
+        }
+
+        .ip-hero-compliance-section {
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            padding: 50px 5% 45px;
+            font-family: 'Sora', sans-serif;
+            color: #fff;
+            background: #010F26; /*radial-gradient(circle at 72% 40%, rgba(0, 110, 220, .26), transparent 34%), radial-gradient(circle at 25% 20%, rgba(0, 95, 180, .24), transparent 30%), linear-gradient(135deg, #020715 0%, #041630 50%, #020714 100%);*/
+        }
+
+        body.light-mode .ip-hero-compliance-section {
+            color: #071428;
+            background: radial-gradient(circle at 72% 40%, rgba(0, 140, 255, .14), transparent 34%), linear-gradient(135deg, #f7fbff 0%, #e8f2ff 50%, #fff 100%);
+        }
+
+        .iphero-container {
+            max-width: 1760px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: .92fr 1.08fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        /*.iphero-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 58px;
+            color: #ffc334;
+        }
+
+        .iphero-logo-icon {
+            width: 90px;
+            height: 90px;
+            filter: drop-shadow(0 0 18px rgba(255,195,52,.45));
+        }
+
+            .iphero-logo-icon svg {
+                width: 100%;
+                height: 100%;
+            }*/
+
+        .ip-hero-compliance-section svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /*.iphero-logo strong {
+            display: block;
+            color: #fff;
+            font-size: 36px;
+            letter-spacing: 8px;
+            line-height: 1;
+        }
+
+        body.light-mode .iphero-logo strong {
+            color: #071428;
+        }*/
+
+        .iphero-logo span {
+            display: block;
+            color: #ffc334;
+            font-size: 19px;
+            font-weight: 600;
+            letter-spacing: 8px;
+            margin-top: 8px;
+        }
+
+        .iphero-content h1 {
+            margin: 0;
+            font-size: clamp(52px, 6vw, 62px);
+            line-height: .95;
+            font-weight: 700;
+        }
+
+            .iphero-content h1 span {
+                color: #ffc334;
+                text-shadow: 0 0 30px rgba(255,195,52,.25);
+            }
+
+        .iphero-desc {
+            max-width: 720px;
+            margin: 26px 0 34px;
+            font-size: clamp(16px, 2vw, 20px);
+            line-height: 1.45;
+            color: rgba(255,255,255,.88);
+        }
+
+        body.light-mode .iphero-desc {
+            color: #26364e;
+        }
+
+        .iphero-feature-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 38px;
+        }
+
+        .iphero-feature {
+            text-align: center;
+            padding: 0 32px;
+            border-right: 1px solid rgba(35,140,255,.35);
+        }
+
+            .iphero-feature:last-child {
+                border-right: none;
+            }
+
+        .iphero-feature-icon {
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            border: 1px solid currentColor;
+            box-shadow: 0 0 25px rgba(255,255,255,.09);
+        }
+
+            .iphero-feature-icon svg {
+                width: 54px;
+                height: 54px;
+            }
+
+        .iphero-feature h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+
+        .iphero-feature p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.45;
+            color: rgba(255,255,255,.88);
+        }
+
+        body.light-mode .iphero-feature p {
+            color: #26364e;
+        }
+
+        .iphero-feature.gold {
+            color: #ffc334;
+        }
+
+        .iphero-feature.green {
+            color: #72ef3f;
+        }
+
+        .iphero-feature.blue {
+            color: #23a7ff;
+        }
+
+        .iphero-buttons {
+            display: flex;
+            gap: 22px;
+            flex-wrap: nowrap;
+        }
+
+        .iphero-btn {
+            min-width: 320px;
+            min-height: 68px;
+            padding: 0 24px;
+            border-radius: 11px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: .35s ease;
+        }
+
+            .iphero-btn:hover {
+                transform: translateY(-5px);
+            }
+
+            .iphero-btn svg {
+                width: 36px;
+                height: 36px;
+            }
+
+            .iphero-btn span {
+                font-size: 36px;
+                line-height: 1;
+            }
+
+            .iphero-btn.scan {
+                color: #071428;
+                background: linear-gradient(135deg, #ffd85a, #f2a90f);
+                box-shadow: 0 18px 35px rgba(255,195,52,.24);
+                width: 350px;
+            }
+
+            .iphero-btn.expert {
+                color: #72ef3f;
+                border: 1px solid #72ef3f;
+                background: rgba(40, 180, 45, .12);
+            }
+
+        .iphero-visual {
+            position: relative;
+            min-height: 760px;
+        }
+
+        .iphero-orbit {
+            position: relative;
+            width: min(760px, 100%);
+            aspect-ratio: 1;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 1px solid rgba(35,140,255,.22);
+            display: grid;
+            place-items: center;
+        }
+
+            .iphero-orbit::before,
+            .iphero-orbit::after {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                pointer-events: none;
+            }
+
+            .iphero-orbit::before {
+                inset: 10%;
+                border: 1px solid rgba(35,140,255,.22);
+            }
+
+            .iphero-orbit::after {
+                inset: 20%;
+                background-image: radial-gradient(rgba(35,140,255,.45) 1px, transparent 1px);
+                background-size: 14px 14px;
+                opacity: .35;
+            }
+
+        .iphero-orbit-icon {
+            position: absolute;
+            width: 86px;
+            height: 86px;
+            border: 1px solid #23a7ff;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #bcdcff;
+            background: rgba(3,18,45,.76);
+            z-index: 4;
+        }
+
+            .iphero-orbit-icon svg {
+                width: 48px;
+                height: 48px;
+            }
+
+            .iphero-orbit-icon.top {
+                top: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .iphero-orbit-icon.left {
+                left: 3%;
+                top: 43%;
+            }
+
+            .iphero-orbit-icon.right {
+                right: 3%;
+                top: 43%;
+            }
+
+        .iphero-main-mark {
+            width: 540px;
+            height: 540px;
+            color: #ffc334;
+            position: relative;
+            z-index: 3;
+            filter: drop-shadow(0 0 30px rgba(255,195,52,.35));
+            animation: ipheroFloat 4s ease-in-out infinite;
+        }
+
+            .iphero-main-mark svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            .iphero-main-mark .outer {
+                stroke: #f5f5f5;
+                stroke-width: 8;
+            }
+
+            .iphero-main-mark .shield {
+                stroke: #ffc334;
+                stroke-width: 8;
+                fill: rgba(6,18,35,.9);
+            }
+
+            .iphero-main-mark .infinity {
+                stroke: #ffc334;
+                stroke-width: 14;
+            }
+
+        .iphero-platform {
+            position: absolute;
+            width: 600px;
+            height: 120px;
+            bottom: 70px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,195,52,.65);
+            box-shadow: 0 0 35px rgba(255,195,52,.35), inset 0 0 40px rgba(35,140,255,.18);
+        }
+
+        .iphero-tagline {
+            max-width: 600px;
+            margin: -15px auto 0;
+            padding: 20px 20px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            border: 1px solid #f2a90f;
+            border-radius: 12px;
+            background: rgba(3,18,45,.72);
+        }
+
+        body.light-mode .iphero-tagline {
+            background: rgba(255,255,255,.86);
+        }
+
+        .iphero-tag-icon {
+            width: 62px;
+            height: 62px;
+            min-width: 62px;
+            color: #f2a90f;
+        }
+
+        .iphero-tagline h3 {
+            margin: 0 0 7px;
+            color: #ffc334;
+            letter-spacing: 5px;
+            font-size: 18px;
+        }
+
+        .iphero-tagline p {
+            margin: 0;
+            font-size: 16px;
+            color: rgba(255,255,255,.88);
+        }
+
+        body.light-mode .iphero-tagline p {
+            color: #26364e;
+        }
+
+        .iphero-reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: .85s ease;
+        }
+
+            .iphero-reveal.iphero-active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        @keyframes ipheroFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-16px);
+            }
+        }
+
+        @media (max-width: 1350px) {
+            .iphero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .iphero-visual {
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .ip-hero-compliance-section {
+                padding: 40px 18px;
+            }
+
+            /*.iphero-logo {
+                margin-bottom: 35px;
+            }
+
+                .iphero-logo strong {
+                    font-size: 26px;
+                }*/
+
+            .iphero-logo span {
+                font-size: 14px;
+            }
+
+            .iphero-feature-row {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .iphero-feature {
+                border-right: none;
+                border-bottom: 1px solid rgba(35,140,255,.25);
+                padding-bottom: 24px;
+            }
+
+                .iphero-feature:last-child {
+                    border-bottom: none;
+                }
+
+            .iphero-btn {
+                width: 100%;
+                min-width: auto;
+                font-size: 18px;
+                min-height: 72px;
+            }
+
+            .iphero-main-mark {
+                width: 320px;
+                height: 320px;
+            }
+
+            .iphero-platform {
+                width: 340px;
+                height: 70px;
+                bottom: 45px;
+            }
+
+            .iphero-orbit-icon {
+                width: 62px;
+                height: 62px;
+            }
+
+                .iphero-orbit-icon svg {
+                    width: 34px;
+                    height: 34px;
+                }
+
+            .iphero-tagline {
+                flex-direction: column;
+                text-align: center;
+            }
+
+                .iphero-tagline h3 {
+                    letter-spacing: 4px;
+                    font-size: 18px;
+                }
+        }
+        /*-- SECTION 8 IP HERO END----------------------------------------------------- -*/
+
+    </style>
 </head>
-
 <body>
+
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -126,380 +3842,1187 @@
         </div>
     </nav>
 
-    <!-- ══════════════════════════════════════
-         HERO
-    ══════════════════════════════════════ -->
-    <section class="comp-hero">
-        <div class="hero-glow hero-glow-1"></div>
-        <div class="hero-glow hero-glow-2"></div>
+
+    <section class="compliance-section" id="complianceSection">
+
+
         <div class="compliance-container">
-            <div class="hero-inner">
+            <div class="compliance-content">
+                <div class="eyebrow">COMPLIANCE TESTING</div>
 
-                <!-- Left -->
-                <div class="hero-left">
-                    <p class="hero-eyebrow reveal">Compliance</p>
-                    <h1 class="reveal rd1">Effortless Security and Compliance for Modern Businesses</h1>
-                    <p class="hero-desc reveal rd2">We help businesses establish trust by building practical security controls and demonstrating compliance through streamlined, effective processes.</p>
+                <h1>
+                    Compliance <br>
+                    <span>Made Simple</span>
+                </h1>
 
-                    <div class="comp-badges reveal rd3">
-                        <span class="comp-badge">ISO 27001</span>
-                        <span class="comp-badge">PCI DSS</span>
-                        <span class="comp-badge">HIPAA</span>
-                        <span class="comp-badge">TX-RAMP</span>
-                        <span class="comp-badge">GDPR</span>
-                        <span class="comp-badge">CIPA</span>
-                        <span class="comp-badge">FTC</span>
+                <p class="lead">
+                    Different businesses have different compliance requirements.
+                </p>
+
+                <p class="desc">
+                    <strong>Infinite Protection</strong> helps you identify, test,
+                    and support the frameworks your business needs through one unified
+                    cybersecurity platform.
+                </p>
+
+                <div class="standard-grid">
+                    <div class="standard-card green">
+                        <svg>
+                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                            <path d="M3 10h18M7 15h4M15 15h2"></path>
+                        </svg>
+                        <div>
+                            <h4>PCI DSS</h4>
+                            <p>Compliant</p>
+                        </div>
                     </div>
 
-                    <div class="hero-btns reveal rd4">
-                        <button class="btn-primary">Get A Quote</button>
-                        <button class="btn-outline">See How We Work</button>
+                    <div class="standard-card purple">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3v18M8 7c2 2 6 2 8 0M7 12h10"></path>
+                            <path d="M6 5l6 4 6-4"></path>
+                        </svg>
+                        <div>
+                            <h4>HIPAA</h4>
+                            <p>Compliant</p>
+                        </div>
+                    </div>
+
+                    <div class="standard-card blue">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"></path>
+                            <path d="M9 12l2 2 4-5"></path>
+                        </svg>
+                        <div>
+                            <h4>SOC 2</h4>
+                            <p>Type II</p>
+                        </div>
+                    </div>
+
+                    <div class="standard-card violet">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path>
+                        </svg>
+                        <div>
+                            <h4>ISO 27001</h4>
+                            <p>Certified</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Right visual -->
-                <div class="hero-visual reveal rd3">
-                    <div class="hero-shield-wrap">
-                        <div class="shield-ring"></div>
-                        <div class="shield-ring"></div>
-                        <div class="shield-ring"></div>
-                        <div class="shield-center">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-                                <path d="m9 12 2 2 4-4" />
+                <div class="button-row">
+                    <a href="#" class="btn-compliance btn-gold">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"></path>
+                            <path d="M9 12l2 2 4-5"></path>
+                        </svg>
+                        Get a Free Compliance Scan
+                        <span>›</span>
+                    </a>
+
+                    <a href="#" class="btn-compliance btn-green">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="4"></circle>
+                            <path d="M4 21c1.5-4 14.5-4 16 0"></path>
+                        </svg>
+                        Talk to an Expert
+                        <span>›</span>
+                    </a>
+                </div>
+            </div>
+            <img src="assets/images/compliance/sec1-main-01.png" alt="" />
+        </div>
+
+        <div class="bottom-bar">
+            <div class="bottom-item">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"></path>
+                    <path d="M9 12l2 2 4-5"></path>
+                </svg>
+                <div>
+                    <h4>Identify Requirements</h4>
+                    <p>Understand which compliance frameworks apply to your business.</p>
+                </div>
+            </div>
+
+            <div class="bottom-item">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="10" cy="10" r="7"></circle>
+                    <path d="M15 15l6 6"></path>
+                </svg>
+                <div>
+                    <h4>Test & Validate</h4>
+                    <p>Continuously test, monitor, and validate your security posture.</p>
+                </div>
+            </div>
+
+            <div class="bottom-item">
+                <svg viewBox="0 0 24 24">
+                    <rect x="5" y="4" width="14" height="17" rx="2"></rect>
+                    <path d="M9 12l2 2 4-5"></path>
+                    <path d="M9 4V2h6v2"></path>
+                </svg>
+                <div>
+                    <h4>Meet Standards</h4>
+                    <p>Align with industry and regulatory standards with confidence.</p>
+                </div>
+            </div>
+
+            <div class="bottom-item">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 20h16"></path>
+                    <path d="M6 20V12h3v8"></path>
+                    <path d="M11 20V8h3v12"></path>
+                    <path d="M16 20V4h3v16"></path>
+                </svg>
+                <div>
+                    <h4>Stay Audit Ready</h4>
+                    <p>Maintain documentation and evidence for audits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 ---------------------THREE LAYERS PLATFORM SECTION START ---------------------->
+    <section class="three-layer-platform-section" id="threeLayerPlatform">
+        <div class="tlp-container">
+
+            <div class="tlp-heading tlp-reveal">
+                <div class="tlp-eyebrow">THREE LAYERS. ONE PLATFORM.</div>
+                <h2>Complete Protection for <span>Modern Businesses</span></h2>
+                <p>
+                    Infinite Protection combines three essential layers of cybersecurity
+                    to protect your business, reduce risk, and support compliance.
+                </p>
+            </div>
+
+            <div class="tlp-main-grid tlp-reveal">
+
+                <!-- Endpoint Protection -->
+                <div class="tlp-card tlp-blue">
+                    <div class="tlp-icon-circle">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path>
+                            <path d="M9 12L11 14L15.5 9.5"></path>
+                        </svg>
+                    </div>
+
+                    <div class="tlp-number">1</div>
+                    <h3>Endpoint Protection</h3>
+                    <h4>Powered by SaferNet</h4>
+
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 3L20 7V12C20 17 16.5 20 12 22C7.5 20 4 17 4 12V7L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>
+                            Real-time threat blocking
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="2"></rect><path d="M8 20H16M12 16V20M8 10L10 12L14 8"></path></svg>
+                            Device control
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21C5.5 16.5 18.5 16.5 20 21"></path></svg>
+                            User access protection
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M2 9C7.5 4.5 16.5 4.5 22 9"></path><path d="M5 13C9 10 15 10 19 13"></path><path d="M8.5 17C10.5 15.5 13.5 15.5 15.5 17"></path><circle cx="12" cy="20" r="1"></circle></svg>
+                            Secure remote work
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tlp-symbol">+</div>
+
+                <!-- Vulnerability Discovery -->
+                <div class="tlp-card tlp-green">
+                    <div class="tlp-icon-circle">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="8"></circle>
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 2V22M2 12H22"></path>
+                        </svg>
+                    </div>
+
+                    <div class="tlp-number">2</div>
+                    <h3>Vulnerability Discovery &<br>Penetration Testing</h3>
+                    <h4>Powered by ZED</h4>
+
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12H21M12 3C15 6 15 18 12 21M12 3C9 6 9 18 12 21"></path></svg>
+                            External scanning
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="6" rx="1"></rect><rect x="4" y="15" width="16" height="4" rx="1"></rect><circle cx="8" cy="8" r="1"></circle><circle cx="8" cy="17" r="1"></circle></svg>
+                            Internal scanning
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 8H21M8 21H16M12 18V21"></path></svg>
+                            Web testing
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"></circle><circle cx="5" cy="19" r="3"></circle><circle cx="19" cy="19" r="3"></circle><path d="M12 8V13M12 13L5 16M12 13L19 16"></path></svg>
+                            Network testing
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tlp-symbol">+</div>
+
+                <!-- Compliance Testing -->
+                <div class="tlp-card tlp-purple">
+                    <div class="tlp-icon-circle">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="6" y="5" width="12" height="16" rx="2"></rect>
+                            <path d="M9 5V3H15V5"></path>
+                            <path d="M9 14L11 16L15 11"></path>
+                        </svg>
+                    </div>
+
+                    <div class="tlp-number">3</div>
+                    <h3>Compliance Testing</h3>
+                    <h4>Meet Industry Requirements</h4>
+
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10H21M7 15H11M15 15H17"></path></svg>
+                            PCI DSS
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 3V21M8 7C10 9 14 9 16 7M7 12H17M6 5L12 9L18 5"></path></svg>
+                            HIPAA
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>
+                            SOC 2
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12H21M12 3C15 6 15 18 12 21M12 3C9 6 9 18 12 21"></path></svg>
+                            ISO 27001
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tlp-symbol">=</div>
+
+                <!-- Infinite Protection -->
+                <div class="tlp-result-card">
+                    <div class="tlp-shield-logo">
+                        <svg viewBox="0 0 120 120">
+                            <path d="M60 8L100 25V60C100 87 83 105 60 114C37 105 20 87 20 60V25L60 8Z"></path>
+                            <path d="M34 62C43 42 56 42 60 60C64 78 77 78 86 58"></path>
+                            <path d="M34 62C43 82 56 82 60 64C64 46 77 46 86 66"></path>
+                        </svg>
+                    </div>
+
+                    <h3>INFINITE</h3>
+                    <h4>PROTECTION</h4>
+
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 3L20 7V12C20 17 16.5 20 12 22C7.5 20 4 17 4 12V7L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>
+                            One Platform
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><circle cx="6" cy="17" r="3"></circle><circle cx="18" cy="17" r="3"></circle><circle cx="12" cy="7" r="3"></circle><path d="M9 9L7 14M15 9L17 14M9 17H15"></path></svg>
+                            All Three Layers
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10"></path></svg>
+                            Complete Peace of Mind
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tlp-bottom-bar tlp-reveal">
+                <div class="tlp-bottom-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 3L20 7V12C20 17 16.5 20 12 22C7.5 20 4 17 4 12V7L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>
+                    <div>
+                        <strong>Stronger Security</strong>
+                        <span>Protect every layer of your business.</span>
+                    </div>
+                </div>
+
+                <div class="tlp-bottom-item">
+                    <svg viewBox="0 0 24 24"><path d="M4 19V13H8V19"></path><path d="M10 19V9H14V19"></path><path d="M16 19V5H20V19"></path><path d="M4 19H21"></path></svg>
+                    <div>
+                        <strong>Reduce Risk</strong>
+                        <span>Identify and fix weaknesses before attackers exploit them.</span>
+                    </div>
+                </div>
+
+                <div class="tlp-bottom-item">
+                    <svg viewBox="0 0 24 24"><rect x="6" y="5" width="12" height="16" rx="2"></rect><path d="M9 5V3H15V5"></path><path d="M9 14L11 16L15 11"></path></svg>
+                    <div>
+                        <strong>Meet Compliance</strong>
+                        <span>Stay aligned with industry and regulatory requirements.</span>
+                    </div>
+                </div>
+
+                <div class="tlp-bottom-item">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15A8 8 0 0 0 20 12L22 10L20 6L17.5 6.5A8 8 0 0 0 15 5L14 2H10L9 5A8 8 0 0 0 6.5 6.5L4 6L2 10L4 12A8 8 0 0 0 4.6 15L3 18L6 21L9 19.5A8 8 0 0 0 15 19.5L18 21L21 18L19.4 15Z"></path></svg>
+                    <div>
+                        <strong>Work Smarter</strong>
+                        <span>One platform. Less complexity. Better results.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- SECTION 2 -------------------------------------THREE LAYERS PLATFORM SECTION END -->
+    <!-- SECTION 3 IP FRAMEWORKS START--------------------------------------------------- -->
+    <section class="ip-frameworks-section" id="ipFrameworks">
+        <div class="ipfw-wrap">
+
+            <div class="ipfw-top-icon">
+                <span></span>
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path>
+                    <path d="M9 12L11 14L15 10"></path>
+                </svg>
+                <span></span>
+            </div>
+
+            <div class="ipfw-heading ipfw-reveal">
+                <h2>Compliance <span>Frameworks</span> We Support</h2>
+                <p>
+                    We help businesses meet industry standards and regulatory requirements
+                    with confidence through comprehensive testing and continuous monitoring.
+                </p>
+            </div>
+
+            <div class="ipfw-grid ipfw-reveal">
+
+                <div class="ipfw-card ipfw-green">
+                    <img src="assets/images/compliance/sec3-card01-01.png" alt="" />
+
+                    <h3>PCI DSS</h3>
+                    <div class="ipfw-line"></div>
+                    <p>For businesses<br>accepting credit cards.</p>
+                    <div class="ipfw-badge">
+                        <svg viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>
+                        PCI DSS Compliant
+                    </div>
+                </div>
+
+                <div class="ipfw-card ipfw-purple">
+                    <img src="assets/images/compliance/sec3-card02-01.png" alt="" />
+                    <h3>HIPAA</h3>
+                    <div class="ipfw-line"></div>
+                    <p>For healthcare<br>organizations.</p>
+                    <div class="ipfw-badge">
+                        <svg viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>
+                        HIPAA Compliant
+                    </div>
+                </div>
+
+                <div class="ipfw-card ipfw-blue">
+                    <img src="assets/images/compliance/sec3-card03-01.png" alt="" />
+                    <h3>SOC 2</h3>
+                    <div class="ipfw-line"></div>
+                    <p>For companies<br>handling customer data.</p>
+                    <div class="ipfw-badge">
+                        <svg viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>
+                        SOC 2 Type II
+                    </div>
+                </div>
+
+                <div class="ipfw-card ipfw-violet">
+                    <img src="assets/images/compliance/sec3-card04-01.png" alt="" />
+                    <h3>ISO 27001</h3>
+                    <div class="ipfw-line"></div>
+                    <p>For advanced security<br>governance.</p>
+                    <div class="ipfw-badge">
+                        <svg viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>
+                        ISO 27001 Certified
+                    </div>
+                </div>
+
+                <div class="ipfw-card ipfw-gold">
+                    <img src="assets/images/compliance/sec3-card05-01.png" alt="" />
+                    <h4></h4>>More Frameworks<br><span>Coming Soon</span></h4>
+                    <div class="ipfw-line"></div>
+                    <p>We continue to expand<br>our supported compliance<br>frameworks.</p>
+                    <div class="ipfw-badge">
+                        <svg viewBox="0 0 24 24"><path d="M5 19C8 10 13 5 21 3C19 11 14 16 5 19Z"></path><path d="M5 19L3 21M9 15L5 15M9 15V19"></path></svg>
+                        Always Expanding
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ipfw-bottom ipfw-reveal">
+                <div><svg viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path></svg>Industry Recognized Standards</div>
+                <div><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"></rect><path d="M9 12L11 14L15 10"></path></svg>Continuous Testing & Validation</div>
+                <div><svg viewBox="0 0 24 24"><path d="M4 20V12H8V20M10 20V8H14V20M16 20V5H20V20"></path></svg>Audit Ready Documentation</div>
+                <div><svg viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>Stay Compliant. Stay Protected.</div>
+            </div>
+
+        </div>
+    </section>
+    <!-- SECTION 3 IP FRAMEWORKS END--------------------------------------------------- -->
+    <!-- SECTION 4 IP INDUSTRY START--------------------------------------------------- -->
+
+    <section class="ip-industry-section" id="ipIndustrySection">
+        <div class="ipind-container">
+
+            <div class="ipind-heading ipind-reveal">
+                <div class="ipind-eyebrow">BUILT FOR EVERY INDUSTRY</div>
+                <h2>
+                    Different Businesses.<br>
+                    Different Requirements.<br>
+                    <span>We Make It Simple.</span>
+                </h2>
+                <p>
+                    Every industry faces unique compliance challenges.<br>
+                    Infinite Protection helps you meet the right requirements with confidence.
+                </p>
+            </div>
+
+            <div class="ipind-grid ipind-reveal">
+
+                <!-- Healthcare -->
+                <div class="ipind-card ipind-blue">
+                    <img src="assets/images/compliance/sec4-card01-01.png" alt="" />
+                    <h3>Healthcare</h3>
+                    <p>Protect patient data and<br>meet healthcare regulations.</p>
+
+                    <div class="ipind-badge ipind-purple-badge">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3V21"></path>
+                            <path d="M8 6C10 8 14 8 16 6"></path>
+                            <path d="M7 11H17"></path>
+                            <path d="M6 5L12 9L18 5"></path>
+                        </svg>
+                        <strong>HIPAA</strong>
+                        <span>Compliance</span>
+                    </div>
+
+                    <a href="#">Learn More <span>›</span></a>
+                </div>
+
+                <!-- Retail -->
+                <div class="ipind-card ipind-green">
+                    <img src="assets/images/compliance/sec4-card02-01.png" alt="" />
+                    <h3>Retail & Ecommerce</h3>
+                    <p>Secure payment data and<br>build customer trust.</p>
+
+                    <div class="ipind-badge ipind-green-badge">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                            <path d="M3 10H21M7 15H11M15 15H17"></path>
+                        </svg>
+                        <strong>PCI DSS</strong>
+                        <span>Compliance</span>
+                    </div>
+
+                    <a href="#">Learn More <span>›</span></a>
+                </div>
+
+                <!-- Technology -->
+                <div class="ipind-card ipind-blue">
+                    <img src="assets/images/compliance/sec4-card03-01.png" alt="" />
+                    <h3>Technology Companies</h3>
+                    <p>Protect customer data and<br>meet industry standards.</p>
+
+                    <div class="ipind-badge-row">
+                        <div class="ipind-small-badge">
+                            <svg viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>
+                            <span><strong>SOC 2</strong><br>Type II</span>
+                        </div>
+                        <div class="ipind-small-badge">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12H21M12 3C15 6 15 18 12 21M12 3C9 6 9 18 12 21"></path></svg>
+                            <span><strong>ISO 27001</strong><br>Certified</span>
+                        </div>
+                    </div>
+
+                    <a href="#">Learn More <span>›</span></a>
+                </div>
+
+                <!-- Financial -->
+                <div class="ipind-card ipind-gold">
+                    <img src="assets/images/compliance/sec4-card04-01.png" alt="" />
+                    <h3>Financial Services</h3>
+                    <p>Meet advanced regulatory<br>requirements and protect<br>sensitive data.</p>
+
+                    <div class="ipind-badge ipind-gold-badge">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path>
+                            <rect x="9" y="12" width="6" height="5" rx="1"></rect>
+                            <path d="M10 12V10C10 8.8 10.8 8 12 8C13.2 8 14 8.8 14 10V12"></path>
+                        </svg>
+                        <strong>Advanced</strong>
+                        <span>Regulatory Requirements</span>
+                    </div>
+
+                    <a href="#">Learn More <span>›</span></a>
+                </div>
+
+                <!-- Professional -->
+                <div class="ipind-card ipind-purple">
+                    <img src="assets/images/compliance/sec4-card05-01.png" alt="" />
+                    <h3>Professional Services</h3>
+                    <p>Meet client requirements<br>with confidence.</p>
+
+                    <div class="ipind-badge ipind-purple-badge">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="9" cy="8" r="3"></circle>
+                            <circle cx="17" cy="10" r="3"></circle>
+                            <path d="M3 21C4 17 14 17 15 21"></path>
+                            <path d="M13 21C14 18 21 18 22 21"></path>
+                        </svg>
+                        <strong>Varies by Client</strong>
+                        <span>Requirements</span>
+                    </div>
+
+                    <a href="#">Learn More <span>›</span></a>
+                </div>
+
+            </div>
+
+            <div class="ipind-bottom ipind-reveal">
+                <div class="ipind-bottom-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path>
+                        <path d="M12 8V16M8 12H16"></path>
+                    </svg>
+                    <div>
+                        <strong>Industry Specific</strong>
+                        <span>Solutions built for your industry's unique needs.</span>
+                    </div>
+                </div>
+
+                <div class="ipind-bottom-item">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8"></circle>
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 2V22M2 12H22"></path>
+                    </svg>
+                    <div>
+                        <strong>Right Compliance</strong>
+                        <span>We help you focus on the frameworks that matter.</span>
+                    </div>
+                </div>
+
+                <div class="ipind-bottom-item">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M12 7V12L16 15"></path>
+                    </svg>
+                    <div>
+                        <strong>Save Time</strong>
+                        <span>Simplify compliance and reduce the burden on your team.</span>
+                    </div>
+                </div>
+
+                <div class="ipind-bottom-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path>
+                        <path d="M9 12L11 14L15 10"></path>
+                    </svg>
+                    <div>
+                        <strong>Reduce Risk</strong>
+                        <span>Strengthen security and stay ahead of evolving threats.</span>
+                    </div>
+                </div>
+
+                <div class="ipind-bottom-item">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="9" cy="8" r="3"></circle>
+                        <circle cx="17" cy="10" r="3"></circle>
+                        <path d="M3 21C4 17 14 17 15 21"></path>
+                        <path d="M13 21C14 18 21 18 22 21"></path>
+                    </svg>
+                    <div>
+                        <strong>Build Trust</strong>
+                        <span>Demonstrate security maturity to clients and partners.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- SECTION 4 IP INDUSTRY END----------------------------------------------------- -->
+    <!-- SECTION 5 IP BENEFIT START----------------------------------------------------- -->
+
+    <section class="ip-benefits-section" id="ipBenefitsSection">
+        <div class="ipben-container">
+
+            <div class="ipben-heading ipben-reveal">
+                <div class="ipben-eyebrow">WHY BUSINESSES CHOOSE INFINITE PROTECTION</div>
+                <h2>Simpler. Stronger. <span>Unified.</span></h2>
+                <div class="ipben-heading-line"></div>
+                <p>
+                    Infinite Protection brings everything your business needs<br>
+                    into one intelligent, integrated cybersecurity platform.
+                </p>
+            </div>
+
+            <div class="ipben-grid ipben-reveal">
+
+                <div class="ipben-card ipben-blue">
+                    <img src="assets/images/compliance/sec5-card01-01.png" alt="" />
+                    <h3>Unified Platform</h3>
+                    <div class="ipben-line"></div>
+                    <p>One place for protection,<br>testing, and compliance.</p>
+                </div>
+
+                <div class="ipben-card ipben-green">
+                    <img src="assets/images/compliance/sec5-card02-01.png" alt="" />
+
+                    <h3>Reduce Risk</h3>
+                    <div class="ipben-line"></div>
+                    <p>Identify weaknesses<br>before attackers do.</p>
+                </div>
+
+                <div class="ipben-card ipben-purple">
+                    <img src="assets/images/compliance/sec5-card03-01.png" alt="" />
+                    <h3>Audit Ready</h3>
+                    <div class="ipben-line"></div>
+                    <p>Maintain documentation<br>and testing.</p>
+                </div>
+
+                <div class="ipben-card ipben-blue">
+                    <img src="assets/images/compliance/sec5-card04-01.png" alt="" />
+                    <h3>Save Time</h3>
+                    <div class="ipben-line"></div>
+                    <p>Reduce vendor<br>complexity.</p>
+                </div>
+
+                <div class="ipben-card ipben-gold">
+                    <img src="assets/images/compliance/sec5-card05-01.png" alt="" />
+                    <h3>Build Trust</h3>
+                    <div class="ipben-line"></div>
+                    <p>Demonstrate<br>security maturity.</p>
+                </div>
+
+            </div>
+
+            <div class="ipben-bottom ipben-reveal">
+                <div class="ipben-bottom-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3L20 7V12C20 17 16.5 20 12 22C7.5 20 4 17 4 12V7L12 3Z"></path>
+                        <path d="M9 12L11 14L15 10"></path>
+                    </svg>
+                    <div>
+                        <strong>Stronger Security Posture</strong>
+                        <span>Comprehensive protection across every layer.</span>
+                    </div>
+                </div>
+
+                <div class="ipben-bottom-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 19V13H8V19"></path>
+                        <path d="M10 19V9H14V19"></path>
+                        <path d="M16 19V5H20V19"></path>
+                        <path d="M4 19H21"></path>
+                        <path d="M16 5L20 5L20 9"></path>
+                    </svg>
+                    <div>
+                        <strong>Lower Risk Exposure</strong>
+                        <span>Proactive testing and monitoring stop threats early.</span>
+                    </div>
+                </div>
+
+                <div class="ipben-bottom-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6 3H15L20 8V21H6Z"></path>
+                        <path d="M15 3V8H20"></path>
+                        <path d="M9 14L11 16L15 11"></path>
+                    </svg>
+                    <div>
+                        <strong>Stay Compliant</strong>
+                        <span>Meet requirements and pass audits with confidence.</span>
+                    </div>
+                </div>
+
+                <div class="ipben-bottom-item">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8"></circle>
+                        <path d="M12 7V17"></path>
+                        <path d="M15 9C14 8 10 8 10 10C10 13 15 11 15 14C15 16 11 16 9 15"></path>
+                        <path d="M18 18L21 21M21 21V17M21 21H17"></path>
+                    </svg>
+                    <div>
+                        <strong>Better Efficiency</strong>
+                        <span>Consolidate tools and save valuable time.</span>
+                    </div>
+                </div>
+
+                <div class="ipben-bottom-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8 12L11 15C12 16 13.5 16 14.5 15L21 9"></path>
+                        <path d="M3 12L8 7L12 11"></path>
+                        <path d="M14 11L17 8L21 12"></path>
+                        <path d="M6 14L9 17M10 16L12 18"></path>
+                    </svg>
+                    <div>
+                        <strong>Stronger Reputation</strong>
+                        <span>Earn trust with customers, partners, and regulators.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5 IP BENEFIT END----------------------------------------------------- -->
+    <!-- SECTION 5 IP DASHBOARD START----------------------------------------------------- -->
+    <section class="ip-dashboard-section" id="ipDashboardSection">
+        <div class="ipdash-container">
+
+            <div class="ipdash-heading ipdash-reveal">
+                <div class="ipdash-eyebrow">COMPLIANCE READINESS DASHBOARD</div>
+                <h2>Know Where <span>You Stand</span></h2>
+                <div class="ipdash-line"></div>
+                <p>
+                    Real-time visibility into your security posture and compliance readiness<br>
+                    so you can take action with confidence.
+                </p>
+            </div>
+
+            <div class="ipdash-board ipdash-reveal">
+
+                <aside class="ipdash-sidebar">
+                    <div class="ipdash-logo">
+                        <!--<div class="ipdash-logo-icon">∞</div>-->
+                        <div class="ipdash-logo-icon">
+                            <svg viewBox="0 0 120 120">
+                                <path d="M60 15
+                 L95 30
+                 V58
+                 C95 84 78 101 60 110
+                 C42 101 25 84 25 58
+                 V30 Z"
+                                      stroke="#FFC334"
+                                      stroke-width="3"
+                                      fill="none" />
+
+                                <path d="M34 60
+                 C34 48 44 42 52 42
+                 C60 42 66 48 72 60
+                 C78 72 84 78 92 78
+                 C100 78 106 72 106 62
+                 C106 52 99 46 90 46
+                 C81 46 74 52 68 60
+                 C62 68 56 78 48 78
+                 C40 78 34 72 34 60Z"
+                                      stroke="#FFC334"
+                                      stroke-width="4"
+                                      fill="none"
+                                      stroke-linecap="round" />
                             </svg>
                         </div>
-                        <div class="shield-dot"></div>
-                        <div class="shield-dot"></div>
-                        <div class="shield-dot"></div>
-                        <div class="shield-dot"></div>
+                        <div>
+                            <strong>INFINITE</strong>
+                            <span>PROTECTION</span>
+                        </div>
                     </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
+                    <nav class="ipdash-menu">
+                        <a class="active" href="#"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"></rect><rect x="14" y="4" width="6" height="6"></rect><rect x="4" y="14" width="6" height="6"></rect><rect x="14" y="14" width="6" height="6"></rect></svg>Dashboard</a>
+                        <a href="#"><svg viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path><path d="M9 12L11 14L15 10"></path></svg>Compliance</a>
+                        <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle><path d="M12 2V5M12 19V22M2 12H5M19 12H22"></path></svg>Scan Results</a>
+                        <a href="#"><svg viewBox="0 0 24 24"><path d="M12 4L21 20H3Z"></path><path d="M12 9V13M12 17H12.01"></path></svg>Findings</a>
+                        <a href="#"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="2"></rect><path d="M8 21H16M12 17V21"></path></svg>Assets</a>
+                        <a href="#"><svg viewBox="0 0 24 24"><path d="M6 3H15L20 8V21H6Z"></path><path d="M15 3V8H20"></path><path d="M9 13H15M9 17H13"></path></svg>Reports</a>
+                        <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19 15A8 8 0 0 0 20 12L22 10L20 6L17.5 6.5A8 8 0 0 0 15 5L14 2H10L9 5A8 8 0 0 0 6.5 6.5L4 6L2 10L4 12A8 8 0 0 0 5 15L3 18L6 21L9 19.5A8 8 0 0 0 15 19.5L18 21L21 18Z"></path></svg>Settings</a>
+                    </nav>
 
-    <!-- ══════════════════════════════════════
-         COMPLIANCE JOURNEY — 3 STEPS
-    ══════════════════════════════════════ -->
-    <section class="journey-section">
-        <div class="compliance-container">
-            <div class="journey-header">
-                <h2 class="reveal">Your journey to business security starts here</h2>
-                <p class="reveal rd1">A straightforward, three-step process that takes you from vulnerable to compliant — with expert guidance at every stage.</p>
-            </div>
-            <div class="journey-steps">
-                <div class="journey-step reveal rd1">
-                    <div class="step-number">1</div>
-                    <h3>Initial Consultation</h3>
-                    <p>We kick things off with an in-depth consultation to explore your infrastructure, pinpoint security challenges, and align with your compliance goals.</p>
-                </div>
-                <div class="journey-step reveal rd2">
-                    <div class="step-number">2</div>
-                    <h3>Tailored Security Plan</h3>
-                    <p>We design a customized security plan perfectly scaled to your organization's size and current stage of growth — no cookie-cutter solutions.</p>
-                </div>
-                <div class="journey-step reveal rd3">
-                    <div class="step-number">3</div>
-                    <h3>Penetration Test</h3>
-                    <p>Our expert testers carry out your penetration test with precision and professionalism, delivering insights only top-tier specialists can provide.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-         TOOLS GRID
-    ══════════════════════════════════════ -->
-    <section class="tools-section">
-        <div class="compliance-container">
-            <div class="tools-header">
-                <h2 class="reveal">Tools for every business</h2>
-                <p class="reveal rd1">Infinite Protection  equips you with all the essentials to stay secure and achieve compliance, all in one central hub — streamlined and stress-free.</p>
-            </div>
-
-            <div class="tools-grid">
-
-                <div class="tool-card reveal rd1">
-                    <div class="tool-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
+                    <div class="ipdash-priority">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path>
+                            <path d="M9 12L11 14L15 10"></path>
+                        </svg>
+                        <strong>Your security.<br>Your compliance.<br>Our priority.</strong>
+                        <p>We help you stay protected and audit ready.</p>
                     </div>
-                    <h3>Penetration Testing</h3>
-                    <p>Identify and fix vulnerabilities before attackers exploit them. Our expert testers simulate real-world attacks to keep you one step ahead.</p>
-                    <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
-                </div>
+                </aside>
 
-                <div class="tool-card reveal rd2">
-                    <div class="tool-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
-                    </div>
-                    <h3>Vulnerability Management</h3>
-                    <p>Stay ahead with continuous threat detection and prioritization. Our program monitors, evaluates, and provides actionable insights to keep systems resilient.</p>
-                    <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
-                </div>
+                <div class="ipdash-content">
 
-                <div class="tool-card reveal rd3">
-                    <div class="tool-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" /><circle cx="12" cy="12" r="3" /></svg>
-                    </div>
-                    <h3>Risk Assessment</h3>
-                    <p>Understand, assess, and mitigate potential cybersecurity risks. We identify potential risks, quantify impact, and recommend effective mitigation strategies.</p>
-                    <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
-                </div>
+                    <div class="ipdash-stats">
+                        <div class="ipdash-stat green">
+                            <h4>COMPLIANCE SCORE</h4>
+                            <div class="ipdash-circle"><strong>85</strong><span>/100</span></div>
+                            <h3>Good</h3>
+                            <p>↑ 12% <span>vs last scan</span></p>
+                        </div>
 
-                <div class="tool-card reveal rd4">
-                    <div class="tool-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                    </div>
-                    <h3>ISO 27001 Audit</h3>
-                    <p>Achieve compliance with a thorough ISO27001 readiness review. We identify gaps, optimize processes, and ensure adherence to international security standards.</p>
-                    <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
-                </div>
+                        <div class="ipdash-stat green">
+                            <h4>SECURITY POSTURE</h4>
+                            <div class="ipdash-icon-large">
+                                <svg viewBox="0 0 120 120">
+                                    <path d="M60 15
+             L95 30
+             V58
+             C95 84 78 101 60 110
+             C42 101 25 84 25 58
+             V30 Z" />
 
-                <div class="tool-card reveal rd1">
-                    <div class="tool-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg>
-                    </div>
-                    <h3>Policy Development</h3>
-                    <p>Create tailored security policies to meet your organizational needs. We build documented, enforceable policies that protect your people and assets.</p>
-                    <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
-                </div>
+                                    <ellipse cx="60" cy="60" rx="22" ry="10"></ellipse>
 
-                <div class="tool-card reveal rd2">
-                    <div class="tool-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-                    </div>
-                    <h3>Security Consulting</h3>
-                    <p>Expert advice to strengthen your cybersecurity defenses. Our consultants work directly with your team to build a culture of security awareness.</p>
-                    <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
-                </div>
+                                    <ellipse cx="60" cy="60"
+                                             rx="10"
+                                             ry="22"></ellipse>
 
-                <div class="tool-card reveal rd3">
-                    <div class="tool-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="M12 12v9" /><path d="m8 17 4 4 4-4" /></svg>
-                    </div>
-                    <h3>Incident Response (Cyber Drill)</h3>
-                    <p>Prepare for the unexpected with tailored incident response strategies and exercises. Practice your response before a real attack forces it.</p>
-                    <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
-                </div>
-
-                <div class="tool-card reveal rd4">
-                    <div class="tool-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
-                    </div>
-                    <h3>Security Awareness Training</h3>
-                    <p>Empower employees with knowledge to protect against cyber threats. Your people are your first line of defense — train them to act like it.</p>
-                    <a href="#" class="tool-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
-                </div>
-
-            </div>
-
-            <div class="tools-cta reveal">
-                <button class="btn-primary">Take A Closer Look</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-         COMPLIANCE STANDARDS
-    ══════════════════════════════════════ -->
-    <section class="standards-section">
-        <div class="compliance-container-md">
-            <div class="standards-header">
-                <h2 class="reveal">Compliance standards we support</h2>
-                <p class="reveal rd1">Whether your industry demands HIPAA, PCI DSS, or GDPR compliance, Infinite Protection  has the tools and expertise to get you there.</p>
-            </div>
-            <div class="standards-grid">
-
-                <div class="standard-card reveal rd1">
-                    <div class="standard-badge">HIPAA</div>
-                    <div>
-                        <h3>Healthcare Compliance</h3>
-                        <p>Protect patient data and meet Health Insurance Portability and Accountability Act requirements with continuous monitoring, encryption, and access controls built for healthcare environments.</p>
-                    </div>
-                </div>
-
-                <div class="standard-card reveal rd2">
-                    <div class="standard-badge">PCI DSS</div>
-                    <div>
-                        <h3>Payment Card Security</h3>
-                        <p>Safeguard cardholder data and achieve Payment Card Industry Data Security Standard compliance with network segmentation, vulnerability scanning, and policy enforcement.</p>
-                    </div>
-                </div>
-
-                <div class="standard-card reveal rd1">
-                    <div class="standard-badge">GDPR</div>
-                    <div>
-                        <h3>Data Privacy Regulation</h3>
-                        <p>Meet General Data Protection Regulation requirements for businesses handling EU citizen data. We help implement data governance, privacy controls, and breach response procedures.</p>
-                    </div>
-                </div>
-
-                <div class="standard-card reveal rd2">
-                    <div class="standard-badge">ISO 27001</div>
-                    <div>
-                        <h3>Information Security Management</h3>
-                        <p>Achieve internationally recognized certification with our ISO 27001 readiness audits that identify gaps, optimize processes, and prepare your organization for certification.</p>
-                    </div>
-                </div>
-
-                <div class="standard-card reveal rd1">
-                    <div class="standard-badge">TX-RAMP</div>
-                    <div>
-                        <h3>Texas Risk & Authorization</h3>
-                        <p>Meet Texas government cloud security requirements. Our TX-RAMP compliance support ensures cloud service providers working with Texas agencies meet all mandatory controls.</p>
-                    </div>
-                </div>
-
-                <div class="standard-card reveal rd2">
-                    <div class="standard-badge">CIPA / FTC</div>
-                    <div>
-                        <h3>Internet & Consumer Protection</h3>
-                        <p>Comply with Children's Internet Protection Act and FTC regulations. We help schools, libraries, and businesses implement the right content controls and privacy safeguards.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-         SELF-ASSESSMENT
-    ══════════════════════════════════════ -->
-    <section class="assess-section">
-        <div class="compliance-container">
-            <div class="assess-inner">
-
-                <div class="assess-left">
-                    <h2 class="reveal">For your business, consider these questions</h2>
-                    <p class="reveal rd1">Answering "No" to any of these means your company may already be exposed. Infinite Protection  helps you turn every No into a Yes.</p>
-                    <div class="assess-questions">
-                        <div class="assess-q reveal rd1">
-                            <div class="assess-q-icon">
-                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" /></svg>
+                                    <circle cx="60" cy="60" r="4"></circle>
+                                </svg>
                             </div>
-                            <p>Have you conducted a <strong>recent security assessment</strong> (internal/external)?</p>
+                            <h3>Strong</h3>
+                            <p>Your systems are<br>well protected</p>
+                            <p>↑ 18% <span>vs last scan</span></p>
                         </div>
-                        <div class="assess-q reveal rd2">
-                            <div class="assess-q-icon">
-                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" /></svg>
+
+                        <div class="ipdash-stat red">
+                            <h4>CRITICAL FINDINGS</h4>
+                            <div class="ipdash-circle red-ring">
+                                <svg viewBox="0 0 120 120">
+                                    <circle cx="60" cy="60" r="28"></circle>
+
+                                    <path d="M60 38 L82 78 H38 Z"></path>
+
+                                    <line x1="60" y1="50" x2="60" y2="65"></line>
+
+                                    <circle cx="60" cy="74" r="2"></circle>
+                                </svg>
+                                <strong>7</strong>
                             </div>
-                            <p>Do you have a <strong>formalized incident response plan</strong>?</p>
+                            <h3>Need Attention</h3>
+                            <p>↓ 3 <span>vs last scan</span></p>
                         </div>
-                        <div class="assess-q reveal rd3">
-                            <div class="assess-q-icon">
-                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" /></svg>
+
+                        <div class="ipdash-stat green">
+                            <h4>RESOLVED ISSUES</h4>
+                            <div class="ipdash-circle"><svg viewBox="0 0 24 24"><path d="M7 12L10 15L17 8"></path></svg><strong>42</strong></div>
+                            <h3>Resolved</h3>
+                            <p>↑ 15 <span>vs last scan</span></p>
+                        </div>
+
+                        <div class="ipdash-stat blue">
+                            <h4>PROTECTED DEVICES</h4>
+                            <div class="ipdash-circle blue-ring">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="10" rx="2"></rect><rect x="17" y="9" width="4" height="9" rx="1"></rect><path d="M7 19H13M10 15V19"></path></svg>
+                                <strong>128</strong>
                             </div>
-                            <p>Do your employees receive <strong>regular security awareness training</strong>?</p>
+                            <h3>Online</h3>
+                            <p>↑ 8 <span>vs last scan</span></p>
                         </div>
-                        <div class="assess-q reveal rd4">
-                            <div class="assess-q-icon">
-                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" /></svg>
+                    </div>
+
+                    <div class="ipdash-lower">
+                        <div class="ipdash-panel">
+                            <h3>COMPLIANCE FRAMEWORKS</h3>
+                            <div class="ipdash-progress green">
+                                <span class="framework">
+                                    <svg viewBox="0 0 24 24">
+                                        <rect x="2" y="5" width="20" height="14" rx="2" />
+                                        <line x1="2" y1="10" x2="22" y2="10" />
+                                        <circle cx="7" cy="15" r="1" />
+                                    </svg>
+                                    PCI DSS
+                                </span>
+
+                                <div><i style="width:87%"></i></div>
+                                <b>87%</b>
                             </div>
-                            <p>Are <strong>security policies</strong> and procedures <strong>documented and enforced</strong> within your organization?</p>
+                            <!--<div class="ipdash-progress green"><span>PCI DSS</span><div><i style="width:87%"></i></div><b>87%</b></div>-->
+                            <div class="ipdash-progress purple">
+                                <span class="framework">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2V22" />
+                                        <path d="M4 8C8 8 16 8 20 8" />
+                                        <path d="M12 8V22" />
+                                        <path d="M8 12L16 12" />
+                                    </svg>
+                                    HIPAA
+                                </span><div><i style="width:82%"></i></div><b>82%</b>
+                            </div>
+                            <div class="ipdash-progress blue">
+                                <span class="framework">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2L20 6V12C20 18 16 21 12 22C8 21 4 18 4 12V6Z" />
+                                    </svg>SOC 2
+                                </span><div><i style="width:88%"></i></div><b>88%</b>
+                            </div>
+                            <div class="ipdash-progress purple">
+                                <span class="framework">
+                                    <svg viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M3 12H21" />
+                                        <path d="M12 3C16 7 16 17 12 21" />
+                                        <path d="M12 3C8 7 8 17 12 21" />
+                                    </svg>ISO 27001
+                                </span><div><i style="width:76%"></i></div><b>76%</b>
+                            </div>
+
+                            <a href="#">View all frameworks ›</a>
                         </div>
+
+                        <div class="ipdash-panel">
+                            <div class="ipdash-chart-head">
+                                <h3>COMPLIANCE TREND</h3>
+                                <button>Last 6 Months⌄</button>
+                            </div>
+
+                            <div class="ipdash-chart">
+                                <svg viewBox="0 0 620 260" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="ipdashArea" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#63ef5d" stop-opacity=".55" />
+                                            <stop offset="100%" stop-color="#63ef5d" stop-opacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                    <line x1="40" y1="35" x2="600" y2="35"></line>
+                                    <line x1="40" y1="85" x2="600" y2="85"></line>
+                                    <line x1="40" y1="135" x2="600" y2="135"></line>
+                                    <line x1="40" y1="185" x2="600" y2="185"></line>
+
+                                    <path d="M40 165 L130 135 L220 122 L315 105 L405 86 L505 72 L600 60 L600 220 L40 220Z" class="area"></path>
+                                    <path d="M40 165 L130 135 L220 122 L315 105 L405 86 L505 72 L600 60" class="line"></path>
+
+                                    <circle cx="40" cy="165" r="5"></circle>
+                                    <circle cx="130" cy="135" r="5"></circle>
+                                    <circle cx="220" cy="122" r="5"></circle>
+                                    <circle cx="315" cy="105" r="5"></circle>
+                                    <circle cx="405" cy="86" r="5"></circle>
+                                    <circle cx="505" cy="72" r="5"></circle>
+                                    <circle cx="600" cy="60" r="5"></circle>
+                                </svg>
+
+                                <div class="ipdash-months">
+                                    <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 7 IP DASHBOARD END----------------------------------------------------- -->
+    <!-- SECTION 7 IP FAQS STARAT----------------------------------------------------- -->
+    <section class="ip-faq-section" id="ipFaqSection">
+        <div class="ipfaq-container">
+
+            <div class="ipfaq-heading ipfaq-reveal">
+                <div class="ipfaq-eyebrow">FAQ</div>
+                <h2>Compliance Questions <span>Answered</span></h2>
+                <p>
+                    Get clear answers to the most common compliance and security questions.<br>
+                    Still have questions? We’re here to help.
+                </p>
+            </div>
+
+            <div class="ipfaq-layout ipfaq-reveal">
+
+                <aside class="ipfaq-help-card">
+                    <div class="ipfaq-help-icon">
+                        <svg viewBox="0 0 24 24">
+                            <!-- Chat bubble -->
+                            <path d="M5 5H19C20.1 5 21 5.9 21 7V15C21 16.1 20.1 17 19 17H10L5 21V17C3.9 17 3 16.1 3 15V7C3 5.9 3.9 5 5 5Z" />
+
+                            <!-- Question mark -->
+                            <g transform="translate(12 12) scale(0.8) translate(-12 -12)">
+                                <path d="M12 13V12C12 10.8 14 10.5 14 8.7C14 7.4 13 6.5 12 6.5C10.8 6.5 10 7.3 10 8.5" />
+                                <path d="M12 15.8H12.01" />
+                            </g>
+                        </svg>
+                    </div>
+
+                    <h3>Need More Help?</h3>
+                    <p>
+                        Our compliance experts are ready to help you achieve your security
+                        and compliance goals.
+                    </p>
+
+                    <div class="ipfaq-help-line"></div>
+
+                    <div class="ipfaq-help-item green">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 5H19C20.1 5 21 5.9 21 7V15C21 16.1 20.1 17 19 17H9L4 21V17C3.4 17 3 16.6 3 16V7C3 5.9 3.9 5 5 5Z"></path>
+                            <path d="M8 11H8.01M12 11H12.01M16 11H16.01"></path>
+                        </svg>
+                        <div>
+                            <strong>Talk to an Expert</strong>
+                            <span>Get personalized answers from our team.</span>
+                        </div>
+                    </div>
+
+                    <div class="ipfaq-help-item purple">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6 3H15L20 8V21H6Z"></path>
+                            <path d="M15 3V8H20"></path>
+                            <path d="M9 13H15M9 17H13"></path>
+                        </svg>
+                        <div>
+                            <strong>Documentation</strong>
+                            <span>Access guides, whitepapers, and resources.</span>
+                        </div>
+                    </div>
+
+                    <div class="ipfaq-help-item blue">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path>
+                            <path d="M9 12L11 14L15 10"></path>
+                        </svg>
+                        <div>
+                            <strong>Compliance Support</strong>
+                            <span>We help you every step of the way.</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="ipfaq-help-btn">Talk to an Expert <span>›</span></a>
+                </aside>
+
+                <div class="ipfaq-list-wrap">
+                    <div class="ipfaq-list">
+                        <div class="ipfaq-item"><button><span>01</span>What compliance standards does Infinite Protection support?<b>+</b></button><p>Infinite Protection supports PCI DSS, HIPAA, SOC 2, ISO 27001, and expanding compliance frameworks.</p></div>
+                        <div class="ipfaq-item"><button><span>02</span>Does ZED help with SOC 2 preparation?<b>+</b></button><p>Yes, ZED helps identify vulnerabilities and supports readiness for SOC 2 security controls.</p></div>
+                        <div class="ipfaq-item"><button><span>03</span>Can SaferNet improve security controls?<b>+</b></button><p>Yes, SaferNet helps strengthen endpoint protection, access controls, device control, and threat blocking.</p></div>
+                        <div class="ipfaq-item"><button><span>04</span>How often should compliance scans run?<b>+</b></button><p>Scans can run regularly based on your risk profile, audit requirements, and business needs.</p></div>
+                        <div class="ipfaq-item"><button><span>05</span>Is Infinite Protection suitable for regulated industries?<b>+</b></button><p>Yes, it is designed for healthcare, finance, ecommerce, technology, and other regulated industries.</p></div>
+                        <div class="ipfaq-item"><button><span>06</span>How does automated scanning support audits?<b>+</b></button><p>Automated scanning provides continuous evidence, findings, and remediation tracking for audit readiness.</p></div>
+                        <div class="ipfaq-item"><button><span>07</span>Can Infinite Protection help maintain audit readiness?<b>+</b></button><p>Yes, it helps keep compliance documentation, testing, and monitoring organized.</p></div>
+                        <div class="ipfaq-item"><button><span>08</span>What’s the difference between compliance and security?<b>+</b></button><p>Compliance meets defined standards, while security protects systems, users, and data from real threats.</p></div>
+                        <div class="ipfaq-item"><button><span>09</span>Does Infinite Protection provide audit documentation?<b>+</b></button><p>Yes, it supports reporting and documentation for compliance reviews and audits.</p></div>
+                        <div class="ipfaq-item"><button><span>10</span>How are sensitive data and scan results protected?<b>+</b></button><p>Security controls are used to protect scan data, reports, and sensitive business information.</p></div>
+                        <div class="ipfaq-item"><button><span>11</span>Can I customize scans to match my compliance requirements?<b>+</b></button><p>Yes, scanning can be aligned with your frameworks, systems, and compliance priorities.</p></div>
+                        <div class="ipfaq-item"><button><span>12</span>Does Infinite Protection support multiple frameworks?<b>+</b></button><p>Yes, one platform can support multiple compliance frameworks at the same time.</p></div>
+                        <div class="ipfaq-item"><button><span>13</span>How long does it take to get compliance results?<b>+</b></button><p>Results depend on scope, but dashboards and scan findings are designed for fast visibility.</p></div>
+                        <div class="ipfaq-item"><button><span>14</span>Can I schedule recurring compliance scans?<b>+</b></button><p>Yes, recurring scans can help maintain continuous compliance readiness.</p></div>
+                        <div class="ipfaq-item"><button><span>15</span>What types of reports are available?<b>+</b></button><p>Reports may include compliance status, risk findings, remediation progress, and audit summaries.</p></div>
+                    </div>
+
+                    <div class="ipfaq-list">
+                        <div class="ipfaq-item"><button><span>16</span>How does ZED identify external vulnerabilities?<b>+</b></button><p>ZED performs external scanning to detect exposed weaknesses and security risks.</p></div>
+                        <div class="ipfaq-item"><button><span>17</span>Can ZED perform authenticated scans?<b>+</b></button><p>Yes, authenticated scanning can provide deeper visibility where configured.</p></div>
+                        <div class="ipfaq-item"><button><span>18</span>Does SaferNet support device control policies?<b>+</b></button><p>Yes, SaferNet supports controls that help manage device access and reduce endpoint risk.</p></div>
+                        <div class="ipfaq-item"><button><span>19</span>How does Infinite Protection reduce compliance risk?<b>+</b></button><p>It combines protection, testing, monitoring, reporting, and remediation visibility in one platform.</p></div>
+                        <div class="ipfaq-item"><button><span>20</span>Is training or onboarding included?<b>+</b></button><p>Training and onboarding can be provided based on the selected engagement or package.</p></div>
+                        <div class="ipfaq-item"><button><span>21</span>Can Infinite Protection integrate with our tools?<b>+</b></button><p>Integration options can be planned according to your existing tools and security workflow.</p></div>
+                        <div class="ipfaq-item"><button><span>22</span>How does Infinite Protection handle remediation tracking?<b>+</b></button><p>Findings can be tracked from discovery through resolution to support accountability.</p></div>
+                        <div class="ipfaq-item"><button><span>23</span>Will this help lower our cyber insurance costs?<b>+</b></button><p>Improved security posture and documentation may support cyber insurance conversations.</p></div>
+                        <div class="ipfaq-item"><button><span>24</span>Is Infinite Protection cloud-based?<b>+</b></button><p>The platform can be positioned to support modern cloud-based security visibility and management.</p></div>
+                        <div class="ipfaq-item"><button><span>25</span>Can it scale with our growing business?<b>+</b></button><p>Yes, it is designed to support growing teams, assets, and compliance needs.</p></div>
+                        <div class="ipfaq-item"><button><span>26</span>What kind of support is available?<b>+</b></button><p>Support can include expert guidance, documentation, onboarding, and compliance assistance.</p></div>
+                        <div class="ipfaq-item"><button><span>27</span>How is pricing structured?<b>+</b></button><p>Pricing can depend on business size, selected layers, scanning scope, and support needs.</p></div>
+                        <div class="ipfaq-item"><button><span>28</span>Do you offer MSP or partner programs?<b>+</b></button><p>Partner and MSP options can be discussed for service providers and channel partners.</p></div>
+                        <div class="ipfaq-item"><button><span>29</span>Can Infinite Protection help with ISO 27001?<b>+</b></button><p>Yes, it can help support ISO 27001 readiness through security testing and compliance visibility.</p></div>
+                        <div class="ipfaq-item"><button><span>30</span>How do I get started?<b>+</b></button><p>You can start by speaking with an expert or requesting a demo.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ipfaq-cta ipfaq-reveal">
+                <div class="ipfaq-cta-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path>
+                        <path d="M9 12L11 14L15 10"></path>
+                    </svg>
+                </div>
+
+                <div>
+                    <h3>More Questions? <span>We’re Here to Help.</span></h3>
+                    <p>Get expert guidance tailored to your business and compliance needs.</p>
+                </div>
+
+                <div class="ipfaq-cta-buttons">
+                    <a href="#" class="gold">Talk to an Expert <span>›</span></a>
+                    <a href="#" class="green">Request a Demo <span>›</span></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 7 IP FAQS END----------------------------------------------------- -->
+    <!-- SECTION 8 IP HERO START----------------------------------------------------- -->
+    <section class="ip-hero-compliance-section" id="ipHeroCompliance">
+        <div class="iphero-container">
+
+            <div class="iphero-content iphero-reveal">
+
+                <h1>
+                    Compliance<br>Doesn’t Have To Be<br>
+                    <span>Complicated</span>
+                </h1>
+
+                <p class="iphero-desc">
+                    Infinite Protection brings together endpoint protection,
+                    vulnerability testing, and compliance support in one
+                    powerful platform—so you can focus on what matters most.
+                </p>
+
+                <div class="iphero-feature-row">
+                    <div class="iphero-feature gold">
+                        <img src="assets/images/compliance/sec8-vard01-1.png" alt="" />
+                        <h3>Strengthen security.</h3>
+                        <p>Protect your systems,<br>data, and users.</p>
+                    </div>
+
+                    <div class="iphero-feature green">
+
+                        <img src="assets/images/compliance/sec8-vard02-1.png" alt="" />
+
+
+                        <h3>Reduce risk.</h3>
+                        <p>Identify threats and<br>vulnerabilities early.</p>
+                    </div>
+
+                    <div class="iphero-feature blue">
+                        <img src="assets/images/compliance/sec8-vard03-1.png" alt="" />
+                        <h3>Support compliance.</h3>
+                        <p>Meet industry standards<br>with confidence.</p>
                     </div>
                 </div>
 
-                <div class="assess-right reveal rd2">
-                    <div class="vuln-card">
-                        <div class="vuln-icon">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                                <line x1="12" y1="9" x2="12" y2="13" />
-                                <line x1="12" y1="17" x2="12.01" y2="17" />
-                            </svg>
-                        </div>
-                        <div class="vuln-stat">60%</div>
-                        <p class="vuln-stat-label">of small businesses that suffer a major cyberattack<br>close within 6 months</p>
-                        <h3>If you answered 'No' to any of these — your company is vulnerable to attack.</h3>
-                        <p>Don't wait for an incident to take action. Infinite Protection  helps you close these gaps before attackers find them.</p>
-                        <button class="btn-primary" style="width:100%;margin-top:4px;">Get A Free Assessment</button>
+                <div class="iphero-buttons">
+                    <a href="#" class="iphero-btn scan">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path>
+                            <path d="M9 12L11 14L15 10"></path>
+                        </svg>
+                        Get a Free Compliance Scan
+                        <span>›</span>
+                    </a>
+
+                    <a href="#" class="iphero-btn expert">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 5H19C20.1 5 21 5.9 21 7V15C21 16.1 20.1 17 19 17H9L4 21V17C3.4 17 3 16.6 3 16V7C3 5.9 3.9 5 5 5Z"></path>
+                            <path d="M8 11H8.01M12 11H12.01M16 11H16.01"></path>
+                        </svg>
+                        Talk to an Expert
+                        <span>›</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="iphero-visual iphero-reveal">
+                <div class="iphero-orbit">
+                    <img src="assets/images/compliance/sec8-main01-01.png" alt="" style="width: 100%;height: auto;display: block;object-fit: contain;" />
+                </div>
+
+                <div class="iphero-tagline">
+                    <div class="iphero-tag-icon">
+                        <img src="assets/images/compliance/sec8-card01-01.png" />
+                    </div>
+                    <div>
+                        <h3>ONE PLATFORM. THREE LAYERS.</h3>
+                        <p>Endpoint Protection. Security Testing. Compliance Support.</p>
                     </div>
                 </div>
-
             </div>
+
         </div>
     </section>
-
-    <!-- ══════════════════════════════════════
-         BUNDLE PLANS
-    ══════════════════════════════════════ -->
-    <section class="bundles-section">
-        <div class="compliance-container">
-            <div class="bundles-header">
-                <h2 class="reveal">Bundle deals for all types of business</h2>
-                <p class="reveal rd1">Cybersecurity isn't one-size-fits-all. Choose a discounted bundle that suits your business best.</p>
-            </div>
-
-            <div class="bundles-grid">
-
-                <div class="bundle-card reveal rd1">
-                    <div class="bundle-name">Essentials Bundle</div>
-                    <div class="bundle-subtitle">Perfect for small businesses getting started</div>
-                    <ul class="bundle-includes">
-                        <li>Penetration Testing (1×/year)</li>
-                        <li>Vulnerability Management</li>
-                        <li>Security Policy Templates</li>
-                        <li>24/7 VPN &amp; Endpoint Protection</li>
-                    </ul>
-                    <button class="btn-bundle">Get This Bundle</button>
-                </div>
-
-                <div class="bundle-card featured reveal rd2">
-                    <div class="bundle-tag">Most Popular</div>
-                    <div class="bundle-name">Professional Bundle</div>
-                    <div class="bundle-subtitle">For growing teams that need full compliance</div>
-                    <ul class="bundle-includes">
-                        <li>Penetration Testing (2×/year)</li>
-                        <li>Vulnerability Management Program</li>
-                        <li>ISO 27001 Readiness Audit</li>
-                        <li>Risk Assessment &amp; Report</li>
-                        <li>Policy Development</li>
-                        <li>Security Awareness Training</li>
-                    </ul>
-                    <button class="btn-bundle btn-bundle-yellow">Get This Bundle</button>
-                </div>
-
-                <div class="bundle-card reveal rd3">
-                    <div class="bundle-name">Enterprise Bundle</div>
-                    <div class="bundle-subtitle">Complete coverage for regulated industries</div>
-                    <ul class="bundle-includes">
-                        <li>Everything in Professional</li>
-                        <li>Incident Response Playbooks</li>
-                        <li>Cyber Drill Exercises</li>
-                        <li>Security Consulting (ongoing)</li>
-                        <li>HIPAA / PCI DSS / GDPR Support</li>
-                        <li>Dedicated Account Manager</li>
-                    </ul>
-                    <button class="btn-bundle">Get This Bundle</button>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-         CTA
-    ══════════════════════════════════════ -->
-    <section class="comp-cta">
-        <div class="cta-glow"></div>
-        <div class="cta-inner">
-            <p class="cta-eyebrow reveal">Ready to Take the Next Step?</p>
-            <h2 class="reveal rd1">Move Beyond Basic Compliance</h2>
-            <p class="reveal rd2">Schedule a call today and discover why hundreds of companies trust Infinite Protection  to strengthen their security and compliance while building lasting confidence with clients.</p>
-            <div class="cta-btns reveal rd3">
-                <button class="btn-primary">Get A Quote</button>
-                <button class="btn-outline">Schedule a Consultation</button>
-            </div>
-            <div class="cta-trust reveal rd4">
-                <span>No setup fees</span>
-                <span>Tailored to your business</span>
-                <span>Expert-led from day one</span>
-            </div>
-        </div>
-    </section>
+    <!-- SECTION 8 IP HERO END----------------------------------------------------- -->
     <!-- FOOTER -->
 
 
@@ -593,16 +5116,155 @@
         </div>
     </footer>
 
+    <script>
+        //const themeToggle = document.getElementById("themeToggle");
 
+        //themeToggle.addEventListener("click", function () {
+        //    document.body.classList.toggle("light-mode");
 
+        //    if (document.body.classList.contains("light-mode")) {
+        //        themeToggle.innerHTML = "🌙 Dark Mode";
+        //    } else {
+        //        themeToggle.innerHTML = "☀️ Light Mode";
+        //    }
+        //});
 
+        document.addEventListener("DOMContentLoaded", function () {
+            const sectionItems = document.querySelectorAll(".three-layer-platform-section .tlp-reveal");
+
+            const tlpObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("tlp-active");
+                    }
+                });
+            }, {
+                threshold: 0.18
+            });
+
+            sectionItems.forEach(function (item) {
+                tlpObserver.observe(item);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const ipfwItems = document.querySelectorAll(".ip-frameworks-section .ipfw-reveal");
+
+            const ipfwObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("ipfw-active");
+                    }
+                });
+            }, {
+                threshold: 0.18
+            });
+
+            ipfwItems.forEach(function (item) {
+                ipfwObserver.observe(item);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const industryItems = document.querySelectorAll(".ip-industry-section .ipind-reveal");
+
+            const industryObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("ipind-active");
+                    }
+                });
+            }, {
+                threshold: 0.18
+            });
+
+            industryItems.forEach(function (item) {
+                industryObserver.observe(item);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const benefitsItems = document.querySelectorAll(".ip-benefits-section .ipben-reveal");
+
+            const benefitsObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("ipben-active");
+                    }
+                });
+            }, {
+                threshold: 0.18
+            });
+
+            benefitsItems.forEach(function (item) {
+                benefitsObserver.observe(item);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dashboardItems = document.querySelectorAll(".ip-dashboard-section .ipdash-reveal");
+
+            const dashboardObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("ipdash-active");
+                    }
+                });
+            }, {
+                threshold: 0.18
+            });
+
+            dashboardItems.forEach(function (item) {
+                dashboardObserver.observe(item);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqRevealItems = document.querySelectorAll(".ip-faq-section .ipfaq-reveal");
+
+            const faqObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("ipfaq-active");
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            faqRevealItems.forEach(function (item) {
+                faqObserver.observe(item);
+            });
+
+            document.querySelectorAll(".ipfaq-item button").forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    const item = this.closest(".ipfaq-item");
+                    item.classList.toggle("active");
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const heroItems = document.querySelectorAll(".ip-hero-compliance-section .iphero-reveal");
+
+            const heroObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("iphero-active");
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            heroItems.forEach(function (item) {
+                heroObserver.observe(item);
+            });
+        });
+    </script>
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/site.js" asp-append-version="true"></script>
-    <script src="assets/js/compliance.js" asp-append-version="true"></script>
-
-    <!--@await RenderSectionAsync("Scripts", required: false) -->
-
 </body>
 </html>
