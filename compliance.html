@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Compliance Made Simple</title>
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
@@ -53,17 +53,18 @@
             position: relative;
             overflow: hidden;
             min-height: 100vh;
-            padding: 70px 5% 55px;
+            padding: 20px 5% 35px;
             color: var(--white);
-            background: radial-gradient(circle at 78% 35%, rgba(0, 132, 255, .35), transparent 32%), radial-gradient(circle at 12% 18%, rgba(0, 81, 180, .28), transparent 30%), linear-gradient(135deg, var(--dark-bg-1) 0%, var(--dark-bg-2) 48%, var(--dark-bg-3) 100%);
-            transition: background .45s ease, color .45s ease;
+            /*background: radial-gradient(circle at 78% 35%, rgba(0, 132, 255, .35), transparent 32%), radial-gradient(circle at 12% 18%, rgba(0, 81, 180, .28), transparent 30%), linear-gradient(135deg, var(--dark-bg-1) 0%, var(--dark-bg-2) 48%, var(--dark-bg-3) 100%);*/
+            background-color: #000A20;
+            /*transition: background .45s ease, color .45s ease;*/
         }
 
             .compliance-section::before {
                 content: "";
                 position: absolute;
                 inset: 0;
-                background-image: linear-gradient(rgba(0, 153, 255, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 153, 255, .07) 1px, transparent 1px);
+                /*background-image: linear-gradient(rgba(0, 153, 255, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 153, 255, .07) 1px, transparent 1px);*/
                 background-size: 44px 44px;
                 opacity: .28;
                 pointer-events: none;
@@ -73,7 +74,7 @@
                 content: "";
                 position: absolute;
                 inset: 0;
-                background: radial-gradient(circle at center right, rgba(0, 153, 255, .18), transparent 38%);
+                /*background: radial-gradient(circle at center right, rgba(0, 153, 255, .18), transparent 38%);*/
                 pointer-events: none;
             }
 
@@ -1590,12 +1591,12 @@
         .ipind-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 30px;
+            gap: 10px;
         }
 
         .ipind-card {
             min-height: 392px;
-            padding: 20px 10px;
+            padding: 10px 10px;
             border-radius: 15px;
             text-align: center;
             background: rgba(3, 18, 45, .78);
@@ -1603,9 +1604,14 @@
             transition: .35s ease;
         }
 
-            .ipind-card:hover {
-                transform: translateY(-8px);
-            }
+        .ipind-card-img {
+            width: 200px;
+            padding-bottom: 30px;
+        }
+
+        .ipind-card:hover {
+            transform: translateY(-8px);
+        }
 
         body.light-mode .ipind-card {
             background: rgba(255,255,255,.86);
@@ -1949,7 +1955,7 @@
 
             .ipind-card {
                 min-height: auto;
-                padding: 28px 22px;
+                padding: 10px 22px;
             }
 
             .ipind-heading h2 {
@@ -2057,8 +2063,8 @@
         }
 
         .ipben-card {
-            min-height: 440px;
-            padding: 30px 30px 26px;
+            min-height: 340px;
+            padding: 20px 10px;
             border-radius: 15px;
             text-align: center;
             background: rgba(3, 18, 45, .78);
@@ -3738,6 +3744,208 @@
         }
         /*-- SECTION 8 IP HERO END----------------------------------------------------- -*/
 
+        /* ===================================================
+           GLOBAL FIXES: zoom, font normalisation, uniform card
+           heights & icon sizes across all sections
+        =================================================== */
+
+        /* 1. Base font — reset browser inconsistencies */
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Sora', sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* 2. SECTION 1 — compliance-section standard-grid cards */
+        .standard-grid {
+            align-items: stretch;
+        }
+        .standard-card {
+            height: 100%;
+            min-height: 80px;
+            align-items: flex-start;
+        }
+        .standard-card h4 { font-size: 13px; }
+        .standard-card p  { font-size: 11px; }
+        .standard-card svg { width: 32px; height: 32px; min-width: 32px; }
+
+        /* bottom-bar uniform */
+        .bottom-bar { align-items: stretch; }
+        .bottom-item { height: 100%; align-items: flex-start; }
+        .bottom-item h4 { font-size: 14px; }
+        .bottom-item p  { font-size: 12px; }
+        .bottom-item svg { width: 46px; height: 46px; min-width: 46px; }
+
+        /* 3. SECTION 2 — three-layer-platform: equal-height cards */
+        .tlp-card,
+        .tlp-result-card {
+            min-height: 520px;
+            display: flex;
+            flex-direction: column;
+        }
+        .tlp-card ul,
+        .tlp-result-card ul { flex: 1; }
+        .tlp-card h3    { font-size: 17px; }
+        .tlp-card h4    { font-size: 14px; }
+        .tlp-card li,
+        .tlp-result-card li { font-size: 13px; }
+        .tlp-icon-circle { width: 100px; height: 100px; }
+        .tlp-icon-circle svg { width: 54px; height: 54px; }
+        .tlp-shield-logo { width: 120px; height: 120px; }
+        .tlp-result-card h3 { font-size: 24px; letter-spacing: 6px; }
+        .tlp-result-card h4 { font-size: 17px; letter-spacing: 6px; }
+
+        /* tlp bottom bar */
+        .tlp-bottom-item { align-items: flex-start; }
+        .tlp-bottom-item svg { width: 48px; height: 48px; min-width: 48px; }
+        .tlp-bottom-item strong { font-size: 14px; }
+        .tlp-bottom-item span   { font-size: 11px; }
+
+        /* 4. SECTION 3 — frameworks: equal-height cards */
+        .ipfw-grid { align-items: stretch; }
+        .ipfw-card {
+            min-height: 460px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ipfw-card p { flex: 1; }
+        .ipfw-icon { width: 110px; height: 110px; }
+        .ipfw-icon svg { width: 64px; height: 64px; }
+        .ipfw-card h3 { font-size: 22px; }
+        .ipfw-card p  { font-size: 13px; }
+        .ipfw-badge   { font-size: 14px; min-height: 48px; }
+        .ipfw-badge svg { width: 24px; height: 24px; }
+
+        /* 5. SECTION 4 — industry: equal-height cards */
+        .ipind-grid { align-items: stretch; }
+        .ipind-card {
+            min-height: 370px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ipind-card p { flex: 1; }
+        .ipind-main-icon { height: 90px; margin-bottom: 8px; }
+        .ipind-main-icon svg { width: 90px; height: 90px; }
+        .ipind-card h3 { font-size: 16px; }
+        .ipind-card p  { font-size: 13px; min-height: auto; }
+        .ipind-badge { min-height: 62px; }
+        .ipind-badge svg,
+        .ipind-small-badge svg { width: 34px; height: 34px; min-width: 34px; }
+        .ipind-badge strong { font-size: 14px; }
+        .ipind-badge span   { font-size: 12px; }
+        .ipind-small-badge span { font-size: 13px; }
+        .ipind-card a { font-size: 14px; }
+
+        /* industry bottom bar */
+        .ipind-bottom-item svg { width: 48px; height: 48px; min-width: 48px; }
+        .ipind-bottom-item strong { font-size: 13px; }
+        .ipind-bottom-item span   { font-size: 11px; }
+
+        /* 6. SECTION 5 — benefits: equal-height cards */
+        .ipben-grid { align-items: stretch; }
+        .ipben-card {
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ipben-card p { flex: 1; }
+        .ipben-main-icon { height: 140px; margin-bottom: 10px; }
+        .ipben-main-icon svg { width: 130px; height: 130px; }
+        .ipben-card h3 { font-size: 18px; }
+        .ipben-card p  { font-size: 14px; }
+
+        /* benefits bottom bar */
+        .ipben-bottom-item svg { width: 46px; height: 46px; min-width: 46px; }
+        .ipben-bottom-item strong { font-size: 13px; }
+        .ipben-bottom-item span   { font-size: 11px; }
+
+        /* 7. SECTION 6 — dashboard stat cards equal height */
+        .ipdash-stats { align-items: stretch; }
+        .ipdash-stat {
+            min-height: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .ipdash-stat h4 { font-size: 12px; }
+        .ipdash-stat h3 { font-size: 20px; }
+        .ipdash-stat p  { font-size: 13px; }
+        .ipdash-circle { width: 120px; height: 120px; }
+        .ipdash-circle strong { font-size: 38px; }
+        .ipdash-circle svg { width: 48px; height: 48px; }
+        .ipdash-icon-large svg { width: 88px; height: 88px; }
+
+        /* dashboard progress */
+        .ipdash-progress { grid-template-columns: 90px 1fr 48px; gap: 14px; }
+        .framework svg { width: 20px; height: 20px; }
+
+        /* 8. SECTION 7 — FAQ */
+        .ipfaq-item button { font-size: 14px; min-height: 44px; }
+        .ipfaq-help-icon { width: 120px; height: 120px; }
+        .ipfaq-help-icon svg { width: 68px; height: 68px; }
+        .ipfaq-help-card h3 { font-size: 20px; }
+        .ipfaq-help-card > p { font-size: 14px; }
+        .ipfaq-help-item svg { width: 30px; height: 30px; min-width: 30px; }
+        .ipfaq-help-item strong { font-size: 13px; }
+        .ipfaq-help-item span  { font-size: 12px; }
+        .ipfaq-cta h3 { font-size: 18px; }
+        .ipfaq-cta p  { font-size: 13px; }
+        .ipfaq-cta-icon svg { width: 72px; height: 72px; }
+        .ipfaq-cta-buttons a { min-width: 200px; min-height: 46px; font-size: 14px; }
+
+        /* 9. SECTION 8 — hero compliance */
+        .iphero-feature-icon { width: 76px; height: 76px; }
+        .iphero-feature-icon svg { width: 44px; height: 44px; }
+        .iphero-feature h3 { font-size: 16px; }
+        .iphero-feature p  { font-size: 13px; }
+        .iphero-btn { min-width: 260px; min-height: 60px; font-size: 16px; }
+        .iphero-btn svg { width: 28px; height: 28px; }
+        .iphero-btn span { font-size: 28px; }
+        .iphero-btn.scan { width: auto; }
+        .iphero-orbit-icon { width: 72px; height: 72px; }
+        .iphero-orbit-icon svg { width: 38px; height: 38px; }
+        .iphero-tagline h3 { font-size: 16px; }
+        .iphero-tagline p  { font-size: 14px; }
+        .iphero-tag-icon { width: 52px; height: 52px; min-width: 52px; }
+        .iphero-main-mark { width: 460px; height: 460px; }
+
+        /* 10. Responsive adjustments for new uniform sizes */
+        @media (max-width: 1350px) {
+            .tlp-card,
+            .tlp-result-card { min-height: auto; }
+            .ipfw-card { min-height: auto; }
+            .ipind-card { min-height: auto; }
+            .ipben-card { min-height: auto; }
+            .ipdash-stat { min-height: auto; }
+        }
+
+        @media (max-width: 900px) {
+            .iphero-main-mark { width: 360px; height: 360px; }
+        }
+
+        @media (max-width: 600px) {
+            .iphero-main-mark { width: 280px; height: 280px; }
+            .tlp-icon-circle { width: 80px; height: 80px; }
+            .tlp-icon-circle svg { width: 44px; height: 44px; }
+            .ipfw-icon { width: 90px; height: 90px; }
+            .ipfw-icon svg { width: 52px; height: 52px; }
+            .ipben-main-icon { height: 110px; }
+            .ipben-main-icon svg { width: 100px; height: 100px; }
+            .ipind-main-icon { height: 72px; }
+            .ipind-main-icon svg { width: 72px; height: 72px; }
+            .ipdash-circle { width: 100px; height: 100px; }
+        }
+
     </style>
 </head>
 <body>
@@ -4286,7 +4494,7 @@
 
                 <!-- Healthcare -->
                 <div class="ipind-card ipind-blue">
-                    <img src="assets/images/compliance/sec4-card01-01.png" alt="" />
+                    <img class="ipind-card-img" src="assets/images/compliance/sec4-card01-01.png" alt="" />
                     <h3>Healthcare</h3>
                     <p>Protect patient data and<br>meet healthcare regulations.</p>
 
@@ -4306,7 +4514,7 @@
 
                 <!-- Retail -->
                 <div class="ipind-card ipind-green">
-                    <img src="assets/images/compliance/sec4-card02-01.png" alt="" />
+                    <img class="ipind-card-img" src="assets/images/compliance/sec4-card02-01.png" alt="" />
                     <h3>Retail & Ecommerce</h3>
                     <p>Secure payment data and<br>build customer trust.</p>
 
@@ -4324,7 +4532,7 @@
 
                 <!-- Technology -->
                 <div class="ipind-card ipind-blue">
-                    <img src="assets/images/compliance/sec4-card03-01.png" alt="" />
+                    <img class="ipind-card-img" src="assets/images/compliance/sec4-card03-01.png" alt=""/>
                     <h3>Technology Companies</h3>
                     <p>Protect customer data and<br>meet industry standards.</p>
 
@@ -4344,7 +4552,7 @@
 
                 <!-- Financial -->
                 <div class="ipind-card ipind-gold">
-                    <img src="assets/images/compliance/sec4-card04-01.png" alt="" />
+                    <img class="ipind-card-img" src="assets/images/compliance/sec4-card04-01.png" alt="" />
                     <h3>Financial Services</h3>
                     <p>Meet advanced regulatory<br>requirements and protect<br>sensitive data.</p>
 
@@ -4363,7 +4571,7 @@
 
                 <!-- Professional -->
                 <div class="ipind-card ipind-purple">
-                    <img src="assets/images/compliance/sec4-card05-01.png" alt="" />
+                    <img class="ipind-card-img" src="assets/images/compliance/sec4-card05-01.png" alt="" />
                     <h3>Professional Services</h3>
                     <p>Meet client requirements<br>with confidence.</p>
 
@@ -4464,14 +4672,14 @@
             <div class="ipben-grid ipben-reveal">
 
                 <div class="ipben-card ipben-blue">
-                    <img src="assets/images/compliance/sec5-card01-01.png" alt="" />
+                    <img src="assets/images/compliance/sec5-card01-01.png" alt=""  style="width:200px;" />
                     <h3>Unified Platform</h3>
                     <div class="ipben-line"></div>
                     <p>One place for protection,<br>testing, and compliance.</p>
                 </div>
 
                 <div class="ipben-card ipben-green">
-                    <img src="assets/images/compliance/sec5-card02-01.png" alt="" />
+                    <img src="assets/images/compliance/sec5-card02-01.png" alt=""  style="width:200px;" />
 
                     <h3>Reduce Risk</h3>
                     <div class="ipben-line"></div>
@@ -4479,21 +4687,21 @@
                 </div>
 
                 <div class="ipben-card ipben-purple">
-                    <img src="assets/images/compliance/sec5-card03-01.png" alt="" />
+                    <img src="assets/images/compliance/sec5-card03-01.png" alt="" style="width:200px;" />
                     <h3>Audit Ready</h3>
                     <div class="ipben-line"></div>
                     <p>Maintain documentation<br>and testing.</p>
                 </div>
 
                 <div class="ipben-card ipben-blue">
-                    <img src="assets/images/compliance/sec5-card04-01.png" alt="" />
+                    <img src="assets/images/compliance/sec5-card04-01.png" alt=""  style="width:200px;" />
                     <h3>Save Time</h3>
                     <div class="ipben-line"></div>
                     <p>Reduce vendor<br>complexity.</p>
                 </div>
 
                 <div class="ipben-card ipben-gold">
-                    <img src="assets/images/compliance/sec5-card05-01.png" alt="" />
+                    <img src="assets/images/compliance/sec5-card05-01.png" alt=""  style="width:200px;" />
                     <h3>Build Trust</h3>
                     <div class="ipben-line"></div>
                     <p>Demonstrate<br>security maturity.</p>
@@ -4989,7 +5197,7 @@
                             <path d="M12 3L19 6V11C19 16 16 19 12 21C8 19 5 16 5 11V6L12 3Z"></path>
                             <path d="M9 12L11 14L15 10"></path>
                         </svg>
-                        Get a Free Compliance Scan
+                        Get a Free Perimeter Pen Test
                         <span>›</span>
                     </a>
 
