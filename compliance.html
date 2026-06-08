@@ -763,6 +763,22 @@
             transition: .35s ease;
         }
 
+        .tlp-result-card-img {
+            display: flex;
+            justify-content: center; /* Horizontal center */
+            align-items: center; /* Vertical center */
+            width: 100%;
+            height: 120px; /* Adjust as needed */
+            margin-bottom:25px;
+        }
+
+            .tlp-result-card-img img {
+                max-width: 120px; /* Adjust image size */
+                width: 100%;
+                height: auto;
+                display: block;
+                
+            }
             .tlp-card:hover,
             .tlp-result-card:hover {
                 transform: translateY(-8px);
@@ -4316,13 +4332,12 @@
 
                 <!-- Infinite Protection -->
                 <div class="tlp-result-card">
-                    <div class="tlp-shield-logo">
-                        <svg viewBox="0 0 120 120">
-                            <path d="M60 8L100 25V60C100 87 83 105 60 114C37 105 20 87 20 60V25L60 8Z"></path>
-                            <path d="M34 62C43 42 56 42 60 60C64 78 77 78 86 58"></path>
-                            <path d="M34 62C43 82 56 82 60 64C64 46 77 46 86 66"></path>
-                        </svg>
+                    <div class="tlp-result-card-img">
+                        <img src="assets/images/compliance/sec2-card04-01.png" alt="Shield Icon">
                     </div>
+                    
+                    
+
 
                     <h3>INFINITE</h3>
                     <h4>PROTECTION</h4>
@@ -4451,7 +4466,7 @@
 
                 <div class="ipfw-card ipfw-gold">
                     <img src="assets/images/compliance/sec3-card05-01.png" alt="" />
-                    <h4></h4>>More Frameworks<br><span>Coming Soon</span></h4>
+                    <h6>More Frameworks<br><span>Coming Soon</span></h6>
                     <div class="ipfw-line"></div>
                     <p>We continue to expand<br>our supported compliance<br>frameworks.</p>
                     <div class="ipfw-badge">
