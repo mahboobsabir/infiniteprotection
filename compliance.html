@@ -3623,7 +3623,7 @@
             padding: 20px 20px;
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 38px;
             border: 1px solid #f2a90f;
             border-radius: 12px;
             background: rgba(3,18,45,.72);
@@ -3635,7 +3635,7 @@
 
         .iphero-tag-icon {
             width: 62px;
-            height: 62px;
+            height: 70px;
             min-width: 62px;
             color: #f2a90f;
         }
@@ -3932,7 +3932,7 @@
         .iphero-orbit-icon svg { width: 38px; height: 38px; }
         .iphero-tagline h3 { font-size: 16px; }
         .iphero-tagline p  { font-size: 14px; }
-        .iphero-tag-icon { width: 52px; height: 52px; min-width: 52px; }
+        .iphero-tag-icon { width: 52px; height: 70px; min-width: 52px; }
         .iphero-main-mark { width: 460px; height: 460px; }
 
         /* 10. Responsive adjustments for new uniform sizes */
@@ -3960,6 +3960,92 @@
             .ipind-main-icon { height: 72px; }
             .ipind-main-icon svg { width: 72px; height: 72px; }
             .ipdash-circle { width: 100px; height: 100px; }
+        }
+
+
+
+        /* ==========================================================
+           IMAGE CORNER + LIGHT MODE IMAGE FIXES
+           Added: rounded image corners and softer image rendering
+           for light mode without changing the existing HTML layout.
+        ========================================================== */
+        .compliance-section img,
+        .three-layer-platform-section img,
+        .ip-frameworks-section img,
+        .ip-industry-section img,
+        .ip-benefits-section img,
+        .ip-dashboard-section img,
+        .ip-compliance-proof-section img,
+        .ip-faq-section img,
+        .ip-hero-compliance-section img {
+            border-radius: 20px;
+            overflow: hidden;
+            object-fit: contain;
+            transition: filter .35s ease, box-shadow .35s ease, background .35s ease, transform .35s ease;
+        }
+
+        .tlp-result-card-img,
+        .ipind-main-icon,
+        .ipben-main-icon,
+        .ipproof-card-img,
+        .iphero-visual,
+        .ipdash-logo-icon {
+            overflow: hidden;
+            border-radius: 22px;
+        }
+
+        .tlp-result-card-img img,
+        .ipind-card-img,
+        .ipben-main-icon img,
+        .ipproof-card-img img,
+        .iphero-visual img {
+            border-radius: 22px;
+        }
+
+        .ipind-card-img,
+        .ipben-main-icon img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body.light-mode .compliance-section img,
+        body.light-mode .three-layer-platform-section img,
+        body.light-mode .ip-frameworks-section img,
+        body.light-mode .ip-industry-section img,
+        body.light-mode .ip-benefits-section img,
+        body.light-mode .ip-dashboard-section img,
+        body.light-mode .ip-compliance-proof-section img,
+        body.light-mode .ip-faq-section img,
+        body.light-mode .ip-hero-compliance-section img {
+            filter: brightness(1.08) contrast(.96) saturate(.9);
+            background: rgba(255, 255, 255, .58);
+            box-shadow: 0 16px 34px rgba(0, 65, 130, .12);
+        }
+
+        body.light-mode .tlp-result-card-img,
+        body.light-mode .ipind-main-icon,
+        body.light-mode .ipben-main-icon,
+        body.light-mode .ipproof-card-img,
+        body.light-mode .iphero-visual {
+            background: rgba(255, 255, 255, .42);
+            box-shadow: inset 0 0 0 1px rgba(0, 90, 180, .10);
+        }
+
+        body.light-mode .ipind-card-img,
+        body.light-mode .ipben-main-icon img,
+        body.light-mode .tlp-result-card-img img {
+            filter: brightness(1.12) contrast(.94) saturate(.88);
+        }
+
+        body.light-mode .logo-dark,
+        body.light-mode .logo-light {
+            filter: none;
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
         }
 
     </style>
