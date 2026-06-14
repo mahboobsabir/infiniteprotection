@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Home - Infinite Protection</title>
 
-    
+
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
@@ -19,7 +20,57 @@
     <link rel="stylesheet" href="assets/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="assets/css/style.css" asp-append-version="true" />
 
-	<link rel="stylesheet" href="assets/css/podcasts.css" asp-append-version="true" />
+    <link rel="stylesheet" href="assets/css/podcasts.css" asp-append-version="true" />
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const modal = document.getElementById("podVideoModal");
+            const player = document.getElementById("podYoutubePlayer");
+            const closeBtn = document.querySelector(".pod-video-close");
+
+            document.querySelectorAll(".btn-listen[data-youtube]").forEach(button => {
+                button.addEventListener("click", function () {
+
+                    let url = this.getAttribute("data-youtube");
+                    let videoId = "";
+
+                    if (url.includes("youtube.com/watch")) {
+                        videoId = new URL(url).searchParams.get("v");
+                        url = "https://www.youtube.com/embed/" + videoId;
+                    }
+                    else if (url.includes("youtu.be/")) {
+                        videoId = url.split("youtu.be/")[1].split("?")[0];
+                        url = "https://www.youtube.com/embed/" + videoId;
+                    }
+
+                    const embedUrl = new URL(url);
+
+                    embedUrl.searchParams.set("autoplay", "1");
+                    embedUrl.searchParams.set("rel", "0");
+                    embedUrl.searchParams.set("modestbranding", "1");
+                    embedUrl.searchParams.set("origin", window.location.origin);
+
+                    player.src = embedUrl.toString();
+                    modal.classList.add("active");
+                });
+            });
+
+            function closeVideo() {
+                player.src = "";
+                modal.classList.remove("active");
+            }
+
+            closeBtn.addEventListener("click", closeVideo);
+
+            modal.addEventListener("click", function (e) {
+                if (e.target === modal) {
+                    closeVideo();
+                }
+            });
+
+        });
+    </script>
 
 </head>
 
@@ -123,7 +174,21 @@
             </div>
         </div>
     </nav>
+    <div class="pod-video-modal" id="podVideoModal">
+        <div class="pod-video-box">
+            <button class="pod-video-close" type="button">&times;</button>
 
+            <iframe id="podYoutubePlayer"
+                    src=""
+                    width="100%"
+                    height="480"
+                    frameborder="0"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
     <!-- ══════════════════════════════════
          HERO
     ══════════════════════════════════ -->
@@ -155,43 +220,33 @@
                 <!-- Episode 1 -->
                 <div class="episode-card reveal reveal-delay-1">
                     <div class="episode-thumb">
-                        <div class="episode-thumb-bg ep-bg-1">
-                            <div class="ep-illustration">
-                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="60" cy="60" r="50" stroke="rgba(74,222,128,0.2)" stroke-width="1" />
-                                    <circle cx="60" cy="60" r="36" stroke="rgba(74,222,128,0.3)" stroke-width="1" />
-                                    <circle cx="60" cy="60" r="22" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.5)" stroke-width="1.5" />
-                                    <path d="M60 46v7M60 60v2" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" />
-                                    <path d="M52 72h16M48 68l4-8h16l4 8" fill="none" stroke="#4ADE80" stroke-width="1.5" stroke-linejoin="round" />
-                                    <circle cx="30" cy="40" r="4" fill="rgba(253,176,34,0.6)" />
-                                    <circle cx="90" cy="38" r="3" fill="rgba(74,222,128,0.5)" />
-                                    <circle cx="88" cy="82" r="4" fill="rgba(253,176,34,0.4)" />
-                                    <circle cx="32" cy="78" r="3" fill="rgba(74,222,128,0.4)" />
-                                    <line x1="30" y1="40" x2="48" y2="56" stroke="rgba(74,222,128,0.25)" stroke-width="1" stroke-dasharray="3 3" />
-                                    <line x1="90" y1="38" x2="72" y2="54" stroke="rgba(74,222,128,0.25)" stroke-width="1" stroke-dasharray="3 3" />
-                                </svg>
-                            </div>
-                            <div class="ep-number-badge">Episode 1</div>
-                        </div>
+                        <img src="assets/images/podcast/episode/episode-01.png" alt="" />
+
+                        <div class="ep-number-badge">Episode 1</div>
                     </div>
                     <div class="episode-body">
                         <div class="ep-meta">
-                            <span>Jason Carter</span>
+                            <span>Brad Hawkins</span>
                             <div class="ep-meta-dot"></div>
-                            <span>19 Aug, 2025</span>
+                            <span>20 Oct, 2023</span>
                         </div>
-                        <h3>Protecting Teens from Online Threats</h3>
-                        <p>In this episode of the Digital Desperados podcast, brought to you by the knights in shining armor at Infinite Protection  VPN.</p>
+                        <h3>The Life & Criminal Activity of Maksim Yakubets (AKA Aqua)</h3>
+                        <p>This premier episode of the Digital Desperados Podcasts introduces a desperado indeed. Maksim Yakubets, known primarily as “Aqua” is a Ukranian-Russian hacker who has stolen and aided in stealing hundreds of millions of dollars.........</p>
                         <div class="ep-author">
-                            <div class="ep-avatar">JC</div>
+                            <div class="ep-avatar">JB</div>
                             <div class="ep-author-info">
-                                By <strong>Jason Carter</strong> &nbsp;·&nbsp; 19 Aug, 2025
+                                By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 20 Oct, 2023
                             </div>
                         </div>
-                        <button class="btn-listen">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
-                            Listen Now
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/embed/CAFIpGYhnhI?list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
                         </button>
+
+
                     </div>
                 </div>
 
@@ -200,34 +255,29 @@
                     <div class="episode-thumb">
                         <div class="episode-thumb-bg ep-bg-2">
                             <div class="ep-illustration">
-                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                                    <rect x="25" y="30" width="70" height="60" rx="6" fill="rgba(168,85,247,0.12)" stroke="rgba(168,85,247,0.4)" stroke-width="1.5" />
-                                    <rect x="33" y="38" width="54" height="8" rx="3" fill="rgba(168,85,247,0.25)" />
-                                    <rect x="33" y="50" width="40" height="6" rx="3" fill="rgba(168,85,247,0.15)" />
-                                    <rect x="33" y="60" width="48" height="6" rx="3" fill="rgba(168,85,247,0.15)" />
-                                    <rect x="33" y="70" width="30" height="6" rx="3" fill="rgba(168,85,247,0.15)" />
-                                    <circle cx="88" cy="38" r="14" fill="rgba(253,176,34,0.15)" stroke="rgba(253,176,34,0.5)" stroke-width="1.5" />
-                                    <path d="M83 38l3 3 6-6" stroke="#FDB022" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                                <img src="assets/images/podcast/episode/episode-02.png" alt="" />
                             </div>
                             <div class="ep-number-badge">Episode 2</div>
                         </div>
                     </div>
                     <div class="episode-body">
                         <div class="ep-meta">
-                            <span>Jason Carter</span>
+                            <span>Brad Hawkins</span>
                             <div class="ep-meta-dot"></div>
-                            <span>19 Aug, 2025</span>
+                            <span>20 Oct, 2023</span>
                         </div>
-                        <h3>Protecting Teens from Online Threats</h3>
-                        <p>In this episode of the Digital Desperados podcast, brought to you by the knights in shining armor at Infinite Protection  VPN.</p>
+                        <h3>Alexsey Belan Could Be Selling Your Information</h3>
+                        <p>This episode highlights the story and crimes of Alexsey Belan, a Latvian hacker best known for Yahoo data breaches and for stealing the information (login, credit card, etc.) of millions. All at about only 19 years old!........</p>
                         <div class="ep-author">
-                            <div class="ep-avatar">JC</div>
-                            <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 19 Aug, 2025</div>
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 20 Oct, 2023</div>
                         </div>
-                        <button class="btn-listen">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
-                            Listen Now
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/embed/CAFIpGYhnhI?list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
                         </button>
                     </div>
                 </div>
@@ -237,33 +287,29 @@
                     <div class="episode-thumb">
                         <div class="episode-thumb-bg ep-bg-3">
                             <div class="ep-illustration">
-                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                                    <path d="M60 25 L80 35 L80 58 C80 72 70 82 60 87 C50 82 40 72 40 58 L40 35 Z" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.45)" stroke-width="1.5" />
-                                    <path d="M60 38 L70 44 L70 59 C70 67 65 73 60 76 C55 73 50 67 50 59 L50 44 Z" fill="rgba(74,222,128,0.2)" stroke="rgba(74,222,128,0.4)" stroke-width="1" />
-                                    <path d="M53 57 l5 5 9-9" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <circle cx="35" cy="30" r="5" fill="rgba(253,176,34,0.5)" stroke="rgba(253,176,34,0.7)" stroke-width="1" />
-                                    <circle cx="88" cy="75" r="4" fill="rgba(74,222,128,0.4)" />
-                                    <path d="M35 30 Q48 40 50 48" stroke="rgba(253,176,34,0.3)" stroke-width="1" stroke-dasharray="3 3" />
-                                </svg>
+                                <img src="assets/images/podcast/episode/episode-03.png" alt="" />
                             </div>
                             <div class="ep-number-badge">Episode 3</div>
                         </div>
                     </div>
                     <div class="episode-body">
                         <div class="ep-meta">
-                            <span>Jason Carter</span>
+                            <span>Brad Hawkins</span>
                             <div class="ep-meta-dot"></div>
-                            <span>19 Aug, 2025</span>
+                            <span>20 Oct, 2023</span>
                         </div>
-                        <h3>Protecting Teens from Online Threats</h3>
-                        <p>In this episode of the Digital Desperados podcast, brought to you by the knights in shining armor at Infinite Protection  VPN.</p>
+                        <h3>The Thrill of Cybercrime: Alberto Gonzalez’s Digital Desperado Story</h3>
+                        <p>It seems that Alberto Gonzalez has always been a thrill seeker. From hacking into NASA at just 14 years old to eventually working as a government spy, Gonzalez seemed to have a love for getting into trouble. From his early hacking days,....... </p>
                         <div class="ep-author">
-                            <div class="ep-avatar">JC</div>
-                            <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 19 Aug, 2025</div>
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 20 Oct, 2023</div>
                         </div>
-                        <button class="btn-listen">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
-                            Listen Now
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=HeM_pxPeFvw&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=3">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
                         </button>
                     </div>
                 </div>
@@ -273,14 +319,7 @@
                     <div class="episode-thumb">
                         <div class="episode-thumb-bg ep-bg-4">
                             <div class="ep-illustration">
-                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                                    <rect x="30" y="35" width="60" height="50" rx="5" fill="rgba(253,176,34,0.08)" stroke="rgba(253,176,34,0.35)" stroke-width="1.5" />
-                                    <circle cx="60" cy="55" r="12" fill="rgba(253,176,34,0.2)" stroke="rgba(253,176,34,0.5)" stroke-width="1.5" />
-                                    <path d="M56 55 h8 M60 51 v8" stroke="#FDB022" stroke-width="2" stroke-linecap="round" />
-                                    <rect x="38" y="72" width="44" height="6" rx="3" fill="rgba(253,176,34,0.2)" />
-                                    <circle cx="32" cy="32" r="5" fill="rgba(239,68,68,0.5)" />
-                                    <circle cx="90" cy="80" r="4" fill="rgba(253,176,34,0.5)" />
-                                </svg>
+                                <img src="assets/images/podcast/episode/episode-04.png" alt="" />
                             </div>
                             <div class="ep-number-badge">Episode 4</div>
                         </div>
@@ -289,17 +328,22 @@
                         <div class="ep-meta">
                             <span>Jason Carter</span>
                             <div class="ep-meta-dot"></div>
-                            <span>19 Aug, 2025</span>
+                            <span>15 Nov 2023</span>
                         </div>
-                        <h3>Protecting Teens from Online Threats</h3>
-                        <p>In this episode of the Digital Desperados podcast, brought to you by the knights in shining armor at Infinite Protection  VPN.</p>
+                        <h3>Game Over Zeus: Slavik’s Cybercrime Dark Tale</h3>
+                        <p>
+                            In this podcast, you’ll hear the dark tale of Evgeny Mikhailovich Bogachev, also known as Slavik, a prolific Russian cybercriminal. Slavik's cybercrime journey began around 2010 when he created the Game Over Zeus (GOZ) botnet......
+                        </p>
                         <div class="ep-author">
                             <div class="ep-avatar">JC</div>
-                            <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 19 Aug, 2025</div>
+                            <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 15 Nov 2023</div>
                         </div>
-                        <button class="btn-listen">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
-                            Listen Now
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=RbBthjIFMc0&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=4">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
                         </button>
                     </div>
                 </div>
@@ -309,17 +353,7 @@
                     <div class="episode-thumb">
                         <div class="episode-thumb-bg ep-bg-5">
                             <div class="ep-illustration">
-                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                                    <circle cx="60" cy="55" r="28" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1.5" />
-                                    <circle cx="60" cy="55" r="16" fill="rgba(96,165,250,0.15)" stroke="rgba(96,165,250,0.45)" stroke-width="1" />
-                                    <circle cx="60" cy="55" r="6" fill="rgba(96,165,250,0.5)" stroke="rgba(96,165,250,0.8)" stroke-width="1" />
-                                    <line x1="60" y1="27" x2="60" y2="35" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" />
-                                    <line x1="60" y1="75" x2="60" y2="83" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" />
-                                    <line x1="32" y1="55" x2="40" y2="55" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" />
-                                    <line x1="80" y1="55" x2="88" y2="55" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" />
-                                    <circle cx="42" cy="37" r="4" fill="rgba(253,176,34,0.5)" />
-                                    <circle cx="80" cy="72" r="3" fill="rgba(74,222,128,0.5)" />
-                                </svg>
+                                <img src="assets/images/podcast/episode/episode-05.png" alt="" />
                             </div>
                             <div class="ep-number-badge">Episode 5</div>
                         </div>
@@ -328,241 +362,1188 @@
                         <div class="ep-meta">
                             <span>Jason Carter</span>
                             <div class="ep-meta-dot"></div>
-                            <span>19 Aug, 2025</span>
+                            <span>29 Nov 2023</span>
                         </div>
-                        <h3>Protecting Teens from Online Threats</h3>
-                        <p>In this episode of the Digital Desperados podcast, brought to you by the knights in shining armor at Infinite Protection  VPN.</p>
+                        <h3>Mafia Boy: A Hacker Prodigy's Redemption Story</h3>
+                        <p>In this episode of the Digital Desperados Podcast, we explore the riveting tale of Mafia Boy, a child prodigy turned hacker extraordinaire. His early experiments with AOL trials led to a life in the shadows, culminating......</p>
                         <div class="ep-author">
                             <div class="ep-avatar">JC</div>
-                            <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 19 Aug, 2025</div>
+                            <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 29 Nov 2023</div>
                         </div>
-                        <button class="btn-listen">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
-                            Listen Now
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=H1KE855u8DU&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=5">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 6 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-5">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-06.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 6</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span>Jason Carter</span>
+                            <div class="ep-meta-dot"></div>
+                            <span>13 Dec 2023</span>
+                        </div>
+                        <h3>Solo's UFO Odyssey: The NASA Hack Chronicles</h3>
+                        <p>Welcome to the Digital Desperados Podcast, where we embark on an enthralling journey into the life of Gary McKinnon, also known as Solo, the NASA Hacker. Gary's story is nothing short of extraordinary - driven by .......</p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JC</div>
+                            <div class="ep-author-info">By <strong>Jason Carter</strong> &nbsp;·&nbsp; 13 Dec 2023</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=RjYQD32SdjU&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=6">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+                <!-- Episode 7 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-07.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 7</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span> 27 Dec 2023</span>
+                        </div>
+                        <h3> Sabu: Hacktivist, Informant, Cybersecurity Advocate</h3>
+                        <p>This episode’s featured dark tale revolves around Hector Xavier Monsegur, also known as Sabu, a prominent figure in hacking and hacktivism. Born in 1983 in Puerto Rico, Sabu's challenging upbringing led him to explore hacking from a young age........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;  27 Dec 2023</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=XRF0TlBv0Ak&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=7">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 8 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-08.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 8</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>10 Jan 2024</span>
+                        </div>
+                        <h3> Iceman’s Cyber Freeze</h3>
+                        <p>This newest episode of the Digital Desperados Podcast recounts the chilling story of Max Butler, aka the Iceman, known for his cool demeanor and freezing victims' assets through credit card fraud. Butler's journey from teenage mischief to a hacking career unfolds as....... </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 10 Jan 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=iZxesST5Ldg&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=8">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 9 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-09.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 9</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>24 Jan 2024</span>
+                        </div>
+                        <h3>A Global War: State-Sponsored Hacking</h3>
+                        <p>In this lively episode of the Digital Desperados Podcast, hosts Jim Brangenberg and Patrick McMurphy, accompanied by SaferNet VPN's Brad Hawkins, unravel the thrilling world of state-sponsored hacking........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 24 Jan 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=hXHaEySHBGM&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=9">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Episode 10 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-010.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 10</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>7 Feb 2024</span>
+                        </div>
+                        <h3>Condor: The Legendary Fugitive</h3>
+                        <p>This Digital Desperados episode introduces Kevin Mitnick, known as The Condor, a legendary figure in the hacking world. Mitnick displayed social engineering skills from a very early age, initiating his hacking journey at 16.After unauthorized access to the Arc and subsequent........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 7 Feb 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=1OszBihkyDs&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=10">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 11 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-011.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 11</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>21 Feb 2024</span>
+                        </div>
+                        <h3>The Gray Legacy of Adrian Lamo</h3>
+                        <p>n the riveting 11th episode of the Digital Desperadoes podcast, the gang dive deep into the captivating and tumultuous tale of Adrian Lamo, famously known as the Homeless Hacker. Lamo's journey unfolds from a tech-savvy enthusiast to a gray hat hacker, blurring the lines....... </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;21 Feb 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=pRDxIiD_1nY&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=11">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 12 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-012.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 12</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>6 Mar 2024</span>
+                        </div>
+                        <h3>SEA: The Power of State-Sponsored Hacking</h3>
+                        <p>In a whirlwind cybersecurity adventure, hosts Jim Brangenberg, Patrick McMurphy, and Brad Hawkins of SaferNet VPN unravel the intriguing history of the Syrian Electronic Army (SEA), a state-sponsored hacking group........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 6 Mar 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=d1YEezJdquw&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=12">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 13 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-013.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 13</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>20 Mar 2024</span>
+                        </div>
+                        <h3>I Spy with My Little Eye... SpyEye and the Smiling Hacker</h3>
+                        <p>Welcome to the Digital Desperados podcast, sponsored by SaferNet VPN.  (http://safernet.com)  In this episode, we delve into the dark tale of Hamza Bendelladj, also known as BX1, the Smiling Hacker. The story unfolds as Hamza, a linguistic....... </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 20 Mar 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=CltJQxEfxaY&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=13">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 14 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-014.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 14</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>3 Apr 2024</span>
+                        </div>
+                        <h3>Spam Lord: Genius, Elusivity, and Mystery</h3>
+                        <p>In episode 14 of the Digital Desperados podcast, hosts Jim Brangenberg, Patrick McMurphy, and Brad Hawkins embark on a wild ride into the world of cybercrime with the intriguing tale of Pytor Levashov, aka the Spam Lord........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 3 Apr 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=JTUuPz7srWo&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=14">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 15 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-015.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 15</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>17 Apr 2024</span>
+                        </div>
+                        <h3> Beware the Cozy Bear!</h3>
+                        <p>The Digital Desperados Podcast explores infamous cybercriminals and attacks with host Jim Brangenberg, story guide Patrick McMurphy, and SaferNet CEO Brad Hawkins. In this episode, they delve into the activities of Cozy Bear, a sophisticated state-sponsored hacking group........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 17 Apr 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=KXUw-Nvo9NA&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=15">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 16 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-016.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 16</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>1 May 2024</span>
+                        </div>
+                        <h3>The Treasonous Story of Forb</h3>
+                        <p>Dmitry Dukachaev, aka Forb, lived a life stranger than fiction. Starting as a Robin Hood hacker providing free internet, he soon dove into the dark world of cybercrime. Forb's skills made him a sought-after hacker-for-hire........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 1 May 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=jK9mNM1HWMw&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=16">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 17 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-017.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 17</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>15 May 2024</span>
+                        </div>
+                        <h3>Nasty Nastra, the King of Fraud</h3>
+                        <p>This episode of Digital Desperados exposes Alexander Zhukov, aka "Nastra," the King of Fraud. Nastra wasn't your average hacker. He started young, hustling on the streets before moving on to online scams. In the 2010s, he created MethBot........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 15 May 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=Eh4A6d8dZsc&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=17">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 18 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-018.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 18</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>29 May 2024</span>
+                        </div>
+                        <h3>Guccifer: Hacking Made Easy</h3>
+                        <p>This week's Digital Desperados serves up a side of "accidental hacking" with Guccifer, the hacker who makes social media security questions look like a joke. This guy used Google and a thirst for fame to waltz into the accounts of the rich, famous........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 29 May 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=Y3xcPVm15H0&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=18">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 19 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-019.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 19</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>15 May 2024</span>
+                        </div>
+                        <h3>Preventing the Next Roman Seleznev</h3>
+                        <p>This Digital Desperados episode explores Roman Seleznev, a hacker who amassed a fortune through stolen credit cards. Born in 1984, Roman's life took a dark turn after his parents divorced when he was young. Tragedy struck again at 17 with his mother's death, followed by his uncle........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 15 May 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=QP9gxBnN72o&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=19">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 20 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-020.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 20</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span> 26 Jun 2024</span>
+                        </div>
+                        <h3>The Silk Road... to Trouble</h3>
+                        <p>Today on the Digital Desperados Podcast, the gang dive into the story of Ross Ulbricht, better known on the dark web as the Dread Pirate Roberts. Born in Austin, Texas, Ulbricht was a bright student and even an Eagle Scout who became obsessed with libertarianism during his college years......... </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;  26 Jun 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=qbbQDMxBm9Q&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=20">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 21 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-021.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 21</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>10 Jul, 2024</span>
+                        </div>
+                        <h3>How Some Teens Created a Cyber Atomic Bomb</h3>
+                        <p>Imagine an attack that takes down the internet! Three teenagers in the US created Mirai to try to get established in the cybersecurity world, but it turned into a monster. Their tool infected millions of internet devices like cameras and routers........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 10 Jul 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=fPVdkSgS4Uc&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=21">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 22 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-022.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 22</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span> 24 Jul, 2024</span>
+                        </div>
+                        <h3>The Julian Assange Story, Part 1</h3>
+                        <p>In this episode of Digital Desperados, Jim Brangenberg, Patrick McMurphy, and Brad Hawkins (CEO of SaferNet VPN) begin to explore the fascinating and controversial life of Julian Assange. We look at the early life events that led Julian........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;  24 Jul 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=cfCgipXUxNI&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=22">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 23 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-023.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 23</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span> 7 Aug 2024</span>
+                        </div>
+                        <h3>The Julian Assange Story, Part 2</h3>
+                        <p>Welcome back to Part 2 in the Julian Assange story! This episode gets into the nitty gritty, discussing key WikiLeaks leaks, ranging from the Peruvian oil scandal to hundreds of thousands of classified war logs that the public was never........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   7 Aug 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=ARbz9Ri7hQ0&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=23">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Episode 24 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-024.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 24</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>21 Aug 2024</span>
+                        </div>
+                        <h3>Don’t Give Drinkman Your Credit Card Information</h3>
+                        <p>xplore the story of Vladimir Drinkman, a notorious Russian hacker. This digital desperado gained expertise in SQL injections and formed a hacking crew that executed long-term cyber-attacks, including the massive........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;  21 Aug 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=ycSC3uKYpw8&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=24">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Episode 25 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-025.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 25</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span> 4 Sept 2024</span>
+                        </div>
+                        <h3> Pavel Durov: Russia's Digital Rebel</h3>
+                        <p>In this episode of Digital Desperados, Jim Brangenberg, Patrick McMurphy, and Brad Hawkins explore the fascinating story of Pavel Durov, known as the "Mark Zuckerberg of Russia." Durov created VK, Russia's largest social........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;  4 Sept 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=Jiah60ve_Eg&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=25">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Episode 26 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-026.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 26</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span> 18 Sept 2024</span>
+                        </div>
+                        <h3>The Accidental Hero, Marcus Hutchins</h3>
+                        <p>In this episode of Digital Desperados, Patrick McMurphy dives into the incredible true story of Marcus Hutchins, founder of the MalwareTech Blog. Born in a quiet English village, Marcus’s passion for computers grew from a young age, leading him........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;  18 Sept 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=ifZ4uzE4OZ8&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=26">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Episode 27 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-027.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 27</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span> 2 Oct, 2024</span>
+                        </div>
+                        <h3>The Rise and Fall of Revil</h3>
+                        <p>In this episode of Digital Desperados, Jim Brangenberg, Patrick McMurphy, and Brad Hawkins (CEO of SaferNet VPN) begin to explore the fascinating and controversial life of Julian Assange. We look at the early life events that led Julian........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;  2 Oct, 2024 </div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=cfCgipXUxNI&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=22">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Episode 28 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-028.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 28</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span> 16 Oct 2024</span>
+                        </div>
+                        <h3>Online Security, More Crucial Than Ever</h3>
+                        <p>In this episode of Digital Desperados, you’ll learn the story of Mustafa Al-Bassam, a teenage hacker who took on the CIA and lived to tell the tale. Co-hosts Patrick, Brad, and Jim dive into Mustafa's journey from mischievous school ........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 16 Oct 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=DmysNb_qpAc&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=28">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Episode 29 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-029.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 29</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  30 Oct 2024</span>
+                        </div>
+                        <h3>The Rise and Fall of a Cyber Jihadist</h3>
+                        <p>Junaid Hussain, a quiet British teen with a knack for computers, morphed into a dangerous cyber jihadist. Initially drawn to hacking as a teenager, he joined groups like Team Poison, targeting perceived enemies of Islam. His skills grew........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   30 Oct 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=h0Nd0KP1PqM&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=29">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 30 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-030.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 30</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  13 Nov 2024</span>
+                        </div>
+                        <h3>The Cyber Redemption of Hieu PC</h3>
+                        <p>Uncover the riveting story of Hieu Minh Ngo—aka “Hieu PC”—a notorious hacker who (thankfully) turned his life around to fight cybercrime. Hieu’s story begins in Vietnam, where he got his first computer at 13 and quickly found........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   13 Nov 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=IBvEQXhacPw&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=30">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 31 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-031.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 31</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  27 Nov 2024</span>
+                        </div>
+                        <h3>Samy Kamkar: A Hacker’s Quick Pivot to CyberSecurity</h3>
+                        <p>This week, Digital Desperados takes a lighthearted stroll through the story of Samy Kamkar, a hacker who quickly found out that hacking isn’t a game. Remember MySpace? (Yes, it’s the “classic rock” of social media.) Back in 2005, teenage Samy........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   27 Nov 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=9UEaYxk892s&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=31">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 32 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-032.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 32</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>   11 Dec 2024</span>
+                        </div>
+                        <h3>Iranian Hacking Group: the Not So “Charming Kitten”</h3>
+                        <p>This week, Jim Brangenberg is joined by cybersecurity expert Patrick McMurphy and SaferNet CEO Brad Hawkins to unravel the dark web world of APT42—better known as Charming Kitten. Spoiler alert: it’s not actually charming........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;    11 Dec 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=3pKvQnzNxmE&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=32">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 33 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-033.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 33</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  25 Dec 2024</span>
+                        </div>
+                        <h3>Kevin Poulsen: The OG Digital Desperado</h3>
+                        <p>Junaid Hussain, a quiet British teen with a knack for computers, morphed into a dangerous cyber jihadist. Initially drawn to hacking as a teenager, he joined groups like Team Poison, targeting perceived enemies of Islam. His skills grew........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   25 Dec 2024</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=qM7d57HJRAI&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=33">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 34 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-034.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 34</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  8 Jan 2025</span>
+                        </div>
+                        <h3>Elizabeth Holmes: Blood, Lies, and A Prison Sentence</h3>
+                        <p>Welcome to Digital Desperados, where we explore the dark tales of the web! In this episode, Jim Brangenberg and Patrick McMurphy take a deep dive into the rise and fall of Elizabeth Holmes, the ambitious founder of Theranos........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   8 Jan 2025</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=RQ_B_SxK3Jo&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=34">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 35 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-035.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 35</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  22 Jan 2025</span>
+                        </div>
+                        <h3>Why You Should Always Update Your Devices: The Story of Udi</h3>
+                        <p>In this episode of Digital Desperados, the spotlight is on Ehud “Udi” Tenenbaum, a hacker whose story of genius and cybercrime shook the digital world. Udi’s tale begins in the late 1990s when his knack for uncovering software vulnerabilities........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   22 Jan 2025</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=tPrfQPnyD6s&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=35">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 36 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-036.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 36</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  5 Feb 2025</span>
+                        </div>
+                        <h3>Explore the Hacking "Business” with DarkSide</h3>
+                        <p>In this episode of Digital Desperados, host Jim Brangenberg is joined by Patrick McMurphy and SaferNet CEO Brad Hawkins to uncover the chilling world of DarkSide, one of the most notorious ransomware groups........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   5 Feb 2025</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=PFn7Z2tQj4U&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=36">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 37 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-037.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 37</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  25 Nov 2025</span>
+                        </div>
+                        <h3>Antivirus to Anarchy: The John McAfee Story</h3>
+                        <p>In this fascinating episode of Digital Desperados, Patrick McMurphy takes us deep into the wild and chaotic life of John McAfee, the tech genius turned fugitive. Best known for creating McAfee Antivirus, John’s story is anything but ordinary........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;  25 Nov 2025</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=iTvclLV_sp0&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=37">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 38 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-038.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 38</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  12 Jan 2026</span>
+                        </div>
+                        <h3>Gary Alford Takes Down “The Dread Pirate Roberts”</h3>
+                        <p>In this episode of Digital Desperados, hosts Jim Brangenberg and Patrick McMurphy dive into the heroic story of Gary Alford, the IRS investigator who cracked the infamous Silk Road case.Unlike the usual criminals featured on the show,........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   12 Jan 2026</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=rGNE5w-ec1U&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=38">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 39 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-039.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 39</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  19 Jan 2026</span>
+                        </div>
+                        <h3>Ctrl + Alt + Caught: w0rmer’s Story</h3>
+                        <p>In this episode of Digital Desperados, dive into the cautionary tale of hacker-turned-ethical-hacker, Higinio Ochoa, aka w0rmer. What starts as harmless curiosity quickly escalates into full-blown cyber activism with CabinCr3w, an offshoot of Anonymous........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   19 Jan 2026</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=Gzl__k0_gzM&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=39">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 40 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-040.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 40</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  2 Feb 2026</span>
+                        </div>
+                        <h3> Billionaire, Investor, Disruptor: Peter Thiel</h3>
+                        <p>Billionaire investor Peter Thiel has been many things—PayPal co-founder, Silicon Valley kingmaker, libertarian mastermind, and more. In this episode, the Digital Desperados gang unravel the tangled web of Thiel’s career, from his early days in PayPal’s "Mafia"........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   2 Feb 2026</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=1W3immTaHvg&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=40">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Episode 41 -->
+                <div class="episode-card reveal reveal-delay-3">
+                    <div class="episode-thumb">
+                        <div class="episode-thumb-bg ep-bg-3">
+                            <div class="ep-illustration">
+                                <img src="assets/images/podcast/episode/episode-041.png" alt="" />
+                            </div>
+                            <div class="ep-number-badge">Episode 41</div>
+                        </div>
+                    </div>
+                    <div class="episode-body">
+                        <div class="ep-meta">
+                            <span></span>
+                            <div class="ep-meta-dot"></div>
+                            <span>  16 Feb 2026</span>
+                        </div>
+                        <h3> Beware the Cozy Bear!</h3>
+                        <p>The Digital Desperados Podcast explores infamous cybercriminals and attacks with host Jim Brangenberg, story guide Patrick McMurphy, and SaferNet CEO Brad Hawkins. In this episode, we revisit as they delve into the activities of Cozy Bear, a sophisticated state-sponsored hacking group linked to........ </p>
+                        <div class="ep-author">
+                            <div class="ep-avatar">JB</div>
+                            <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp;   16 Feb 2026</div>
+                        </div>
+                        <button class="btn-listen"
+                                data-youtube="https://www.youtube.com/watch?v=rLnLO5LImow&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=41">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Watch Now
                         </button>
                     </div>
                 </div>
 
             </div>
+
         </div>
     </section>
 
-    <!-- ══════════════════════════════════
-         LATEST ARTICLES
-    ══════════════════════════════════ -->
-    <section class="pod-section">
-        <div class="podcasts-container">
-            <div class="section-header">
-                <h2 class="reveal">Latest Articles</h2>
-                <p class="reveal reveal-delay-1">Stay updated with our newest insights and guides.</p>
-            </div>
 
-            <div class="articles-grid">
-
-                <!-- Article 1 -->
-                <div class="article-card reveal reveal-delay-1">
-                    <div class="article-thumb">
-                        <div class="article-thumb-bg art-bg-1">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                                <rect x="20" y="25" width="60" height="50" rx="5" fill="rgba(96,165,250,0.15)" stroke="rgba(96,165,250,0.4)" stroke-width="1.5" />
-                                <path d="M30 42 h40 M30 52 h30 M30 62 h20" stroke="rgba(96,165,250,0.5)" stroke-width="2" stroke-linecap="round" />
-                                <circle cx="72" cy="28" r="10" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.5)" stroke-width="1.5" />
-                                <path d="M68 28 h8 M72 24 v8" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
-                            </svg>
-                            <div class="article-cat-badge">Cloud Security</div>
-                        </div>
-                    </div>
-                    <div class="article-body">
-                        <h3>Why Cloud Tools Like Google Drive Don't Make You 100% Secure</h3>
-                        <p>The Cloud Security Myth. A common tale you may hear today in the world of business is that using cloud architecture systems means that you</p>
-                        <div class="article-footer">
-                            <div class="article-author-row">
-                                <div class="art-avatar">JC</div>
-                                <div>
-                                    <div class="art-author-name">Jason Carter</div>
-                                    <div class="art-date">19 Aug, 2025</div>
-                                </div>
-                            </div>
-                            <a href="#" class="art-read-link">
-                                Read
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="article-card reveal reveal-delay-2">
-                    <div class="article-thumb">
-                        <div class="article-thumb-bg art-bg-2">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                                <path d="M50 20 L68 30 L68 52 C68 63 60 71 50 75 C40 71 32 63 32 52 L32 30 Z" fill="rgba(74,222,128,0.15)" stroke="rgba(74,222,128,0.45)" stroke-width="1.5" />
-                                <path d="M43 48 l5 5 9-9" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <circle cx="25" cy="25" r="6" fill="rgba(253,176,34,0.4)" />
-                                <circle cx="76" cy="70" r="5" fill="rgba(74,222,128,0.4)" />
-                            </svg>
-                            <div class="article-cat-badge">Family Safety</div>
-                        </div>
-                    </div>
-                    <div class="article-body">
-                        <h3>Cybersecurity for Christian Families: Protecting Everyone at Home</h3>
-                        <p>Christian families are online more than ever—for work, school, ministry, and staying connected with friends and family. The internet is a blessing, but</p>
-                        <div class="article-footer">
-                            <div class="article-author-row">
-                                <div class="art-avatar">JC</div>
-                                <div>
-                                    <div class="art-author-name">Jason Carter</div>
-                                    <div class="art-date">19 Aug, 2025</div>
-                                </div>
-                            </div>
-                            <a href="#" class="art-read-link">
-                                Read
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="article-card reveal reveal-delay-3">
-                    <div class="article-thumb">
-                        <div class="article-thumb-bg art-bg-3">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                                <rect x="18" y="30" width="64" height="40" rx="5" fill="rgba(253,176,34,0.12)" stroke="rgba(253,176,34,0.4)" stroke-width="1.5" />
-                                <rect x="26" y="38" width="28" height="24" rx="3" fill="rgba(253,176,34,0.2)" />
-                                <circle cx="40" cy="50" r="7" fill="rgba(253,176,34,0.3)" stroke="rgba(253,176,34,0.6)" stroke-width="1" />
-                                <path d="M37 50 l2 2 4-4" stroke="#FDB022" stroke-width="1.5" stroke-linecap="round" />
-                                <rect x="60" y="38" width="16" height="6" rx="2" fill="rgba(253,176,34,0.25)" />
-                                <rect x="60" y="48" width="16" height="6" rx="2" fill="rgba(253,176,34,0.2)" />
-                                <rect x="60" y="58" width="10" height="6" rx="2" fill="rgba(253,176,34,0.15)" />
-                            </svg>
-                            <div class="article-cat-badge">Endpoint</div>
-                        </div>
-                    </div>
-                    <div class="article-body">
-                        <h3>How Antivirus Endpoint Protection Secures Your Remote Workforce</h3>
-                        <p>No matter where work happens—home offices, cafes, airports, or coworking spaces—ensuring your devices and data are safe is now a foundational part of business success.</p>
-                        <div class="article-footer">
-                            <div class="article-author-row">
-                                <div class="art-avatar">JC</div>
-                                <div>
-                                    <div class="art-author-name">Jason Carter</div>
-                                    <div class="art-date">19 Aug, 2025</div>
-                                </div>
-                            </div>
-                            <a href="#" class="art-read-link">
-                                Read
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 4 -->
-                <div class="article-card reveal reveal-delay-1">
-                    <div class="article-thumb">
-                        <div class="article-thumb-bg art-bg-4">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                                <rect x="22" y="28" width="56" height="44" rx="5" fill="rgba(168,85,247,0.12)" stroke="rgba(168,85,247,0.4)" stroke-width="1.5" />
-                                <circle cx="38" cy="48" r="10" fill="rgba(168,85,247,0.2)" stroke="rgba(168,85,247,0.5)" stroke-width="1" />
-                                <path d="M35 48 l2 2 4-4" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" />
-                                <rect x="52" y="38" width="20" height="5" rx="2" fill="rgba(168,85,247,0.3)" />
-                                <rect x="52" y="46" width="16" height="5" rx="2" fill="rgba(168,85,247,0.2)" />
-                                <rect x="52" y="54" width="20" height="5" rx="2" fill="rgba(168,85,247,0.15)" />
-                                <circle cx="76" cy="32" r="8" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.4)" stroke-width="1.5" />
-                                <path d="M73 32 h6 M76 29 v6" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
-                            </svg>
-                            <div class="article-cat-badge">Ransomware</div>
-                        </div>
-                    </div>
-                    <div class="article-body">
-                        <h3>What If Hackers Lock Your Files Tonight? Avoid It Ransomware Software</h3>
-                        <p>Files carry the weight of business. Contracts. Payroll. Client data. Everything sits on digital ground and shifts every day. One smart threat can make it</p>
-                        <div class="article-footer">
-                            <div class="article-author-row">
-                                <div class="art-avatar">JC</div>
-                                <div>
-                                    <div class="art-author-name">Jason Carter</div>
-                                    <div class="art-date">19 Aug, 2025</div>
-                                </div>
-                            </div>
-                            <a href="#" class="art-read-link">
-                                Read
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 5 -->
-                <div class="article-card reveal reveal-delay-2">
-                    <div class="article-thumb">
-                        <div class="article-thumb-bg art-bg-5">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                                <circle cx="50" cy="50" r="28" fill="none" stroke="rgba(74,222,128,0.3)" stroke-width="1.5" />
-                                <circle cx="50" cy="50" r="16" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.4)" stroke-width="1" />
-                                <path d="M36 50 Q43 38 50 50 Q57 62 64 50" stroke="#4ADE80" stroke-width="1.5" fill="none" stroke-linecap="round" />
-                                <circle cx="36" cy="50" r="3" fill="#4ADE80" />
-                                <circle cx="64" cy="50" r="3" fill="#4ADE80" />
-                                <path d="M50 22 v6 M50 72 v6 M22 50 h6 M72 50 h6" stroke="rgba(74,222,128,0.4)" stroke-width="1.5" stroke-linecap="round" />
-                            </svg>
-                            <div class="article-cat-badge">Privacy</div>
-                        </div>
-                    </div>
-                    <div class="article-body">
-                        <h3>What Is Online Privacy Protection and Why Does It Matter More Than Ever</h3>
-                        <p>As digital activity continues to rise, we are providing tools that help protect what matters most online. Our online privacy protection services are designed to</p>
-                        <div class="article-footer">
-                            <div class="article-author-row">
-                                <div class="art-avatar">JC</div>
-                                <div>
-                                    <div class="art-author-name">Jason Carter</div>
-                                    <div class="art-date">19 Aug, 2025</div>
-                                </div>
-                            </div>
-                            <a href="#" class="art-read-link">
-                                Read
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 6 -->
-                <div class="article-card reveal reveal-delay-3">
-                    <div class="article-thumb">
-                        <div class="article-thumb-bg art-bg-6">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                                <rect x="20" y="25" width="60" height="50" rx="5" fill="rgba(239,68,68,0.10)" stroke="rgba(239,68,68,0.35)" stroke-width="1.5" />
-                                <path d="M30 40 h40 M30 50 h30 M30 60 h36" stroke="rgba(239,68,68,0.4)" stroke-width="2" stroke-linecap="round" />
-                                <circle cx="76" cy="30" r="9" fill="rgba(74,222,128,0.2)" stroke="rgba(74,222,128,0.5)" stroke-width="1.5" />
-                                <path d="M72 30 l3 3 5-5" stroke="#4ADE80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <div class="article-cat-badge">Business</div>
-                        </div>
-                    </div>
-                    <div class="article-body">
-                        <h3>Business Internet Security That Fits Modern Workplace Needs</h3>
-                        <p>Digital protection plays a crucial yet often undervalued role in today's work environment. Whether you're managing internal files, using cloud apps, or collaborating across departments.</p>
-                        <div class="article-footer">
-                            <div class="article-author-row">
-                                <div class="art-avatar">JC</div>
-                                <div>
-                                    <div class="art-author-name">Jason Carter</div>
-                                    <div class="art-date">19 Aug, 2025</div>
-                                </div>
-                            </div>
-                            <a href="#" class="art-read-link">
-                                Read
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- ══════════════════════════════════
          CTA
@@ -581,10 +1562,6 @@
             </div>
         </div>
     </section>
-
-
-
-
 
 
 
@@ -691,6 +1668,56 @@
     <script src="assets/js/podcasts.js" asp-append-version="true"></script>
 
     <!--@await RenderSectionAsync("Scripts", required: false) -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const modal = document.getElementById("podVideoModal");
+            const player = document.getElementById("podYoutubePlayer");
+            const closeBtn = document.querySelector(".pod-video-close");
+
+            document.querySelectorAll(".btn-listen[data-youtube]").forEach(button => {
+                button.addEventListener("click", function () {
+
+                    let url = this.getAttribute("data-youtube");
+                    let videoId = "";
+
+                    if (url.includes("youtube.com/watch")) {
+                        videoId = new URL(url).searchParams.get("v");
+                        url = "https://www.youtube.com/embed/" + videoId;
+                    }
+                    else if (url.includes("youtu.be/")) {
+                        videoId = url.split("youtu.be/")[1].split("?")[0];
+                        url = "https://www.youtube.com/embed/" + videoId;
+                    }
+
+                    const embedUrl = new URL(url);
+
+                    embedUrl.searchParams.set("autoplay", "1");
+                    embedUrl.searchParams.set("rel", "0");
+                    embedUrl.searchParams.set("modestbranding", "1");
+                    embedUrl.searchParams.set("origin", window.location.origin);
+
+                    player.src = embedUrl.toString();
+                    modal.classList.add("active");
+                });
+            });
+
+            function closeVideo() {
+                player.src = "";
+                modal.classList.remove("active");
+            }
+
+            closeBtn.addEventListener("click", closeVideo);
+
+            modal.addEventListener("click", function (e) {
+                if (e.target === modal) {
+                    closeVideo();
+                }
+            });
+
+        });
+    </script>
 
 </body>
 </html>
