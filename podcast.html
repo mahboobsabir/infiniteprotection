@@ -30,30 +30,33 @@
             const closeBtn = document.querySelector(".pod-video-close");
 
             document.querySelectorAll(".btn-listen[data-youtube]").forEach(button => {
+
                 button.addEventListener("click", function () {
 
-                    let url = this.getAttribute("data-youtube");
+                    const youtubeUrl = this.getAttribute("data-youtube");
+
                     let videoId = "";
 
-                    if (url.includes("youtube.com/watch")) {
-                        videoId = new URL(url).searchParams.get("v");
-                        url = "https://www.youtube.com/embed/" + videoId;
+                    try {
+                        const url = new URL(youtubeUrl);
+                        videoId = url.searchParams.get("v");
                     }
-                    else if (url.includes("youtu.be/")) {
-                        videoId = url.split("youtu.be/")[1].split("?")[0];
-                        url = "https://www.youtube.com/embed/" + videoId;
+                    catch (e) {
+                        console.error("Invalid YouTube URL");
+                        return;
                     }
 
-                    const embedUrl = new URL(url);
+                    if (!videoId) {
+                        console.error("Video ID not found");
+                        return;
+                    }
 
-                    embedUrl.searchParams.set("autoplay", "1");
-                    embedUrl.searchParams.set("rel", "0");
-                    embedUrl.searchParams.set("modestbranding", "1");
-                    embedUrl.searchParams.set("origin", window.location.origin);
+                    player.src =
+                        `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
 
-                    player.src = embedUrl.toString();
                     modal.classList.add("active");
                 });
+
             });
 
             function closeVideo() {
@@ -183,7 +186,6 @@
                     width="100%"
                     height="480"
                     frameborder="0"
-                    referrerpolicy="strict-origin-when-cross-origin"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen>
             </iframe>
@@ -239,7 +241,7 @@
                             </div>
                         </div>
                         <button class="btn-listen"
-                                data-youtube="https://www.youtube.com/embed/CAFIpGYhnhI?list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual">
+                                data-youtube="https://www.youtube.com/watch?v=CAFIpGYhnhI&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=1">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                 <polygon points="5 3 19 12 5 21 5 3" />
                             </svg>
@@ -273,7 +275,7 @@
                             <div class="ep-author-info">By <strong>Jim Brangberg</strong> &nbsp;·&nbsp; 20 Oct, 2023</div>
                         </div>
                         <button class="btn-listen"
-                                data-youtube="https://www.youtube.com/embed/CAFIpGYhnhI?list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual">
+                                data-youtube="https://www.youtube.com/watch?v=GmIYvOWGX-w&list=PLBCFyVbmU_cYg7JthOSn4kXHHTNBekual&index=2">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                                 <polygon points="5 3 19 12 5 21 5 3" />
                             </svg>
@@ -1669,55 +1671,7 @@
 
     <!--@await RenderSectionAsync("Scripts", required: false) -->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const modal = document.getElementById("podVideoModal");
-            const player = document.getElementById("podYoutubePlayer");
-            const closeBtn = document.querySelector(".pod-video-close");
-
-            document.querySelectorAll(".btn-listen[data-youtube]").forEach(button => {
-                button.addEventListener("click", function () {
-
-                    let url = this.getAttribute("data-youtube");
-                    let videoId = "";
-
-                    if (url.includes("youtube.com/watch")) {
-                        videoId = new URL(url).searchParams.get("v");
-                        url = "https://www.youtube.com/embed/" + videoId;
-                    }
-                    else if (url.includes("youtu.be/")) {
-                        videoId = url.split("youtu.be/")[1].split("?")[0];
-                        url = "https://www.youtube.com/embed/" + videoId;
-                    }
-
-                    const embedUrl = new URL(url);
-
-                    embedUrl.searchParams.set("autoplay", "1");
-                    embedUrl.searchParams.set("rel", "0");
-                    embedUrl.searchParams.set("modestbranding", "1");
-                    embedUrl.searchParams.set("origin", window.location.origin);
-
-                    player.src = embedUrl.toString();
-                    modal.classList.add("active");
-                });
-            });
-
-            function closeVideo() {
-                player.src = "";
-                modal.classList.remove("active");
-            }
-
-            closeBtn.addEventListener("click", closeVideo);
-
-            modal.addEventListener("click", function (e) {
-                if (e.target === modal) {
-                    closeVideo();
-                }
-            });
-
-        });
-    </script>
+    
 
 </body>
 </html>
