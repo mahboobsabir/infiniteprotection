@@ -519,6 +519,472 @@ body.light-mode .faq-advisor-link {
     color: #d97706;
 }
 
+
+/*-- SECTION 7 IP FAQS STARAT----------------------------------------------------*/
+.ip-faq-section,
+.ip-faq-section * {
+    box-sizing: border-box;
+}
+
+.ip-faq-section {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 4% 50px;
+    font-family: 'Sora', sans-serif;
+    color: #fff;
+    background: radial-gradient(circle at 50% 0%, rgba(0, 95, 180, .32), transparent 34%), linear-gradient(135deg, #020715 0%, #041630 50%, #020714 100%);
+}
+
+body.light-mode .ip-faq-section {
+    color: #071428;
+    background: radial-gradient(circle at 50% 0%, rgba(0, 140, 255, .15), transparent 34%), linear-gradient(135deg, #f7fbff 0%, #e8f2ff 50%, #fff 100%);
+}
+
+.ipfaq-container {
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.ipfaq-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.ipfaq-eyebrow {
+    color: #ffc334;
+    letter-spacing: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.ipfaq-heading h2 {
+    margin: 0;
+    font-size: clamp(40px, 5vw, 58px);
+    line-height: 1.05;
+    font-weight: 600;
+}
+
+    .ipfaq-heading h2 span {
+        color: #ffc334;
+    }
+
+.ipfaq-heading p {
+    margin: 18px auto 0;
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.45;
+    color: rgba(255,255,255,.86);
+}
+
+body.light-mode .ipfaq-heading p {
+    color: #26364e;
+}
+
+.ipfaq-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 32px;
+}
+
+.ipfaq-help-card,
+.ipfaq-cta {
+    border: 1px solid rgba(35,140,255,.45);
+    background: rgba(3,18,45,.76);
+    backdrop-filter: blur(14px);
+    border-radius: 10px;
+}
+
+body.light-mode .ipfaq-help-card,
+body.light-mode .ipfaq-cta {
+    background: rgba(255,255,255,.86);
+}
+
+.ipfaq-help-card {
+    padding: 30px 26px;
+    text-align: center;
+}
+
+.ipfaq-help-icon {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #57f263;
+    border: 2px dotted #57f263;
+    box-shadow: 0 0 35px rgba(87,242,99,.18);
+}
+
+.ip-faq-section svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ipfaq-help-icon svg {
+    width: 84px;
+    height: 84px;
+    stroke-width: 1;
+}
+
+.ipfaq-help-card h3 {
+    margin: 0 0 14px;
+    font-size: 25px;
+}
+
+.ipfaq-help-card > p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.55;
+    color: rgba(255,255,255,.84);
+}
+
+body.light-mode .ipfaq-help-card > p {
+    color: #26364e;
+}
+
+.ipfaq-help-line {
+    height: 1px;
+    margin: 26px 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
+}
+
+.ipfaq-help-item {
+    display: flex;
+    gap: 16px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+    .ipfaq-help-item svg {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+    }
+
+    .ipfaq-help-item.green svg {
+        color: #57f263;
+    }
+
+    .ipfaq-help-item.purple svg {
+        color: #bd62ff;
+    }
+
+    .ipfaq-help-item.blue svg {
+        color: #23a7ff;
+    }
+
+    .ipfaq-help-item strong {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .ipfaq-help-item span {
+        display: block;
+        color: rgba(255,255,255,.72);
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+body.light-mode .ipfaq-help-item span {
+    color: #26364e;
+}
+
+.ipfaq-help-btn {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    border: 1px solid #ffc334;
+    color: #ffc334;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+    .ipfaq-help-btn span,
+    .ipfaq-cta-buttons a span {
+        font-size: 28px;
+        line-height: 1;
+    }
+
+.ipfaq-list-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.ipfaq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ipfaq-item {
+    border: 1px solid rgba(110,160,210,.28);
+    background: rgba(8,29,63,.72);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+body.light-mode .ipfaq-item {
+    background: rgba(255,255,255,.85);
+}
+
+.ipfaq-item button {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 18px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    display: grid;
+    grid-template-columns: 45px 1fr 22px;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .ipfaq-item button span {
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #ffc334;
+        font-size: 13px;
+        font-weight: 600;
+        background: rgba(255,195,52,.12);
+        border: 1px solid rgba(255,195,52,.3);
+    }
+
+    .ipfaq-item button b {
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+.ipfaq-item p {
+    display: none;
+    margin: 0;
+    padding: 0 22px 16px 75px;
+    color: rgba(255,255,255,.75);
+    line-height: 1.5;
+}
+
+body.light-mode .ipfaq-item p {
+    color: #26364e;
+}
+
+.ipfaq-item.active p {
+    display: block;
+}
+
+.ipfaq-item.active button b {
+    transform: rotate(45deg);
+}
+
+.ipfaq-cta {
+    margin-top: 34px;
+    padding: 30px 42px;
+    display: grid;
+    grid-template-columns: 190px 1fr auto;
+    align-items: center;
+    gap: 30px;
+}
+
+.ipfaq-cta-icon {
+    width: 120px;
+    height: 90px;
+    display: grid;
+    place-items: center;
+    color: #ffc334;
+    filter: drop-shadow(0 0 18px rgba(255,195,52,.35));
+}
+
+    .ipfaq-cta-icon svg {
+        width: 88px;
+        height: 88px;
+    }
+
+.ipfaq-cta h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+    .ipfaq-cta h3 span {
+        color: #ffc334;
+    }
+
+.ipfaq-cta p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255,255,255,.82);
+}
+
+body.light-mode .ipfaq-cta p {
+    color: #26364e;
+}
+
+.ipfaq-cta-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+    .ipfaq-cta-buttons a {
+        min-width: 245px;
+        min-height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        border-radius: 7px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .ipfaq-cta-buttons .gold {
+        background: linear-gradient(135deg, #ffd95a, #f4aa13);
+        color: #071428;
+    }
+
+    .ipfaq-cta-buttons .green {
+        border: 1px solid #45ef4f;
+        color: #45ef4f;
+    }
+
+.ipfaq-reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: .85s ease;
+}
+
+    .ipfaq-reveal.ipfaq-active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+@media (max-width: 1200px) {
+    .ipfaq-layout,
+    .ipfaq-list-wrap,
+    .ipfaq-cta {
+        grid-template-columns: 1fr;
+    }
+
+    .ipfaq-cta-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .ip-faq-section {
+        padding: 35px 18px;
+    }
+
+    .ipfaq-eyebrow {
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+
+    .ipfaq-item button {
+        grid-template-columns: 40px 1fr 20px;
+        font-size: 14px;
+        padding: 0 12px;
+    }
+
+    .ipfaq-item p {
+        padding: 0 16px 14px 65px;
+    }
+
+    .ipfaq-cta {
+        padding: 24px;
+    }
+
+    .ipfaq-cta-buttons a {
+        width: 100%;
+        min-width: auto;
+    }
+}
+/*-- SECTION 7 IP FAQS END----------------------------------------------------- -*/
+
+/* 8. SECTION 7 — FAQ */
+.ipfaq-item button {
+    font-size: 14px;
+    min-height: 44px;
+}
+
+.ipfaq-help-icon {
+    width: 120px;
+    height: 120px;
+}
+
+    .ipfaq-help-icon svg {
+        width: 68px;
+        height: 68px;
+    }
+
+.ipfaq-help-card h3 {
+    font-size: 20px;
+}
+
+.ipfaq-help-card > p {
+    font-size: 14px;
+}
+
+.ipfaq-help-item svg {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+}
+
+.ipfaq-help-item strong {
+    font-size: 13px;
+}
+
+.ipfaq-help-item span {
+    font-size: 12px;
+}
+
+.ipfaq-cta h3 {
+    font-size: 18px;
+}
+
+.ipfaq-cta p {
+    font-size: 13px;
+}
+
+.ipfaq-cta-icon svg {
+    width: 72px;
+    height: 72px;
+}
+
+.ipfaq-cta-buttons a {
+    min-width: 200px;
+    min-height: 46px;
+    font-size: 14px;
+}
+
+.ip-faq-section img{
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: contain;
+    transition: filter .35s ease, box-shadow .35s ease, background .35s ease, transform .35s ease;
+}
+
+body.light-mode .ip-faq-section img{
+    filter: brightness(1.08) contrast(.96) saturate(.9);
+    background: rgba(255, 255, 255, .58);
+    box-shadow: 0 16px 34px rgba(0, 65, 130, .12);
+}
+
+/*---------------------------------FAQS END ------------------------*/
+
 /* ══════════════════════════════════════
    STILL HAVE QUESTIONS
 ══════════════════════════════════════ */
