@@ -61,8 +61,8 @@ function initNavbar() {
     });
 }
 
-(function () {
-    'use strict';
+//(function () {
+//    'use strict';
 
     /* ──────────────────────────────────────────
        1. LIGHT / DARK MODE TOGGLE
@@ -386,7 +386,7 @@ function initNavbar() {
         });
     });
 
-})();
+/*})();*/
 //--------------------logo image change for dark and light mode --------------------------
 
 //function applyTheme(isLight) {
