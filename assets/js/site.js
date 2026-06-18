@@ -2,13 +2,76 @@
    Infinite Protection  — Enhanced JavaScript
    Scroll Reveal | Navbar | Counter | Dark Mode
    ============================================= */
+
+function initTheme() {
+    const toggle = document.getElementById('theme-toggle');
+
+    if (!toggle) {
+        console.log("Theme toggle not found");
+        return;
+    }
+
+    const saved = localStorage.getItem('theme');
+
+    if (saved === 'light') {
+        document.body.classList.add('light-mode');
+        toggle.checked = true;
+    } else {
+        document.body.classList.remove('light-mode');
+        toggle.checked = false;
+    }
+
+    toggle.addEventListener('change', function () {
+        if (this.checked) {
+            document.body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.classList.remove('light-mode');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+}
+
+
+function initNavbar() {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+
+    let lastScrollTop = 0;
+    let ticking = false;
+
+    function handleNavbar() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 60) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+        if (!ticking) {
+            requestAnimationFrame(handleNavbar);
+            ticking = true;
+        }
+    });
+}
+
 (function () {
     'use strict';
 
     /* ──────────────────────────────────────────
        1. LIGHT / DARK MODE TOGGLE
        ────────────────────────────────────────── */
-    const toggle = document.getElementById('theme-toggle');
+    /*const toggle = document.getElementById('theme-toggle');*/
+
+
+    
+
 
     function applyTheme(isLight) {
         if (isLight) {
@@ -39,7 +102,10 @@
        2. NAVBAR — HIDE ON SCROLL DOWN, SHOW ON UP
           + shrink on scroll
        ────────────────────────────────────────── */
-    const navbar = document.querySelector('.navbar');
+    /*const navbar = document.querySelector('.navbar');*/
+
+    
+
     let lastScrollTop = 0;
     let ticking = false;
 
@@ -323,22 +389,22 @@
 })();
 //--------------------logo image change for dark and light mode --------------------------
 
-function applyTheme(isLight) {
-    if (isLight) {
-        document.body.classList.add('light-mode');
-    } else {
-        document.body.classList.remove('light-mode');
-    }
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+//function applyTheme(isLight) {
+//    if (isLight) {
+//        document.body.classList.add('light-mode');
+//    } else {
+//        document.body.classList.remove('light-mode');
+//    }
+//    localStorage.setItem('theme', isLight ? 'light' : 'dark');
 
-    // Swap logo
-    const logo = document.getElementById('logoImg');
-    if (logo) {
-        logo.src = isLight
-            ? '/assets/images/logolight.png'
-            : '/assets/images/logodark.png';
-    }
-}
+//    // Swap logo
+//    const logo = document.getElementById('logoImg');
+//    if (logo) {
+//        logo.src = isLight
+//            ? '/assets/images/logolight.png'
+//            : '/assets/images/logodark.png';
+//    }
+//}
 
 
     (function () {
