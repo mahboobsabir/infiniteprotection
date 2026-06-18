@@ -3,32 +3,50 @@
    Scroll Reveal | Navbar | Counter | Dark Mode
    ============================================= */
 
+/* ── Apply saved theme immediately to avoid flash of wrong colours ──
+   Runs synchronously before any rendering; no DOM elements needed.    */
+(function () {
+    if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light-mode-pre');
+        document.body && document.body.classList.add('light-mode');
+    }
+})();
+
 function initTheme() {
     const toggle = document.getElementById('theme-toggle');
 
     if (!toggle) {
-        console.log("Theme toggle not found");
+        console.warn("Theme toggle not found — navbar partial may not have loaded yet.");
         return;
     }
 
-    const saved = localStorage.getItem('theme');
-
-    if (saved === 'light') {
-        document.body.classList.add('light-mode');
-        toggle.checked = true;
-    } else {
-        document.body.classList.remove('light-mode');
-        toggle.checked = false;
-    }
-
-    toggle.addEventListener('change', function () {
-        if (this.checked) {
+    /* ── Single helper: apply a theme and persist it ── */
+    function applyTheme(isLight) {
+        if (isLight) {
             document.body.classList.add('light-mode');
-            localStorage.setItem('theme', 'light');
         } else {
             document.body.classList.remove('light-mode');
-            localStorage.setItem('theme', 'dark');
         }
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+
+        // Optional logo swap — remove if you don't use separate logo images
+        const logo = document.getElementById('logoImg');
+        if (logo) {
+            logo.src = isLight
+                ? '/assets/images/logolight.png'
+                : '/assets/images/logodark.png';
+        }
+    }
+
+    /* ── Restore saved preference (default: dark) ── */
+    const saved = localStorage.getItem('theme');
+    const isLight = saved === 'light';
+    applyTheme(isLight);
+    toggle.checked = isLight;
+
+    /* ── Listen for toggle changes ── */
+    toggle.addEventListener('change', function () {
+        applyTheme(this.checked);
     });
 }
 
@@ -73,68 +91,11 @@ function initNavbar() {
     
 
 
-    function applyTheme(isLight) {
-        if (isLight) {
-            document.body.classList.add('light-mode');
-            document.body.classList.remove('dark');
-        } else {
-            document.body.classList.remove('light-mode');
-            document.body.classList.add('dark');
-        }
-        localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    }
-
-    // Restore saved preference
-    const saved = localStorage.getItem('theme');
-    if (saved === 'light') {
-        applyTheme(true);
-        if (toggle) toggle.checked = true;
-    }
-
-    if (toggle) {
-        toggle.addEventListener('change', function () {
-            applyTheme(this.checked);
-        });
-    }
-
-
     /* ──────────────────────────────────────────
-       2. NAVBAR — HIDE ON SCROLL DOWN, SHOW ON UP
-          + shrink on scroll
+       2. NAVBAR — shrink on scroll
+          (initialised via initNavbar() in layout.js
+           after the navbar partial has loaded)
        ────────────────────────────────────────── */
-    /*const navbar = document.querySelector('.navbar');*/
-
-    
-
-    let lastScrollTop = 0;
-    let ticking = false;
-
-    function handleNavbar() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Shrink effect
-        if (scrollTop > 60) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-
-        // Hide / show
-        //if (scrollTop > lastScrollTop && scrollTop > 150) {
-        //    navbar.style.top = '-100px';
-        //} else {
-        //    navbar.style.top = '0';
-        //}
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', function () {
-        if (!ticking) {
-            requestAnimationFrame(handleNavbar);
-            ticking = true;
-        }
-    }, { passive: true });
 
 
     /* ──────────────────────────────────────────
