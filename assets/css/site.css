@@ -1478,7 +1478,7 @@ body.light-mode .tp2-stats {
     font-family: 'Sora', sans-serif;
     font-size: clamp(26px, 3.8vw, 52px);
     font-weight: 800;
-    color: var(--tp2-text);
+    color: #ffffff;
     line-height: 1.08;
     margin: 0 0 16px;
     letter-spacing: -0.025em;
